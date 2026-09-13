@@ -6,33 +6,27 @@ This repository is a recruiter-facing collection of finance research and analyti
 
 [GitHub profile](https://github.com/sat79) · [Portfolio website](https://satvik-sahni-finance.deathsatan7777.chatgpt.site) · [LinkedIn](https://www.linkedin.com/in/satviksahnifinance/)
 
-## Start here
+## Selected finance research
 
-| Project | Financial question | Methods |
-|---|---|---|
-| [Kaspi.kz valuation & bank risk](kspi-valuation-bank-risk/) | How do payout, FX and lending economics affect shareholder value? | Dividend valuation, scenarios, funding/credit stress, Python, SQL |
-| [Unilever equity valuation](unilever-equity-valuation/) | Which operating and discount-rate assumptions drive value? | FCFF DCF, residual income, comparables, DuPont, sensitivity |
-| [Financial risk modelling](financial-risk-modelling/) | Do risk forecasts cover the losses that actually occur? | Historical/normal VaR, ES, GARCH-t, backtesting, Monte Carlo |
-| [Time-series econometrics](time-series-econometrics/) | Does multivariate information improve historical GDP forecasts? | ARIMA, VAR/VECM, ADF/KPSS, chronological validation |
-| [AURA & blockchain microfinance](blockchain-microfinance-aura/) | When does technical efficiency translate into financial inclusion? | AURA framework, scoring audit, Bass adoption scenarios |
+| Project | Financial question | Methods | Case study |
+|---|---|---|---|
+| Kaspi.kz valuation & bank risk | How do payout, FX and lending economics affect shareholder value? | Dividend valuation, scenarios, funding/credit stress, Python, SQL | [Open KSPI](https://satvik-sahni-finance.deathsatan7777.chatgpt.site/kspi.html) |
+| Unilever equity valuation | Which operating and discount-rate assumptions drive value? | FCFF DCF, residual income, comparables, DuPont, sensitivity | [Open Unilever](https://satvik-sahni-finance.deathsatan7777.chatgpt.site/unilever.html) |
+| Financial risk modelling | Do risk forecasts cover the losses that actually occur? | Historical/normal VaR, ES, GARCH-t, backtesting, Monte Carlo | [Open risk study](https://satvik-sahni-finance.deathsatan7777.chatgpt.site/risk.html) |
+| Time-series econometrics | Does multivariate information improve historical GDP forecasts? | ARIMA, VAR/VECM, ADF/KPSS, chronological validation | [Open econometrics](https://satvik-sahni-finance.deathsatan7777.chatgpt.site/econometrics.html) |
+| AURA & blockchain microfinance | When does technical efficiency translate into financial inclusion? | AURA framework, scoring audit, Bass adoption scenarios | [Open AURA](https://satvik-sahni-finance.deathsatan7777.chatgpt.site/aura.html) |
 
 ## What a recruiter can verify
 
-- **KSPI:** scenario valuation, segment analysis, geographic earnings bridge, SQL, tests and workbook checks. Reviewed baseline: Base **$73.11**, Downside **$45.53**, Upside **$95.68** per ADS. These are assumption-led outputs, not price targets.
+- **KSPI:** scenario valuation, segment analysis, a geographic earnings bridge, SQL, tests and workbook checks. Reviewed baseline: Base **$73.11**, Downside **$45.53**, Upside **$95.68** per ADS. These are assumption-led outputs, not price targets.
 - **Unilever:** retrospective FY2024 DCF, residual income and trading comparables. Independent arithmetic checks reproduced **98 saved formula values**.
 - **Risk:** historical, normal and GARCH-t 99% VaR forecasts are tested against realised losses. All three miss the nominal coverage target in this historical sample.
 - **Econometrics:** model choice is separated from the final test period. VAR improves historical test error versus simple benchmarks; selected cointegration rank is zero, so VECM does not manufacture a long-run relationship.
 - **AURA:** the public derivative audits arithmetic, weighting and adoption assumptions without claiming empirical validation.
 
-## How to inspect the work
-
-Each project folder contains a finance-first README and representative source code that can be inspected directly on GitHub. The project pages link back to the visual portfolio and the complete downloadable packages.
-
-For the best visual overview, use the [portfolio website](https://satvik-sahni-finance.deathsatan7777.chatgpt.site). For methodology and implementation detail, use the folders here.
-
 ## Reproducibility and limitations
 
-Project READMEs state run commands, assumptions and known limitations. The work distinguishes reported data from analyst assumptions and uses checks/tests where they add financial assurance. Passing a test does not validate an investment thesis, source quality or future performance.
+The linked case studies include downloadable research packages with source code, assumptions, tests, reports and, where relevant, Excel models. The work distinguishes reported data from analyst assumptions and uses checks/tests where they add financial assurance. Passing a test does not validate an investment thesis, source quality or future performance.
 
 Some projects use historical or frozen data intentionally. They are not live trading recommendations, production risk systems or current company target prices.
 
