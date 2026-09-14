@@ -1,6 +1,6 @@
 # Trading strategy research
 This branch contains executable research for BTC/USDT and ETH/USDT spot.
-It is not a live trading bot. See RESEARCH-SPEC.md and reports/KROWN-META-SIGNALS-REVIEW.md for the original hypotheses.
+It is not a live trading bot. [Executed results](reports/RESULTS-2026-09-14.md): 17 tests passed; the historical strategy family did not meet the requested targets. See RESEARCH-SPEC.md and reports/KROWN-META-SIGNALS-REVIEW.md for the original hypotheses.
 
 ## Run
 Use Python 3.12:

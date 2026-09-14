@@ -1,5 +1,5 @@
 # Trading bot v2 — research specification
-Recorded 14 September 2026. Status: specified, not historically backtested or approved for live trading.
+Recorded 14 September 2026. Original research contract. Execution update: the thirteen-configuration family, including amendment D, has now been run retrospectively. It did not meet the requested targets. See reports/RESULTS-2026-09-14.md. No live trading approval or prospective validation is implied.
 
 ## Objective
 Develop a cost-aware, long-only research bot with separate intraday, swing and position-trading modules. Begin with BTC/USDT spot, matching the prior research. ETH/USDT is a predeclared secondary robustness instrument, not a substitute chosen after seeing BTC results. No leverage or broker credentials are required for the research phase.
@@ -138,8 +138,8 @@ Pass/fail/insufficient-evidence must be explicit. Never present a high hit rate 
 ## Implementation checks required before historical runs
 Financial accounting, next-bar entry, completed higher-timeframe joins, future-data perturbation, gap stops, same-bar stop/target ambiguity, partial-exit accounting, trailing timing, shared-account limits, duplicate/missing bars, fee stress and fold-boundary isolation.
 
-## Current blocker and next action
-The execution workspace failed its initialization handshake in this session; no new historical backtest, data download or live bot has run. This file records the research contract so implementation and evaluation can proceed when execution is available. The draft does not certify a 60% hit rate or any profitability.
+## Execution update
+The local workspace failed initialization, but the GitHub research runner subsequently completed the implementation tests and historical evaluation. See reports/RESULTS-2026-09-14.md for actual outcomes, implementation clarifications and remaining limitations. The original objective has not been achieved: the rolling strategy's net hit rate was 33.7% and doubled-cost returns were negative.
 
 ## Primary implementation references
 - Binance public archive conventions and checksums: https://github.com/binance/binance-public-data
