@@ -1,0 +1,36 @@
+name: Trading research checks
+on:
+  push:
+    branches: [research/trading-bot-v2]
+    paths:
+      - 'trading-bot-v2/src/**'
+      - 'trading-bot-v2/tests/**'
+      - '.github/workflows/trading-research.yml'
+permissions:
+  contents: read
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check runner
+        run: python -c "import sys; print(sys.version)"
+      - name: Install research dependencies
+        if: hashFiles('trading-bot-v2/src/research.py') != ''
+        run: python -m pip install numpy==2.2.6 pandas==2.2.3
+      - name: Accounting and timing tests
+        if: hashFiles('trading-bot-v2/tests/test_research.py') != ''
+        run: python -m unittest discover -s trading-bot-v2/tests -v
+      - name: Run historical research
+        if: hashFiles('trading-bot-v2/src/research.py') != ''
+        run: python trading-bot-v2/src/research.py
+      - uses: actions/upload-artifact@v4
+        if: always() && hashFiles('trading-bot-v2/reports/generated/**') != ''
+        with:
+          name: trading-research-results
+          path: trading-bot-v2/reports/generated/
+          retention-days: 30
