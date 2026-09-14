@@ -272,6 +272,16 @@ def stats(trades, daily_equity, initial, exposure_sum, steps, gap_positions, rej
         "accounting_error": float(equity[-1]-initial-p.sum()),
     }
 
+def adaptive_stop(position, high, atr, fee, slip):
+    """Use only a completed signal-timeframe high, applied at next execution open."""
+    position["highest"] = max(position["highest"], high)
+    initial_r = position["entry"] - position["initial_stop"]
+    if position["highest"] >= position["entry"] + initial_r:
+        breakeven = position["entry"] * (1 + fee) / ((1 - slip) * (1 - fee))
+        position["stop"] = max(position["stop"], breakeven)
+    if position["highest"] >= position["entry"] + 2 * initial_r:
+        position["stop"] = max(position["stop"], position["highest"] - 2 * atr)
+
 def simulate(markets, strategies, start, end, multiplier=1, initial=10000):
     """One shared cash account. strategies is an ordered list of (symbol, prepared_signal)."""
     index = next(iter(markets.values())).index
@@ -307,7 +317,8 @@ def simulate(markets, strategies, start, end, multiplier=1, initial=10000):
                            "exit_time": str(when), "entry_price": p["entry"],
                            "initial_stop": p["initial_stop"], "initial_quantity": p["initial_qty"],
                            "net_pnl": pnl, "net_r": pnl/p["planned_risk"],
-                           "costs": p["costs"], "gap_affected": p["gap"], "fills": p["fills"]})
+                           "costs": p["costs"], "gap_affected": p["gap"], "fills": p["fills"],
+                           "entry_regime": p["entry_regime"]})
             del positions[symbol]
     candidate_mask = np.zeros(len(index), dtype=bool)
     for _, f in strategies:
@@ -334,6 +345,12 @@ def simulate(markets, strategies, start, end, multiplier=1, initial=10000):
                 p["gap"] = True
                 continue
             f = p["feature"]
+            if p["adaptive"] and np.isfinite(f["daily_high"][i]) and np.isfinite(f["atr"][i]):
+                adaptive_stop(p, f["daily_high"][i], f["atr"][i], fee, slip)
+            regime_exit = ("regime" in f and f["regime"][i] != "" and
+                           f["regime"][i] != p["entry_regime"])
+            mean_exit = (p["adaptive"] and p["entry_regime"] == "sideways" and
+                         "mean_exit" in f and f["mean_exit"][i])
             if p["kind"] == "C" and np.isfinite(f["daily_high"][i]):
                 p["highest"] = max(p["highest"], f["daily_high"][i])
                 if p["partial"]:
@@ -341,7 +358,7 @@ def simulate(markets, strategies, start, end, multiplier=1, initial=10000):
             # A protective gap stop precedes discretionary next-open exits.
             if bar[0] <= p["stop"]:
                 sell(symbol, bar[0], 1, when, "gap_stop")
-            elif f["exit"][i] or when.value-p["entry_ns"] >= p["max_hold"]:
+            elif f["exit"][i] or regime_exit or mean_exit or when.value-p["entry_ns"] >= p["max_hold"]:
                 sell(symbol, bar[0], 1, when, "rule_or_time")
             else:
                 raw, reason = exit_fill(bar, p["stop"], p["target"])
@@ -407,7 +424,9 @@ def simulate(markets, strategies, start, end, multiplier=1, initial=10000):
                 "planned_risk": qty*unit_risk, "proceeds": 0.,
                 "costs": qty*(entry-bar[0])+qty*entry*fee, "fills": [],
                 "max_hold": holding_days*24*60*MINUTE,
-                "partial": False, "highest": entry, "gap": False}
+                "partial": False, "highest": entry, "gap": False,
+                "adaptive": config.get("adaptive", False),
+                "entry_regime": str(f["regime"][i]) if "regime" in f else "unspecified"}
             # Entry candle is tradable after its opening fill.
             raw, reason = exit_fill(bar, stop, target)
             if raw is not None:

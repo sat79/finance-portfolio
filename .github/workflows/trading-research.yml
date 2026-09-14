@@ -27,7 +27,7 @@ jobs:
         run: python -m unittest discover -s trading-bot-v2/tests -v
       - name: Run BTCUSDT historical research
         if: hashFiles('trading-bot-v2/src/research.py') != ''
-        run: python trading-bot-v2/src/btc_round2.py
+        run: python trading-bot-v2/src/btc_round3.py
       - uses: actions/upload-artifact@v4
         if: always() && hashFiles('trading-bot-v2/reports/generated/**') != ''
         with:
