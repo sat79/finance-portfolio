@@ -373,7 +373,7 @@ def simulate(markets, strategies, start, end, multiplier=1, initial=10000):
             if not np.isfinite(atr+structure) or bar[0] <= structure:
                 rejected += 1
                 continue
-            stop = min(entry-(1.5 if config["kind"] == "A" else 2)*atr, structure)
+            stop = min(entry-config.get("atr_multiple", 1.5 if config["kind"] == "A" else 2)*atr, structure)
             if stop <= 0:
                 rejected += 1
                 continue
@@ -398,7 +398,7 @@ def simulate(markets, strategies, start, end, multiplier=1, initial=10000):
                 continue
             entry_cash = qty*entry*(1+fee)
             cash -= entry_cash
-            holding_days = 2 if config["kind"] == "A" else (365 if config["tf"] == "1d" else 30)
+            holding_days = config.get("holding_days", 2 if config["kind"] == "A" else (365 if config["tf"] == "1d" else 30))
             positions[symbol] = {
                 "name": config["name"], "kind": config["kind"], "feature": f,
                 "entry_time": str(when), "entry_ns": when.value, "entry": entry,
