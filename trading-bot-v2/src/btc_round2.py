@@ -64,8 +64,11 @@ def raw_rule(f, family, gate):
     signal &= np.isfinite(structure) & np.isfinite(f.atr)
     return signal,structure,exit_rule
 
-def prepare(base):
+def prepare(base,daily_prices=None):
     frames = {tf:m.indicators(base,tf) for tf in ("15min","1h","4h","1d")}
+    if daily_prices is not None:
+        from market_data import daily_indicators
+        frames["1d"] = daily_indicators(daily_prices)
     output = {}
     for config in CONFIGS:
         f = frames[config["tf"]]
@@ -256,3 +259,4 @@ def run():
 
 if __name__=="__main__":
     run()
+

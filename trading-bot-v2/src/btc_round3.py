@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 import research as m
 import btc_round2 as previous
+import market_data
 
 OUT=m.ROOT/"reports"/"generated"/"btc-round-3"
 CONFIGS=[{"name":f"H-{tf}-{confirm}-{exit_}","tf":tf,"confirmation":confirm,
@@ -97,8 +98,10 @@ def fib_signals(f,require_div=False,allowed=None):
             signal[t]=True;consumed.add(impulse)
     return signal,anchor_low,anchor_high
 
-def prepare(base):
+def prepare(base,daily_prices=None):
     frames={tf:m.indicators(base,tf) for tf in ("1h","4h","1d")}
+    if daily_prices is not None:
+        frames["1d"]=market_data.daily_indicators(daily_prices)
     daily_regime=regimes(frames["1d"])
     output={}
     for tf in ("1h","4h"):
@@ -185,12 +188,19 @@ def run():
         base,manifest=m.download("BTCUSDT")
     (OUT/"data-manifest.json").write_text(json.dumps(manifest,indent=2))
     print("BTC3 DATA",json.dumps({"missing_bars":manifest["missing_bars"],"off_grid_bars":manifest["off_grid_bars"]}),flush=True)
-    features,dreg=prepare(base)
+    daily_prices,daily_manifest=market_data.load_daily()
+    reconciliation=market_data.reconcile(base,daily_prices)
+    (OUT/"daily-data-manifest.json").write_text(json.dumps(daily_manifest,indent=2))
+    (OUT/"data-reconciliation.json").write_text(json.dumps(reconciliation,indent=2))
+    print("BTC3 RECONCILIATION",json.dumps(reconciliation),flush=True)
+    features,dreg=prepare(base,daily_prices)
     markets={"BTCUSDT":base}
     start=pd.Timestamp("2020-01-01",tz="UTC");end=pd.Timestamp("2026-09-01",tz="UTC")
     (OUT/"settings.json").write_text(json.dumps({"configs":CONFIGS,"start":str(start),"end":str(end),
        "source_sha256":hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
        "engine_sha256":hashlib.sha256(Path(m.__file__).read_bytes()).hexdigest(),
+       "daily_data_source":"Official native daily archives; 5m gaps retained for execution",
+       "daily_data_code_sha256":hashlib.sha256(Path(market_data.__file__).read_bytes()).hexdigest(),
        "python_numpy":np.__version__,"pandas":pd.__version__,
        "data_frame_sha256":hashlib.sha256(pd.util.hash_pandas_object(base,index=True).values.tobytes()).hexdigest(),
        "classification":"Research-exposed retrospective evaluation"},indent=2))
@@ -204,14 +214,17 @@ def run():
             label=config["name"]+f"/cost{cost}"
             ledger.extend(dict(t,run=label) for t in trades);curves[label]=daily
             print("BTC3 SCREEN",json.dumps(compact(metrics)),flush=True)
-    # One frozen benchmark from round 2, reported without selecting new parameters.
-    baseline=previous.prepare(base)["E-4h-3R"]
-    for cost in (1,2):
-        metrics,trades,daily=m.simulate(markets,[("BTCUSDT",baseline)],start,end,cost)
-        metrics.update({"config":"BASELINE-E-4h-3R","cost_multiplier":cost})
-        metrics.update(previous.extra_metrics(trades,daily))
-        rows.append(metrics)
-        print("BTC3 BASELINE",json.dumps(compact(metrics)),flush=True)
+    # Separate unchanged legacy and daily-data-corrected baselines.
+    for label,prices in (("LEGACY",None),("DAILY",daily_prices)):
+        baseline=previous.prepare(base,daily_prices=prices)["E-4h-3R"]
+        for cost in (1,2):
+            metrics,trades,daily=m.simulate(markets,[("BTCUSDT",baseline)],start,end,cost)
+            metrics.update({"config":f"BASELINE-{label}-E-4h-3R","cost_multiplier":cost})
+            metrics.update(previous.extra_metrics(trades,daily))
+            rows.append(metrics)
+            curves[metrics["config"]+f"/cost{cost}"]=daily
+            ledger.extend(dict(t,run=metrics["config"]+f"/cost{cost}") for t in trades)
+            print("BTC3 BASELINE",json.dumps(compact(metrics)),flush=True)
     (OUT/"screen.json").write_text(json.dumps(rows,indent=2))
     pd.DataFrame([compact(r) for r in rows]).to_csv(OUT/"screen.csv",index=False)
     (OUT/"trade-ledger.json").write_text(json.dumps(ledger))

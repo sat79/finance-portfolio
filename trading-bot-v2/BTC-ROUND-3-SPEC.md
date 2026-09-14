@@ -52,3 +52,6 @@ Wilson hit-rate intervals and a fixed-seed circular three-month, 2,000-draw boot
 Report whole-account results, trade counts, payoff, costs, worst month/year, drawdown and exposure, rather than judging isolated win rates.
 All historical periods are research-exposed; neither chronological selection nor bootstrap removes selection bias. The 60%/1.5 payoff target remains unproven until supported by sufficiently broad evaluation and later forward observations.
 
+
+## Data-method amendment before corrected evaluation
+The preliminary aggregated-daily run left 1,078 of 2,435 evaluation days unknown: missing five-minute candles invalidated full days and repeatedly reset the 200-day average. Preserve that preliminary run as an audit, not the final result. Use separately checksum-verified Binance daily archives for daily regime indicators; retain every missing/blocked five-minute candle in the execution frame. Reconcile daily OHLC on all complete intraday days within 0.011 USDT and fail on discrepancies. No thresholds, configurations, costs, or selection rules change. Show both the original E-4h-3R baseline and its identical-rule rerun using native daily data, so data coverage is not misrepresented as a strategy improvement. Daily benchmark endpoints remain unfilled.
