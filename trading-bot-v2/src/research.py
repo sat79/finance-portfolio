@@ -88,7 +88,7 @@ def download(symbol):
         raise ValueError("Malformed OHLC")
     grid = pd.date_range(START, END, freq="5min", inclusive="left", tz="UTC")
     if not frame.index.isin(grid).all():
-        raise ValueError("Off-grid or unexpected candles")
+        raise ValueError(f"Off-grid or unexpected candles: {frame.index[~frame.index.isin(grid)][:12].tolist()}; bounds={frame.index.min()} to {frame.index.max()}")
     missing = grid.difference(frame.index)
     frame = frame.reindex(grid)  # NaN is never a tradable price.
     manifest = {"symbol": symbol, "retrieved_at": pd.Timestamp.now(tz="UTC").isoformat(),
