@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+.venv/
+my-assumptions.json
+reports/my-results.json

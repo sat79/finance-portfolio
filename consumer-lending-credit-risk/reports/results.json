@@ -1,0 +1,118 @@
+{
+  "data_status": "Entirely synthetic; no customer or employer data",
+  "split": {
+    "train_year": 2022,
+    "validation_year": 2023,
+    "test_year": 2024
+  },
+  "grade_pd": {
+    "A": 0.015584415584415584,
+    "B": 0.027777777777777776,
+    "C": 0.11607142857142858,
+    "D": 0.15384615384615385
+  },
+  "selected_pd_cutoff": 0.03,
+  "validation_candidates": {
+    "0.0": {
+      "applications": 600,
+      "approved": 0,
+      "approval_rate": 0.0,
+      "principal_gbp": 0.0,
+      "expected_loss_gbp": 0.0,
+      "expected_contribution_gbp": 0.0,
+      "observed_default_rate": null
+    },
+    "0.03": {
+      "applications": 600,
+      "approved": 327,
+      "approval_rate": 0.545,
+      "principal_gbp": 3085000.0,
+      "expected_loss_gbp": 28306.637806637762,
+      "expected_contribution_gbp": 140462.33838195415,
+      "observed_default_rate": 0.021406727828746176
+    },
+    "0.06": {
+      "applications": 600,
+      "approved": 327,
+      "approval_rate": 0.545,
+      "principal_gbp": 3085000.0,
+      "expected_loss_gbp": 28306.637806637762,
+      "expected_contribution_gbp": 140462.33838195415,
+      "observed_default_rate": 0.021406727828746176
+    },
+    "0.1": {
+      "applications": 600,
+      "approved": 327,
+      "approval_rate": 0.545,
+      "principal_gbp": 3085000.0,
+      "expected_loss_gbp": 28306.637806637762,
+      "expected_contribution_gbp": 140462.33838195415,
+      "observed_default_rate": 0.021406727828746176
+    },
+    "0.15": {
+      "applications": 600,
+      "approved": 381,
+      "approval_rate": 0.635,
+      "principal_gbp": 3559000.0,
+      "expected_loss_gbp": 55815.56637806636,
+      "expected_contribution_gbp": 135941.19991269507,
+      "observed_default_rate": 0.04461942257217848
+    },
+    "1.0": {
+      "applications": 600,
+      "approved": 397,
+      "approval_rate": 0.6616666666666666,
+      "principal_gbp": 3716000.0,
+      "expected_loss_gbp": 67892.48945498945,
+      "expected_contribution_gbp": 130149.67516200639,
+      "observed_default_rate": 0.055415617128463476
+    }
+  },
+  "test_brier": 0.05527391861723875,
+  "constant_baseline_brier": 0.05672632674297606,
+  "test_auc": 0.6739066193853428,
+  "test_calibration": [
+    {
+      "grade": "A",
+      "count": 386,
+      "estimated_pd": 0.015584415584415584,
+      "observed_default_rate": 0.03367875647668394
+    },
+    {
+      "grade": "B",
+      "count": 116,
+      "estimated_pd": 0.027777777777777776,
+      "observed_default_rate": 0.07758620689655173
+    },
+    {
+      "grade": "C",
+      "count": 79,
+      "estimated_pd": 0.11607142857142858,
+      "observed_default_rate": 0.11392405063291139
+    },
+    {
+      "grade": "D",
+      "count": 19,
+      "estimated_pd": 0.15384615384615385,
+      "observed_default_rate": 0.2631578947368421
+    }
+  ],
+  "test_base": {
+    "applications": 600,
+    "approved": 327,
+    "approval_rate": 0.545,
+    "principal_gbp": 3115000.0,
+    "expected_loss_gbp": 29107.395382395327,
+    "expected_contribution_gbp": 142050.03462663796,
+    "observed_default_rate": 0.039755351681957186
+  },
+  "test_stress_same_book": {
+    "applications": 600,
+    "approved": 327,
+    "approval_rate": 0.545,
+    "principal_gbp": 3115000.0,
+    "expected_loss_gbp": 64327.343795093904,
+    "expected_contribution_gbp": 46766.170797575054,
+    "observed_default_rate": 0.039755351681957186
+  }
+}

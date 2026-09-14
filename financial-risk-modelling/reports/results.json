@@ -1,0 +1,191 @@
+{
+  "data_sha256": "d14cb9a6929c033e10ac06a678fafa537b85054f15884c0dc0bed9545b443414",
+  "prices": 5031,
+  "returns": 5030,
+  "data_start": "1999-01-04",
+  "data_end": "2018-12-31",
+  "test_start": "2002-12-27",
+  "test_end": "2018-12-31",
+  "units": "percent log-return loss; positive is loss",
+  "backtests": [
+    {
+      "n": 4030,
+      "exceptions": 243,
+      "expected": 201.50000000000017,
+      "exception_rate": 0.06029776674937965,
+      "coverage_ci_low": 0.053145418078051045,
+      "coverage_ci_high": 0.06809547613375168,
+      "kupiec_p": 0.0036190471519213243,
+      "independence_p": 0.5239069881597451,
+      "conditional_coverage_p": 0.011843800278234078,
+      "transitions": [
+        [
+          3560,
+          226
+        ],
+        [
+          226,
+          17
+        ]
+      ],
+      "model": "GARCH-t 1000d",
+      "confidence": 0.95,
+      "mean_var": 1.5438940910868024,
+      "mean_es": 2.1394754175630224,
+      "mean_tail_residual": 0.04667916603066798
+    },
+    {
+      "n": 4030,
+      "exceptions": 63,
+      "expected": 40.30000000000003,
+      "exception_rate": 0.015632754342431762,
+      "coverage_ci_low": 0.012032996166384822,
+      "coverage_ci_high": 0.019957296485065043,
+      "kupiec_p": 0.000899353614447636,
+      "independence_p": 0.36040390989969695,
+      "conditional_coverage_p": 0.002657715819777002,
+      "transitions": [
+        [
+          3905,
+          61
+        ],
+        [
+          61,
+          2
+        ]
+      ],
+      "model": "GARCH-t 1000d",
+      "confidence": 0.99,
+      "mean_var": 2.479818107991098,
+      "mean_es": 3.144327947760121,
+      "mean_tail_residual": -0.05132733000632665
+    },
+    {
+      "n": 4030,
+      "exceptions": 210,
+      "expected": 201.50000000000017,
+      "exception_rate": 0.052109181141439205,
+      "coverage_ci_low": 0.045450266702351284,
+      "coverage_ci_high": 0.05942647674943299,
+      "kupiec_p": 0.541640182728852,
+      "independence_p": 1.0706866232664358e-05,
+      "conditional_coverage_p": 5.135546246625819e-05,
+      "transitions": [
+        [
+          3636,
+          183
+        ],
+        [
+          183,
+          27
+        ]
+      ],
+      "model": "Historical 250d",
+      "confidence": 0.95,
+      "mean_var": 1.7658422242966223,
+      "mean_es": 2.4229638632017734,
+      "mean_tail_residual": 0.14391477608711234
+    },
+    {
+      "n": 4030,
+      "exceptions": 55,
+      "expected": 40.30000000000003,
+      "exception_rate": 0.013647642679900745,
+      "coverage_ci_low": 0.010297375619026905,
+      "coverage_ci_high": 0.01772764817287775,
+      "kupiec_p": 0.0274510332258824,
+      "independence_p": 0.04540972618211838,
+      "conditional_coverage_p": 0.011881325883613366,
+      "transitions": [
+        [
+          3922,
+          52
+        ],
+        [
+          52,
+          3
+        ]
+      ],
+      "model": "Historical 250d",
+      "confidence": 0.99,
+      "mean_var": 2.969780369668702,
+      "mean_es": 3.3910045540546587,
+      "mean_tail_residual": 0.2800485666103891
+    },
+    {
+      "n": 4030,
+      "exceptions": 196,
+      "expected": 201.50000000000017,
+      "exception_rate": 0.048635235732009924,
+      "coverage_ci_low": 0.042199371694285184,
+      "coverage_ci_high": 0.05573509228517199,
+      "kupiec_p": 0.6897036181080995,
+      "independence_p": 2.3264140493848197e-06,
+      "conditional_coverage_p": 1.3243111135823063e-05,
+      "transitions": [
+        [
+          3663,
+          170
+        ],
+        [
+          170,
+          26
+        ]
+      ],
+      "model": "Normal 1000d",
+      "confidence": 0.95,
+      "mean_var": 1.914278557873208,
+      "mean_es": 2.4046197290315487,
+      "mean_tail_residual": 0.6556609891486711
+    },
+    {
+      "n": 4030,
+      "exceptions": 94,
+      "expected": 40.30000000000003,
+      "exception_rate": 0.023325062034739455,
+      "coverage_ci_low": 0.01888916888202224,
+      "coverage_ci_high": 0.028469189830343702,
+      "kupiec_p": 4.1913569961749345e-13,
+      "independence_p": 1.7087291359131116e-07,
+      "conditional_coverage_p": 4.491238347942486e-18,
+      "transitions": [
+        [
+          3854,
+          81
+        ],
+        [
+          81,
+          13
+        ]
+      ],
+      "model": "Normal 1000d",
+      "confidence": 0.99,
+      "mean_var": 2.7139850207319944,
+      "mean_es": 3.1116312346843875,
+      "mean_tail_residual": 0.9185368383178761
+    }
+  ],
+  "monte_carlo_10day": {
+    "0.95": {
+      "var": 9.222704319264581,
+      "es": 14.094348776024791
+    },
+    "0.99": {
+      "var": 16.338446489005094,
+      "es": 23.03609124771167
+    }
+  },
+  "monte_carlo_paths": 100000,
+  "seed": 79,
+  "final_parameters": {
+    "mu": 0.06178984618693887,
+    "omega": 0.01724673049125656,
+    "alpha": 0.18317937097532916,
+    "beta": 0.816820629024665,
+    "nu": 4.547251712132553
+  },
+  "final_fit_diagnostics": {
+    "residual_lb_p": 0.6553859824913578,
+    "squared_residual_lb_p": 0.5136258411279171
+  }
+}

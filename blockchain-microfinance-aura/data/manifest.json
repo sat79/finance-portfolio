@@ -1,0 +1,12 @@
+[
+  {
+    "file": "aura_scores.csv",
+    "sha256": "311c07e2f3db2a1bea877f644df67ac715954a755e3afa1e85a7227db7c9642f",
+    "bytes": 372
+  },
+  {
+    "file": "bass_parameters.csv",
+    "sha256": "140426f0f4e8d1592c1f76834f7432ba17f070831ebfa6739217845cf12cfba9",
+    "bytes": 404
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "status": "Uncalibrated dissertation assumptions; audit illustration, not empirical validation",
+  "seed": 79,
+  "preference_draws": 10000,
+  "aura": [
+    {
+      "case": "Kenya context",
+      "equal_weight_score": 79.4,
+      "reported_rounded_score": 79,
+      "rounding_consistent": true,
+      "share_of_sampled_weights_ranked_first": 0.7485
+    },
+    {
+      "case": "Indonesia context",
+      "equal_weight_score": 66.1,
+      "reported_rounded_score": 66,
+      "rounding_consistent": true,
+      "share_of_sampled_weights_ranked_first": 0.0
+    },
+    {
+      "case": "Argentina context",
+      "equal_weight_score": 76.9,
+      "reported_rounded_score": 77,
+      "rounding_consistent": true,
+      "share_of_sampled_weights_ranked_first": 0.2515
+    }
+  ],
+  "bass_year10": [
+    {
+      "region": "Sub-Saharan Africa",
+      "year10_low": 0.0549171501476262,
+      "year10_mid": 0.15358928036012945,
+      "year10_high": 0.29259252017218723
+    },
+    {
+      "region": "Southeast Asia",
+      "year10_low": 0.12734643244965066,
+      "year10_mid": 0.24634783565664162,
+      "year10_high": 0.40312100913155763
+    },
+    {
+      "region": "Latin America",
+      "year10_low": 0.039103418566634476,
+      "year10_mid": 0.11601211301391291,
+      "year10_high": 0.24775153407098907
+    }
+  ],
+  "bass_time_unit": "Years assumed for this audit; original table does not specify parameter frequency",
+  "fee_arithmetic": {
+    "baseline": 12.3,
+    "blockchain_low": 4.2,
+    "blockchain_high": 8.7,
+    "actual_reduction_low": 0.29268292682926844,
+    "actual_reduction_high": 0.6585365853658537,
+    "stated_reduction_low": 0.35,
+    "stated_reduction_high": 0.65
+  }
+}

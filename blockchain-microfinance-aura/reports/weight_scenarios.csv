@@ -1,0 +1,16 @@
+scenario,case,score
+equal,Kenya context,79.4
+equal,Indonesia context,66.1
+equal,Argentina context,76.9
+accessibility emphasis,Kenya context,79.32
+accessibility emphasis,Indonesia context,66.86
+accessibility emphasis,Argentina context,75.42
+usability emphasis,Kenya context,76.12
+usability emphasis,Indonesia context,63.34
+usability emphasis,Argentina context,77.02000000000001
+reliability emphasis,Kenya context,80.44
+reliability emphasis,Indonesia context,69.26
+reliability emphasis,Argentina context,73.82000000000001
+affordability emphasis,Kenya context,81.72
+affordability emphasis,Indonesia context,64.94000000000001
+affordability emphasis,Argentina context,81.34

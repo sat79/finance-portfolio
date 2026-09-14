@@ -1,0 +1,243 @@
+{
+  "data_sha256": "554ef04003d75e59ad101255878f6e3d51722ca5b8f022c14ecdad07641fd7ef",
+  "quarters": 203,
+  "train_end": "1989Q4",
+  "validation": "1990Q1\u20131999Q4",
+  "test": "2000Q1\u20132009Q3",
+  "target": "US real GDP annualised log growth: 400*log(GDP_t/GDP_t-1), percent",
+  "arima_order": [
+    2,
+    1,
+    0
+  ],
+  "arima_candidates": [
+    {
+      "order": [
+        0,
+        1,
+        0
+      ],
+      "aic": 350.0609526524022,
+      "status": "converged"
+    },
+    {
+      "order": [
+        1,
+        1,
+        0
+      ],
+      "aic": 344.6617647381882,
+      "status": "converged"
+    },
+    {
+      "order": [
+        0,
+        1,
+        1
+      ],
+      "aic": 346.40465247368877,
+      "status": "converged"
+    },
+    {
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "aic": 345.2031440418369,
+      "status": "converged"
+    },
+    {
+      "order": [
+        2,
+        1,
+        0
+      ],
+      "aic": 344.6338105691072,
+      "status": "converged"
+    }
+  ],
+  "var_difference_lags": 1,
+  "vecm_difference_lags": 1,
+  "cointegration_rank": 0,
+  "johansen_trace": [
+    9.66272574848423
+  ],
+  "johansen_critical": [
+    15.4943
+  ],
+  "rank_note": "Fixed from training sample; unrestricted constant, no deterministic time trend in VECM",
+  "stationarity": [
+    {
+      "series": "realgdp",
+      "transform": "log level",
+      "deterministic": "ct",
+      "adf_stat": -2.4370365527259814,
+      "adf_p": 0.3601218838913057,
+      "adf_lags": 2,
+      "kpss_stat": 0.278240869368303,
+      "kpss_p": 0.01,
+      "kpss_lags": 6,
+      "kpss_warning": "The test statistic is outside of the range of p-values available in the look-up table. The actual p-value is smaller than the p-value returned."
+    },
+    {
+      "series": "realgdp",
+      "transform": "log difference",
+      "deterministic": "c",
+      "adf_stat": -5.8129343915955305,
+      "adf_p": 4.35863334680998e-07,
+      "adf_lags": 1,
+      "kpss_stat": 0.12535785601934368,
+      "kpss_p": 0.1,
+      "kpss_lags": 4,
+      "kpss_warning": "The test statistic is outside of the range of p-values available in the look-up table. The actual p-value is greater than the p-value returned."
+    },
+    {
+      "series": "realcons",
+      "transform": "log level",
+      "deterministic": "ct",
+      "adf_stat": -2.291352378636494,
+      "adf_p": 0.4387388905056416,
+      "adf_lags": 3,
+      "kpss_stat": 0.31997017624613083,
+      "kpss_p": 0.01,
+      "kpss_lags": 6,
+      "kpss_warning": "The test statistic is outside of the range of p-values available in the look-up table. The actual p-value is smaller than the p-value returned."
+    },
+    {
+      "series": "realcons",
+      "transform": "log difference",
+      "deterministic": "c",
+      "adf_stat": -4.382002208552265,
+      "adf_p": 0.0003193758770056695,
+      "adf_lags": 2,
+      "kpss_stat": 0.14753455917673708,
+      "kpss_p": 0.1,
+      "kpss_lags": 4,
+      "kpss_warning": "The test statistic is outside of the range of p-values available in the look-up table. The actual p-value is greater than the p-value returned."
+    },
+    {
+      "series": "realinv",
+      "transform": "log level",
+      "deterministic": "ct",
+      "adf_stat": -3.5665995234674277,
+      "adf_p": 0.03278649365600963,
+      "adf_lags": 6,
+      "kpss_stat": 0.1359780131629892,
+      "kpss_p": 0.06855923488335335,
+      "kpss_lags": 6,
+      "kpss_warning": ""
+    },
+    {
+      "series": "realinv",
+      "transform": "log difference",
+      "deterministic": "c",
+      "adf_stat": -5.859983985689743,
+      "adf_p": 3.4284408498939114e-07,
+      "adf_lags": 4,
+      "kpss_stat": 0.041805832281417765,
+      "kpss_p": 0.1,
+      "kpss_lags": 2,
+      "kpss_warning": "The test statistic is outside of the range of p-values available in the look-up table. The actual p-value is greater than the p-value returned."
+    }
+  ],
+  "system_variables": [
+    "realgdp",
+    "realcons"
+  ],
+  "excluded_variable": "realinv: training diagnostics support trend stationarity, so excluded from I(1) system",
+  "train_arima_ljung_box_p": 0.4556522981186807,
+  "validation_selected_model": "VAR",
+  "scores": [
+    {
+      "split": "test",
+      "model": "ARIMA",
+      "n": 39,
+      "rmse": 2.6586557811746374,
+      "mae": 1.9615241615930574,
+      "bias": 1.0720596375139808,
+      "interval_coverage": 0.9487179487179487
+    },
+    {
+      "split": "test",
+      "model": "Historical mean",
+      "n": 39,
+      "rmse": 3.1295548799955855,
+      "mae": 2.183880703062381,
+      "bias": 1.6258608857923276,
+      "interval_coverage": null
+    },
+    {
+      "split": "test",
+      "model": "Random walk",
+      "n": 39,
+      "rmse": 3.1843821942452877,
+      "mae": 2.654933600337491,
+      "bias": -1.6924700427471004,
+      "interval_coverage": null
+    },
+    {
+      "split": "test",
+      "model": "VAR",
+      "n": 39,
+      "rmse": 2.376434907324359,
+      "mae": 1.784630983245836,
+      "bias": 0.9830890834688721,
+      "interval_coverage": 0.9743589743589743
+    },
+    {
+      "split": "test",
+      "model": "VECM",
+      "n": 39,
+      "rmse": 2.376434907324431,
+      "mae": 1.784630983245851,
+      "bias": 0.9830890834688051,
+      "interval_coverage": 0.9743589743589743
+    },
+    {
+      "split": "validation",
+      "model": "ARIMA",
+      "n": 40,
+      "rmse": 1.961194083424874,
+      "mae": 1.5319164171999944,
+      "bias": 0.01785392953266296,
+      "interval_coverage": 1.0
+    },
+    {
+      "split": "validation",
+      "model": "Historical mean",
+      "n": 40,
+      "rmse": 2.179058333994696,
+      "mae": 1.6068482416768048,
+      "bias": 0.10244668440840612,
+      "interval_coverage": null
+    },
+    {
+      "split": "validation",
+      "model": "Random walk",
+      "n": 40,
+      "rmse": 3.9173852290215003,
+      "mae": 3.540278339839311,
+      "bias": -3.2668559006415876,
+      "interval_coverage": null
+    },
+    {
+      "split": "validation",
+      "model": "VAR",
+      "n": 40,
+      "rmse": 1.8916879366401635,
+      "mae": 1.4455870217157771,
+      "bias": -0.06772675566853897,
+      "interval_coverage": 1.0
+    },
+    {
+      "split": "validation",
+      "model": "VECM",
+      "n": 40,
+      "rmse": 1.8916879366402006,
+      "mae": 1.4455870217158129,
+      "bias": -0.06772675566848463,
+      "interval_coverage": 1.0
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "units": "KZT millions; reported geographic scope",
+  "core_scope": "Kazakhstan & Other includes Azerbaijan and Ukraine; not Kazakhstan standalone",
+  "core_revenue_growth": 0.18712942911349884,
+  "core_net_income_growth": 0.0983039909768233,
+  "core_2025_net_income": 1160725.0,
+  "turkiye_2025_net_income": -93018.0,
+  "group_2025_net_income": 1067707.0,
+  "turkiye_loss_as_fraction_of_core_income": 0.08013784488143186,
+  "group_net_income_growth": 0.01028827611526495,
+  "source": "FY2025 Form 20-F, PDF p189 / printed F-35",
+  "limitations": "Acquisition-scope and IAS 29 figures; no organic Turkish growth rate or incremental acquisition valuation is inferred."
+}

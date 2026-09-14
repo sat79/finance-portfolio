@@ -1,41 +1,47 @@
 # Satvik Sahni | Finance Research Portfolio
 
-**MSc Finance, University of Bath · Valuation · Risk · Forecasting · Financial analysis**
+**MSc Finance, University of Bath · Valuation · Credit risk · Forecasting · Financial analysis**
 
-This repository is a recruiter-facing collection of finance research and analytical work. The emphasis is on **financial judgement, transparent assumptions and reproducible analysis** rather than software engineering for its own sake.
+I use financial analysis to test assumptions, understand business performance and explain what the evidence means for a decision. This repository contains six complete, downloadable studies with source files, data, reports and calculation tests.
 
-[GitHub profile](https://github.com/sat79) · [Portfolio website](https://satvik-sahni-finance.deathsatan7777.chatgpt.site) · [LinkedIn](https://www.linkedin.com/in/satviksahnifinance/)
+[GitHub profile](https://github.com/sat79) · [LinkedIn](https://www.linkedin.com/in/satviksahnifinance/)
 
-## Selected finance research
+## Start here
 
-| Project | Financial question | Methods | Case study |
-|---|---|---|---|
-| Kaspi.kz valuation & bank risk | How do payout, FX and lending economics affect shareholder value? | Dividend valuation, scenarios, funding/credit stress, Python, SQL | [Open KSPI](https://satvik-sahni-finance.deathsatan7777.chatgpt.site/kspi.html) |
-| Unilever equity valuation | Which operating and discount-rate assumptions drive value? | FCFF DCF, residual income, comparables, DuPont, sensitivity | [Open Unilever](https://satvik-sahni-finance.deathsatan7777.chatgpt.site/unilever.html) |
-| Financial risk modelling | Do risk forecasts cover the losses that actually occur? | Historical/normal VaR, ES, GARCH-t, backtesting, Monte Carlo | [Open risk study](https://satvik-sahni-finance.deathsatan7777.chatgpt.site/risk.html) |
-| Time-series econometrics | Does multivariate information improve historical GDP forecasts? | ARIMA, VAR/VECM, ADF/KPSS, chronological validation | [Open econometrics](https://satvik-sahni-finance.deathsatan7777.chatgpt.site/econometrics.html) |
-| AURA & blockchain microfinance | When does technical efficiency translate into financial inclusion? | AURA framework, scoring audit, Bass adoption scenarios | [Open AURA](https://satvik-sahni-finance.deathsatan7777.chatgpt.site/aura.html) |
+| Project | Financial question | Evidence |
+|---|---|---|
+| [Consumer lending and credit risk](consumer-lending-credit-risk/) | How do affordability, credit losses and funding costs affect lending economics? | Synthetic applications, chronological evaluation, PD calibration, stress and committee note |
+| [Kaspi.kz valuation and bank risk](kspi-valuation-bank-risk/) | How do payout, FX and lending economics affect shareholder value? | [Excel model](kspi-valuation-bank-risk/models/KSPI-Valuation-and-Bank-Risk.xlsx), dividend scenarios, segment SQL and geographic earnings bridge |
+| [Unilever equity valuation](unilever-equity-valuation/) | Which operating and discount-rate assumptions drive value? | [Excel model](unilever-equity-valuation/models/Unilever-Valuation-Reviewed.xlsx), DCF, residual income and sensitivities |
+| [Financial risk modelling](financial-risk-modelling/) | Do risk forecasts cover losses that actually occur? | Historical/normal VaR, ES, GARCH-t and backtesting |
+| [Time-series econometrics](time-series-econometrics/) | Does multivariate information improve historical GDP forecasts? | ARIMA, VAR/VECM and chronological validation |
+| [AURA and blockchain microfinance](blockchain-microfinance-aura/) | When does technical efficiency translate into inclusion? | Dissertation-derived framework, scoring audit and adoption scenarios |
 
-## What a recruiter can verify
+## What to inspect
 
-- **KSPI:** scenario valuation, segment analysis, a geographic earnings bridge, SQL, tests and workbook checks. Reviewed baseline: Base **$73.11**, Downside **$45.53**, Upside **$95.68** per ADS. These are assumption-led outputs, not price targets.
-- **Unilever:** retrospective FY2024 DCF, residual income and trading comparables. Independent arithmetic checks reproduced **98 saved formula values**.
-- **Risk:** historical, normal and GARCH-t 99% VaR forecasts are tested against realised losses. All three miss the nominal coverage target in this historical sample.
-- **Econometrics:** model choice is separated from the final test period. VAR improves historical test error versus simple benchmarks; selected cointegration rank is zero, so VECM does not manufacture a long-run relationship.
-- **AURA:** the public derivative audits arithmetic, weighting and adoption assumptions without claiming empirical validation.
+Every project exposes `src/`, `data/`, `tests/` and `reports/`. KSPI and Unilever also contain editable workbooks in `models/`. Open a project README for its question, findings, exact run commands and limitations. Download everything with GitHub's **Code → Download ZIP**, or clone:
 
-## Reproducibility and limitations
+```bash
+git clone https://github.com/sat79/finance-portfolio.git
+cd finance-portfolio
+python3 scripts/check_portfolio.py
+```
 
-The linked case studies include downloadable research packages with source code, assumptions, tests, reports and, where relevant, Excel models. The work distinguishes reported data from analyst assumptions and uses checks/tests where they add financial assurance. Passing a test does not validate an investment thesis, source quality or future performance.
+The check runner uses Python 3.10+ and checks the standard-library projects, workbook calculations and all project manifests. To run the numerical studies, install their pinned dependencies as described in their READMEs. Market data for the risk study are reconstructed from the documented dependency rather than redistributed as an unlicensed raw download.
 
-Some projects use historical or frozen data intentionally. They are not live trading recommendations, production risk systems or current company target prices.
+## Financial judgment and scope
+
+- **Credit:** all borrower records and outcomes are synthetic. Calibration deterioration matters despite positive modelled contribution.
+- **KSPI:** baseline scenario values are $73.11 / $45.53 / $95.68 per ADS for Base / Downside / Upside. These are assumptions-based outputs, not live price targets.
+- **Unilever:** a retrospective FY2024 study with 98 independently reproduced saved formula values. Native Excel recalculation is a separate check.
+- **Risk:** the historical backtests reject nominal coverage. A passing calculation test does not rescue a weak risk forecast.
+- **Econometrics:** revised historical data carry hindsight. No real-time forecasting claim is made.
+- **AURA:** a conceptual framework with a quantitative audit; empirical validation remains outstanding.
+
+Reported data, analyst assumptions and new portfolio extensions are distinguished within the studies. None of the work is a production bank system or a current investment recommendation. See [verification scope](reports/Verification.md).
 
 ## About me
 
-I am an MSc Finance graduate from the University of Bath with experience in mortgage valuation operations at Better.com and direct commercial/P&L responsibility as Founder & Manager of Café On The Go. I am targeting Financial Analyst, Risk, Corporate Finance, Investment Banking and fintech roles.
+My experience spans mortgage valuation operations at Better.com and budgeting, pricing, inventory and P&L responsibility as Founder & Manager of Café On The Go, bringing a long-held family business idea to life. I am targeting Financial Analyst, Risk, Corporate Finance, Investment Banking and fintech opportunities.
 
-**Core tools:** Excel · Python · SQL · MATLAB
-
-## Authorship note
-
-Research and code extensions were prepared with AI assistance and then reviewed for financial logic, reproducibility and limitations. Academic material and later portfolio extensions are identified separately rather than presented as the same body of work.
+**Tools:** Excel · Python · SQL · MATLAB

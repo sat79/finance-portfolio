@@ -1,0 +1,12 @@
+{
+  "README.md": "81e74c623ad10715500909788c5f4004a7d521f25b43a9a06645b72634dd2529",
+  "data/README.md": "642248ded01d86963e5c9895156b03ee110bcb4b717a431f19702f0d58b87087",
+  "data/synthetic_applications.csv": "1bdbfd4daa3ce8203b17c78b27e79fcb60301f8e9016f6dfaaa084358f5b78a4",
+  "reports/Credit-Committee-Note.md": "7593fcb63e378a7e8e560c07a85dff96a225479865ef470d5b8175404d0b363a",
+  "reports/calibration.csv": "11dba94532bbe2517ab2476f009d7284297448b6db5e6ed5dd68324b88a5befb",
+  "reports/results.json": "6a930d1a2ccdd38757f0819c345f959f13edf9d1603d6cad4739714de48574b3",
+  "src/analyse.py": "d1957684038b2f49d798342f2ef4671bfcbd02ea796677a12e1971f7113b59d6",
+  "src/generate_data.py": "5606b674e492473fbdc8d7633e7dd0a59d61c047358ab004368cdbb696b7d422",
+  "tests/test_credit.py": "b25d6789aeb3710ed969566085dd318e8cf8ec7e7bb6c2d81d50ca95b2552a4e",
+  "src/verify_package.py": "e0b31d105b6f197b49855935f400358d2c637cbeb00b508063152ab0010f131e"
+}

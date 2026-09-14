@@ -1,0 +1,167 @@
+{
+  "Base": {
+    "value_usd": 73.10726731154458,
+    "terminal_share": 0.5615741814280909,
+    "explicit_pv_usd": 32.0521135146193,
+    "terminal_pv_usd": 41.055153796925275,
+    "cost_of_equity": 0.1355,
+    "terminal_usd_growth": 0.009615384615384581,
+    "cashflows": [
+      {
+        "year": 1,
+        "dividend_kzt": 4400.0,
+        "fx_kzt_per_usd": 504.75600000000003,
+        "dividend_usd": 8.717083105500478,
+        "present_value_usd": 7.676867552180078
+      },
+      {
+        "year": 2,
+        "dividend_kzt": 4840.0,
+        "fx_kzt_per_usd": 529.9938000000001,
+        "dividend_usd": 9.132182301000501,
+        "present_value_usd": 7.082723622820311
+      },
+      {
+        "year": 3,
+        "dividend_kzt": 5227.200000000001,
+        "fx_kzt_per_usd": 556.4934900000001,
+        "dividend_usd": 9.393101795314802,
+        "present_value_usd": 6.415752668340724
+      },
+      {
+        "year": 4,
+        "dividend_kzt": 5593.104000000001,
+        "fx_kzt_per_usd": 584.3181645000001,
+        "dividend_usd": 9.572018019987466,
+        "present_value_usd": 5.7577784949987
+      },
+      {
+        "year": 5,
+        "dividend_kzt": 5928.690240000002,
+        "fx_kzt_per_usd": 613.5340727250001,
+        "dividend_usd": 9.663180096368299,
+        "present_value_usd": 5.1189911762794855
+      }
+    ]
+  },
+  "Downside": {
+    "value_usd": 45.53407186310936,
+    "terminal_share": 0.5300206038570031,
+    "explicit_pv_usd": 21.400075598155958,
+    "terminal_pv_usd": 24.1339962649534,
+    "cost_of_equity": 0.1355,
+    "terminal_usd_growth": 0.009615384615384581,
+    "cashflows": [
+      {
+        "year": 1,
+        "dividend_kzt": 3600.0,
+        "fx_kzt_per_usd": 528.792,
+        "dividend_usd": 6.807969863386738,
+        "present_value_usd": 5.99557011306626
+      },
+      {
+        "year": 2,
+        "dividend_kzt": 3600.0,
+        "fx_kzt_per_usd": 576.3832800000001,
+        "dividend_usd": 6.245843911363979,
+        "present_value_usd": 4.844141822554231
+      },
+      {
+        "year": 3,
+        "dividend_kzt": 3708.0,
+        "fx_kzt_per_usd": 622.4939424000002,
+        "dividend_usd": 5.9566844710230535,
+        "present_value_usd": 4.068583000824289
+      },
+      {
+        "year": 4,
+        "dividend_kzt": 3856.32,
+        "fx_kzt_per_usd": 666.0685183680002,
+        "dividend_usd": 5.789674626041098,
+        "present_value_usd": 3.482616098846701
+      },
+      {
+        "year": 5,
+        "dividend_kzt": 4010.5728000000004,
+        "fx_kzt_per_usd": 706.0326294700803,
+        "dividend_usd": 5.68043548215353,
+        "present_value_usd": 3.0091645628644765
+      }
+    ]
+  },
+  "Upside": {
+    "value_usd": 95.6828782652726,
+    "terminal_share": 0.5867910380599729,
+    "explicit_pv_usd": 39.53702280342728,
+    "terminal_pv_usd": 56.14585546184533,
+    "cost_of_equity": 0.1355,
+    "terminal_usd_growth": 0.009615384615384581,
+    "cashflows": [
+      {
+        "year": 1,
+        "dividend_kzt": 4720.0,
+        "fx_kzt_per_usd": 490.3344,
+        "dividend_usd": 9.626083750191706,
+        "present_value_usd": 8.47739652152506
+      },
+      {
+        "year": 2,
+        "dividend_kzt": 5428.0,
+        "fx_kzt_per_usd": 500.141088,
+        "dividend_usd": 10.852937561490648,
+        "present_value_usd": 8.41730428830162
+      },
+      {
+        "year": 3,
+        "dividend_kzt": 6079.360000000001,
+        "fx_kzt_per_usd": 515.14532064,
+        "dividend_usd": 11.801252494048084,
+        "present_value_usd": 8.06058731485451
+      },
+      {
+        "year": 4,
+        "dividend_kzt": 6687.296000000001,
+        "fx_kzt_per_usd": 530.5996802592,
+        "dividend_usd": 12.603279362575627,
+        "present_value_usd": 7.581148586303423
+      },
+      {
+        "year": 5,
+        "dividend_kzt": 7222.2796800000015,
+        "fx_kzt_per_usd": 546.517670666976,
+        "dividend_usd": 13.215089040370561,
+        "present_value_usd": 7.000586092442659
+      }
+    ]
+  },
+  "funding_expense_kzt_bn": 78.0,
+  "credit_loss_expense_kzt_bn": 73.0,
+  "pretax_stress_kzt_bn": 151.0,
+  "after_tax_stress_kzt_bn": 113.25,
+  "stress_fraction_annualised_h1_income": 0.11085638885190957,
+  "as_of": "2026-09-11",
+  "pe_crosscheck_usd": 116.3255117324014,
+  "segment_analysis": [
+    {
+      "segment": "Fintech",
+      "revenue_growth": 0.2036990951197002,
+      "net_income_growth": 0.08599656699109937,
+      "net_income_change_kzt_mn": 28106.0,
+      "net_margin": 0.23003770738087306
+    },
+    {
+      "segment": "Marketplace",
+      "revenue_growth": 1.635228114600999,
+      "net_income_growth": -0.1969776119402985,
+      "net_income_change_kzt_mn": -68627.0,
+      "net_margin": 0.14484962764150866
+    },
+    {
+      "segment": "Payments",
+      "revenue_growth": 0.12200539263528865,
+      "net_income_growth": 0.13467782299590936,
+      "net_income_change_kzt_mn": 51394.0,
+      "net_margin": 0.6573309691738295
+    }
+  ]
+}
