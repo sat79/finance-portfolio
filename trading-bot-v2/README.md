@@ -1,38 +1,37 @@
 # BTCUSDT strategy research
 
-Current focus: BTCUSDT spot, long only. The project compares explicit trading rules with protective stops, fixed profit targets and realistic cost assumptions. It is research, not a live trading service.
+BTCUSDT spot, long only. Explicit entry rules, protective stops, take profits and cost-aware historical evaluation. Research only; no live orders.
 
 ## Latest executed round
-[BTCUSDT round 2 results](reports/BTC-ROUND-2-RESULTS.md) cover twelve new configurations, with 26 passing implementation tests. The strongest full-period screen was a four-hour compression breakout with a 3R target: 41.2% wins over 51 positions and +6.46% total account return for January 2020 through August 2026. Doubled-cost return was +3.38%.
+[Round 3 results](reports/BTC-ROUND-3-RESULTS.md) compare twelve configurations using daily regimes, confirmed Fibonacci retracements, RSI, hidden divergence, range entries and fixed/adaptive exits across 1h and 4h timeframes.
 
-That result does not establish the requested 60% hit rate. The predeclared rolling combined account lost 17.73% at normal costs and 22.04% at doubled costs. It is rejected for deployment. Read the report for uncertainty, trade counts, full comparisons and limitations.
+The highest-return new full-period screen returned +4.69% from January 2020 through August 2026, with 47.0% wins over 66 positions, 1.47 payoff and 1.30 profit factor. It was selected with hindsight, and one position crossed a data gap. The rolling selection lost 0.71% at normal costs and 1.68% at doubled costs over 23 positions. **The 60% hit-rate target is not established; this strategy is not approved for live deployment.**
+
+Thirty-eight implementation tests passed. An independent GitHub run reproduced all 42 summary rows. Daily regime data now come from separately verified daily archives; execution gaps remain flagged. The report separates this correction from strategy changes and retains the superseded preliminary results.
 
 ## Research record
-- [Round 2 rules recorded before execution](BTC-ROUND-2-SPEC.md).
-- [Latest spreadsheet-ready comparison](reports/btc-round-2-comparison.csv).
-- [Latest screen and rolling results](reports/btc-round-2-results.json).
-- [Original thirteen-configuration results, including earlier ETH comparison](reports/RESULTS-2026-09-14.md).
-- [Original research contract](RESEARCH-SPEC.md).
+- [Round 3 specification and data-method amendment](BTC-ROUND-3-SPEC.md).
+- [Round 3 full results, ledgers and manifests](reports/btc-round-3-full-results.zip).
+- [Round 3 comparison CSV](reports/btc-round-3-comparison.csv).
+- [Round 3 machine-readable snapshot](reports/btc-round-3-results.json).
+- [Round 2 results](reports/BTC-ROUND-2-RESULTS.md).
+- [Original research results](reports/RESULTS-2026-09-14.md).
 - [Krown and Meta Signals public-source review](reports/KROWN-META-SIGNALS-REVIEW.md).
 
-The prior studies remain available; the current workflow evaluates BTC only.
-
 ## Reproduce
-[Open the BTCUSDT notebook in Colab](https://colab.research.google.com/github/sat79/finance-portfolio/blob/research/trading-bot-v2/trading-bot-v2/notebooks/BTCUSDT-Round-2.ipynb), or use Python 3.12:
+[Open the pinned round 3 notebook in Colab](https://colab.research.google.com/github/sat79/finance-portfolio/blob/research/trading-bot-v2/trading-bot-v2/notebooks/BTCUSDT-Round-3.ipynb), or use Python 3.12:
 
 ```sh
 python -m pip install -r trading-bot-v2/requirements.txt
 python -m unittest discover -s trading-bot-v2/tests -v
-python trading-bot-v2/src/btc_round2.py
+python trading-bot-v2/src/btc_round3.py
 ```
 
-The GitHub workflow runs the same checks and attaches data manifests, ledgers, daily equity, all training candidates and summary results. Full run artifacts have 30-day retention; compact result snapshots are permanently saved here.
-
-The original study remains reproducible through notebooks/Run-Research.ipynb, pinned to its original tested source.
+The notebook pins source commit ade55f92b8d4adb35a06187603390ad5e2f62810. [Independent workflow run](https://github.com/sat79/finance-portfolio/actions/runs/34910758348). Full workflow artifacts have 30-day retention; this repository also stores a permanent result archive.
 
 ## Assumptions
-Official Binance five-minute archives from 2018 onward; evaluation begins in 2020. Normal costs are assumed to be 0.10% fees and 0.02% spread/slippage each side. The study also includes zero and doubled costs, next-open entries, conservative stop-first handling, gap flags and cost-aware position sizing.
+Official Binance five-minute and daily archives from 2018 onward; evaluation begins in 2020. Normal costs are 0.10% fees and 0.02% slippage each side; zero and doubled costs are replayed. Initial account 10,000 USDT, 0.5% planned trade risk, 25% initial position allocation, no leverage. Downtrend policy is cash, not short selling.
 
-Rolling selection uses preceding data only, but all historical periods have already influenced research. The tests establish implementation checks, not profitable future performance. Quantity steps and minimum notional remain fixed research assumptions. Sparse samples, missing data, approximate fills and multiple-testing bias limit conclusions.
+Next-open entries, confirmed pivots, conservative stop-first intrabar handling, cost-aware stops and quantity sizing are implemented. All historical periods are research-exposed; multiple testing, sparse samples, fixed lot-size assumptions and unobserved execution gaps limit conclusions. The tests verify implementation, not future profitability.
 
 No exchange credentials, proprietary signal archive, live execution or recurring monitoring are included.

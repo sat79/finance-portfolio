@@ -1,0 +1,296 @@
+[
+  {
+    "config": "H-1h-rsi-fixed1.5",
+    "cost": 0,
+    "total_return_pct": -1.2123430139106883,
+    "trades": 448,
+    "win_rate_pct": 40.401785714285715
+  },
+  {
+    "config": "H-1h-rsi-fixed1.5",
+    "cost": 1,
+    "total_return_pct": -23.45926357603163,
+    "trades": 438,
+    "win_rate_pct": 38.35616438356164
+  },
+  {
+    "config": "H-1h-rsi-fixed1.5",
+    "cost": 2,
+    "total_return_pct": -27.733914196031982,
+    "trades": 299,
+    "win_rate_pct": 37.792642140468224
+  },
+  {
+    "config": "H-1h-rsi-fixed2",
+    "cost": 0,
+    "total_return_pct": 5.195936477982355,
+    "trades": 416,
+    "win_rate_pct": 36.05769230769231
+  },
+  {
+    "config": "H-1h-rsi-fixed2",
+    "cost": 1,
+    "total_return_pct": -17.110788013237112,
+    "trades": 417,
+    "win_rate_pct": 34.05275779376499
+  },
+  {
+    "config": "H-1h-rsi-fixed2",
+    "cost": 2,
+    "total_return_pct": -26.9039093529303,
+    "trades": 348,
+    "win_rate_pct": 34.195402298850574
+  },
+  {
+    "config": "H-1h-rsi-adaptive",
+    "cost": 0,
+    "total_return_pct": 0.14334558176758438,
+    "trades": 458,
+    "win_rate_pct": 36.02620087336245
+  },
+  {
+    "config": "H-1h-rsi-adaptive",
+    "cost": 1,
+    "total_return_pct": -22.078033690646603,
+    "trades": 462,
+    "win_rate_pct": 31.818181818181817
+  },
+  {
+    "config": "H-1h-rsi-adaptive",
+    "cost": 2,
+    "total_return_pct": -40.26067912822129,
+    "trades": 455,
+    "win_rate_pct": 24.615384615384617
+  },
+  {
+    "config": "H-1h-div-fixed1.5",
+    "cost": 0,
+    "total_return_pct": 3.4893969815088965,
+    "trades": 241,
+    "win_rate_pct": 43.56846473029046
+  },
+  {
+    "config": "H-1h-div-fixed1.5",
+    "cost": 1,
+    "total_return_pct": -9.677789047897678,
+    "trades": 233,
+    "win_rate_pct": 40.772532188841204
+  },
+  {
+    "config": "H-1h-div-fixed1.5",
+    "cost": 2,
+    "total_return_pct": -12.868267872575089,
+    "trades": 156,
+    "win_rate_pct": 40.38461538461539
+  },
+  {
+    "config": "H-1h-div-fixed2",
+    "cost": 0,
+    "total_return_pct": 8.14712917985716,
+    "trades": 232,
+    "win_rate_pct": 38.36206896551724
+  },
+  {
+    "config": "H-1h-div-fixed2",
+    "cost": 1,
+    "total_return_pct": -4.621346377613977,
+    "trades": 234,
+    "win_rate_pct": 36.324786324786324
+  },
+  {
+    "config": "H-1h-div-fixed2",
+    "cost": 2,
+    "total_return_pct": -10.754416198872917,
+    "trades": 189,
+    "win_rate_pct": 37.03703703703704
+  },
+  {
+    "config": "H-1h-div-adaptive",
+    "cost": 0,
+    "total_return_pct": 2.4707982297679676,
+    "trades": 248,
+    "win_rate_pct": 46.37096774193548
+  },
+  {
+    "config": "H-1h-div-adaptive",
+    "cost": 1,
+    "total_return_pct": -11.2917222106229,
+    "trades": 250,
+    "win_rate_pct": 40.8
+  },
+  {
+    "config": "H-1h-div-adaptive",
+    "cost": 2,
+    "total_return_pct": -22.17417453868318,
+    "trades": 239,
+    "win_rate_pct": 32.63598326359833
+  },
+  {
+    "config": "H-4h-rsi-fixed1.5",
+    "cost": 0,
+    "total_return_pct": 3.1307305821607123,
+    "trades": 115,
+    "win_rate_pct": 43.47826086956522
+  },
+  {
+    "config": "H-4h-rsi-fixed1.5",
+    "cost": 1,
+    "total_return_pct": -1.704682051954276,
+    "trades": 115,
+    "win_rate_pct": 42.608695652173914
+  },
+  {
+    "config": "H-4h-rsi-fixed1.5",
+    "cost": 2,
+    "total_return_pct": -5.096374205493415,
+    "trades": 113,
+    "win_rate_pct": 43.36283185840708
+  },
+  {
+    "config": "H-4h-rsi-fixed2",
+    "cost": 0,
+    "total_return_pct": 5.2544397211964355,
+    "trades": 112,
+    "win_rate_pct": 40.17857142857143
+  },
+  {
+    "config": "H-4h-rsi-fixed2",
+    "cost": 1,
+    "total_return_pct": 0.35315252817855747,
+    "trades": 112,
+    "win_rate_pct": 39.285714285714285
+  },
+  {
+    "config": "H-4h-rsi-fixed2",
+    "cost": 2,
+    "total_return_pct": -3.797967199608776,
+    "trades": 112,
+    "win_rate_pct": 39.285714285714285
+  },
+  {
+    "config": "H-4h-rsi-adaptive",
+    "cost": 0,
+    "total_return_pct": 4.847029285017879,
+    "trades": 116,
+    "win_rate_pct": 39.6551724137931
+  },
+  {
+    "config": "H-4h-rsi-adaptive",
+    "cost": 1,
+    "total_return_pct": -0.43830572169391013,
+    "trades": 117,
+    "win_rate_pct": 38.46153846153846
+  },
+  {
+    "config": "H-4h-rsi-adaptive",
+    "cost": 2,
+    "total_return_pct": -6.673686449654015,
+    "trades": 118,
+    "win_rate_pct": 33.05084745762712
+  },
+  {
+    "config": "H-4h-div-fixed1.5",
+    "cost": 0,
+    "total_return_pct": 7.0913748039464375,
+    "trades": 67,
+    "win_rate_pct": 52.23880597014925
+  },
+  {
+    "config": "H-4h-div-fixed1.5",
+    "cost": 1,
+    "total_return_pct": 3.8217799446619516,
+    "trades": 67,
+    "win_rate_pct": 50.74626865671642
+  },
+  {
+    "config": "H-4h-div-fixed1.5",
+    "cost": 2,
+    "total_return_pct": 1.805393937704003,
+    "trades": 65,
+    "win_rate_pct": 52.30769230769231
+  },
+  {
+    "config": "H-4h-div-fixed2",
+    "cost": 0,
+    "total_return_pct": 7.977877187124949,
+    "trades": 66,
+    "win_rate_pct": 48.484848484848484
+  },
+  {
+    "config": "H-4h-div-fixed2",
+    "cost": 1,
+    "total_return_pct": 4.690306267170685,
+    "trades": 66,
+    "win_rate_pct": 46.96969696969697
+  },
+  {
+    "config": "H-4h-div-fixed2",
+    "cost": 2,
+    "total_return_pct": 1.9511597736968644,
+    "trades": 66,
+    "win_rate_pct": 46.96969696969697
+  },
+  {
+    "config": "H-4h-div-adaptive",
+    "cost": 0,
+    "total_return_pct": 3.7957041691963678,
+    "trades": 66,
+    "win_rate_pct": 51.515151515151516
+  },
+  {
+    "config": "H-4h-div-adaptive",
+    "cost": 1,
+    "total_return_pct": 0.753024638272648,
+    "trades": 66,
+    "win_rate_pct": 50
+  },
+  {
+    "config": "H-4h-div-adaptive",
+    "cost": 2,
+    "total_return_pct": -2.1000153367240038,
+    "trades": 66,
+    "win_rate_pct": 43.93939393939394
+  },
+  {
+    "config": "BASELINE-LEGACY-E-4h-3R",
+    "cost": 1,
+    "total_return_pct": 6.455767028641213,
+    "trades": 51,
+    "win_rate_pct": 41.1764705882353
+  },
+  {
+    "config": "BASELINE-LEGACY-E-4h-3R",
+    "cost": 2,
+    "total_return_pct": 3.383918147976628,
+    "trades": 51,
+    "win_rate_pct": 37.254901960784316
+  },
+  {
+    "config": "BASELINE-DAILY-E-4h-3R",
+    "cost": 1,
+    "total_return_pct": 4.048308941502232,
+    "trades": 89,
+    "win_rate_pct": 34.831460674157306
+  },
+  {
+    "config": "BASELINE-DAILY-E-4h-3R",
+    "cost": 2,
+    "total_return_pct": -0.34940884178995546,
+    "trades": 89,
+    "win_rate_pct": 32.58426966292135
+  },
+  {
+    "config": "ROLLING",
+    "cost": 1,
+    "total_return_pct": -0.7067528985259419,
+    "trades": 23,
+    "win_rate_pct": 43.47826086956522
+  },
+  {
+    "config": "ROLLING",
+    "cost": 2,
+    "total_return_pct": -1.6843333294404017,
+    "trades": 23,
+    "win_rate_pct": 43.47826086956522
+  }
+]
