@@ -23,6 +23,15 @@ class ResearchTests(unittest.TestCase):
     def sim(self, market, f, cost=1):
         return m.simulate({"BTCUSDT": market}, [("BTCUSDT", f)], market.index[0],
                           market.index[-1]+pd.Timedelta(minutes=5), cost)
+    def test_shifted_candles_are_not_rounded(self):
+        index = pd.to_datetime(["2024-01-01 00:00:00+00:00",
+                                "2024-01-01 00:03:14.789+00:00",
+                                "2024-01-01 00:10:00+00:00"], format="mixed")
+        frame = pd.DataFrame({"open":[100]*3,"high":[101]*3,"low":[99]*3,"close":[100]*3},index=index)
+        clean, audit = m.validate_grid(frame,"2024-01-01","2024-01-01 00:15")
+        self.assertEqual(audit["off_grid_bars"],1)
+        self.assertTrue(clean.iloc[:2].isna().all().all())
+        self.assertEqual(clean.close.iloc[2],100)
     def test_ambiguous_stop_first(self):
         self.assertEqual(m.exit_fill((100, 110, 90, 103), 95, 105), (95, "stop"))
     def test_gap_stop_uses_open(self):

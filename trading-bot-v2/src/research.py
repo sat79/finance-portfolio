@@ -86,15 +86,28 @@ def download(symbol):
             (frame.low <= frame[["open", "close", "high"]].min(axis=1)) &
             (frame.low > 0)).all():
         raise ValueError("Malformed OHLC")
-    grid = pd.date_range(START, END, freq="5min", inclusive="left", tz="UTC")
-    if not frame.index.isin(grid).all():
-        raise ValueError(f"Off-grid or unexpected candles: {frame.index[~frame.index.isin(grid)][:12].tolist()}; bounds={frame.index.min()} to {frame.index.max()}")
-    missing = grid.difference(frame.index)
-    frame = frame.reindex(grid)  # NaN is never a tradable price.
+    frame, audit = validate_grid(frame, START, END)
     manifest = {"symbol": symbol, "retrieved_at": pd.Timestamp.now(tz="UTC").isoformat(),
-                "missing_bars": len(missing), "missing_times": missing.astype(str).tolist(),
-                "archives": [p[1] for p in parts]}
+                **audit, "archives": [p[1] for p in parts]}
     return frame, manifest
+
+def validate_grid(frame, start, end):
+    grid = pd.date_range(start, end, freq="5min", inclusive="left", tz="UTC")
+    if frame.index.has_duplicates:
+        raise ValueError("Duplicate candles")
+    if ((frame.index < grid[0]) | (frame.index >= pd.Timestamp(end, tz="UTC"))).any():
+        raise ValueError("Archive contains dates outside the requested range")
+    offgrid = frame.index[~frame.index.isin(grid)]
+    # Preserve archive hashes and rejected timestamps. Never round shifted candles:
+    # their underlying OHLC spans a different time window.
+    blocked = offgrid.floor("5min").union(offgrid.floor("5min")+pd.Timedelta(minutes=5))
+    frame = frame.loc[frame.index.isin(grid)].reindex(grid)
+    frame.loc[frame.index.isin(blocked), :] = np.nan
+    missing = frame.index[frame.close.isna()]
+    audit = {"off_grid_bars": len(offgrid), "off_grid_times": offgrid.astype(str).tolist(),
+             "missing_bars": len(missing), "missing_times": missing.astype(str).tolist(),
+             "handling": "Reject shifted candles and block overlapping grid intervals; no price imputation"}
+    return frame, audit
 
 def indicators(base, tf):
     count = int(pd.Timedelta(tf).value // STEP)
@@ -144,7 +157,7 @@ def earlier_gate(f, higher, rising=True):
     right = pd.DataFrame({"end": higher.end.to_numpy(), "gate": h.to_numpy()})
     left = pd.DataFrame({"end": f.end.to_numpy()})
     joined = pd.merge_asof(left, right, on="end", direction="backward", allow_exact_matches=False)
-    return pd.Series(joined.gate.fillna(False).to_numpy(dtype=bool), index=f.index)
+    return pd.Series(joined.gate.eq(True).to_numpy(dtype=bool), index=f.index)
 
 def divergence_signal(f, gate):
     low, high, close = (f[c].to_numpy() for c in ("low", "high", "close"))
@@ -214,8 +227,8 @@ def prepare(base, configs=CONFIGS):
         # End timestamps map to the next 5-minute bar open; events are not forward-filled.
         aligned = events.reindex(base.index)
         result[config["name"]] = {
-            "signal": aligned.signal.fillna(False).to_numpy(dtype=bool),
-            "exit": aligned.exit.fillna(False).to_numpy(dtype=bool),
+            "signal": aligned.signal.eq(True).to_numpy(dtype=bool),
+            "exit": aligned.exit.eq(True).to_numpy(dtype=bool),
             "atr": aligned.atr.to_numpy(), "structure": aligned.structure.to_numpy(),
             "daily_high": aligned.high.to_numpy(), "config": config}
     return result
