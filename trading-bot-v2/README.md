@@ -1,6 +1,8 @@
 # BTCUSDT strategy research
 
-BTCUSDT spot, long only. Explicit entry rules, protective stops, take profits and cost-aware historical evaluation. Research only; no live orders.
+Current authorized research scope: **BTCUSDT long and short perpetual futures, maximum 5x leverage**, with stop-based position sizing and 0.5% planned risk per trade. See the [futures research amendment](FUTURES-RESEARCH-AMENDMENT.md). This futures version has not yet been backtested.
+
+The completed studies below evaluated BTCUSDT spot, long only, with protective stops, take profits and cost-aware historical evaluation. Research only; no live orders.
 
 ## Latest executed round
 [Round 3 results](reports/BTC-ROUND-3-RESULTS.md) compare twelve configurations using daily regimes, confirmed Fibonacci retracements, RSI, hidden divergence, range entries and fixed/adaptive exits across 1h and 4h timeframes.
