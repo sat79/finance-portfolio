@@ -15,7 +15,11 @@ from pathlib import Path
 
 import requests
 
-SUPPORTED = {"AAPL": ("Apple Inc.", "0000320193"), "MSFT": ("Microsoft Corporation", "0000789019")}
+SUPPORTED = {
+    "KSPI": ("Kaspi.kz", "0001985487"),
+    "AAPL": ("Apple Inc.", "0000320193"),
+    "MSFT": ("Microsoft Corporation", "0000789019"),
+}
 TICKERS_URL = "https://www.sec.gov/files/company_tickers.json"
 MAX_RESPONSE_BYTES = 25 * 1024 * 1024
 _RATE_LOCK = threading.Lock()
@@ -182,7 +186,7 @@ class SECClient:
 
         ticker = ticker.strip().upper()
         if ticker not in SUPPORTED:
-            raise SECError("Initial SEC coverage is AAPL and MSFT only.")
+            raise SECError("SEC coverage is KSPI, AAPL and MSFT only.")
         mapping = self._request(TICKERS_URL, refresh)
         matches = [
             v for v in mapping.data.values() if isinstance(v, dict) and v.get("ticker") == ticker

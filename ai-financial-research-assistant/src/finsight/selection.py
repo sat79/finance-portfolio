@@ -8,22 +8,14 @@ from decimal import Decimal
 
 from pydantic import ValidationError
 
-from finsight.models import INSTANT_METRICS, Dataset, Fact, Metric, Period, Warning, filing_url
+from finsight.models import INSTANT_METRICS, Dataset, Fact, Period, Warning, filing_url
+from finsight.profiles import US_CONCEPTS, profile_for
 from finsight.sec import SECError
 
-CONCEPTS = {
-    Metric.REVENUE: ("RevenueFromContractWithCustomerExcludingAssessedTax", "SalesRevenueNet"),
-    Metric.OPERATING_PROFIT: ("OperatingIncomeLoss",),
-    Metric.NET_INCOME: ("NetIncomeLoss",),
-    Metric.OPERATING_CASH_FLOW: ("NetCashProvidedByUsedInOperatingActivities",),
-    Metric.CAPEX: ("PaymentsToAcquirePropertyPlantAndEquipment",),
-    Metric.CASH: ("CashAndCashEquivalentsAtCarryingValue",),
-    Metric.ASSETS: ("Assets",),
-    Metric.LIABILITIES: ("Liabilities",),
-}
+CONCEPTS = US_CONCEPTS  # Public alias retained for US GAAP regression tests.
 POLICY = (
-    "Latest available annual 10-K/10-K/A observation for each exact fiscal interval and metric. "
-    "Annual endpoints and fiscal-year labels anchored to the company's own 10-K disclosures. "
+    "Latest available annual filing observation for each exact fiscal interval and metric. "
+    "Annual endpoints and fiscal-year labels anchored to the company's own annual disclosures. "
     "Same-date conflicts stay missing. Different concept values stay missing. "
     "Competing observations retained. This is not a historical point-in-time series."
 )
@@ -38,6 +30,9 @@ def select_annual(
     fetched_at: datetime,
     source_hashes=None,
 ) -> Dataset:
+    profile = profile_for(cik)
+    concepts_by_metric = profile.concepts
+    forms = {profile.annual_form, profile.annual_form + "/A"}
     warnings = []
 
     def warn(code, message, end=None, metric=None):
@@ -57,20 +52,20 @@ def select_annual(
         filings = [
             dict(zip(("accn", "form", "end", "filed"), row))
             for row in zip(*columns)
-            if row[1] in {"10-K", "10-K/A"}
+            if row[1] in forms
         ]
-        taxonomy = companyfacts["facts"]["us-gaap"]
+        taxonomy = companyfacts["facts"][profile.taxonomy]
         if not isinstance(taxonomy, dict) or not isinstance(company, str):
             raise SECError("Unexpected SEC financial schema.")
     except (KeyError, TypeError, ValueError) as exc:
         if isinstance(exc, SECError):
             raise
         raise SECError(
-            "SEC response lacks the required company or US GAAP annual filing schema."
+            "SEC response lacks the required company or supported annual filing schema."
         ) from exc
 
     raw = []
-    for metric, concepts in CONCEPTS.items():
+    for metric, concepts in concepts_by_metric.items():
         for concept in concepts:
             try:
                 units = taxonomy.get(concept, {}).get("units", {})
@@ -78,7 +73,7 @@ def select_annual(
                     for row in rows:
                         if not isinstance(row, dict):
                             raise SECError("Malformed SEC fact observation.")
-                        if row.get("form") not in {"10-K", "10-K/A"} or row.get("fp") != "FY":
+                        if row.get("form") not in forms or row.get("fp") != "FY":
                             continue
                         if any(row.get(k) for k in ("segment", "dimensions")):
                             warn(
@@ -98,14 +93,16 @@ def select_annual(
         except (ValueError, TypeError):
             warn("INVALID_REPORT_DATE", "A filing has an invalid report date; excluded.")
             continue
-        own = {f["accn"] for f in filings if f["end"] == endpoint and f["form"] == "10-K"}
+        own = {
+            f["accn"] for f in filings if f["end"] == endpoint and f["form"] == profile.annual_form
+        }
         anchors = set()
         for metric, _, unit, row in raw:
             if (
                 row.get("accn") not in own
                 or row.get("end") != endpoint
                 or metric in INSTANT_METRICS
-                or unit != "USD"
+                or unit != profile.currency
             ):
                 continue
             try:
@@ -125,7 +122,7 @@ def select_annual(
         start, year = anchors.pop()
         periods.append(Period(start=start, end=end, fiscal_year=year))
     if not periods:
-        raise SECError("No unambiguous supported annual periods found in recent 10-K filings.")
+        raise SECError("No unambiguous supported annual periods found in recent annual filings.")
     observations = {}
     selected = []
     for period in sorted(periods, key=lambda p: p.end):
@@ -137,10 +134,10 @@ def select_annual(
                 continue
             if metric in INSTANT_METRICS and row.get("start"):
                 continue
-            if unit != "USD":
+            if unit != profile.currency:
                 warn(
                     "UNSUPPORTED_UNIT",
-                    f"Excluded {concept} unit {unit}; SEC MVP requires USD.",
+                    f"Excluded {concept} unit {unit}; expected {profile.currency}.",
                     period.end,
                     metric,
                 )
@@ -151,7 +148,7 @@ def select_annual(
                     company=company,
                     cik=cik,
                     metric=metric,
-                    concept=f"us-gaap:{concept}",
+                    concept=f"{profile.taxonomy}:{concept}",
                     value=Decimal(str(row["val"])),
                     original_value=str(row["val"]),
                     currency=unit,
@@ -170,7 +167,7 @@ def select_annual(
                     source_id=(
                         f"synthetic:{concept}:{accession}"
                         if origin == "synthetic_fixture"
-                        else f"https://data.sec.gov/api/xbrl/companyfacts/CIK{cik}.json#us-gaap/{concept}"
+                        else f"https://data.sec.gov/api/xbrl/companyfacts/CIK{cik}.json#{profile.taxonomy}/{concept}"
                     ),
                     status="synthetic" if origin == "synthetic_fixture" else "reported",
                 )
@@ -184,7 +181,7 @@ def select_annual(
                 continue
             observations[fact.id] = fact
             by_metric[metric].append(fact)
-        for metric in Metric:
+        for metric in concepts_by_metric:
             candidates = list({f.id: f for f in by_metric[metric]}.values())
             if not candidates:
                 warn(
@@ -220,16 +217,16 @@ def select_annual(
             latest.sort(
                 key=lambda f: (
                     -f.filed.toordinal(),
-                    CONCEPTS[metric].index(f.concept.split(":")[1]),
+                    concepts_by_metric[metric].index(f.concept.split(":")[1]),
                     f.accession,
                 )
             )
             winner = latest[0]
             selected.append(winner.id)
-            if winner.form == "10-K/A":
+            if winner.form.endswith("/A"):
                 warn(
                     "AMENDMENT_SELECTED",
-                    "Selected a later 10-K/A observation; review amendment scope.",
+                    "Selected an amended annual observation; review amendment scope.",
                     period.end,
                     metric,
                 )
@@ -249,9 +246,26 @@ def select_annual(
     warn("POLICY", POLICY)
     warn(
         "SCOPE",
-        "AAPL/MSFT, USD, US GAAP, consolidated companyfacts and recent 10-K history only. "
+        f"{profile.accounting_basis}, {profile.currency}, consolidated CompanyFacts and recent {profile.annual_form} history only. "
         "Custom tags, segments, short transition years and accounting-basis changes need manual review.",
     )
+    if profile.financial_group:
+        warn(
+            "KSPI_REVENUE_BASIS",
+            "KSPI revenue is consolidated IFRS revenue after customer rewards. Segment revenue before rewards is a different measure; the older portfolio study uses that segment basis.",
+        )
+        warn(
+            "KSPI_SCOPE_CHANGE",
+            "FY2025 includes Hepsiburada and IAS 29 effects. Reported growth is not organic or constant-currency growth.",
+        )
+        warn(
+            "FINANCIAL_GROUP",
+            "KSPI includes lending and deposit-taking. CFO is not distributable cash. The simple CFO less PP&E proxy is suppressed; broad investment purchases remain separate.",
+        )
+        warn(
+            "PROFIT_DEFINITION",
+            "Group net income and income attributable to owners of the parent are separate. Pretax profit is not operating profit; no substitute operating margin is manufactured.",
+        )
     return Dataset(
         company=company,
         cik=cik,
@@ -263,4 +277,7 @@ def select_annual(
         warnings=tuple(warnings),
         policy=POLICY,
         source_hashes=source_hashes or {},
+        accounting_basis=profile.accounting_basis,
+        financial_group=profile.financial_group,
+        metrics=tuple(concepts_by_metric),
     )

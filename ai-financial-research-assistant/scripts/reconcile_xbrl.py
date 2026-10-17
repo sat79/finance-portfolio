@@ -2,7 +2,7 @@
 
 This deliberately does not import the application's CompanyFacts parser or calculations.
 Download the filing_xml_url values in tests/fixtures/reconciled_companies.json as
-AAPL-instance.xml and MSFT-instance.xml, then pass their directory with --filings.
+AAPL-instance.xml, MSFT-instance.xml and KSPI-instance.xml, then pass their directory with --filings.
 """
 
 import argparse
@@ -38,7 +38,12 @@ def main():
             matches = []
             tag = fact["concept"].split(":", 1)[1]
             for element in root:
-                if not element.tag.endswith("}" + tag) or "fasb.org/us-gaap" not in element.tag:
+                namespace = (
+                    "xbrl.ifrs.org"
+                    if fact["concept"].startswith("ifrs-full:")
+                    else "fasb.org/us-gaap"
+                )
+                if not element.tag.endswith("}" + tag) or namespace not in element.tag:
                     continue
                 context = contexts[element.attrib["contextRef"]]
                 if (
@@ -51,7 +56,10 @@ def main():
                 if context.findtext("x:period/x:endDate", namespaces=NS) != fact["end"]:
                     continue
                 unit = units[element.attrib["unitRef"]]
-                if unit.findtext("x:measure", namespaces=NS) not in ("iso4217:USD", "USD"):
+                if unit.findtext("x:measure", namespaces=NS) not in (
+                    f"iso4217:{fact['currency']}",
+                    fact["currency"],
+                ):
                     continue
                 matches.append((Decimal(element.text), element.attrib["contextRef"]))
             values = {value for value, _ in matches}
@@ -74,19 +82,19 @@ def main():
                     "app_value": fact["value"],
                     "independent_xbrl_value": str(expected),
                     "difference": str(difference),
-                    "currency": "USD",
+                    "currency": fact["currency"],
                     "concept": tag,
                     "accession": fact["accession"],
                     "source_url": company["filing_xml_url"],
                     "context_id": matches[0][1],
                     "source_sha256": source_hash,
                     "status": "MATCH",
-                    "notes": "Compared to standalone filing XBRL, consolidated annual context and USD unit; not an independent audit.",
+                    "notes": "Compared to standalone filing XBRL, consolidated annual context and reported currency unit; not an independent audit.",
                 }
             )
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open("w", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(comparisons[0]))
+        writer = csv.DictWriter(handle, fieldnames=list(comparisons[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(comparisons)
     print(

@@ -22,8 +22,16 @@ class Metric(str, Enum):
     CASH = "cash"
     ASSETS = "assets"
     LIABILITIES = "liabilities"
+    PARENT_NET_INCOME = "parent_net_income"
+    PRETAX_PROFIT = "pretax_profit"
+    INVESTMENT_PURCHASES = "investment_purchases"
 
 
+BASE_METRICS = tuple(
+    metric
+    for metric in Metric
+    if metric not in {Metric.PARENT_NET_INCOME, Metric.PRETAX_PROFIT, Metric.INVESTMENT_PURCHASES}
+)
 INSTANT_METRICS = {Metric.CASH, Metric.ASSETS, Metric.LIABILITIES}
 LABELS = {
     Metric.REVENUE: "Revenue",
@@ -34,6 +42,9 @@ LABELS = {
     Metric.CASH: "Cash and cash equivalents",
     Metric.ASSETS: "Total assets",
     Metric.LIABILITIES: "Total liabilities",
+    Metric.PARENT_NET_INCOME: "Profit attributable to owners of the parent",
+    Metric.PRETAX_PROFIT: "Profit before tax",
+    Metric.INVESTMENT_PURCHASES: "Purchases of property, equipment and intangibles",
 }
 
 
@@ -74,7 +85,7 @@ class Fact(Record):
     source_fiscal_year: int | None = None
     fiscal_period: Literal["FY"] = "FY"
     kind: Literal["instant", "duration"]
-    form: Literal["10-K", "10-K/A", "CSV"]
+    form: Literal["10-K", "10-K/A", "20-F", "20-F/A", "CSV"]
     filed: date | None = None
     accession: str | None = None
     source_url: str | None = None
@@ -101,7 +112,7 @@ class Fact(Record):
         if self.status == "reported":
             if not self.accession or not re.fullmatch(r"\d{10}-\d{2}-\d{6}", self.accession):
                 raise ValueError("SEC reported data require a valid accession.")
-            if self.form not in {"10-K", "10-K/A"} or self.filed is None:
+            if self.form not in {"10-K", "10-K/A", "20-F", "20-F/A"} or self.filed is None:
                 raise ValueError("SEC reported data require filing metadata.")
             expected_url = filing_url(self.cik, self.accession)
             if self.source_url != expected_url:
@@ -133,6 +144,9 @@ class Dataset(Record):
     selected_ids: tuple[str, ...]
     warnings: tuple[Warning, ...] = ()
     policy: str
+    accounting_basis: Literal["US GAAP", "IFRS", "user-provided"] = "US GAAP"
+    financial_group: bool = False
+    metrics: tuple[Metric, ...] = BASE_METRICS
     source_hashes: dict[str, str] = Field(default_factory=dict)
 
     @model_validator(mode="after")

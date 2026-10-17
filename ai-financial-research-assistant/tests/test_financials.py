@@ -168,10 +168,15 @@ def test_frozen_real_company_reconciliation():
             assert result(data, 2025, "fcf_proxy").value == D("98767000000")
             assert round(result(data, 2025, "operating_margin").value, 4) == D("31.9708")
             assert round(result(data, 2024, "revenue_growth").value, 4) == D("2.0220")
-        else:
+        elif company["ticker"] == "MSFT":
             assert result(data, 2026, "fcf_proxy").value == D("66987000000")
             assert round(result(data, 2026, "operating_margin").value, 4) == D("46.7808")
             assert round(result(data, 2025, "revenue_growth").value, 4) == D("14.9322")
+        else:
+            assert company["ticker"] == "KSPI"
+            assert result(data, 2025, "fcf_proxy").value is None
+            assert round(result(data, 2025, "net_margin").value, 4) == D("26.3887")
+            assert data.accounting_basis == "IFRS" and data.financial_group
 
 
 def test_cash_proxy_preserves_schema_precision():

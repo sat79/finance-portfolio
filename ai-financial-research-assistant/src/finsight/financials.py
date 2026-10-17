@@ -51,7 +51,9 @@ def calculate(dataset: Dataset) -> list[Calculation]:
         facts: list[Fact] = [f for f in inputs if f is not None]
         warning = issue
         value = None
-        if len(facts) != len(inputs):
+        if warning:
+            pass
+        elif len(facts) != len(inputs):
             warning = "Missing required input; no value calculated."
         elif len({(f.currency, f.unit) for f in facts}) != 1:
             warning = "Incompatible currencies or units."
@@ -126,6 +128,12 @@ def calculate(dataset: Dataset) -> list[Calculation]:
             "operating_cash_flow - purchases_of_PPE (positive outflow)",
             [cfo, capex],
             fcf_proxy,
+            (
+                "Not presented for a financial group: lending/deposit cash flows and regulatory capital "
+                "make this simple proxy unsuitable as distributable cash."
+            )
+            if dataset.financial_group
+            else None,
         )
     return results
 

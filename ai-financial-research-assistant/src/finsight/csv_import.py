@@ -11,7 +11,7 @@ from decimal import Decimal
 
 from pydantic import ValidationError
 
-from finsight.models import INSTANT_METRICS, Dataset, Fact, Metric, Period, Warning
+from finsight.models import BASE_METRICS, INSTANT_METRICS, Dataset, Fact, Metric, Period, Warning
 
 MAX_CSV_BYTES = 1024 * 1024
 MAX_ROWS = 1000
@@ -35,7 +35,7 @@ class ImportError(ValueError):
     """CSV does not meet the documented annual-fact schema."""
 
 
-def import_csv(content: bytes) -> Dataset:
+def import_csv(content: bytes, *, financial_group: bool = False) -> Dataset:
     if not content or len(content) > MAX_CSV_BYTES:
         raise ImportError("CSV must contain data and be at most 1 MiB.")
     try:
@@ -112,7 +112,7 @@ def import_csv(content: bytes) -> Dataset:
                     "Value must be a plain finite decimal, without commas, exponent or formula."
                 )
             value = Decimal(row["value"])
-            if metric == Metric.CAPEX and value < 0:
+            if metric in {Metric.CAPEX, Metric.INVESTMENT_PURCHASES} and value < 0:
                 raise ValueError(
                     "capex must be a positive outflow; confirm and correct the source sign."
                 )
@@ -145,7 +145,7 @@ def import_csv(content: bytes) -> Dataset:
     if any(current.start <= prior.end for prior, current in zip(ordered, ordered[1:])):
         raise ImportError("Annual reporting intervals overlap; review the supplied periods.")
     for period in periods.values():
-        for metric in Metric:
+        for metric in BASE_METRICS:
             if not any(f.end == period.end and f.metric == metric for f in facts):
                 warnings.append(
                     Warning(
@@ -167,6 +167,12 @@ def import_csv(content: bytes) -> Dataset:
             warnings=tuple(warnings),
             policy="User-provided annual data; no SEC verification or independent source confirmation.",
             source_hashes={"uploaded_csv": digest},
+            accounting_basis="user-provided",
+            financial_group=financial_group or identity[1] == "0001985487",
+            metrics=BASE_METRICS
+            + tuple(
+                m for m in Metric if m not in BASE_METRICS and any(f.metric == m for f in facts)
+            ),
         )
     except ValidationError as exc:
         raise ImportError(exc.errors()[0]["msg"]) from exc

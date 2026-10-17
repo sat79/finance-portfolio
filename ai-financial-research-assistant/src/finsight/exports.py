@@ -63,10 +63,16 @@ def tables(dataset: Dataset, calculations: list[Calculation]) -> dict[str, list[
             "company": dataset.company,
             "cik": dataset.cik,
             "origin": dataset.origin,
+            "accounting_basis": dataset.accounting_basis,
+            "financial_group": dataset.financial_group,
             "fetched_at": dataset.fetched_at,
             "policy": dataset.policy,
             "source_hashes": dataset.source_hashes,
-            "fcf_definition": "Operating cash flow less purchases of property, plant and equipment; not FCFF.",
+            "fcf_definition": (
+                "Suppressed for financial groups; CFO is not distributable cash."
+                if dataset.financial_group
+                else "Operating cash flow less purchases of property, plant and equipment; not FCFF."
+            ),
             "precision": "Exact decimal strings retained in CSV/XLSX. Parse as numeric for further calculations.",
             "text_safety": "Formula-like text is prefixed with an apostrophe in spreadsheet exports.",
             "limitations": "Limited concepts/companies; no point-in-time guarantee, FX conversion, cause inference or investment recommendations.",

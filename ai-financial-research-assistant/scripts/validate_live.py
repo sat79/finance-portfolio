@@ -10,7 +10,7 @@ from pathlib import Path
 from finsight.exports import csv_bundle
 from finsight.financials import calculate
 from finsight.models import Metric
-from finsight.sec import SECClient, SECError
+from finsight.sec import SUPPORTED, SECClient, SECError
 
 
 def main():
@@ -20,18 +20,28 @@ def main():
     args.output.mkdir(parents=True, exist_ok=True)
     outcomes = []
     evidence = []
-    for ticker in ("AAPL", "MSFT"):
+    for ticker in SUPPORTED:
         try:
             data = SECClient().load(ticker, refresh=True)
             if len(data.periods) < 3:
                 raise SECError("Fewer than three unambiguous annual periods.")
             for period in data.periods[-3:]:
-                required = {
-                    Metric.REVENUE,
-                    Metric.OPERATING_PROFIT,
-                    Metric.OPERATING_CASH_FLOW,
-                    Metric.CAPEX,
-                }
+                required = (
+                    {
+                        Metric.REVENUE,
+                        Metric.NET_INCOME,
+                        Metric.OPERATING_CASH_FLOW,
+                        Metric.INVESTMENT_PURCHASES,
+                        Metric.PARENT_NET_INCOME,
+                    }
+                    if data.financial_group
+                    else {
+                        Metric.REVENUE,
+                        Metric.OPERATING_PROFIT,
+                        Metric.OPERATING_CASH_FLOW,
+                        Metric.CAPEX,
+                    }
+                )
                 available = {f.metric for f in data.selected if f.end == period.end}
                 if not required <= available:
                     raise SECError(
@@ -77,7 +87,7 @@ def main():
     (args.output / "status.json").write_text(json.dumps(summary, indent=2) + "\n")
     if evidence:
         with (args.output / "reconciliation-to-review.csv").open("w", newline="") as handle:
-            writer = csv.DictWriter(handle, fieldnames=list(evidence[0]))
+            writer = csv.DictWriter(handle, fieldnames=list(evidence[0]), lineterminator="\n")
             writer.writeheader()
             writer.writerows(evidence)
     print(json.dumps(summary, indent=2))
