@@ -132,7 +132,8 @@ if dataset.financial_group:
         "The simple free-cash-flow proxy is not presented as distributable cash. "
         "Operating profit is not inferred from pretax profit."
     )
-if dataset.cik == "0001985487":
+verified_kspi = dataset.cik == "0001985487" and dataset.origin in {"sec_live", "sec_cache"}
+if verified_kspi:
     st.info(
         "KSPI revenue is consolidated IFRS revenue after customer rewards. Segment revenue before "
         "rewards is a different measure. FY2025 includes Hepsiburada and IAS 29 effects; reported "
@@ -144,6 +145,11 @@ if dataset.origin == "synthetic_fixture":
     )
 elif dataset.origin == "csv":
     st.warning("User-provided data. Source references have not been verified by FinSight.")
+    if dataset.cik == "0001985487":
+        st.warning(
+            "This CSV identifies KSPI, but its revenue definition and accounting basis have not "
+            "been verified. Confirm after-rewards revenue and group versus parent profit yourself."
+        )
 if len(dataset.periods) < 3:
     st.warning("Fewer than three annual periods available; multi-year analysis is limited.")
 
@@ -161,7 +167,7 @@ with financials:
     rows = []
     for metric in dataset.metrics:
         label = LABELS[metric]
-        if dataset.cik == "0001985487" and metric == Metric.REVENUE:
+        if verified_kspi and metric == Metric.REVENUE:
             label = "Consolidated IFRS revenue (after rewards)"
         elif dataset.financial_group and metric == Metric.NET_INCOME:
             label = "Group net income / loss (including non-controlling interests)"
@@ -183,7 +189,8 @@ with financials:
             fact = lookup.get((period.end, metric))
             row[LABELS[metric]] = float(fact.value) / 1_000_000 if fact else None
         chart.append(row)
-    st.write("Financial trends (millions of the reported currency; rounded only for display)")
+    currency = next(iter({f.currency for f in dataset.selected}), "reported currency")
+    st.write(f"Financial trends ({currency} millions; rounded only for display)")
     st.line_chart(pd.DataFrame(chart).set_index("Fiscal period"))
 with ratios:
     st.subheader("Calculated metrics")
@@ -211,6 +218,7 @@ with ratios:
         }
         for p in dataset.periods
     ]
+    st.write("Ratios and growth (%) — fiscal period ends")
     st.line_chart(pd.DataFrame(trend).set_index("Period end"))
     st.info(
         "Revenue growth compares consecutive compatible fiscal years. Margins divide profit by revenue. "
@@ -272,6 +280,8 @@ with exports:
         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
     )
     st.caption(
-        "Amounts are exact decimal strings to preserve precision. Excel users can convert selected amount columns "
-        "to numbers. Formula-like source text is escaped for spreadsheet safety."
+        "Excel amounts are numbers when they fit its 15-significant-digit precision; larger-precision amounts "
+        "remain text. Percentages are numeric and rounded to 15 significant digits. exact_value preserves "
+        "every Decimal as text; value_storage explains the choice. CSV preserves exact decimal text. "
+        "Identifiers stay text, and formula-like source text is escaped."
     )

@@ -5,6 +5,7 @@ import os
 import zipfile
 from pathlib import Path
 
+from openpyxl import load_workbook
 from playwright.sync_api import sync_playwright
 
 base = Path(__file__).resolve().parents[1]
@@ -25,6 +26,11 @@ with sync_playwright() as p:
         page.get_by_role("button", name="Fetch SEC annual data").click()
         page.get_by_role("heading", name=company["dataset"]["company"], exact=True).wait_for(
             timeout=60000
+        )
+        page.get_by_role("tab", name="Financial statements", exact=True).click()
+        page.locator('[data-testid="stDataFrame"] canvas').first.wait_for(timeout=30000)
+        page.locator('[data-testid="stVegaLiteChart"]').first.locator("svg, canvas").first.wait_for(
+            timeout=30000
         )
         page.get_by_role("tab", name="Ratios & trends").click()
         page.get_by_role("heading", name="Calculated metrics").wait_for()
@@ -47,5 +53,25 @@ with sync_playwright() as p:
                 checks += 1
         print(
             f"PASS: {company['ticker']} live/cache browser load, ratios, sources, CSV download; {checks} exported financial facts match independent filing reconciliation."
+        )
+        with page.expect_download() as download:
+            page.get_by_role("button", name="Download Excel workbook").click()
+        with open(download.value.path(), "rb") as file:
+            workbook = load_workbook(file)
+        cells = list(workbook["financials"])
+        exported = [dict(zip([c.value for c in cells[0]], row)) for row in cells[1:]]
+        for year, metrics in company["expected"].items():
+            for metric, value in metrics.items():
+                row = next(
+                    r
+                    for r in exported
+                    if str(r["fiscal_year"].value) == year and r["metric"].value == metric
+                )
+                assert row["value"].data_type == "n" and row["value"].value == int(value)
+                assert row["exact_value"].data_type == "s" and row["exact_value"].value == value
+                assert row["cik"].value == company["dataset"]["cik"]
+        assert all(c.data_type != "f" for sheet in workbook for row in sheet for c in row)
+        print(
+            f"PASS: {company['ticker']} XLSX browser download; {checks} numeric amounts, exact text and identifiers preserved; no formulas."
         )
     browser.close()

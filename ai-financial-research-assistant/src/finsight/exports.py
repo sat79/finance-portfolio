@@ -7,7 +7,7 @@ import io
 import json
 import zipfile
 from datetime import date, datetime
-from decimal import Decimal
+from decimal import Decimal, localcontext
 from enum import Enum
 
 from openpyxl import Workbook
@@ -73,7 +73,13 @@ def tables(dataset: Dataset, calculations: list[Calculation]) -> dict[str, list[
                 if dataset.financial_group
                 else "Operating cash flow less purchases of property, plant and equipment; not FCFF."
             ),
-            "precision": "Exact decimal strings retained in CSV/XLSX. Parse as numeric for further calculations.",
+            "precision": (
+                "CSV retains exact decimals. XLSX value cells use numbers for amounts with at most "
+                "15 significant digits; higher-precision amounts remain text. Percentage calculations "
+                "are rounded to 15 significant digits. XLSX exact_value retains the original Decimal "
+                "as text; value_storage describes each decision. Percent values are already multiplied "
+                "by 100 (31.97 means 31.97%, not 3197%). Identifiers remain text."
+            ),
             "text_safety": "Formula-like text is prefixed with an apostrophe in spreadsheet exports.",
             "limitations": "Limited concepts/companies; no point-in-time guarantee, FX conversion, cause inference or investment recommendations.",
         }.items()
@@ -104,6 +110,20 @@ def csv_bundle(dataset: Dataset, calculations: list[Calculation]) -> bytes:
     return output.getvalue()
 
 
+def excel_value(value: Decimal | None, *, percentage: bool = False):
+    """Excel has 15 significant decimal digits; preserve unsafe source amounts as text."""
+    if value is None:
+        return None, "missing"
+    digits = "".join(str(d) for d in value.as_tuple().digits).rstrip("0")
+    if len(digits) > 15 and not percentage:
+        return str(value), "exact text: exceeds Excel's 15 significant digits"
+    with localcontext() as context:
+        context.prec = 15
+        rounded = +value
+    number = int(rounded) if rounded == rounded.to_integral_value() else float(rounded)
+    return number, "number: rounded to 15 significant digits" if rounded != value else "number"
+
+
 def excel_bytes(dataset: Dataset, calculations: list[Calculation]) -> bytes:
     workbook = Workbook()
     workbook.remove(workbook.active)
@@ -111,9 +131,29 @@ def excel_bytes(dataset: Dataset, calculations: list[Calculation]) -> bytes:
         sheet = workbook.create_sheet(name)
         if not rows:
             continue
-        sheet.append(list(rows[0]))
+        has_value = name in {"financials", "calculations", "sources"}
+        columns = list(rows[0]) + (["exact_value", "value_storage"] if has_value else [])
+        sheet.append(columns)
         for row in rows:
-            sheet.append([safe_cell(v) for v in row.values()])
+            values = {key: safe_cell(value) for key, value in row.items()}
+            if has_value:
+                values["value"], storage = excel_value(
+                    row["value"], percentage=name == "calculations" and row["unit"] == "percent"
+                )
+                # These strings originate from validated Decimal values, never executable input.
+                values["exact_value"] = str(row["value"]) if row["value"] is not None else None
+                values["value_storage"] = storage
+            sheet.append([values[key] for key in columns])
+            if has_value:
+                cell = sheet.cell(sheet.max_row, columns.index("value") + 1)
+                if cell.data_type == "n" and cell.value is not None:
+                    cell.number_format = (
+                        '0.00"%"'
+                        if row["unit"] == "percent"
+                        else "#,##0"
+                        if isinstance(cell.value, int)
+                        else "#,##0.00########"
+                    )
         sheet.freeze_panes = "A2"
         sheet.auto_filter.ref = sheet.dimensions
         for column in sheet.columns:

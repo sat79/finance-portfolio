@@ -74,3 +74,21 @@ def test_kspi_default_and_financial_group_explanations(monkeypatch):
     assert app.header[0].value == "Joint Stock Company Kaspi.kz"
     assert any("after customer rewards" in i.value for i in app.info)
     assert any("distributable cash" in w.value for w in app.warning)
+
+
+def test_kspi_csv_does_not_claim_verified_ifrs_revenue_basis():
+    from finsight.csv_import import import_csv
+
+    content = (APP.parents[1] / "data/examples/valid_synthetic.csv").read_bytes()
+    content = content.replace(b"0000000001", b"0001985487")
+    data = import_csv(content)
+    assert data.financial_group
+    app = AppTest.from_file(str(APP)).run()
+    app.session_state["dataset"] = data
+    app.run()
+    assert not app.exception
+    assert not any("KSPI revenue is consolidated IFRS" in i.value for i in app.info)
+    assert any("revenue definition" in w.value for w in app.warning)
+    assert (
+        "Consolidated IFRS revenue (after rewards)" not in app.dataframe[0].value["Metric"].tolist()
+    )

@@ -40,8 +40,10 @@ def import_csv(content: bytes, *, financial_group: bool = False) -> Dataset:
         raise ImportError("CSV must contain data and be at most 1 MiB.")
     try:
         text = content.decode("utf-8-sig")
-        if "\x00" in text:
-            raise ImportError("CSV contains binary/null characters.")
+        if re.search(r"[\x00-\x08\x0b\x0c\x0e-\x1f\ufffe\uffff]", text):
+            raise ImportError(
+                "CSV contains unsupported control/XML characters; remove them and retry."
+            )
         reader = csv.DictReader(io.StringIO(text), strict=True)
         if reader.fieldnames != list(COLUMNS):
             raise ImportError(
