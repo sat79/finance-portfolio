@@ -1,5 +1,13 @@
 # Changelog
 
+## Phase 1 quality and usability review — 17 October 2026
+
+- Numeric XLSX value cells with 15-significant-digit safeguards, exact Decimal backups, explicit storage labels, preserved text identifiers and formula-injection protection.
+- Rejected CSV control/XML characters that could crash exports; stopped unverified KSPI CSVs inheriting SEC-specific accounting-basis claims.
+- Named currencies/percentage units in chart captions; retained KSPI's financial-group controls.
+- Added a local startup helper, Intel Mac guide, unchecked three-company/Excel acceptance checklist, quality-review findings and ranked Phase 2 proposal.
+- Validation increased from 80 to 102 passing tests; fresh SEC retrieval and the 48-value historical reconciliation repeated; browser checks now inspect numeric XLSX downloads for all three companies. No native Mac or desktop Excel execution claimed.
+
 ## 0.1.0 — 17 October 2026 — scoped research MVP, review candidate
 
 - Audited existing financial projects and preserved the learning notebook.

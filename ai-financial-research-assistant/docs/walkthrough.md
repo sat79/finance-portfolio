@@ -19,10 +19,12 @@ On GitHub, select branch `feat/finsight-research-mvp` and open this project. Sta
 3. Open **Financial statements**. FY2023 revenue is 1,200 USD, operating profit 96 USD, CFO −20 USD, and PP&E purchases 30 USD. These are teaching numbers.
 4. Open **Ratios & trends**. Independently check: `(1,200 / 1,000 − 1) × 100 = 20%` growth; `96 / 1,200 × 100 = 8%` operating margin; `−20 − 30 = −50` cash-flow proxy. Margin declined from 10% to 8%, a **2 percentage-point** change.
 5. Open **Sources & warnings**. Inspect status, period, input source reference and observation ID. There is no invented SEC filing URL for the fictional data.
-6. Open **Export**, download the CSV bundle or XLSX and inspect financials, calculations, sources, warnings and metadata. Match a calculation's `input_ids` to source `fact_id`s. Numeric columns are exact decimal strings; convert chosen columns to numbers in Excel when doing arithmetic there.
+6. Open **Export**, download the CSV bundle or XLSX and inspect financials, calculations, sources, warnings and metadata. Match a calculation's `input_ids` to source `fact_id`s. XLSX `value` cells are numeric when their precision is safe; `exact_value` preserves full Decimal text and `value_storage` explains any rounding/text fallback. Percent values already mean percent, so do not apply Excel's multiplying Percentage format again. CSV retains exact decimals.
 7. Switch to **Upload CSV**, select `data/examples/valid_synthetic.csv`, inspect the preview and click **Analyse validated CSV**. This import is labelled user-provided. Try `invalid_negative_capex.csv`; it must explain the positive-outflow convention and reject the file.
 
 ## Analyse a real company when SEC access is enabled
+
+For your own Mac, use [Mac setup](mac-setup.md) and the [three-company acceptance checklist](acceptance-test.md), which provides historical expected figures and desktop Excel arithmetic checks. Your exercises remain unchecked.
 
 1. Configure `SEC_USER_AGENT` with your real contact email in the local shell, then restart the app.
 2. Choose **SEC company → KSPI** (the default); AAPL and MSFT are also available, then **Fetch SEC annual data**.

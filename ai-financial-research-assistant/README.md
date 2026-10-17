@@ -16,6 +16,8 @@ No paid API, database or credentials are needed for the CSV/example workflow. Th
 
 ## Install (Python 3.12)
 
+**First time on an Intel Mac?** Follow the [step-by-step Mac setup](docs/mac-setup.md), then the [Apple → Microsoft → KSPI acceptance checklist](docs/acceptance-test.md). Native macOS and desktop Excel execution remain untested here; the guide distinguishes those checks from Linux validation.
+
 From the repository root:
 
 ```bash
@@ -33,6 +35,8 @@ Use `python3` if it is already Python 3.12. A separate environment avoids confli
 ```bash
 python -m streamlit run app/main.py
 ```
+
+Or run `bash scripts/start.sh`: it uses the project environment, prompts for SEC contact identification when needed, and binds the server to your own computer. It does not install dependencies, save the email, or automatically execute `.env`.
 
 Open the local address printed by Streamlit on your own machine. Select **Synthetic example → Load fictional example** for the fully offline walkthrough, or **Upload CSV** to supply your own data. Navigate **Financial statements → Ratios & trends → Sources & warnings → Export**. Both example CSVs are in `data/examples/`. CSV uploads are user-provided, never SEC-verified.
 
@@ -62,6 +66,9 @@ To trace a figure, open **Sources & warnings**, find its metric and period, and 
 ## Learn and inspect
 
 - [Beginner walkthrough and one exercise](docs/walkthrough.md)
+- [Intel Mac setup](docs/mac-setup.md) and [your acceptance checklist](docs/acceptance-test.md)
+- [Phase 1 quality review and fixes](docs/quality-review.md)
+- [Ranked Phase 2 proposal — awaiting approval](docs/phase-2-proposal.md)
 - [Architecture/audit and ordered backlog](docs/audit-and-plan.md)
 - [Financial methodology and annual selection](docs/methodology.md)
 - [KSPI reporting definitions and financial-group controls](docs/kspi-methodology.md)

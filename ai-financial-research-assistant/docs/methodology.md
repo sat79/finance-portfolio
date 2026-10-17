@@ -39,7 +39,7 @@ These tags are not an exhaustive accounting ontology. Revenue concepts are not s
 - Margin movement = difference of percentages, expressed in **percentage points**.
 - Missing/zero/invalid denominators return no calculated result and an explanatory warning. Missing inputs never become zero.
 
-Decimal arithmetic preserves source amounts and avoids binary-float rounding of input values. Ratios use Python Decimal's normal 28 significant-digit precision; rounding to two places occurs only for display/commentary. Charts convert to floats for presentation. Exports retain decimal strings, formulas and input observation IDs.
+Decimal arithmetic preserves source amounts and avoids binary-float rounding of input values. Ratios use Python Decimal's normal 28 significant-digit precision; UI/commentary display two places. Charts convert to floats for presentation. CSV retains exact decimals, formula descriptions and input observation IDs. XLSX uses numeric amounts up to 15 significant digits, and rounds percentage calculations to 15 significant digits. Larger-precision source amounts remain text. `exact_value` always preserves the pre-conversion Decimal string; `value_storage` records the decision. No spreadsheet formulas are executed or generated.
 
 For KSPI, operating profit and PP&E-only capex remain missing, and the simple cash-flow proxy is suppressed. IFRS group revenue after rewards, group profit, parent-attributable profit, pretax profit and broader investment purchases are distinct observations. Reported growth includes acquisition/scope effects and is not labelled organic.
 
