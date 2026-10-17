@@ -80,6 +80,6 @@ for name, body in [
     ("invalid_negative_capex.csv", [rows[4][:9] + [-50] + rows[4][10:]]),
 ]:
     with (ROOT / "data/examples" / name).open("w", newline="") as handle:
-        writer = csv.writer(handle)
+        writer = csv.writer(handle, lineterminator="\n")
         writer.writerow(header)
         writer.writerows(body)

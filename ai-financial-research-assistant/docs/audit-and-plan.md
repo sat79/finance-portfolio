@@ -8,7 +8,7 @@ Audit performed 17 October 2026 against portfolio commit `53287b8` on Linux/Pyth
 |---|---|---|
 | Learning notebook + learning log | Preserve both. Reuse the revenue-growth, margin and percentage-point definitions; implement finite-input and period checks in a separate package. | Fictional teaching data; notebook functions do not validate provenance or units. Exercises remain unchecked. |
 | Unilever | Read `verify_model.py`, valuation tests, README and validation report. Reuse independent expected-result and sensitivity-test patterns. | 98 saved formula comparisons establish arithmetic, not source correctness. Peer inputs, equity bridge and residual-income assumptions require further work. No DCF copied into Phase 1. |
-| KSPI | Read `analyse.py`, tests and validation report. Reuse strict schemas, explicit assumptions, undefined-ratio handling and deterministic functions. | Dividend/FX/capital assumptions are scenario-specific. A financial institution model is outside this operating-company MVP. Cached Excel results are not native Excel recalculation. |
+| KSPI | Read `analyse.py`, tests and validation report. Reuse strict schemas, explicit assumptions, undefined-ratio handling and deterministic functions. | Dividend/FX/capital assumptions are scenario-specific. The old bank valuation is not copied; the user-requested KSPI IFRS research profile is developed separately with financial-group controls. Cached Excel results are not native Excel recalculation. |
 | Consumer lending | Read calculation, loader and tests plus credit committee note. Reuse chronological separation, duplicate detection and legitimate-loss handling. | All borrower data are synthetic; lending economics are not corporate reporting metrics. No customer records imported. |
 
 Earlier environment onboarding passed 63 existing portfolio tests and the workbook checks. Those results do not establish that the models are suitable for new companies. This milestone adds its own tests and does not import sibling `analyse.py` modules, whose repeated names would otherwise collide.
@@ -21,20 +21,17 @@ Pydantic validates boundaries. `Decimal` retains source precision. pandas is use
 
 Python 3.12 is the reproducible environment target. The app has its own virtual environment because the portfolio numerical studies have a different pinned dependency set. The original notebook and other projects remain intact. No licence is added.
 
-## SEC feasibility and current blocker
+## SEC feasibility and access policy
 
-Attempted the official API documentation page, CompanyFacts endpoint and identified live requests. This cloud proxy returned HTTP 403 / CONNECT denial before CompanyFacts could be retrieved. Consequently **current official documentation, fair-access policy and redistribution terms could not be verified from this runtime**, and no real-company reconciliation is complete. Links to verify before public deployment:
+Live retrieval succeeded after the required domain settings became available. The official API, access guidance and privacy/security policy were read on 17 October 2026:
 
 - https://www.sec.gov/search-filings/edgar-application-programming-interfaces
-- https://www.sec.gov/os/accessing-edgar-data
+- https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data
 - https://www.sec.gov/about/privacy-information
-- https://www.sec.gov/files/company_tickers.json
-- https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json
-- https://data.sec.gov/submissions/CIK0000320193.json
 
-The connector uses the documented SEC endpoint shapes, a configurable identifying User-Agent, at most one request per second per process (including retries), a 24-hour cache and no third-party mirrors. The 1 req/s choice is deliberately conservative; it is not a claim that the current SEC limit was verified. Multi-process deployments must coordinate aggregate limits before deployment.
+The API documentation states that CompanyFacts aggregates non-custom taxonomy observations applying to the entire filing entity, that no API key is needed, and that submissions include at least one year or 1,000 recent filings. Older archives require separate requests and are outside this MVP. The access guidance requests an identifying User-Agent with a contact email; the privacy/security policy sets a maximum of 10 requests/second across machines and may block excessive/unclassified automation. FinSight uses 1 request/second per process, a 24-hour cache and bounded retries. Multiple processes sharing an egress address need aggregate coordination before deployment.
 
-`www.sec.gov`, `data.sec.gov` and `api.github.com` were added to the cloud configuration draft. Saving that draft does not apply it to the running network policy. No raw real-company dataset is redistributed. Fixture values are explicitly fictional and have no real filing links. Git HTTPS read access worked; the GitHub API was denied by the network proxy.
+The cloud configuration draft includes `www.sec.gov`, `data.sec.gov` and `api.github.com`. Live requests to these destinations were verified. The project bundles only a small factual reconciliation sample and synthetic fixtures, not whole company filings or full SEC datasets. Access guidance is not a blanket copyright licence for every company-authored document; no such licence is asserted. Public hosting and wider redistribution require a separate review of the then-current terms and content rights.
 
 ## Acceptance and manageable milestones
 
@@ -42,15 +39,13 @@ The connector uses the documented SEC endpoint shapes, a configurable identifyin
 2. **Usable workflow:** Streamlit company selection, loading/error states, financials, ratios, source review, CSV preview and downloads. Exercise the interface in a real browser as well as AppTest.
 3. **Evidence/review:** pinned environment, scoped CI, walkthrough, uncompleted learning exercises, validation evidence, feature-branch commits and PR if access permits.
 
-Phase 1 is **not complete** until Apple and Microsoft each have at least three annual periods retrieved, selected figures reconciled to official disclosures and the real-company user workflow checked. Offline tests validate engineering behaviour, not authentic financial inputs.
+Acceptance requires live KSPI/Apple/Microsoft retrieval, at least three annual periods, source reconciliation and a user-workflow check in addition to offline tests. See `validation.md` and `reconciliation.csv` for completed evidence; tests do not establish universal financial-data correctness.
 
 ## Remaining backlog, in order
 
-- Apply the saved network additions and retry official documentation and live data.
-- Run `scripts/validate_live.py`; investigate any schema/selection differences without relaxing financial controls merely to pass.
-- Independently reconcile selected revenue, operating income, CFO and PP&E purchases for three periods per company; populate `docs/reconciliation.csv` with actual evidence and discrepancies.
-- Complete the live company UI walkthrough and resolve any material issues.
-- Publish the feature branch and create a review PR if GitHub access allows; never merge automatically.
-- Gather user feedback after the verified MVP. Phase 2 concept enrichment, Phase 3 documents, Phase 4 AI, Phase 5 valuation and deployment remain separate future work.
+- Review this scoped MVP and its reconciliation evidence; merge only after the owner's approval.
+- Gather user feedback on source review, missing-data messages and export usability. No time-saving claims have been measured.
+- Extend coverage only with company/concept-specific evidence and tests, as Phase 2.
+- Keep Phase 3 documents, Phase 4 AI, Phase 5 valuation and deployment as separate future work.
 
-No financial assumption needs a user decision for this scope. SEC identification is local runtime configuration, supplied separately from code. No paid services are introduced.
+The user explicitly requested all three companies, including KSPI; its IFRS/KZT/20-F profile extends the initial US GAAP scope without introducing valuation assumptions. SEC identification is local runtime configuration, supplied separately from code. No paid services were introduced.
