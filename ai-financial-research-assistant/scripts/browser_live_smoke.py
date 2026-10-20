@@ -18,6 +18,7 @@ with sync_playwright() as p:
     )
     page = browser.new_page(viewport={"width": 1440, "height": 1100})
     page.goto(os.environ.get("FINSIGHT_BASE_URL", "http://127.0.0.1:8502"))
+    page.get_by_text("SEC company", exact=True).click()
     page.get_by_role("button", name="Fetch SEC annual data").wait_for()
     for company in expected:
         labels = {"KSPI": "Kaspi.kz", "AAPL": "Apple Inc.", "MSFT": "Microsoft Corporation"}

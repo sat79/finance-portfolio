@@ -194,6 +194,7 @@ class Calculation(Record):
     input_ids: tuple[str, ...]
     status: Literal["calculated"] = "calculated"
     warning: str | None = None
+    review_warnings: tuple[str, ...] = ()
 
     @field_validator("value")
     @classmethod

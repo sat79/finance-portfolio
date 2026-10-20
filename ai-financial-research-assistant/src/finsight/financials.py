@@ -5,6 +5,24 @@ from decimal import Decimal, localcontext
 from finsight.models import Calculation, Dataset, Fact, Metric, Period
 
 
+def review_notes(dataset: Dataset, facts: list[Fact]) -> tuple[str, ...]:
+    """Propagate source uncertainty without confusing it with a blocked calculation."""
+    return tuple(
+        dict.fromkeys(
+            f"{w.code}: {w.message}"
+            for w in dataset.warnings
+            if w.code not in {"POLICY", "SCOPE"}
+            and (
+                w.period_end is None
+                or any(
+                    w.period_end == f.end and (w.metric is None or w.metric == f.metric)
+                    for f in facts
+                )
+            )
+        )
+    )
+
+
 def _finite(*values: Decimal) -> None:
     if any(not isinstance(value, Decimal) or not value.is_finite() for value in values):
         raise ValueError("Inputs must be finite Decimal values.")
@@ -79,6 +97,7 @@ def calculate(dataset: Dataset) -> list[Calculation]:
                 formula=formula,
                 input_ids=tuple(f.id for f in facts),
                 warning=warning,
+                review_warnings=review_notes(dataset, facts),
             )
         )
 
@@ -144,6 +163,17 @@ def commentary(dataset: Dataset, results: list[Calculation]) -> list[str]:
     lookup = {(r.period_end, r.metric): r for r in results}
     periods = sorted(dataset.periods, key=lambda p: p.end)
     for index, period in enumerate(periods):
+        notes = tuple(
+            dict.fromkeys(
+                note
+                for result in results
+                if result.period_end == period.end
+                for note in result.review_warnings
+            )
+        )
+        if notes:
+            lines.append(f"{period.label}: review limitations — " + " | ".join(notes))
+
         growth = lookup[(period.end, "revenue_growth")].value
         if growth is not None:
             direction = (

@@ -12,6 +12,7 @@ with sync_playwright() as p:
     )
     page = browser.new_page(viewport={"width": 1440, "height": 1000})
     page.goto(os.environ.get("FINSIGHT_BASE_URL", "http://127.0.0.1:8501"))
+    page.get_by_text("SEC company", exact=True).click()
     page.get_by_text("No analysis loaded.", exact=False).wait_for()
     page.get_by_text("Synthetic example", exact=True).click()
     page.get_by_role("button", name="Load fictional example").click()

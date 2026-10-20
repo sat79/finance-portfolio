@@ -10,14 +10,24 @@ from finsight.examples import synthetic_example
 from finsight.exports import csv_bundle, excel_bytes, tables
 from finsight.financials import calculate, commentary
 from finsight.models import LABELS, Metric
+from finsight.research.ui import render_research
 from finsight.sec import SUPPORTED, SECClient, SECError
 
 ROOT = Path(__file__).resolve().parents[1]
 st.set_page_config(page_title="FinSight | Financial research", page_icon="📊", layout="wide")
 st.title("FinSight — Financial Research & Valuation Workspace")
-st.caption("Research MVP · deterministic financial analysis · AI and valuation are planned")
+st.caption(
+    "Company research · cited evidence · deterministic financial analysis · optional model narrative"
+)
 st.write("Choose a source, review annual figures, check the evidence, then export your analysis.")
-mode = st.radio("Data source", ["SEC company", "Upload CSV", "Synthetic example"], horizontal=True)
+mode = st.radio(
+    "Data source",
+    ["Company research", "SEC company", "Upload CSV", "Synthetic example"],
+    horizontal=True,
+)
+if mode == "Company research":
+    render_research()
+    st.stop()
 ticker = (
     st.selectbox(
         "Supported company (search by ticker)",
@@ -180,6 +190,19 @@ with financials:
         rows.append(row)
     st.dataframe(pd.DataFrame(rows), hide_index=True, width="stretch")
     st.caption(
+        "Source/review limitations for the financial table (reported does not mean independently verified):"
+    )
+    st.dataframe(
+        pd.DataFrame(
+            [
+                w.model_dump(mode="json")
+                for w in dataset.warnings
+                if w.code not in {"POLICY", "SCOPE"}
+            ]
+        ),
+        hide_index=True,
+    )
+    st.caption(
         "Income and cash-flow metrics cover each fiscal interval. Cash, assets and liabilities are year-end balances."
     )
     chart = []
@@ -204,6 +227,7 @@ with ratios:
                 "Unit": result.unit,
                 "Formula": result.formula,
                 "Warning": result.warning or "",
+                "Review limitations": "; ".join(result.review_warnings),
             }
         )
     st.dataframe(pd.DataFrame(display), hide_index=True, width="stretch")

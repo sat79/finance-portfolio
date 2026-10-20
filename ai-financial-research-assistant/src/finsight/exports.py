@@ -12,6 +12,7 @@ from enum import Enum
 
 from openpyxl import Workbook
 
+from finsight.financials import review_notes
 from finsight.models import Calculation, Dataset
 
 
@@ -40,7 +41,10 @@ def safe_cell(value):
 
 
 def tables(dataset: Dataset, calculations: list[Calculation]) -> dict[str, list[dict]]:
-    financials = [dict(f.model_dump(), fact_id=f.id) for f in dataset.selected]
+    financials = [
+        dict(f.model_dump(), fact_id=f.id, review_warnings=review_notes(dataset, [f]))
+        for f in dataset.selected
+    ]
     sources = [
         dict(f.model_dump(), fact_id=f.id, selected=f.id in dataset.selected_ids)
         for f in dataset.observations

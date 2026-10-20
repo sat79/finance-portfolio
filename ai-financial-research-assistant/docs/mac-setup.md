@@ -2,6 +2,8 @@
 
 This guide is for your own local computer, with no hosting or paid API. Linux/Python 3.12.14 was tested. We also downloaded the complete pinned dependency set using Python 3.12 / Intel macOS **12 and 14** wheel targets. That is a package-availability check, **not an executed macOS installation**. Desktop Chrome/Excel acceptance remains yours to perform. macOS versions older than 12 have not been checked.
 
+For the new default name-to-report flow, follow [Research a company](research-guide.md) after launch. The earlier wheel checks predate the added PDF parser; native Mac installation of this revision remains untested.
+
 ## 1. Check your computer and Python
 
 Open **Applications → Utilities → Terminal**. Run each line separately:
@@ -55,7 +57,7 @@ python -m pip check
 python -m pytest -q
 ```
 
-`.venv` keeps this app's dependencies separate from your other portfolio projects. Activation makes `python` use that environment. Installation uses the committed version lock; `pip check` checks dependency compatibility; the offline suite should report **102 passed** at this revision. Installation needs Internet access; these tests do not need SEC access. Do not use `sudo pip`.
+`.venv` keeps this app's dependencies separate from your other portfolio projects. Activation makes `python` use that environment. Installation uses the committed version lock; `pip check` checks dependency compatibility; the offline suite should report **133 passed** at this revision. Installation needs Internet access; these tests do not need SEC access. Do not use `sudo pip`.
 
 If pip reports no compatible distribution, check Python is 3.12, `uname -m` is `x86_64`, and macOS is at least 12. Keep the exact error for troubleshooting rather than randomly changing dependency versions. A newer macOS version should not be installed solely on the strength of this guide.
 

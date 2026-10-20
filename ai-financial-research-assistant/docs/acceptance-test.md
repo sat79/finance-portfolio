@@ -1,3 +1,7 @@
+## New company research acceptance
+
+Follow [Research a company](research-guide.md) for Kaspi.kz, Microsoft and Apple. Confirm Apple’s legal entity explicitly, review document/news coverage and download each report bundle. Try NVIDIA to check the unsupported financial-coverage message, and a private/nonexistent company to check no-match handling. Inspect citation URLs, fiscal periods, warnings and KSPI’s suppressed FCF proxy. Record your Mac/browser/Excel result; cloud replay does not complete local acceptance.
+
 # Your three-company acceptance test
 
 **Status: not performed by the user. All boxes intentionally unchecked.** The developer's Linux browser checks do not complete your Mac/Chrome/Excel acceptance. Follow [Mac setup](mac-setup.md) first. Record your date, macOS/Python/Excel versions and any failure in your own notes.

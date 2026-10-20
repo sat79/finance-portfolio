@@ -1,3 +1,7 @@
+# Current product direction
+
+The updated [company-name-to-research plan](phase-2-proposal.md) supersedes the original phase ordering below. The implementation adds `finsight.research` for identity, bounded HTML/PDF retrieval, RSS news, deterministic cited reporting and an opt-in narrative provider. Existing financial selection, pure calculations, caches, CSV and XLSX are reused. See [current validation](research-validation.md); the following audit remains historical.
+
 # Phase 0: repository audit and delivery plan
 
 Audit performed 17 October 2026 against portfolio commit `53287b8` on Linux/Python 3.12.14. Development branch: `feat/finsight-research-mvp`.

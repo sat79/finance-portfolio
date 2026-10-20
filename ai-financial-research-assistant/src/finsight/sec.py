@@ -90,7 +90,10 @@ class SECClient:
         self.ttl_seconds = ttl_seconds
 
     def _request(self, url: str, refresh=False) -> Response:
-        allowed = url == TICKERS_URL or re.fullmatch(
+        allowed = url in {
+            TICKERS_URL,
+            "https://www.sec.gov/files/company_tickers_exchange.json",
+        } or re.fullmatch(
             r"https://data\.sec\.gov/(api/xbrl/companyfacts|submissions)/CIK\d{10}\.json", url
         )
         if not allowed:

@@ -1,18 +1,19 @@
 # FinSight — Financial Research & Valuation Workspace
 
-A Python/Streamlit research MVP for reviewing annual financial figures, deterministic ratios, provenance and analyst exports. The working product name is **FinSight AI**; this milestone contains no LLM or valuation engine.
+Enter a company name, confirm the entity, retrieve official documents and recent news, then download a cited research report. FinSight combines deterministic financial analysis with attributed disclosure excerpts; optional model narration is disabled unless explicitly configured and approved.
 
-**Status:** scoped Phase 1 research MVP. Live SEC retrieval returned three annual periods for **Kaspi.kz (KSPI)** and five each for **Apple (AAPL)** and **Microsoft (MSFT)**; **48 sampled figures** across three periods per company matched the standalone filing XBRL. Offline/CSV tests remain distinct from this live evidence. See [validation evidence](docs/validation.md) for the exact scope and limitations.
+**Status:** the company-research workflow is implemented for review on the feature branch. Annual financial extraction covers **KSPI, Apple and Microsoft**; wider SEC-listed entities can produce document reports with explicit financial-coverage gaps. Historical live validation and current offline/browser results are documented in [research validation](docs/research-validation.md). Fresh retrieval on the 20 October cloud instance is blocked by its unapplied network settings.
 
 ## What works
 
-- Strict annual CSV import with preview, missing-data states and understandable errors.
-- An explicitly fictional three-year example, including a loss and negative cash flow.
-- Revenue growth, operating/net margins and operating cash flow less PP&E purchases; input provenance, warnings and rule-based observations.
-- Financial tables/charts, source-observation review, CSV ZIP and Excel exports.
-- A SEC connector for KSPI/AAPL/MSFT with official ticker-to-CIK verification, company-specific 10-K/20-F selection, retained competing disclosures, timeouts, retries, rate limits and dated caching. Its transport and selection have synthetic edge-case tests and live KSPI/Apple/Microsoft validation. Coverage remains limited to the documented companies and concepts.
+- Name/ticker search, explicit ambiguous-entity confirmation and unsupported/private-company messaging.
+- Annual/interim filings, linked earnings exhibits and bounded investor-relations discovery, with dated/hash-backed document registers and real text locations.
+- Adjustable recent-news window, company versus independent-source labels, duplicate handling and honest headline-only access states.
+- Business/revenue descriptions, annual trends, cash/position caveats, management quotations, developments, risks, questions and research conclusion with citations.
+- Deterministic arithmetic and review-warning propagation; KSPI financial-group safeguards remain intact.
+- Markdown report and ZIP evidence pack, including financial XLSX where supported. Existing CSV and explicitly fictional offline examples remain available.
 
-No paid API, database or credentials are needed for the CSV/example workflow. The SEC connector requires a real identifying contact email in local configuration, not an API key.
+Start with the [company research guide](docs/research-guide.md). No paid API is needed. SEC requests require a real identifying contact address in local configuration, not an API key.
 
 ## Install (Python 3.12)
 
@@ -38,7 +39,7 @@ python -m streamlit run app/main.py
 
 Or run `bash scripts/start.sh`: it uses the project environment, prompts for SEC contact identification when needed, and binds the server to your own computer. It does not install dependencies, save the email, or automatically execute `.env`.
 
-Open the local address printed by Streamlit on your own machine. Select **Synthetic example → Load fictional example** for the fully offline walkthrough, or **Upload CSV** to supply your own data. Navigate **Financial statements → Ratios & trends → Sources & warnings → Export**. Both example CSVs are in `data/examples/`. CSV uploads are user-provided, never SEC-verified.
+Open the local address printed by Streamlit on your own machine. The default **Company research** mode starts with a name search; follow the [research guide](docs/research-guide.md). Select **Synthetic example → Load fictional example** for the fully offline walkthrough, or **Upload CSV** to supply your own data. Navigate **Financial statements → Ratios & trends → Sources & warnings → Export**. Both example CSVs are in `data/examples/`. CSV uploads are user-provided, never SEC-verified.
 
 For live SEC requests, set identification in your shell before starting the app:
 
@@ -46,7 +47,7 @@ For live SEC requests, set identification in your shell before starting the app:
 export SEC_USER_AGENT='FinSightAI your-real-contact-email'
 ```
 
-Replace the placeholder with your real contact email; do not commit it. You can keep the export command in an ignored `.env` file and run `source .env`. The app intentionally does not automatically execute `.env` files. SEC access needs HTTPS to `www.sec.gov` and `data.sec.gov`. Select **SEC company**, choose KSPI (default), Apple or Microsoft, and click **Fetch SEC annual data**. An access failure is displayed without substituting example data.
+Replace the placeholder with your real contact email; do not commit it. You can keep the export command in an ignored `.env` file and run `source .env`. The app intentionally does not automatically execute `.env` files. Research access needs HTTPS to `www.sec.gov`, `data.sec.gov`, `news.google.com`, `investor.apple.com`, `www.microsoft.com` and `ir.kaspi.kz`. Select **SEC company**, choose KSPI (default), Apple or Microsoft, and click **Fetch SEC annual data**. An access failure is displayed without substituting example data.
 
 The local cache defaults to `.cache/sec`; optionally set `FINSIGHT_CACHE_DIR` to another writable directory. **Clear session data** removes loaded data from the UI. It does not delete the public SEC disk cache. See [data handling and limitations](docs/limitations.md).
 
@@ -57,6 +58,7 @@ python -m pytest -q
 ruff check .
 ruff format --check .
 python scripts/validate_live.py --output exports/live-validation
+python scripts/validate_research.py --output exports/research-validation
 ```
 
 The first three commands work offline after installation. The live script requires SEC identification and network access; exits nonzero when retrieval fails, writes the actual outcome, and does **not** mark independent reconciliation complete. An optional real-browser check is documented in [validation.md](docs/validation.md).
@@ -68,7 +70,7 @@ To trace a figure, open **Sources & warnings**, find its metric and period, and 
 - [Beginner walkthrough and one exercise](docs/walkthrough.md)
 - [Intel Mac setup](docs/mac-setup.md) and [your acceptance checklist](docs/acceptance-test.md)
 - [Phase 1 quality review and fixes](docs/quality-review.md)
-- [Ranked Phase 2 proposal — awaiting approval](docs/phase-2-proposal.md)
+- [Company-name-to-research implementation plan](docs/phase-2-proposal.md)
 - [Architecture/audit and ordered backlog](docs/audit-and-plan.md)
 - [Financial methodology and annual selection](docs/methodology.md)
 - [KSPI reporting definitions and financial-group controls](docs/kspi-methodology.md)
@@ -83,4 +85,4 @@ The original [Lesson 01 notebook](01_financial_metrics.ipynb) and [learning log]
 
 SEC scope: KSPI (IFRS, KZT, 20-F), Apple and Microsoft (US GAAP, USD, 10-K), with recent annual filings and explicit standard tags. The policy selects latest available compatible observations, retains competitors and flags uncertainty; it is not historical point-in-time reconstruction. For Apple/Microsoft, the free-cash-flow proxy is **CFO less purchases of PP&E**, not complete FCFF. For KSPI it is suppressed: bank cash flows are not distributable cash. KSPI revenue is after customer rewards; group/parent profit and broader investment purchases remain separate. See [KSPI methodology](docs/kspi-methodology.md). Losses are valid, missing figures are never zero-filled, and no business causes are invented.
 
-AI research, documents, valuation, hosting and deployment remain future milestones. No service was deployed, no paid resources were created and no licence was added. Review current SEC terms before public hosting or redistributing real-company data.
+Document research and an optional model-provider interface are implemented; valuation, hosting and deployment remain outside scope. No service was deployed, no paid resources were created and no licence was added. Review current SEC terms before public hosting or redistributing real-company data.

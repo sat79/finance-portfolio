@@ -10,7 +10,7 @@ APP = Path(__file__).resolve().parents[1] / "app/main.py"
 def test_user_can_load_example_review_calculations_and_export():
     app = AppTest.from_file(str(APP), default_timeout=20).run()
     assert not app.exception
-    assert any("No analysis loaded" in i.value for i in app.info)
+    assert any("Start with a name search" in i.value for i in app.info)
     app.radio[0].set_value("Synthetic example").run()
     app.button[0].click().run()
     assert not app.exception
@@ -21,7 +21,7 @@ def test_user_can_load_example_review_calculations_and_export():
         "Sources & warnings",
         "Export",
     ]
-    assert len(app.dataframe) == 4
+    assert len(app.dataframe) == 5
     assert any("20.00%" in m.value for m in app.markdown)
     assert len(app.get("download_button")) == 2
     assert any("fictional" in w.value.lower() for w in app.warning)
@@ -37,6 +37,7 @@ def test_api_failure_visible_and_no_fallback(monkeypatch):
     monkeypatch.setattr("finsight.sec.SECClient.load", fail)
     monkeypatch.setenv("SEC_USER_AGENT", "FinSight tests contact@example.org")
     app = AppTest.from_file(str(APP)).run()
+    app.radio[0].set_value("SEC company").run()
     app.button[0].click().run()
     assert not app.exception
     assert "403" in app.error[0].value
@@ -68,6 +69,7 @@ def test_kspi_default_and_financial_group_explanations(monkeypatch):
     monkeypatch.setenv("SEC_USER_AGENT", "FinSight tests contact@example.org")
     monkeypatch.setattr("finsight.sec.SECClient.load", lambda *args, **kwargs: data)
     app = AppTest.from_file(str(APP)).run()
+    app.radio[0].set_value("SEC company").run()
     assert app.selectbox[0].value == "KSPI"
     app.button[0].click().run()
     assert not app.exception
@@ -84,6 +86,7 @@ def test_kspi_csv_does_not_claim_verified_ifrs_revenue_basis():
     data = import_csv(content)
     assert data.financial_group
     app = AppTest.from_file(str(APP)).run()
+    app.radio[0].set_value("SEC company").run()
     app.session_state["dataset"] = data
     app.run()
     assert not app.exception
@@ -92,3 +95,41 @@ def test_kspi_csv_does_not_claim_verified_ifrs_revenue_basis():
     assert (
         "Consolidated IFRS revenue (after rewards)" not in app.dataframe[0].value["Metric"].tolist()
     )
+
+
+def test_research_requires_ambiguous_entity_confirmation(monkeypatch):
+    from finsight.research.models import Company
+
+    companies = [
+        Company("Apple Inc.", "AAPL", "Nasdaq", "0000320193", supported=True),
+        Company("Apple Hospitality", "APLE", "NYSE", "0001715948"),
+    ]
+    monkeypatch.setattr("finsight.research.ui.find_companies", lambda *args: companies)
+    monkeypatch.setenv("SEC_USER_AGENT", "FinSight tests contact@example.org")
+    app = AppTest.from_file(str(APP)).run()
+    app.text_input[0].set_value("Apple")
+    app.button[0].click().run()
+    assert not app.exception
+    assert app.selectbox[0].value is None
+    assert not any(b.label == "Research selected company" for b in app.button)
+    app.selectbox[0].set_value(companies[0]).run()
+    assert any(b.label == "Research selected company" for b in app.button)
+
+
+def test_name_research_report_exports_and_failed_news_visible(monkeypatch, dataset):
+    from test_research import report_fixture
+
+    result = report_fixture(dataset)
+    result.limitations.append("News request failed; coverage incomplete")
+    monkeypatch.setattr("finsight.research.ui.find_companies", lambda *args: [result.company])
+    monkeypatch.setattr("finsight.research.ui.run_research", lambda *args, **kwargs: result)
+    monkeypatch.setenv("SEC_USER_AGENT", "FinSight tests contact@example.org")
+    app = AppTest.from_file(str(APP), default_timeout=20).run()
+    app.text_input[0].set_value("Fixture")
+    app.button[0].click().run()
+    next(b for b in app.button if b.label == "Research selected company").click().run()
+    assert not app.exception
+    assert app.header[0].value == "Research report: Fixture Company"
+    assert any("News request failed" in w.value for w in app.warning)
+    assert len(app.get("download_button")) == 2
+    assert any("Research conclusion" in m.value for m in app.markdown)

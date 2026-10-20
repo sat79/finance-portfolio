@@ -1,3 +1,11 @@
+# Company research update — 20 October 2026
+
+- Added company-name resolution and explicit ambiguous-entity confirmation, official document extraction/registers, recent-news metadata and cited deterministic research reports.
+- Added downloadable evidence bundles and retained failed-stage evidence, date/access limits and financial review warnings across outputs.
+- Preserved KSPI accounting controls and existing annual CSV/SEC/Excel workflows.
+- Added an opt-in model interface with pre-call estimates, cumulative reservations, usage records and citation/numeric-output checks; no live paid calls made.
+- Added regression and browser replay coverage; see [validation](docs/research-validation.md) for current network blocker and historical live evidence.
+
 # Changelog
 
 ## Phase 1 quality and usability review — 17 October 2026
