@@ -78,5 +78,5 @@ def resolve_details(company: Company, submissions: dict) -> Company:
     )
 
 
-def find_companies(client: SECClient, query: str) -> list[Company]:
-    return search(client._request(DIRECTORY).data, query)
+def find_companies(client: SECClient, query: str, *, refresh=False) -> list[Company]:
+    return search(client._request(DIRECTORY, refresh).data, query)

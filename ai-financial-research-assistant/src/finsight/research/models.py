@@ -53,6 +53,11 @@ class NewsItem:
     access: str = "headline_only; article not read"
     document_id: str | None = None
     duplicate_urls: list[str] = field(default_factory=list)
+    content: list[dict] = field(default_factory=list)
+    retrieved_at: str = ""
+    sha256: str = ""
+    access_notes: list[str] = field(default_factory=list)
+    event_date_source: dict = field(default_factory=dict)
 
 
 @dataclass
@@ -68,6 +73,8 @@ class Research:
     stages: dict[str, str] = field(default_factory=dict)
     seconds: dict[str, float] = field(default_factory=dict)
     news_feed: dict = field(default_factory=dict)
+    identity_evidence: dict = field(default_factory=dict)
+    access_attempts: list[dict] = field(default_factory=list)
     model_usage: dict = field(
         default_factory=lambda: {"mode": "deterministic", "calls": 0, "actual_cost_usd": "0"}
     )
@@ -76,3 +83,19 @@ class Research:
         values = asdict(self)
         values["dataset"] = self.dataset.model_dump(mode="json") if self.dataset else None
         return values
+
+
+def from_snapshot(raw: dict) -> Research:
+    """Restore dated evidence without fetching or relabelling its provenance."""
+    values = dict(raw)
+    values["company"] = Company(**values["company"])
+    values["cutoff"] = datetime.fromisoformat(values["cutoff"])
+    for key in ["news_start", "news_end"]:
+        values[key] = date.fromisoformat(values[key])
+    values["documents"] = [
+        Document(**{**d, "passages": [Passage(**p) for p in d["passages"]]})
+        for d in values["documents"]
+    ]
+    values["news"] = [NewsItem(**n) for n in values["news"]]
+    values["dataset"] = Dataset.model_validate(values["dataset"]) if values.get("dataset") else None
+    return Research(**values)

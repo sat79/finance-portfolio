@@ -43,6 +43,10 @@ with sync_playwright() as p:
             report = archive.read("research-report.md").decode()
             assert ticker in report and "TEST REPLAY" in report
             assert "citations.json" in archive.namelist()
+            assert "model-evidence.json" in archive.namelist()
+            assert "Research outcome: PARTIAL" in report
+            assert "Latest interim and earnings evidence alongside the annual baseline" in report
+            assert "Discovery only" in report
             assert ("financial-analysis.xlsx" in archive.namelist()) == (ticker != "NVDA")
         page.get_by_role("tab", name="Company research report", exact=True).click()
         if ticker == "KSPI":

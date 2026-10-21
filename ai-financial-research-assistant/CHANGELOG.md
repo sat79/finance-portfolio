@@ -1,3 +1,11 @@
+# Independent review follow-up — 21 October 2026
+
+- Derived complete/partial/failed outcomes from stages and substantive evidence; failed retrieval no longer displays successful completion.
+- Added latest interim and earnings passages, source period context, release-over-cover selection and foreign interim recognition.
+- Added bounded original/official news text and explicit event-date provenance; discovery-only headlines produce no substantive conclusions.
+- Added an exportable complete model evidence payload and exact metric/period/currency/source numerical-claim binding, with unverified prose labels.
+- Recorded fresh source failures separately from historical replay; 156 tests and browser workflows pass. See [review validation](docs/review-followup.md) for the active proxy blocker and handoff.
+
 # Company research update — 20 October 2026
 
 - Added company-name resolution and explicit ambiguous-entity confirmation, official document extraction/registers, recent-news metadata and cited deterministic research reports.

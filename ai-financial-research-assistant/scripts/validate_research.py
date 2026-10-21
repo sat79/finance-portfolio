@@ -7,6 +7,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from finsight.research.identity import find_companies
+from finsight.research.outcomes import assess
 from finsight.research.report import build_report, report_bundle
 from finsight.research.workflow import run_research
 from finsight.sec import SECClient
@@ -18,7 +19,7 @@ def main():
     parser.add_argument(
         "--refresh",
         action="store_true",
-        help="Refresh document/news/financial evidence; directory uses its dated cache.",
+        help="Bypass all source caches, including company-name resolution.",
     )
     parser.add_argument(
         "--companies", nargs="+", default=["Apple", "Microsoft", "Kaspi.kz", "NVIDIA"]
@@ -36,8 +37,10 @@ def main():
     end = datetime.now(timezone.utc).date()
     for name in args.companies:
         start = time.perf_counter()
+        attempted_at = datetime.now(timezone.utc).isoformat()
+        sec.attempts.clear()
         try:
-            matches = find_companies(sec, name)
+            matches = find_companies(sec, name, refresh=args.refresh)
             company = next(c for c in matches if c.cik == expected[name])
             result = run_research(
                 company,
@@ -55,6 +58,25 @@ def main():
             )
             row = {
                 "query": name,
+                "attempted_at": attempted_at,
+                "finished_at": datetime.now(timezone.utc).isoformat(),
+                "research_cutoff": result.cutoff.isoformat(),
+                "cache_policy": "fresh, bypass caches" if args.refresh else "dated cache permitted",
+                "source_access": result.access_attempts,
+                "outcome": assess(result),
+                "document_register": [
+                    {
+                        "id": d.id,
+                        "url": d.url,
+                        "period": d.period,
+                        "status": d.status,
+                        "retrieved_at": d.retrieved_at,
+                        "cached": d.cached,
+                        "sha256": d.sha256,
+                    }
+                    for d in result.documents
+                ],
+                "news_content_read": sum(bool(n.content) for n in result.news),
                 "ticker": company.ticker,
                 "matched_listings": len(matches),
                 "seconds_including_search_and_export": round(time.perf_counter() - start, 2),
@@ -69,24 +91,36 @@ def main():
                 "actual_model_cost_usd": 0,
                 "limitations": result.limitations,
             }
-            if not any(d.kind == "annual" and d.status == "read" for d in result.documents):
-                row["validation"] = "INCOMPLETE: annual document unavailable"
-            elif company.supported and result.dataset is None:
-                row["validation"] = "INCOMPLETE: supported financial extraction failed"
-            elif result.stages["Recent news"] != "completed":
-                row["validation"] = "INCOMPLETE: news retrieval failed"
-            else:
-                row["validation"] = "REPORT_CREATED; inspect source and news limitations"
+            row["validation"] = assess(result)["status"].upper()
             outcomes.append(row)
             print(json.dumps(row), flush=True)
         except (ValueError, StopIteration, OSError) as exc:
-            outcomes.append({"query": name, "validation": "FAILED", "reason": str(exc)})
+            outcomes.append(
+                {
+                    "query": name,
+                    "validation": "FAILED",
+                    "reason": str(exc),
+                    "attempted_at": attempted_at,
+                    "finished_at": datetime.now(timezone.utc).isoformat(),
+                    "cache_policy": "fresh, bypass caches"
+                    if args.refresh
+                    else "dated cache permitted",
+                    "source_access": list(sec.attempts),
+                    "documents": 0,
+                    "read_documents": 0,
+                    "news_items": 0,
+                    "news_coverage": "not attempted: company resolution failed",
+                    "financial_coverage": "not attempted: company resolution failed",
+                    "model_calls": 0,
+                    "actual_model_cost_usd": 0,
+                }
+            )
     extra = {}
     for query in ["American", "NonexistentPrivateExampleZZZ"]:
         try:
             extra[query] = [
                 {"name": c.name, "ticker": c.ticker, "cik": c.cik}
-                for c in find_companies(sec, query)[:10]
+                for c in find_companies(sec, query, refresh=args.refresh)[:10]
             ]
         except (ValueError, OSError) as exc:
             extra[query] = {"validation": "FAILED", "reason": str(exc)}
@@ -101,7 +135,7 @@ def main():
         )
     )
     return int(
-        any(not row["validation"].startswith("REPORT_CREATED") for row in outcomes)
+        any(row["validation"] != "COMPLETE" for row in outcomes)
         or any(isinstance(value, dict) for value in extra.values())
     )
 

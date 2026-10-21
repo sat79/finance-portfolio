@@ -88,8 +88,25 @@ class SECClient:
         self.cache_dir = cache_dir or Path(os.environ.get("FINSIGHT_CACHE_DIR", ".cache/sec"))
         self.session = session or requests.Session()
         self.ttl_seconds = ttl_seconds
+        self.attempts = []
 
     def _request(self, url: str, refresh=False) -> Response:
+        attempt = {"url": url, "attempted_at": datetime.now(timezone.utc).isoformat()}
+        self.attempts.append(attempt)
+        try:
+            response = self._fetch(url, refresh)
+            attempt.update(
+                status="retrieved",
+                retrieved_at=response.fetched_at.isoformat(),
+                cached=response.cached,
+                sha256=response.sha256,
+            )
+            return response
+        except SECError as exc:
+            attempt.update(status="failed", reason=str(exc))
+            raise
+
+    def _fetch(self, url: str, refresh=False) -> Response:
         allowed = url in {
             TICKERS_URL,
             "https://www.sec.gov/files/company_tickers_exchange.json",

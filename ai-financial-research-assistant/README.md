@@ -2,7 +2,7 @@
 
 Enter a company name, confirm the entity, retrieve official documents and recent news, then download a cited research report. FinSight combines deterministic financial analysis with attributed disclosure excerpts; optional model narration is disabled unless explicitly configured and approved.
 
-**Status:** the company-research workflow is implemented for review on the feature branch. Annual financial extraction covers **KSPI, Apple and Microsoft**; wider SEC-listed entities can produce document reports with explicit financial-coverage gaps. Historical live validation and current offline/browser results are documented in [research validation](docs/research-validation.md). Fresh retrieval on the 20 October cloud instance is blocked by its unapplied network settings.
+**Status:** the company-research workflow is implemented for review on the feature branch. Annual financial extraction covers **KSPI, Apple and Microsoft**; wider SEC-listed entities can produce document reports with explicit financial-coverage gaps. Historical live validation and current offline/browser results are documented in [research validation](docs/research-validation.md). The [21 October review follow-up](docs/review-followup.md) records 156 passing tests and the remaining proxy-policy blocker for fresh retrieval. Read the [KSPI demonstration](docs/kspi-review-demonstration.md) for annual/interim/earnings context; it is labelled historical replay.
 
 ## What works
 

@@ -57,7 +57,7 @@ python -m pip check
 python -m pytest -q
 ```
 
-`.venv` keeps this app's dependencies separate from your other portfolio projects. Activation makes `python` use that environment. Installation uses the committed version lock; `pip check` checks dependency compatibility; the offline suite should report **133 passed** at this revision. Installation needs Internet access; these tests do not need SEC access. Do not use `sudo pip`.
+`.venv` keeps this app's dependencies separate from your other portfolio projects. Activation makes `python` use that environment. Installation uses the committed version lock; `pip check` checks dependency compatibility; the offline suite should report **156 passed** at this revision. Installation needs Internet access; these tests do not need SEC access. Do not use `sudo pip`.
 
 If pip reports no compatible distribution, check Python is 3.12, `uname -m` is `x86_64`, and macOS is at least 12. Keep the exact error for troubleshooting rather than randomly changing dependency versions. A newer macOS version should not be installed solely on the strength of this guide.
 

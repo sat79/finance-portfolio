@@ -224,10 +224,24 @@ def retrieve_documents(
 
 
 def read_document(client, doc, *, refresh=False):
+    doc.passages = []
+    doc.retrieved_at, doc.sha256, doc.cached = "", "", False
     try:
         raw = client.get(doc.url, refresh=refresh)
         doc.retrieved_at, doc.sha256, doc.cached = raw.fetched_at, raw.sha256, raw.cached
         doc.passages, links, notes = extract(raw.content, raw.media_type, doc.url)
+        text = " ".join(p.text for p in doc.passages)
+        if len(text) < 5000 and re.search(
+            r"access denied|request rate threshold exceeded|subscribe to (?:continue|read)|enable javascript to continue",
+            text,
+            re.I,
+        ):
+            doc.passages = []
+            doc.status = "inaccessible"
+            doc.limitations.append(
+                "Source returned an access/paywall interstitial; article/document not read."
+            )
+            return []
         doc.limitations.extend(notes)
         doc.status = "read" if any(len(p.text) > 80 for p in doc.passages) else "unreadable"
         if doc.status != "read":

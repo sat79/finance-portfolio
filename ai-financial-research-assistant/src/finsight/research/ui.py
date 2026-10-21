@@ -9,9 +9,10 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
-from finsight.financials import calculate
 from finsight.research.identity import find_companies
+from finsight.research.model_evidence import build_model_evidence, fact_text
 from finsight.research.narrative import ModelConfig, OpenAIProvider, estimate
+from finsight.research.outcomes import assess
 from finsight.research.report import build_report, report_bundle
 from finsight.research.workflow import run_research
 from finsight.sec import SECClient, SECError
@@ -91,10 +92,13 @@ def render_research():
             try:
                 result = run_research(company, start, end, refresh=refresh, progress=progress)
                 st.session_state.research_result = result
+                build_report(result)
+                coverage = assess(result)
+                result.stages["Analysis"] = coverage["status"] + ": deterministic report rendered"
                 status.update(
-                    label="Research ready — review coverage limitations",
-                    state="complete",
-                    expanded=False,
+                    label=f"Research {coverage['status']} — review evidence coverage",
+                    state="complete" if coverage["status"] == "complete" else "error",
+                    expanded=coverage["status"] != "complete",
                 )
             except (SECError, ValueError, OSError) as exc:
                 status.update(
@@ -108,7 +112,17 @@ def render_research():
         st.info(
             "The report below retains its original company/date settings. Click Research selected company to apply your changed selection."
         )
+    coverage = assess(result)
     st.header(f"Research report: {result.company.name}")
+    message = f"Research {coverage['status']}: " + (
+        "; ".join(coverage["missing"]) or coverage["scope"]
+    )
+    if coverage["status"] == "failed":
+        st.error(message)
+    elif coverage["status"] == "partial":
+        st.warning(message)
+    else:
+        st.success(message)
     st.caption(
         f"Cut-off {result.cutoff.isoformat()} · measured retrieval/extraction time {result.seconds.get('total', 0):.1f}s · deterministic report: 0 model calls, $0 model cost. Optional narrative usage is shown separately below."
     )
@@ -141,6 +155,7 @@ def render_research():
         )
         st.json(
             {
+                "outcome": coverage,
                 "stages": result.stages,
                 "seconds": result.seconds,
                 "news_feed": result.news_feed,
@@ -170,7 +185,7 @@ def render_research():
         )
     with st.expander("Optional model narrative — separate API setup and spending approval"):
         st.write(
-            "The complete report above works without a model. A chat subscription does not provide API access. No model call happens automatically."
+            "The deterministic report above works without a model. A chat subscription does not provide API access. No model call happens automatically."
         )
         if not os.environ.get("OPENAI_API_KEY") or os.environ.get("FINSIGHT_ENABLE_MODEL") != "1":
             st.info(
@@ -179,19 +194,12 @@ def render_research():
             return
         try:
             config = ModelConfig.from_environment()
-            evidence = {
-                "citations": citations,
-                "financials": result.dataset.model_dump(mode="json") if result.dataset else None,
-                "calculations": [c.model_dump(mode="json") for c in calculate(result.dataset)]
-                if result.dataset
-                else [],
-                "limitations": result.limitations,
-            }
-            # Only selected cited passages plus selected financial observations, never whole filings.
-            if evidence["financials"]:
-                evidence["financials"]["observations"] = [
-                    f.model_dump(mode="json") for f in result.dataset.selected
-                ]
+            if coverage["status"] == "failed":
+                st.info(
+                    "No substantive evidence: optional generation is unavailable for this failed run."
+                )
+                return
+            evidence = build_model_evidence(result, citations)
             usage = estimate(config, evidence)
             st.json(usage)
             approved = st.checkbox(
@@ -214,6 +222,9 @@ def render_research():
                 for p in narrative["narrative"]["paragraphs"]:
                     st.text(f"{p['kind']}: {p['text']}")
                     st.caption("Citations: " + ", ".join(p["citation_ids"]))
+                for claim in narrative["narrative"]["quantitative_claims"]:
+                    st.text("Bound financial record: " + fact_text(claim))
+                    st.caption("Citations: " + ", ".join(claim["citation_ids"]))
                 st.json(narrative["usage"])
                 st.download_button(
                     "Download optional model output",

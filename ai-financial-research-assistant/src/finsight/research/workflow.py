@@ -6,7 +6,8 @@ from datetime import date, datetime, timezone
 from finsight.research.documents import retrieve_documents, retrieve_ir, select_documents
 from finsight.research.identity import resolve_details
 from finsight.research.models import Research
-from finsight.research.news import news_url, official_news, parse_news
+from finsight.research.news import enrich_news, news_url, official_news, parse_news
+from finsight.research.outcomes import assess
 from finsight.research.transport import EvidenceClient
 from finsight.sec import SECClient, SECError
 
@@ -37,8 +38,8 @@ def run_research(
             progress(name, result)
         before = time.perf_counter()
         try:
-            function()
-            result.stages[name] = "completed"
+            outcome = function()
+            result.stages[name] = outcome or "completed"
         except (SECError, ValueError, OSError, KeyError, TypeError) as exc:
             result.stages[name] = "failed; earlier stages preserved"
             result.limitations.append(f"{name}: {exc}")
@@ -50,10 +51,15 @@ def run_research(
 
     def identify():
         nonlocal submissions
-        submissions = sec._request(
-            f"https://data.sec.gov/submissions/CIK{company.cik}.json", refresh
-        ).data
+        raw = sec._request(f"https://data.sec.gov/submissions/CIK{company.cik}.json", refresh)
+        submissions = raw.data
         result.company = resolve_details(company, submissions)
+        result.identity_evidence = {
+            "url": result.company.identity_url,
+            "retrieved_at": str(getattr(raw, "fetched_at", "")),
+            "sha256": getattr(raw, "sha256", ""),
+            "cached": getattr(raw, "cached", None),
+        }
 
     stage("Company resolution", identify)
 
@@ -72,6 +78,10 @@ def run_research(
         result.limitations.append(
             "Evidence is limited to SEC recent filings and linked exhibits. Standalone IR-site documents/presentations are not exhaustively searched; inaccessible or unlinked presentations remain missing."
         )
+        if not any(d.status == "read" and d.kind != "IR discovery" for d in result.documents):
+            return "failed: no substantive documents read"
+        if unread:
+            return "partial: some registered documents unread"
 
     if result.stages["Company resolution"] == "completed":
         stage("Official documents", documents)
@@ -103,6 +113,7 @@ def run_research(
         result.limitations.append(
             "Independent news retrieval failed. Coverage is incomplete; do not infer an absence of events."
         )
+    enrich_news(evidence, result.news, result.documents, refresh=refresh)
 
     def financials():
         if not company.supported:
@@ -113,8 +124,13 @@ def run_research(
         result.dataset = sec.load(company.ticker, refresh=refresh)
 
     stage("Financial extraction", financials)
-    if result.dataset is None:
+    if result.dataset is None or not result.dataset.selected:
         result.stages["Financial extraction"] = "unavailable: see coverage limitations"
-    result.stages["Analysis"] = "evidence ready for deterministic report rendering"
+    result.access_attempts = list(getattr(sec, "attempts", [])) + list(
+        getattr(evidence, "attempts", [])
+    )
+    result.stages["Analysis"] = (
+        assess(result)["status"] + ": evidence assessment; report rendering follows"
+    )
     result.seconds["total"] = round(time.perf_counter() - started, 3)
     return result

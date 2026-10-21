@@ -357,7 +357,14 @@ def test_model_provider_never_calls_without_approval_or_with_exceeded_cap(tmp_pa
 
 
 def test_model_citations_and_numerical_invention_rejected():
-    evidence = {"citations": {"D1": {"quote": "Revenue 100"}}}
+    evidence = {
+        "citations": {
+            "D1": {
+                "support_text": "Reported revenue is 100 USD in this fixture.",
+                "eligible_for_prose": True,
+            }
+        }
+    }
     with pytest.raises(ValueError, match="outside"):
         validate_narrative(
             {
@@ -371,7 +378,17 @@ def test_model_citations_and_numerical_invention_rejected():
         validate_narrative(
             {
                 "paragraphs": [
-                    {"kind": "interpretation", "text": "Revenue 999", "citation_ids": ["D1"]}
+                    {
+                        "kind": "interpretation",
+                        "text": "Revenue 999",
+                        "citation_ids": ["D1"],
+                        "support": [
+                            {
+                                "citation_id": "D1",
+                                "quote": "Reported revenue is 100 USD in this fixture.",
+                            }
+                        ],
+                    }
                 ]
             },
             evidence,
@@ -381,7 +398,13 @@ def test_model_citations_and_numerical_invention_rejected():
             "paragraphs": [
                 {
                     "kind": "interpretation",
-                    "text": "Revenue 100 needs review",
+                    "text": "Revenue needs review",
+                    "support": [
+                        {
+                            "citation_id": "D1",
+                            "quote": "Reported revenue is 100 USD in this fixture.",
+                        }
+                    ],
                     "citation_ids": ["D1"],
                 }
             ]
@@ -402,7 +425,15 @@ def test_malformed_model_output_fails_cleanly(value):
 def test_model_usage_and_cumulative_reservation(tmp_path, monkeypatch):
     monkeypatch.setenv("FINSIGHT_ENABLE_MODEL", "1")
     monkeypatch.setenv("OPENAI_API_KEY", "fictional-test-key")
-    evidence = {"citations": {"D1": {"quote": "Revenue 100"}}, "limitations": ["Review required"]}
+    evidence = {
+        "citations": {
+            "D1": {
+                "support_text": "Reported revenue is 100 USD in this fixture.",
+                "eligible_for_prose": True,
+            }
+        },
+        "limitations": ["Review required"],
+    }
     config = ModelConfig("test-model", Decimal("1"), Decimal("2"), Decimal("1"))
     reserve = Decimal(estimate(config, evidence)["reserved_cost_usd"])
     config = replace(config, cap_usd=reserve)
@@ -419,7 +450,13 @@ def test_model_usage_and_cumulative_reservation(tmp_path, monkeypatch):
                                 "paragraphs": [
                                     {
                                         "kind": "interpretation",
-                                        "text": "Revenue 100 needs review",
+                                        "text": "Revenue needs review",
+                                        "support": [
+                                            {
+                                                "citation_id": "D1",
+                                                "quote": "Reported revenue is 100 USD in this fixture.",
+                                            }
+                                        ],
                                         "citation_ids": ["D1"],
                                     }
                                 ]

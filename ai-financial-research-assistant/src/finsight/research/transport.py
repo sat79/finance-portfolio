@@ -28,8 +28,25 @@ class EvidenceClient:
     def __init__(self, sec: SECClient, cache_dir: Path | None = None):
         self.sec = sec
         self.cache_dir = cache_dir or sec.cache_dir / "documents"
+        self.attempts = []
 
     def get(self, url: str, *, refresh=False) -> EvidenceResponse:
+        attempt = {"url": url, "attempted_at": datetime.now(timezone.utc).isoformat()}
+        self.attempts.append(attempt)
+        try:
+            result = self._get(url, refresh=refresh)
+            attempt.update(
+                status="retrieved",
+                retrieved_at=result.fetched_at,
+                sha256=result.sha256,
+                cached=result.cached,
+            )
+            return result
+        except SECError as exc:
+            attempt.update(status="failed", reason=str(exc))
+            raise
+
+    def _get(self, url: str, *, refresh=False) -> EvidenceResponse:
         parsed = urlsplit(url)
         official = bool(
             re.fullmatch(

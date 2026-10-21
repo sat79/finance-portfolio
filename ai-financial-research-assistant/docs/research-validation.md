@@ -1,3 +1,5 @@
+For the latest review, tests and fresh attempts, see [21 October follow-up](review-followup.md). The results and illustrative payload estimates below describe the earlier revision and must not be treated as current payload pricing or fresh access evidence.
+
 # Company research validation — 20 October 2026
 
 The local application starts and the deterministic name-to-report workflow passes offline tests and browser replay. **Fresh source retrieval in the current cloud instance is blocked by its proxy policy.** The saved configuration lists SEC/news/IR domains, but the runtime reports only package-manager destinations. Saving a draft, publication and a running instance's effective network policy are separate facts. Review/save the required domains in environment settings and publish, then rerun live validation; do not mark this complete until it succeeds.

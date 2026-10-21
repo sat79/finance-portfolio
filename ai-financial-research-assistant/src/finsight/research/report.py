@@ -11,23 +11,13 @@ from datetime import date
 from finsight.exports import csv_bytes, excel_bytes
 from finsight.financials import calculate, commentary, review_notes
 from finsight.models import LABELS, Metric
+from finsight.research.evidence import excerpt, period_basis, recent_evidence
 from finsight.research.models import Research
+from finsight.research.outcomes import assess
 
 
 def safe(text):
     return re.sub(r"([\\`*_{}\[\]()#+!|>])", r"\\\1", html.escape(str(text), quote=False))
-
-
-def excerpt(document, patterns, limit=2):
-    candidates = []
-    for passage in document.passages:
-        if not 100 <= len(passage.text) <= 3000:
-            continue
-        score = sum(bool(re.search(pattern, passage.text, re.I)) for pattern in patterns)
-        if score and sum(c.isdigit() for c in passage.text) / len(passage.text) < 0.15:
-            candidates.append((score, passage))
-    # Stable source order within score. Avoid presenting an entire table as a quotation.
-    return [p for _, p in sorted(candidates, key=lambda item: -item[0])[:limit]]
 
 
 def business_passages(document):
@@ -54,7 +44,7 @@ def build_report(research: Research) -> tuple[str, dict]:
     citations = {}
 
     def cite(key, url, locator, **metadata):
-        citations[key] = {"url": url, "locator": locator, **metadata}
+        citations[key] = {**citations.get(key, {}), "url": url, "locator": locator, **metadata}
         return f"[{key}]({url})"
 
     def quote(doc, passage):
@@ -62,20 +52,34 @@ def build_report(research: Research) -> tuple[str, dict]:
         # The excerpt is an exact prefix of normalized source text. Ellipsis is outside the quote.
         text = passage.text[:1000]
         reference = cite(
-            key, doc.url, passage.locator, sha256=doc.sha256, quote=text, kind="disclosure excerpt"
+            key,
+            doc.url,
+            passage.locator,
+            sha256=doc.sha256,
+            quote=text,
+            kind="disclosure excerpt",
+            document_id=doc.id,
+            document_kind=doc.kind,
+            source_report_date=doc.period,
+            publication_date=doc.published,
+            period_basis=period_basis(text),
+            retrieved_at=doc.retrieved_at,
         )
         return (
             f"> **Company disclosure excerpt:** “{safe(text)}”"
             + (" [excerpt truncated]" if len(passage.text) > 1000 else "")
-            + f" {reference} — {safe(passage.locator)}"
+            + f" {reference} — {safe(passage.locator)}; source report date: {safe(doc.period)}; duration cues: {safe(period_basis(text))}."
         )
 
+    coverage = assess(research)
     company = research.company
     identity = cite(
         "IDENTITY", company.identity_url, "SEC company identity metadata", kind="identity"
     )
     lines = [
         f"# {safe(company.name)} — company research",
+        f"**Research outcome: {coverage['status'].upper()}**. {safe(coverage['scope'])}",
+        "Coverage gaps: " + safe("; ".join(coverage["missing"]) or "None in the bounded checks."),
         f"Research cut-off: **{research.cutoff.isoformat()}**. News window: **{research.news_start} to {research.news_end}**, inclusive (publication dates). Financial fiscal periods are listed separately; this is not historical point-in-time research.",
         f"{safe(company.ticker)} · {safe(company.exchange)} · CIK {company.cik} · business-address country: {safe(company.country)} · reporting currency: {safe(company.currency)}. {identity}",
         "**Method:** deterministic calculations and attributed source excerpts. No language-model narrative was generated. Reported figures are not universally verified. Source text is evidence, never application instructions.",
@@ -117,6 +121,14 @@ def build_report(research: Research) -> tuple[str, dict]:
                 f"{fact.concept}; {fact.start or 'instant'} to {fact.end}; accession {fact.accession}",
                 fact_id=fact.id,
                 kind="reported financial observation",
+                metric=fact.metric.value,
+                value=str(fact.value),
+                currency=fact.currency,
+                period_start=str(fact.start) if fact.start else None,
+                period_end=str(fact.end),
+                unit=fact.unit,
+                source_id=fact.source_id,
+                warnings=list(review_notes(data, [fact])),
             )
             notes = review_notes(data, [fact])
             lines.append(
@@ -191,6 +203,41 @@ def build_report(research: Research) -> tuple[str, dict]:
     else:
         lines.append("Missing annual disclosure text prevents supported causal explanation.")
 
+    lines.append("## Latest interim and earnings evidence alongside the annual baseline")
+    lines.append(
+        f"Annual baseline report date: {annual.period if annual else 'unavailable'}. "
+        "The annual calculation table above is annual-only. The excerpts below are separate "
+        "recent disclosure evidence, not additional normalized financial observations. "
+        "Quarterly, year-to-date and annual amounts are not compared or annualized. "
+        "A SEC current-report date can be an event date rather than a financial period end; "
+        "use the quoted period headings. Missing duration/date context remains unresolved."
+    )
+    recent = recent_evidence(research.documents)
+    for selection in recent:
+        doc = selection["document"]
+        lines.append(f"### {selection['label']} — {safe(doc.title)}")
+        lines.append(
+            f"Filing/publication date: {doc.published}; SEC report-date metadata: {doc.period}; access: {doc.status}."
+        )
+        if selection["passages"]:
+            lines.extend(quote(doc, p) for p in selection["passages"])
+            lines.append(
+                "**Interpretation boundary:** these are source statements for the periods shown. "
+                "Management explanations here are not assumed to explain annual movements. "
+                "Check the exact duration, scope, units and accounting basis before comparing figures."
+            )
+        else:
+            lines.append(
+                "Recent document text is unavailable or no relevant passages were selected; no annual explanation was reused."
+            )
+    if not recent:
+        lines.append(
+            "No usable interim/earnings selection was established. Recent financial developments remain a coverage gap."
+        )
+    lines.append(
+        "Selection is heuristic and limited to retrieved documents. Unread or undiscovered newer releases may change the assessment."
+    )
+
     lines.append("## Recent developments and possible implications")
     if not research.news:
         lines.append(
@@ -202,16 +249,26 @@ def build_report(research: Research) -> tuple[str, dict]:
             item.url,
             "SEC exhibit" if item.document_id else "RSS headline metadata; article not read",
             kind=item.access,
+            news=asdict(item),
         )
         lines.append(
             f"- **{safe(item.category)}:** {safe(item.title)} — {safe(item.publisher)}, {item.published[:10]}; event date: {item.event_date or 'not established'}. {reference} Access: {safe(item.access)}."
         )
-        if item.document_id:
-            doc = next(d for d in research.documents if d.id == item.document_id)
-            passages = excerpt(
-                doc, [r"revenue|net income|earnings|acquisition|capital|dividend"], 1
+        if not item.content:
+            lines.append(
+                "  **Discovery only:** no article/announcement content supplied for analysis. Read the original before drawing any substantive conclusion."
             )
-            lines.extend(quote(doc, p) for p in passages)
+            continue
+        for content in item.content:
+            reference = cite(
+                content["citation_id"],
+                content["url"],
+                content["locator"],
+                **{k: v for k, v in content.items() if k not in {"citation_id", "url", "locator"}},
+            )
+            lines.append(
+                f"> **Read source excerpt:** “{safe(content['quote'])}” {reference} — {safe(content['locator'])}; duration cues: {safe(content['period_basis'])}."
+            )
         if re.search(r"acqui|merger", item.title, re.I):
             question = "Investigate purchase price, financing, integration costs and reporting-scope changes; financial effects are not quantified here."
         elif re.search(r"earnings|results|revenue", item.title, re.I):
@@ -267,7 +324,7 @@ def build_report(research: Research) -> tuple[str, dict]:
                 f"- **Calculated latest-period finding:** {c.metric} = {c.value:,.2f} {c.unit}. {refs} {safe('; '.join(c.review_warnings))}"
             )
     lines.append(
-        "Next: resolve flagged disclosure/comparability issues, inspect the latest interim/earnings exhibits, read headline-only stories in full, and verify liquidity/capital and principal-risk notes before drawing stronger conclusions. Optional model narrative is a separate setup step; deterministic evidence and arithmetic remain available."
+        "Next: resolve flagged disclosure/comparability issues, review the selected interim/earnings context and any missing releases, read discovery-only stories in full, and verify liquidity/capital and principal-risk notes before drawing stronger conclusions. Optional model narrative is a separate setup step; deterministic evidence and arithmetic remain available."
     )
     lines.append("## Document register")
     lines += [
@@ -293,10 +350,16 @@ def build_report(research: Research) -> tuple[str, dict]:
 
 
 def report_bundle(research: Research) -> bytes:
+    from finsight.research.model_evidence import build_model_evidence
+
     report, citations = build_report(research)
     output = io.BytesIO()
     with zipfile.ZipFile(output, "w", zipfile.ZIP_DEFLATED) as archive:
         archive.writestr("research-report.md", report)
+        archive.writestr("coverage.json", json.dumps(assess(research), indent=2))
+        archive.writestr(
+            "model-evidence.json", json.dumps(build_model_evidence(research, citations), indent=2)
+        )
         archive.writestr("citations.json", json.dumps(citations, indent=2, default=str))
         archive.writestr(
             "research-evidence.json", json.dumps(research.serializable(), indent=2, default=str)
