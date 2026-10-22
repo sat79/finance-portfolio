@@ -1,6 +1,17 @@
 """Select recent disclosure evidence without normalizing mixed reporting periods."""
 
 import re
+from datetime import date
+
+
+def valid_date(value):
+    """Strict ISO calendar dates only; labels and malformed dates cannot rank latest."""
+    if not isinstance(value, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
+        return None
+    try:
+        return date.fromisoformat(value)
+    except ValueError:
+        return None
 
 
 def excerpt(document, patterns, limit=2):
@@ -42,10 +53,35 @@ def is_interim(document):
 def recent_evidence(documents):
     """Latest registered interim, plus latest readable results exhibit (not arbitrary ex99)."""
     groups = []
-    interims = [d for d in documents if is_interim(d)]
+    supplementary = []
+
+    def dated(candidates):
+        eligible = []
+        for doc in candidates:
+            published = valid_date(doc.published)
+            if published is None:
+                reason = (
+                    "Publication date unavailable"
+                    if doc.published in {"", "Not established", "Not specified"}
+                    else "Invalid publication date"
+                )
+                supplementary.append(
+                    (f"Supplementary evidence — {reason}; excluded from latest ranking", doc)
+                )
+            else:
+                eligible.append(doc)
+        return eligible
+
+    interims = dated([d for d in documents if is_interim(d)])
     if interims:
         groups.append(
-            ("Latest interim filing", max(interims, key=lambda d: (d.period, d.published)))
+            (
+                "Latest interim filing",
+                max(
+                    interims,
+                    key=lambda d: (valid_date(d.period) or date.min, valid_date(d.published)),
+                ),
+            )
         )
     earnings = [
         d
@@ -62,15 +98,19 @@ def recent_evidence(documents):
             for p in d.passages[:100]
         )
     ]
+    earnings = dated(earnings)
     if earnings:
         groups.append(
             (
                 "Latest accessible earnings/results disclosure",
-                max(earnings, key=lambda d: (d.published, d.kind == "earnings/event exhibit")),
+                max(
+                    earnings,
+                    key=lambda d: (valid_date(d.published), d.kind == "earnings/event exhibit"),
+                ),
             )
         )
     output = []
-    for label, doc in groups:
+    for label, doc in groups + supplementary:
         passages = (
             excerpt(
                 doc,
@@ -101,5 +141,22 @@ def recent_evidence(documents):
             )
         ][:2]
         selected = list(dict.fromkeys(context + passages)) if doc.status == "read" else []
-        output.append({"label": label, "document": doc, "passages": selected})
+        warnings = []
+        if valid_date(doc.period) is None:
+            warnings.append(
+                "Report-period date unavailable or invalid; no reporting period inferred."
+            )
+        if valid_date(doc.published) is None:
+            warnings.append(
+                "Publication date unavailable or invalid; supplementary only, not latest evidence."
+            )
+        output.append(
+            {
+                "label": label,
+                "document": doc,
+                "passages": selected,
+                "latest_eligible": valid_date(doc.published) is not None,
+                "date_warnings": warnings,
+            }
+        )
     return output

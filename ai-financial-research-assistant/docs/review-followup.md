@@ -1,5 +1,7 @@
 # Independent review follow-up — 21 October 2026
 
+**Historical record:** the [22 October acceptance review](acceptance-2026-10-22.md) supersedes the runtime blocker and test results below.
+
 The current company-research milestone now has evidence-based outcomes, recent disclosure analysis, a bounded news-content step and an auditable model payload. **Fresh end-to-end operation remains blocked by the environment proxy.** The prior work at `50c7ca1` and the annual financial/KSPI safeguards are retained. This follow-up does not expand financial coverage or enable paid calls.
 
 ## Fresh source access: actual result

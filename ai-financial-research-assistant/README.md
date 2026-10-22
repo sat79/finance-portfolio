@@ -2,7 +2,7 @@
 
 Enter a company name, confirm the entity, retrieve official documents and recent news, then download a cited research report. FinSight combines deterministic financial analysis with attributed disclosure excerpts; optional model narration is disabled unless explicitly configured and approved.
 
-**Status:** the company-research workflow is implemented for review on the feature branch. Annual financial extraction covers **KSPI, Apple and Microsoft**; wider SEC-listed entities can produce document reports with explicit financial-coverage gaps. Historical live validation and current offline/browser results are documented in [research validation](docs/research-validation.md). The [21 October review follow-up](docs/review-followup.md) records 156 passing tests and the remaining proxy-policy blocker for fresh retrieval. Read the [KSPI demonstration](docs/kspi-review-demonstration.md) for annual/interim/earnings context; it is labelled historical replay.
+**Status:** fresh company-name research and production-app acceptance are documented in the [22 October acceptance review](docs/acceptance-2026-10-22.md). Apple, Microsoft and Kaspi.kz retrieve official evidence and reviewed annual financial data, with **partial** outcomes and explicit gaps. The latest-document date bug is fixed; a narrow free Guardian RSS-to-article route is implemented but live article retrieval remains blocked by the runtime host policy. **178 tests pass**. Paid model calls remain disabled. Earlier [review findings](docs/review-followup.md) and [historical KSPI demonstration](docs/kspi-review-demonstration.md) remain dated historical records.
 
 ## What works
 
@@ -47,7 +47,7 @@ For live SEC requests, set identification in your shell before starting the app:
 export SEC_USER_AGENT='FinSightAI your-real-contact-email'
 ```
 
-Replace the placeholder with your real contact email; do not commit it. You can keep the export command in an ignored `.env` file and run `source .env`. The app intentionally does not automatically execute `.env` files. Research access needs HTTPS to `www.sec.gov`, `data.sec.gov`, `news.google.com`, `investor.apple.com`, `www.microsoft.com` and `ir.kaspi.kz`. Select **SEC company**, choose KSPI (default), Apple or Microsoft, and click **Fetch SEC annual data**. An access failure is displayed without substituting example data.
+Replace the placeholder with your real contact email; do not commit it. You can keep the export command in an ignored `.env` file and run `source .env`. The app intentionally does not automatically execute `.env` files. Research access needs HTTPS to `www.sec.gov`, `data.sec.gov`, `news.google.com`, `investor.apple.com`, `www.microsoft.com` and `ir.kaspi.kz`; the narrow independent-news route also needs `www.theguardian.com`. Select **SEC company**, choose KSPI (default), Apple or Microsoft, and click **Fetch SEC annual data**. An access failure is displayed without substituting example data.
 
 The local cache defaults to `.cache/sec`; optionally set `FINSIGHT_CACHE_DIR` to another writable directory. **Clear session data** removes loaded data from the UI. It does not delete the public SEC disk cache. See [data handling and limitations](docs/limitations.md).
 

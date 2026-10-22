@@ -12,6 +12,7 @@ from urllib.parse import urlsplit
 
 import requests
 
+from finsight.research.publisher import guardian_endpoint
 from finsight.sec import MAX_RESPONSE_BYTES, SECClient, SECError, _throttle
 
 
@@ -63,7 +64,7 @@ class EvidenceClient:
             and parsed.netloc in {"investor.apple.com", "www.microsoft.com", "ir.kaspi.kz"}
             and ".." not in parsed.path
         )
-        if not (official or news or ir):
+        if not (official or news or ir or guardian_endpoint(url)):
             raise SECError(
                 "Evidence URL is outside the supported official filing/public news-feed endpoints."
             )

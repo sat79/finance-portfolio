@@ -74,6 +74,14 @@ def research(dataset):
 
 
 def test_outcomes_require_substantive_evidence(research):
+    assert assess(research)["status"] == "partial"
+    assert any("independent original article" in gap for gap in assess(research)["missing"])
+    # Synthetic independent content is required in addition to company announcements.
+    independent = deepcopy(research.news[0])
+    independent.id = "synthetic-independent"
+    independent.category = "independent reporting; synthetic test evidence"
+    independent.url = "https://www.theguardian.com/business/2026/aug/02/synthetic-results"
+    research.news.append(independent)
     assert assess(research)["status"] == "complete"
     research.documents[1].status = "inaccessible"
     assert assess(research)["status"] == "partial"

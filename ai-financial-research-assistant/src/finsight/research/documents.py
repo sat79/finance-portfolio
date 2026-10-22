@@ -9,6 +9,7 @@ from pypdf import PdfReader
 from pypdf.errors import PdfReadError
 
 from finsight.research.models import Document, Passage
+from finsight.research.publisher import guardian_article
 from finsight.research.transport import EvidenceClient
 from finsight.sec import SECError
 
@@ -66,6 +67,62 @@ class FilingHTML(HTMLParser):
             self.buffer.append(data)
 
 
+class GuardianArticleHTML(FilingHTML):
+    """Read only the publisher's marked public article body, excluding site navigation."""
+
+    def __init__(self):
+        super().__init__()
+        self.depth = 0
+
+    def handle_starttag(self, tag, attrs):
+        attributes = dict(attrs)
+        classes = attributes.get("class", "").split()
+        marked = (
+            attributes.get("data-gu-name") == "body"
+            or attributes.get("data-test-id") == "article-body"
+            or "article-body-viewer-selector" in classes
+            or "content__article-body" in classes
+        )
+        if not self.depth and tag == "div" and marked:
+            self.depth = 1
+        elif self.depth and tag not in {
+            "br",
+            "hr",
+            "img",
+            "input",
+            "meta",
+            "link",
+            "source",
+            "wbr",
+            "embed",
+            "area",
+            "base",
+            "col",
+            "param",
+            "track",
+        }:
+            self.depth += 1
+        if self.depth:
+            super().handle_starttag(tag, attrs)
+
+    def handle_endtag(self, tag):
+        if self.depth:
+            super().handle_endtag(tag)
+            self.depth -= 1
+            if not self.depth:
+                self.flush()
+
+    def handle_startendtag(self, tag, attrs):
+        before = self.depth
+        self.handle_starttag(tag, attrs)
+        if self.depth > before:
+            self.handle_endtag(tag)
+
+    def handle_data(self, data):
+        if self.depth:
+            super().handle_data(data)
+
+
 def extract(content: bytes, media: str, url: str) -> tuple[list[Passage], list[str], list[str]]:
     if content.startswith(b"%PDF"):
         try:
@@ -99,9 +156,17 @@ def extract(content: bytes, media: str, url: str) -> tuple[list[Passage], list[s
             return [], [], [f"PDF extraction failed ({type(exc).__name__}); no OCR performed."]
     if "html" not in media and not urlsplit(url).path.lower().endswith((".htm", ".html")):
         return [], [], ["Unsupported document format; content not read."]
-    parser = FilingHTML()
+    parser = GuardianArticleHTML() if guardian_article(url) else FilingHTML()
     parser.feed(content.decode("utf-8", errors="replace"))
     parser.flush()
+    if guardian_article(url) and not parser.blocks:
+        return (
+            [],
+            [],
+            [
+                "Public publisher article body unavailable; no paywall, consent or navigation text substituted."
+            ],
+        )
     return (
         parser.blocks,
         parser.links,

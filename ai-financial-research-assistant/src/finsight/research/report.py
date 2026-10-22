@@ -216,6 +216,7 @@ def build_report(research: Research) -> tuple[str, dict]:
     for selection in recent:
         doc = selection["document"]
         lines.append(f"### {selection['label']} — {safe(doc.title)}")
+        lines.extend(safe(warning) for warning in selection["date_warnings"])
         lines.append(
             f"Filing/publication date: {doc.published}; SEC report-date metadata: {doc.period}; access: {doc.status}."
         )
@@ -247,7 +248,7 @@ def build_report(research: Research) -> tuple[str, dict]:
         reference = cite(
             item.id,
             item.url,
-            "SEC exhibit" if item.document_id else "RSS headline metadata; article not read",
+            "Selected source text" if item.content else "RSS headline metadata; article not read",
             kind=item.access,
             news=asdict(item),
         )

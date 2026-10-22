@@ -1,0 +1,18 @@
+{
+  "observations_current": true,
+  "state": "unknown",
+  "custom_hosts": [
+    "api.github.com",
+    "data.sec.gov",
+    "investor.apple.com",
+    "ir.kaspi.kz",
+    "news.google.com",
+    "www.microsoft.com",
+    "www.sec.gov"
+  ],
+  "spec_revision": "2",
+  "source_config_version_id": "82a209ba-cf21-4fe3-a4b4-76e872e16fc1~cecfgver_6ad88cb052b48193920d46318f8d8515",
+  "note": "State unknown; actual SEC, RSS and GitHub success is recorded separately. Guardian proxy denial remains.",
+  "recorded_at": "2026-10-22T21:12:01.224984+00:00",
+  "observation_window_utc": "2026-10-22 21:01\u201321:09"
+}

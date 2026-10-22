@@ -6,6 +6,7 @@ import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+from finsight.research.evidence import recent_evidence
 from finsight.research.identity import find_companies
 from finsight.research.outcomes import assess
 from finsight.research.report import build_report, report_bundle
@@ -77,6 +78,36 @@ def main():
                     for d in result.documents
                 ],
                 "news_content_read": sum(bool(n.content) for n in result.news),
+                "independent_articles_read": sum(
+                    bool(n.content) and n.category.startswith("independent reporting")
+                    for n in result.news
+                ),
+                "news_records": [
+                    {
+                        "title": n.title,
+                        "publisher": n.publisher,
+                        "published": n.published,
+                        "event_date": n.event_date,
+                        "url": n.url,
+                        "access": n.access,
+                        "retrieved_at": n.retrieved_at,
+                        "sha256": n.sha256,
+                        "discovery": n.discovery,
+                    }
+                    for n in result.news
+                ],
+                "recent_selections": [
+                    {
+                        "label": s["label"],
+                        "id": s["document"].id,
+                        "published": s["document"].published,
+                        "period": s["document"].period,
+                        "latest_eligible": s["latest_eligible"],
+                        "date_warnings": s["date_warnings"],
+                        "selected_passages": len(s["passages"]),
+                    }
+                    for s in recent_evidence(result.documents)
+                ],
                 "ticker": company.ticker,
                 "matched_listings": len(matches),
                 "seconds_including_search_and_export": round(time.perf_counter() - start, 2),

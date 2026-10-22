@@ -1,6 +1,7 @@
 """Evidence-based outcomes, independent of whether a renderer produced Markdown."""
 
 from finsight.research.evidence import recent_evidence
+from finsight.research.publisher import guardian_article
 
 
 def assess(research):
@@ -18,7 +19,8 @@ def assess(research):
     if not any(d.kind == "annual" for d in substantive):
         missing.append("Annual baseline text is unavailable.")
     if not any(
-        any(len(p.text) > 80 for p in s["passages"]) for s in recent_evidence(research.documents)
+        s["latest_eligible"] and any(len(p.text) > 80 for p in s["passages"])
+        for s in recent_evidence(research.documents)
     ):
         missing.append("No substantive recent interim/earnings passages are available.")
     unread = [d.id for d in research.documents if d.status != "read"]
@@ -39,6 +41,10 @@ def assess(research):
     if not any(n.content for n in research.news):
         missing.append(
             "No selected news/announcement content was read; headlines are discovery-only."
+        )
+    if not any(n.content and guardian_article(n.url) for n in research.news):
+        missing.append(
+            "No independent original article text was read; independent news remains discovery-only or unavailable."
         )
     if any(
         v.startswith(("failed", "partial", "skipped", "unavailable"))

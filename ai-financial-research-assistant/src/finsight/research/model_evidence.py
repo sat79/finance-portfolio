@@ -66,6 +66,8 @@ def build_model_evidence(research, citations=None):
         recent.append(
             {
                 "label": selected["label"],
+                "latest_eligible": selected["latest_eligible"],
+                "date_warnings": selected["date_warnings"],
                 "document_id": doc.id,
                 "source_report_date": doc.period,
                 "publication_date": doc.published,

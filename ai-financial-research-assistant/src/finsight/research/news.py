@@ -9,6 +9,7 @@ from urllib.parse import urlencode, urlsplit
 
 from finsight.research.evidence import is_interim
 from finsight.research.models import Document, NewsItem
+from finsight.research.publisher import guardian_article
 from finsight.sec import SECError
 
 ALIASES = {"0000320193": "Apple", "0000789019": "Microsoft", "0001985487": "Kaspi.kz"}
@@ -40,7 +41,13 @@ def deduplicate(items: list[NewsItem]) -> list[NewsItem]:
                 for old in kept
                 if old.url == item.url
                 or (
-                    old.category == item.category
+                    (
+                        old.category == item.category
+                        or (
+                            old.category.startswith("independent reporting")
+                            and item.category.startswith("independent reporting")
+                        )
+                    )
                     and abs(
                         (
                             date.fromisoformat(old.published[:10])
@@ -149,12 +156,19 @@ def enrich_news(client, items, documents, *, refresh=False, limit=3):
     from finsight.research.evidence import excerpt, period_basis, recent_evidence
 
     used = 0
-    for item in sorted(items, key=lambda n: n.published, reverse=True):
+    independent_used = False
+    # Reserve a slot for the narrow independent route even when official releases are newer.
+    for item in sorted(items, key=lambda n: (guardian_article(n.url), n.published), reverse=True):
         item.content = []
         doc = next((d for d in documents if d.id == item.document_id), None)
         if doc and is_interim(doc):
             item.title = "Interim financial disclosure — " + doc.published
             item.category = "company interim financial disclosure; date is SEC filing date"
+        if guardian_article(item.url):
+            if independent_used:
+                item.access = "discovery_only; independent article budget exhausted"
+                continue
+            independent_used = True
         if used >= limit:
             item.access = "discovery_only; selected-content budget exhausted"
             continue
@@ -188,7 +202,9 @@ def enrich_news(client, items, documents, *, refresh=False, limit=3):
             continue
         passages = excerpt(
             doc,
-            [r"revenue|earnings|results|acquisition|financing|regulat|management|dividend|outlook"],
+            [
+                r"revenue|earnings|profit|sales|results|acquisition|financing|regulat|management|dividend|outlook|lawsuit|antitrust|competition|invest|billion|million"
+            ],
             2,
         )
         if is_interim(doc):

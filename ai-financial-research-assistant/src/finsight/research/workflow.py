@@ -6,8 +6,9 @@ from datetime import date, datetime, timezone
 from finsight.research.documents import retrieve_documents, retrieve_ir, select_documents
 from finsight.research.identity import resolve_details
 from finsight.research.models import Research
-from finsight.research.news import enrich_news, news_url, official_news, parse_news
+from finsight.research.news import deduplicate, enrich_news, news_url, official_news, parse_news
 from finsight.research.outcomes import assess
+from finsight.research.publisher import discover_guardian
 from finsight.research.transport import EvidenceClient
 from finsight.sec import SECClient, SECError
 
@@ -99,9 +100,11 @@ def run_research(
             "cached": raw.cached,
         }
         items = parse_news(raw.content, news_start, news_end)
+        for item in items:
+            item.discovery = dict(result.news_feed)
         result.news.extend(sorted(items, key=lambda item: item.published, reverse=True)[:12])
         result.limitations.append(
-            "Independent news is RSS headline metadata only: articles/paywalled text were not read. A company-name and financial-event keyword search can miss events or include namesakes; relevance needs review. Coverage is incomplete and not exhaustive; zero results does not establish no news."
+            "Google News links remain discovery-only. The separate Guardian route reads at most one relevant public article. Company-name/keyword searches can miss events or include namesakes; relevance needs review. Coverage is not exhaustive; zero results does not establish no news."
         )
         if len(items) > 12:
             result.limitations.append(
@@ -111,9 +114,27 @@ def run_research(
     stage("Recent news", news)
     if result.stages["Recent news"] != "completed":
         result.limitations.append(
-            "Independent news retrieval failed. Coverage is incomplete; do not infer an absence of events."
+            "Google News discovery failed. Coverage is incomplete; do not infer an absence of events."
         )
+
+    def independent_news():
+        items, provenance = discover_guardian(
+            evidence, result.company, news_start, news_end, refresh=refresh
+        )
+        result.news_feed["independent_publisher"] = provenance
+        # Prefer a direct original URL over a matching aggregator headline.
+        result.news = deduplicate(items + result.news)
+        if not items:
+            result.limitations.append(
+                "No relevant Guardian article discovered in the public feed/window. This bounded feed is not an archive search; independent article coverage remains missing."
+            )
+            return "partial: no relevant independent article discovered"
+
+    stage("Independent news", independent_news)
     enrich_news(evidence, result.news, result.documents, refresh=refresh)
+    if not any(n.content and n.publisher == "The Guardian" for n in result.news):
+        if result.stages["Independent news"] == "completed":
+            result.stages["Independent news"] = "partial: discovered original article text not read"
 
     def financials():
         if not company.supported:

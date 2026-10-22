@@ -1,3 +1,11 @@
+# 22 October 2026 — focused acceptance follow-up
+
+- Parse valid calendar dates for latest interim/earnings ranking; retain undated/invalid-date documents as labelled supplementary evidence in reports and model inputs.
+- Add a bounded public Guardian RSS-to-original-article route with feed/body provenance, exact host/path checks, body-only extraction and a one-article budget. Runtime access is still blocked; no independent live article read is claimed.
+- Make missing independent original text a prominent partial-coverage condition; expose citations in the production UI.
+- Fresh uncached Apple/Microsoft/Kaspi.kz runs retrieve official documents and financial observations. See [acceptance results](docs/acceptance-2026-10-22.md) for actual outcomes, browser checks and the remaining setup action.
+- 178 tests pass; paid model calls remain disabled.
+
 # Independent review follow-up — 21 October 2026
 
 - Derived complete/partial/failed outcomes from stages and substantive evidence; failed retrieval no longer displays successful completion.

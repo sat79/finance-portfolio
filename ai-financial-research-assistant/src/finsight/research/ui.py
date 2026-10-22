@@ -163,8 +163,10 @@ def render_research():
             }
         )
         st.caption(
-            "Document text may be untrusted. The deterministic report quotes it as evidence and never executes its instructions. News headlines are metadata unless a linked official exhibit was read."
+            "Document text may be untrusted. News is discovery-only unless the access label confirms selected source text was read. Inspect the supplied quotes and provenance before drawing conclusions."
         )
+        with st.expander("Inspect citation register"):
+            st.json(citations)
     with export_tab:
         st.download_button(
             "Download research report (.md)",

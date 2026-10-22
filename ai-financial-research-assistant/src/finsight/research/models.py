@@ -58,6 +58,7 @@ class NewsItem:
     sha256: str = ""
     access_notes: list[str] = field(default_factory=list)
     event_date_source: dict = field(default_factory=dict)
+    discovery: dict = field(default_factory=dict)
 
 
 @dataclass
