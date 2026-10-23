@@ -1,5 +1,7 @@
 # Focused acceptance — 22 October 2026
 
+**Historical record:** the [23 October follow-up](news-review-2026-10-23.md) supersedes the Guardian network blocker, Microsoft redirect and test counts below.
+
 Continues `8f47a0f`, preserving `50c7ca1` and the existing annual accounting, KSPI, CSV, Excel and model-spending safeguards. **Fresh official-source research and the production-app journey work. Acceptance remains incomplete because no independent original article has yet been retrieved live.** No merge, deployment or paid model call occurred.
 
 ## Published environment and fresh requests

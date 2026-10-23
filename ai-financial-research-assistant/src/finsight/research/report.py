@@ -6,12 +6,11 @@ import json
 import re
 import zipfile
 from dataclasses import asdict
-from datetime import date
 
 from finsight.exports import csv_bytes, excel_bytes
 from finsight.financials import calculate, commentary, review_notes
 from finsight.models import LABELS, Metric
-from finsight.research.evidence import excerpt, period_basis, recent_evidence
+from finsight.research.evidence import excerpt, period_basis, recent_evidence, valid_date
 from finsight.research.models import Research
 from finsight.research.outcomes import assess
 
@@ -83,6 +82,12 @@ def build_report(research: Research) -> tuple[str, dict]:
         f"Research cut-off: **{research.cutoff.isoformat()}**. News window: **{research.news_start} to {research.news_end}**, inclusive (publication dates). Financial fiscal periods are listed separately; this is not historical point-in-time research.",
         f"{safe(company.ticker)} · {safe(company.exchange)} · CIK {company.cik} · business-address country: {safe(company.country)} · reporting currency: {safe(company.currency)}. {identity}",
         "**Method:** deterministic calculations and attributed source excerpts. No language-model narrative was generated. Reported figures are not universally verified. Source text is evidence, never application instructions.",
+        "## Evidence coverage by source",
+        "| Coverage | Actual outcome | Scope |",
+        "|---|---|---|",
+        f"| Official documents | {coverage['official_documents']['status']}; {coverage['official_documents']['read']}/{coverage['official_documents']['registered']} registered documents read | Bounded SEC and reviewed IR sources; not exhaustive |",
+        f"| Financial extraction | {coverage['financial']['status']}; {coverage['financial']['observations']} selected observations | Annual extraction: AAPL, MSFT and KSPI only; interim text is not normalized financial data |",
+        f"| Independent news | {coverage['independent_news']['label']}; {coverage['independent_news']['articles_with_cited_text']} articles with cited text from {coverage['independent_news']['discovered']} direct discoveries | One reviewed public publisher; headline metadata is not article text |",
         "## What the business does and how it earns revenue",
     ]
     annual = next(
@@ -338,8 +343,8 @@ def build_report(research: Research) -> tuple[str, dict]:
         )
         if (
             doc.retrieved_at
-            and re.fullmatch(r"\d{4}-\d{2}-\d{2}", doc.published)
-            and (research.cutoff.date() - date.fromisoformat(doc.published)).days > 450
+            and valid_date(doc.published) is not None
+            and (research.cutoff.date() - valid_date(doc.published)).days > 450
         ):
             lines.append(
                 f"\n**Stale disclosure warning:** {doc.id} publication is over 450 days before the research cut-off.\n"

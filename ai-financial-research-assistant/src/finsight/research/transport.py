@@ -45,6 +45,13 @@ class EvidenceClient:
             return result
         except SECError as exc:
             attempt.update(status="failed", reason=str(exc))
+            attempt["failure_kind"] = (
+                "network_failure"
+                if isinstance(exc.__cause__, requests.RequestException)
+                else "http_error"
+                if str(exc).startswith("Evidence HTTP")
+                else "source_failure"
+            )
             raise
 
     def _get(self, url: str, *, refresh=False) -> EvidenceResponse:

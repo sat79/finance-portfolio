@@ -48,6 +48,9 @@ with sync_playwright() as p:
         page.get_by_role("heading", name="Research conclusion", exact=False).wait_for()
         assert "TEST REPLAY" not in page.inner_text("body")
         assert page.locator('a[href^="https://www.sec.gov/Archives/"]').count() > 0
+        page.get_by_role(
+            "heading", name="Evidence coverage by source", exact=True
+        ).scroll_into_view_if_needed()
         page.screenshot(path=str(output / f"{ticker}-report.png"))
         page.get_by_role("tab", name="Evidence & coverage", exact=True).click()
         page.get_by_text("Inspect citation register", exact=True).click()
@@ -72,6 +75,10 @@ with sync_playwright() as p:
             successful = [a for a in evidence["access_attempts"] if a["status"] == "retrieved"]
             assert successful and all(a["cached"] is False for a in successful)
             assert "TEST REPLAY" not in report
+            assert all(
+                key in coverage for key in ["official_documents", "financial", "independent_news"]
+            )
+            assert coverage["independent_news"]["label"] in report
             for item in model["recent_disclosures"]:
                 for passage in item["passages"]:
                     assert passage["citation_id"] in citations

@@ -188,3 +188,101 @@ def test_publisher_self_closing_break_keeps_article_scope():
     content = HTML.replace(b"<p>", b"<br/><p>")
     blocks, _, _ = extract(content, "text/html", ARTICLE)
     assert [p.text for p in blocks] == [TEXT]
+
+
+def test_leadership_article_body_contributes_cited_evidence():
+    """The live CEO story was extracted but dropped by the financial-only selector."""
+    from finsight.research.models import NewsItem
+
+    text = (
+        "The new CEO introduced the company's products at its annual showcase. "
+        "The leadership transition raises questions about the direction of the business."
+    )
+
+    class Client:
+        def get(self, url, **kwargs):
+            return SimpleNamespace(
+                content=(
+                    '<div class="article-body-viewer-selector"><p>' + text + "</p></div>"
+                ).encode(),
+                media_type="text/html",
+                fetched_at="2026-10-23T02:00:00+00:00",
+                sha256="a" * 64,
+                cached=False,
+            )
+
+    item = NewsItem("leadership", "Apple CEO transition", "The Guardian", ARTICLE, "2026-10-20")
+    documents = []
+    enrich_news(Client(), [item], documents, refresh=True)
+    assert item.content[0]["quote"] == text
+    assert item.content[0]["citation_id"] == "NDocleadership:B1"
+    assert item.content[0]["url"] == ARTICLE and item.sha256 == "a" * 64
+
+
+@pytest.mark.parametrize(
+    "failure",
+    ["network_failure", "no_matching_article", "extraction_failure", "no_relevant_excerpt"],
+)
+def test_independent_coverage_distinguishes_failure_stages(dataset, failure):
+    from test_research import report_fixture
+
+    from finsight.research.models import NewsItem
+    from finsight.research.outcomes import assess
+    from finsight.research.report import build_report
+
+    research = report_fixture(dataset)
+    research.stages["Independent news"] = "partial: no relevant independent article discovered"
+    if failure == "network_failure":
+        research.stages["Independent news"] = "failed; earlier stages preserved"
+        research.access_attempts = [
+            {
+                "url": "https://www.theguardian.com/technology/apple/rss",
+                "status": "failed",
+                "failure_kind": "network_failure",
+            }
+        ]
+    if failure in {"extraction_failure", "no_relevant_excerpt"}:
+        research.news = [NewsItem("N1", "Apple revenue", "The Guardian", ARTICLE, "2026-10-20")]
+        research.documents.append(
+            replace(
+                release(),
+                kind="news original",
+                status="unreadable" if failure == "extraction_failure" else "read",
+            )
+        )
+    coverage = assess(research)
+    assert coverage["independent_news"]["status"] == failure
+    assert coverage["independent_news"]["articles_with_cited_text"] == 0
+    assert coverage["financial"]["observations"] == len(dataset.selected)
+    assert coverage["official_documents"]["registered"] == 1
+    report, _ = build_report(research)
+    assert (
+        "Evidence coverage by source" in report and coverage["independent_news"]["label"] in report
+    )
+    assert "AAPL, MSFT and KSPI only" in report
+
+
+def test_transport_records_network_failure_without_claiming_extraction(tmp_path):
+    import requests
+
+    class Session:
+        def get(self, *args, **kwargs):
+            raise requests.exceptions.ProxyError("synthetic proxy denial")
+
+    client = EvidenceClient(SimpleNamespace(cache_dir=tmp_path, session=Session()))
+    with pytest.raises(SECError, match="connection failed"):
+        client.get(ARTICLE, refresh=True)
+    assert client.attempts[0]["failure_kind"] == "network_failure"
+    assert "retrieved_at" not in client.attempts[0]
+
+
+def test_invalid_publication_date_does_not_crash_report_staleness_check(dataset):
+    from test_research import report_fixture
+
+    from finsight.research.report import build_report
+
+    research = report_fixture(dataset)
+    research.documents.append(release("2026-02-30", retrieved_at="2026-10-23T02:00:00+00:00"))
+    report, citations = build_report(research)
+    assert "Invalid publication date" in report and "Supplementary evidence" in report
+    assert citations["SEC:B1"]["publication_date"] == "2026-02-30"

@@ -2,7 +2,7 @@
 
 Enter a company name, confirm the entity, retrieve official documents and recent news, then download a cited research report. FinSight combines deterministic financial analysis with attributed disclosure excerpts; optional model narration is disabled unless explicitly configured and approved.
 
-**Status:** fresh company-name research and production-app acceptance are documented in the [22 October acceptance review](docs/acceptance-2026-10-22.md). Apple, Microsoft and Kaspi.kz retrieve official evidence and reviewed annual financial data, with **partial** outcomes and explicit gaps. The latest-document date bug is fixed; a narrow free Guardian RSS-to-article route is implemented but live article retrieval remains blocked by the runtime host policy. **178 tests pass**. Paid model calls remain disabled. Earlier [review findings](docs/review-followup.md) and [historical KSPI demonstration](docs/kspi-review-demonstration.md) remain dated historical records.
+**Status:** the [23 October review](docs/news-review-2026-10-23.md) validates live original Guardian articles for Apple and Microsoft and the canonical Microsoft IR endpoint. Fresh KSPI research has 21/21 official documents and 27 annual observations; its independent feed has no matching article, so coverage remains partial. Official documents, financial extraction and independent news are reported separately. **185 tests pass**, with three production-browser journeys validated. Read the [Kaspi analytical critique](docs/kspi-analytical-review-2026-10-23.md) alongside the complete report and bundle. Paid model calls remain disabled; annual extraction scope remains **KSPI, AAPL and MSFT only**.
 
 ## What works
 

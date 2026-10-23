@@ -1,3 +1,11 @@
+# 23 October 2026 — live news and Kaspi analytical review
+
+- Verified original Guardian article body extraction and citations for Apple and Microsoft; corrected omission of CEO/leadership passages from the content selector.
+- Replaced Microsoft's redirecting IR URL with the directly verified canonical endpoint; redirect and URL safeguards remain.
+- Report official-document, annual-financial and independent-news coverage separately; distinguish network, matching, parsing and body-extraction outcomes.
+- Fresh KSPI report/bundle and a separate evidence-bound critique cover growth/profit conversion, operating drivers, funding/credit risk and dividend chronology. A bounded synthesis pilot is prepared but unrun.
+- 185 tests pass, lint/formatting and dependencies pass, and all three production-browser journeys pass. See [review evidence](docs/news-review-2026-10-23.md). No paid model calls, merge or deployment.
+
 # 22 October 2026 — focused acceptance follow-up
 
 - Parse valid calendar dates for latest interim/earnings ranking; retain undated/invalid-date documents as labelled supplementary evidence in reports and model inputs.

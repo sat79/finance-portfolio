@@ -123,6 +123,11 @@ def render_research():
         st.warning(message)
     else:
         st.success(message)
+    st.write(
+        f"Official documents: **{coverage['official_documents']['status']}** · "
+        f"Annual financial extraction: **{coverage['financial']['status']}** · "
+        f"Independent news: **{coverage['independent_news']['label']}**"
+    )
     st.caption(
         f"Cut-off {result.cutoff.isoformat()} · measured retrieval/extraction time {result.seconds.get('total', 0):.1f}s · deterministic report: 0 model calls, $0 model cost. Optional narrative usage is shown separately below."
     )

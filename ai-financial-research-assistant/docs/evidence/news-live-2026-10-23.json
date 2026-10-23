@@ -1,0 +1,92 @@
+[
+  {
+    "title": "Apple’s new CEO introduces himself at annual showcase: ‘I continue to be inspired every single day’",
+    "publisher": "The Guardian",
+    "url": "https://www.theguardian.com/technology/2026/sep/09/apple-product-showcase-ceo-john-ternus",
+    "published": "2026-09-09T19:07:53+00:00",
+    "event_date": null,
+    "retrieved_at": "2026-10-23T02:12:17.422089+00:00",
+    "sha256": "1f2616ea7e0cbdb37a68b87dca6006fe08ba63bbaa484531e10b461c33a1d6f8",
+    "access": "selected_source_text_read; not independently verified",
+    "content": [
+      {
+        "citation_id": "NDocN7febf8d308:B1",
+        "quote": "John Ternus, Apple’s new CEO, helmed the company’s annual showcase of new iPhones and other products on Wednesday. It was the first time the public saw the warm and unpretentious demeanor of the executive, who is filling the shoes of Tim Cook and his predecessor, Steve Jobs, at the $4.5tn tech giant.",
+        "url": "https://www.theguardian.com/technology/2026/sep/09/apple-product-showcase-ceo-john-ternus",
+        "locator": "HTML text block 1",
+        "document_id": "NDocN7febf8d308",
+        "source_report_date": "Not established",
+        "period_basis": "duration not established from this excerpt",
+        "sha256": "1f2616ea7e0cbdb37a68b87dca6006fe08ba63bbaa484531e10b461c33a1d6f8",
+        "retrieved_at": "2026-10-23T02:12:17.422089+00:00"
+      },
+      {
+        "citation_id": "NDocN7febf8d308:B8",
+        "quote": "Not much is publicly known about Ternus’s leadership style, even though he has worked at Apple for 25 years. He has kept a low profile and is known for a calm manner and attention to detail. Ternus started at the company in 2001 and in 2013 became the vice-president of hardware engineering. By 2021, he was heading the entire hardware department.",
+        "url": "https://www.theguardian.com/technology/2026/sep/09/apple-product-showcase-ceo-john-ternus",
+        "locator": "HTML text block 8",
+        "document_id": "NDocN7febf8d308",
+        "source_report_date": "Not established",
+        "period_basis": "duration not established from this excerpt",
+        "sha256": "1f2616ea7e0cbdb37a68b87dca6006fe08ba63bbaa484531e10b461c33a1d6f8",
+        "retrieved_at": "2026-10-23T02:12:17.422089+00:00"
+      }
+    ],
+    "discovery": {
+      "url": "https://www.theguardian.com/technology/apple/rss",
+      "retrieved_at": "2026-10-23T02:12:14.824978+00:00",
+      "sha256": "3b40ae3816831fba203482ee1197fba3a68ffa9e463a6c6917c31423ec2039a4",
+      "cached": false,
+      "status": "retrieved",
+      "scope": "Public RSS feed only; not an archive search. Relevant older stories may be absent."
+    },
+    "article_datePublished": "2026-09-09T19:07:53.000Z",
+    "publication_checked_against_original_metadata": true,
+    "publication_date_note": "RSS timestamp agrees with original article datePublished; dateModified is not used as publication date."
+  },
+  {
+    "title": "AI less regulated than milk, Microsoft president says in warning over safety",
+    "publisher": "The Guardian",
+    "url": "https://www.theguardian.com/technology/2026/oct/12/ai-less-regulated-than-milk-microsoft-president-calls-for-tougher-rules",
+    "published": "2026-10-12T07:52:46+00:00",
+    "event_date": null,
+    "retrieved_at": "2026-10-23T02:12:36.879566+00:00",
+    "sha256": "7cd1ab0f33db3f07cfdff3d16858a3ea61fcde305b1b89f0ce4a2db2ad1fc65b",
+    "access": "selected_source_text_read; not independently verified",
+    "content": [
+      {
+        "citation_id": "NDocN9348a6c236:B1",
+        "quote": "Artificial intelligence is less regulated than milk and washing machines, the president of Microsoft has said, as the tech industry warns over the safety of AI.",
+        "url": "https://www.theguardian.com/technology/2026/oct/12/ai-less-regulated-than-milk-microsoft-president-calls-for-tougher-rules",
+        "locator": "HTML text block 1",
+        "document_id": "NDocN9348a6c236",
+        "source_report_date": "Not established",
+        "period_basis": "duration not established from this excerpt",
+        "sha256": "7cd1ab0f33db3f07cfdff3d16858a3ea61fcde305b1b89f0ce4a2db2ad1fc65b",
+        "retrieved_at": "2026-10-23T02:12:36.879566+00:00"
+      },
+      {
+        "citation_id": "NDocN9348a6c236:B4",
+        "quote": "There are growing calls from experts, politicians and regulators for tougher rules to control AI, as well as warnings from Anthropic, Google DeepMind and OpenAI that the pace of the technology’s development should slow.",
+        "url": "https://www.theguardian.com/technology/2026/oct/12/ai-less-regulated-than-milk-microsoft-president-calls-for-tougher-rules",
+        "locator": "HTML text block 4",
+        "document_id": "NDocN9348a6c236",
+        "source_report_date": "Not established",
+        "period_basis": "duration not established from this excerpt",
+        "sha256": "7cd1ab0f33db3f07cfdff3d16858a3ea61fcde305b1b89f0ce4a2db2ad1fc65b",
+        "retrieved_at": "2026-10-23T02:12:36.879566+00:00"
+      }
+    ],
+    "discovery": {
+      "url": "https://www.theguardian.com/technology/microsoft/rss",
+      "retrieved_at": "2026-10-23T02:12:35.736815+00:00",
+      "sha256": "41d84eeee3a92ff585cbbdb32b55625475b9793bd9725bdcdc1ed387187ff6ed",
+      "cached": false,
+      "status": "retrieved",
+      "scope": "Public RSS feed only; not an archive search. Relevant older stories may be absent."
+    },
+    "article_datePublished": "2026-10-12T07:52:46.000Z",
+    "publication_checked_against_original_metadata": true,
+    "publication_date_note": "RSS timestamp agrees with original article datePublished; dateModified is not used as publication date."
+  }
+]

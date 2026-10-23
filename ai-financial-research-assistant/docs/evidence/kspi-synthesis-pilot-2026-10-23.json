@@ -1,0 +1,19 @@
+{
+  "status": "prepared_not_executed",
+  "model": null,
+  "paid_calls": 0,
+  "actual_cost_usd": "0",
+  "max_calls": 1,
+  "max_output_tokens": 1200,
+  "input_token_allowance": 30766,
+  "input_allowance_method": "Conservative UTF-8 byte count plus existing instruction/serialization overhead; not tokenizer measurement.",
+  "cost_formula_usd": "(input_token_allowance * input_price_per_million + 1200 * output_price_per_million) / 1000000",
+  "illustrative_rates_only": {
+    "input_per_million_usd": "1",
+    "output_per_million_usd": "4",
+    "estimated_reservation_usd": "0.035566"
+  },
+  "proposed_cap_usd": "0.10",
+  "conditions": "Verify a selected model and its current prices, confirm estimate is within cap, and obtain explicit spending authorization before enabling. No automatic retries. Existing locked reservation ledger and exact numerical/citation checks remain mandatory.",
+  "acceptance": "At most ten structured outputs; prioritize growth/profit conversion, operating drivers, funding/credit risk and dividend chronology. Every factual statement must have supplied evidence; unsupported causal interpretations fail human review. No semantic-verification claim."
+}

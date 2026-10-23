@@ -203,7 +203,7 @@ def enrich_news(client, items, documents, *, refresh=False, limit=3):
         passages = excerpt(
             doc,
             [
-                r"revenue|earnings|profit|sales|results|acquisition|financing|regulat|management|dividend|outlook|lawsuit|antitrust|competition|invest|billion|million"
+                r"revenue|earnings|profit|sales|results|acquisition|financing|regulat|management|dividend|outlook|lawsuit|antitrust|competition|invest|billion|million|\bCEO\b|chief executive|leadership"
             ],
             2,
         )

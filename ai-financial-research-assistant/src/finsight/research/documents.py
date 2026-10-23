@@ -320,7 +320,7 @@ def read_document(client, doc, *, refresh=False):
 
 IR_PAGES = {
     "0000320193": "https://investor.apple.com/investor-relations/default.aspx",
-    "0000789019": "https://www.microsoft.com/en-us/Investor",
+    "0000789019": "https://www.microsoft.com/en-us/investor/default",
     "0001985487": "https://ir.kaspi.kz/",
 }
 
