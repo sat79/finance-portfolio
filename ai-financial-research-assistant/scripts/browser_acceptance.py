@@ -48,9 +48,7 @@ with sync_playwright() as p:
         page.get_by_role("heading", name="Research conclusion", exact=False).wait_for()
         assert "TEST REPLAY" not in page.inner_text("body")
         assert page.locator('a[href^="https://www.sec.gov/Archives/"]').count() > 0
-        page.get_by_role(
-            "heading", name="Evidence coverage by source", exact=True
-        ).scroll_into_view_if_needed()
+        page.get_by_role("heading", name="Key findings", exact=True).scroll_into_view_if_needed()
         page.screenshot(path=str(output / f"{ticker}-report.png"))
         page.get_by_role("tab", name="Evidence & coverage", exact=True).click()
         page.get_by_text("Inspect citation register", exact=True).click()
@@ -71,6 +69,8 @@ with sync_playwright() as p:
             assert evidence["model_usage"]["calls"] == 0
             assert "Latest interim and earnings evidence alongside the annual baseline" in report
             assert citations and model["recent_disclosures"]
+            assert 3 <= len(model["key_findings"]) <= 5
+            assert report.index("## Key findings") < report.index("## What the business")
             assert "financial-analysis.xlsx" in archive.namelist()
             successful = [a for a in evidence["access_attempts"] if a["status"] == "retrieved"]
             assert successful and all(a["cached"] is False for a in successful)
@@ -101,6 +101,7 @@ with sync_playwright() as p:
                     "download and inspect bundle",
                 ],
                 "model_calls": 0,
+                "key_findings": len(model["key_findings"]),
             }
             rows.append(row)
             (output / "summary.json").write_text(json.dumps(rows, indent=2))

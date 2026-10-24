@@ -1,3 +1,12 @@
+# 24 October 2026 — automated analytical usefulness
+
+- Replace generic recent-document ranking with bounded topic selection for results, drivers, credit risk, explanations and capital actions; preserve short results, nearby period/heading/unit context and exact citation provenance.
+- Add up to five Key findings with verbatim reported facts/management explanations, existing annual calculations and unresolved questions. No causal bridge or interim normalization is invented.
+- Deduplicate repeated measures/supplements and model warning records; share actual selected quotes across report/model inputs. Protect full selected evidence from shorter news excerpts.
+- Paired identical-snapshot evaluation improves the chosen 11-passage benchmark from 4/11 to 11/11 across KSPI/AAPL/MSFT. This is a small development benchmark, not general semantic/materiality verification.
+- Publish complete fresh reports/evidence ZIPs on the review branch. Independent-article exports retain all cited excerpts and original block positions, not uncited article bodies.
+- 194 tests pass; lint/formatting, dependencies and three fresh production-browser journeys pass. Kaspi independent news remains partial; paid model calls remain zero. See [evaluation and limits](docs/analytical-selection-2026-10-24.md). No merge or deployment.
+
 # 23 October 2026 — live news and Kaspi analytical review
 
 - Verified original Guardian article body extraction and citations for Apple and Microsoft; corrected omission of CEO/leadership passages from the content selector.

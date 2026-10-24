@@ -11,6 +11,7 @@ from finsight.exports import csv_bytes, excel_bytes
 from finsight.financials import calculate, commentary, review_notes
 from finsight.models import LABELS, Metric
 from finsight.research.evidence import excerpt, period_basis, recent_evidence, valid_date
+from finsight.research.findings import key_findings
 from finsight.research.models import Research
 from finsight.research.outcomes import assess
 
@@ -43,13 +44,19 @@ def build_report(research: Research) -> tuple[str, dict]:
     citations = {}
 
     def cite(key, url, locator, **metadata):
+        previous = citations.get(key, {})
+        if previous.get("quote", "").startswith(metadata.get("quote", "")) and len(
+            previous.get("quote", "")
+        ) > len(metadata.get("quote", "")):
+            metadata["quote"] = previous["quote"]
+            metadata["period_basis"] = previous.get("period_basis", "")
         citations[key] = {**citations.get(key, {}), "url": url, "locator": locator, **metadata}
         return f"[{key}]({url})"
 
-    def quote(doc, passage):
+    def quote(doc, passage, limit=1000):
         key = f"{doc.id}:B{doc.passages.index(passage) + 1}"
         # The excerpt is an exact prefix of normalized source text. Ellipsis is outside the quote.
-        text = passage.text[:1000]
+        text = passage.text[:limit]
         reference = cite(
             key,
             doc.url,
@@ -66,7 +73,7 @@ def build_report(research: Research) -> tuple[str, dict]:
         )
         return (
             f"> **Company disclosure excerpt:** “{safe(text)}”"
-            + (" [excerpt truncated]" if len(passage.text) > 1000 else "")
+            + (" [excerpt truncated]" if len(passage.text) > limit else "")
             + f" {reference} — {safe(passage.locator)}; source report date: {safe(doc.period)}; duration cues: {safe(period_basis(text))}."
         )
 
@@ -90,6 +97,7 @@ def build_report(research: Research) -> tuple[str, dict]:
         f"| Independent news | {coverage['independent_news']['label']}; {coverage['independent_news']['articles_with_cited_text']} articles with cited text from {coverage['independent_news']['discovered']} direct discoveries | One reviewed public publisher; headline metadata is not article text |",
         "## What the business does and how it earns revenue",
     ]
+    findings_insert = len(lines) - 1
     annual = next(
         (d for d in research.documents if d.kind == "annual" and d.status == "read"), None
     )
@@ -222,11 +230,27 @@ def build_report(research: Research) -> tuple[str, dict]:
         doc = selection["document"]
         lines.append(f"### {selection['label']} — {safe(doc.title)}")
         lines.extend(safe(warning) for warning in selection["date_warnings"])
+        if selection["duplicate_document_ids"]:
+            lines.append(
+                "Equivalent selected supplementary text also appears in registered documents: "
+                + ", ".join(selection["duplicate_document_ids"])
+                + ". Quoted once here; their provenance remains in the document register."
+            )
         lines.append(
             f"Filing/publication date: {doc.published}; SEC report-date metadata: {doc.period}; access: {doc.status}."
         )
         if selection["passages"]:
-            lines.extend(quote(doc, p) for p in selection["passages"])
+            lines.append(
+                "Selected passages and nearby period/section/unit context are quoted once below. Context does not assign a normalized period or scope to every figure."
+            )
+            for p in selection["passages"]:
+                lines.append(quote(doc, p, limit=1600))
+            for record in selection["records"]:
+                key = f"{doc.id}:B{record['index'] + 1}"
+                citations[key]["selection_topic"] = record["topic"]
+                citations[key]["context_citation_ids"] = [
+                    f"{doc.id}:B{i + 1}" for i in record["context_indices"]
+                ]
             lines.append(
                 "**Interpretation boundary:** these are source statements for the periods shown. "
                 "Management explanations here are not assumed to explain annual movements. "
@@ -349,6 +373,49 @@ def build_report(research: Research) -> tuple[str, dict]:
             lines.append(
                 f"\n**Stale disclosure warning:** {doc.id} publication is over 450 days before the research cut-off.\n"
             )
+    finding_lines = [
+        "## Key findings",
+        "Prioritized by explicit evidence categories, not a claim of exhaustive materiality. Source statements, calculations and open questions remain separate.",
+    ]
+    calc_map = {f"C{i}": c for i, c in enumerate(calculate(data), 1)} if data else {}
+    findings = key_findings(research, recent)
+    finding_context_seen = set()
+    for index, finding in enumerate(findings, 1):
+        finding_lines.append(f"### {index}. {safe(finding['title'])}")
+        for key in finding["context_citation_ids"]:
+            citation = citations[key]
+            if key in finding_context_seen:
+                finding_lines.append(
+                    f"**Context already quoted above:** [{key}]({citation['url']})"
+                )
+                continue
+            finding_context_seen.add(key)
+            finding_lines.append(
+                f"**Nearby source context:** “{safe(citation['quote'])}” [{key}]({citation['url']})"
+            )
+        for statement in finding["statements"]:
+            key = statement["citation_id"]
+            finding_lines.append(
+                f"**{statement['kind'].capitalize()} (verbatim):** “{safe(statement['text'])}” [{key}]({citations[key]['url']})"
+            )
+        for key in finding["calculation_ids"]:
+            c = calc_map[key]
+            references = " ".join(f"[F{i}]({citations['F' + i]['url']})" for i in c.input_ids)
+            finding_lines.append(
+                f"**Deterministic annual calculation:** {safe(c.metric.replace('_', ' '))} at {c.period_end}: {c.value:,.2f} {c.unit}. {references}"
+            )
+        if finding["calculation_ids"]:
+            finding_lines.append(f"**Boundary:** {safe(finding['boundary'])}")
+        finding_lines.append(f"**Unresolved analytical question:** {safe(finding['question'])}")
+    if not findings:
+        finding_lines.append(
+            "Insufficient substantive evidence for prioritized findings; no finding was manufactured."
+        )
+    elif len(findings) < 3:
+        finding_lines.append(
+            "Fewer than three supported findings were available; the report does not fill missing evidence with generic conclusions."
+        )
+    lines[findings_insert:findings_insert] = finding_lines
     lines.append("## Citation register")
     for key, value in citations.items():
         lines.append(f"- [{key}]({value['url']}): {safe(value['locator'])}")
@@ -367,9 +434,15 @@ def report_bundle(research: Research) -> bytes:
             "model-evidence.json", json.dumps(build_model_evidence(research, citations), indent=2)
         )
         archive.writestr("citations.json", json.dumps(citations, indent=2, default=str))
-        archive.writestr(
-            "research-evidence.json", json.dumps(research.serializable(), indent=2, default=str)
-        )
+        snapshot = research.serializable()
+        for doc in snapshot["documents"]:
+            if doc["kind"] == "news original":
+                for index, passage in enumerate(doc["passages"], 1):
+                    passage["text"] = citations.get(f"{doc['id']}:B{index}", {}).get("quote", "")
+                doc["limitations"].append(
+                    "Export retains cited independent-article excerpts only. Empty blocks preserve original citation numbering; the URL/hash identify the retrieved original."
+                )
+        archive.writestr("research-evidence.json", json.dumps(snapshot, indent=2, default=str))
         archive.writestr(
             "document-register.csv",
             csv_bytes(

@@ -1,0 +1,146 @@
+[
+  {
+    "query": "Apple",
+    "ticker": "AAPL",
+    "attempted_at": "2026-10-24T14:29:05.309672+00:00",
+    "finished_at": "2026-10-24T14:29:35.360525+00:00",
+    "cutoff": "2026-10-24 14:29:08.662766+00:00",
+    "coverage": {
+      "status": "complete",
+      "missing": [],
+      "read_documents": 16,
+      "financial_observations": 40,
+      "official_documents": {
+        "status": "available",
+        "read": 16,
+        "registered": 16,
+        "recent_passages_available": true
+      },
+      "financial": {
+        "status": "available",
+        "observations": 40,
+        "missing_latest_core_metrics": [],
+        "scope": "Reviewed annual extraction only: Apple (AAPL), Microsoft (MSFT), Kaspi.kz (KSPI). Interim figures remain quoted evidence."
+      },
+      "independent_news": {
+        "status": "selected_article_text_read",
+        "label": "Selected original article text read",
+        "discovered": 3,
+        "articles_with_cited_text": 1,
+        "stage": "completed",
+        "scope": "One reviewed public publisher, one article maximum; not exhaustive independent coverage."
+      },
+      "scope": "Complete means the bounded research checks passed, not exhaustive coverage or verified claims."
+    },
+    "fresh_source_retrievals": 23,
+    "citations": 73,
+    "document_count": 17,
+    "steps": [
+      "name search",
+      "entity confirmation",
+      "refresh source evidence",
+      "read report",
+      "inspect citation register",
+      "download and inspect bundle"
+    ],
+    "model_calls": 0,
+    "key_findings": 4
+  },
+  {
+    "query": "Microsoft",
+    "ticker": "MSFT",
+    "attempted_at": "2026-10-24T14:29:35.836363+00:00",
+    "finished_at": "2026-10-24T14:29:54.802720+00:00",
+    "cutoff": "2026-10-24 14:29:36.613874+00:00",
+    "coverage": {
+      "status": "complete",
+      "missing": [],
+      "read_documents": 8,
+      "financial_observations": 40,
+      "official_documents": {
+        "status": "available",
+        "read": 8,
+        "registered": 8,
+        "recent_passages_available": true
+      },
+      "financial": {
+        "status": "available",
+        "observations": 40,
+        "missing_latest_core_metrics": [],
+        "scope": "Reviewed annual extraction only: Apple (AAPL), Microsoft (MSFT), Kaspi.kz (KSPI). Interim figures remain quoted evidence."
+      },
+      "independent_news": {
+        "status": "selected_article_text_read",
+        "label": "Selected original article text read",
+        "discovered": 1,
+        "articles_with_cited_text": 1,
+        "stage": "completed",
+        "scope": "One reviewed public publisher, one article maximum; not exhaustive independent coverage."
+      },
+      "scope": "Complete means the bounded research checks passed, not exhaustive coverage or verified claims."
+    },
+    "fresh_source_retrievals": 15,
+    "citations": 78,
+    "document_count": 9,
+    "steps": [
+      "name search",
+      "entity confirmation",
+      "refresh source evidence",
+      "read report",
+      "inspect citation register",
+      "download and inspect bundle"
+    ],
+    "model_calls": 0,
+    "key_findings": 5
+  },
+  {
+    "query": "Kaspi.kz",
+    "ticker": "KSPI",
+    "attempted_at": "2026-10-24T14:29:55.179971+00:00",
+    "finished_at": "2026-10-24T14:30:31.126950+00:00",
+    "cutoff": "2026-10-24 14:29:56.314960+00:00",
+    "coverage": {
+      "status": "partial",
+      "missing": [
+        "No independent original article text was read; independent news remains discovery-only or unavailable.",
+        "One or more evidence stages failed, were skipped or returned partial coverage."
+      ],
+      "read_documents": 20,
+      "financial_observations": 27,
+      "official_documents": {
+        "status": "available",
+        "read": 21,
+        "registered": 21,
+        "recent_passages_available": true
+      },
+      "financial": {
+        "status": "available",
+        "observations": 27,
+        "missing_latest_core_metrics": [],
+        "scope": "Reviewed annual extraction only: Apple (AAPL), Microsoft (MSFT), Kaspi.kz (KSPI). Interim figures remain quoted evidence."
+      },
+      "independent_news": {
+        "status": "no_matching_article",
+        "label": "Feed retrieved; no matching article",
+        "discovered": 0,
+        "articles_with_cited_text": 0,
+        "stage": "partial: no relevant independent article discovered",
+        "scope": "One reviewed public publisher, one article maximum; not exhaustive independent coverage."
+      },
+      "scope": "Complete means the bounded research checks passed, not exhaustive coverage or verified claims."
+    },
+    "fresh_source_retrievals": 27,
+    "citations": 69,
+    "document_count": 21,
+    "steps": [
+      "name search",
+      "entity confirmation",
+      "refresh source evidence",
+      "read report",
+      "inspect citation register",
+      "download and inspect bundle"
+    ],
+    "model_calls": 0,
+    "key_findings": 5
+  }
+]

@@ -4,6 +4,7 @@ from dataclasses import asdict
 
 from finsight.financials import calculate, review_notes
 from finsight.research.evidence import recent_evidence
+from finsight.research.findings import key_findings
 from finsight.research.outcomes import assess
 from finsight.research.report import build_report
 
@@ -13,6 +14,18 @@ def build_model_evidence(research, citations=None):
         _, citations = build_report(research)
     citations = {key: dict(value) for key, value in citations.items()}
     observations, calculations, quantitative = [], [], {}
+    warning_registry = {}
+
+    def warning_ids(messages):
+        ids = []
+        for message in messages:
+            key = next((k for k, v in warning_registry.items() if v == message), None)
+            if key is None:
+                key = f"W{len(warning_registry) + 1}"
+                warning_registry[key] = message
+            ids.append(key)
+        return ids
+
     data = research.dataset
     if data:
         for fact in data.selected:
@@ -33,12 +46,13 @@ def build_model_evidence(research, citations=None):
                 {
                     **fact.model_dump(mode="json"),
                     "evidence_id": key,
-                    "review_warnings": list(review_notes(data, [fact])),
+                    "review_warning_ids": warning_ids(review_notes(data, [fact])),
                 }
             )
             citations[key]["support_text"] = fact_text(row)
         for index, calc in enumerate(calculate(data), 1):
             row = calc.model_dump(mode="json")
+            row["review_warning_ids"] = warning_ids(row.pop("review_warnings", []))
             row["evidence_id"] = f"C{index}"
             calculations.append(row)
             if calc.value is None:
@@ -57,6 +71,11 @@ def build_model_evidence(research, citations=None):
                 "source_urls": list(dict.fromkeys(f.source_url for f in inputs)),
             }
     for value in citations.values():
+        if "news" in value:
+            value["news_id"] = value["news"]["id"]
+            value["news"] = {"publisher": value["news"]["publisher"]}
+        if "warnings" in value:
+            value["warning_ids"] = warning_ids(value.pop("warnings"))
         value["support_text"] = value.get("quote") or value.get("support_text", "")
         # Headline and identity metadata are context, not evidence for substantive model prose.
         value["eligible_for_prose"] = bool(value["support_text"])
@@ -68,6 +87,7 @@ def build_model_evidence(research, citations=None):
                 "label": selected["label"],
                 "latest_eligible": selected["latest_eligible"],
                 "date_warnings": selected["date_warnings"],
+                "duplicate_document_ids": selected["duplicate_document_ids"],
                 "document_id": doc.id,
                 "source_report_date": doc.period,
                 "publication_date": doc.published,
@@ -75,13 +95,23 @@ def build_model_evidence(research, citations=None):
                 "passages": [
                     {
                         "citation_id": f"{doc.id}:B{doc.passages.index(p) + 1}",
-                        **citations[f"{doc.id}:B{doc.passages.index(p) + 1}"],
                     }
                     for p in selected["passages"]
                 ],
             }
         )
     return {
+        "selection_budget": {
+            "latest_documents": 2,
+            "supplementary_documents": 2,
+            "primary_passages_per_latest": 6,
+            "context_passages_per_primary": 3,
+            "max_passage_characters": 1600,
+            "max_key_findings": 5,
+        },
+        "evidence_layout": "Recent passage references resolve to the single citation register, which contains actual source quotes, locators and provenance. Warning IDs resolve to warning_registry; no warning is omitted.",
+        "warning_registry": warning_registry,
+        "key_findings": key_findings(research),
         "company": asdict(research.company),
         "identity_evidence": research.identity_evidence,
         "research_cutoff": research.cutoff.isoformat(),

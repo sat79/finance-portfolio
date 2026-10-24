@@ -159,11 +159,20 @@ def test_latest_interim_and_earnings_enter_report_and_payload(research):
     payload = build_model_evidence(research)
     assert payload["company"]["cik"] == research.company.cik
     assert payload["research_cutoff"] == research.cutoff.isoformat()
-    assert payload["recent_disclosures"][0]["passages"][1]["quote"] in report
+    assert (
+        payload["citations"][payload["recent_disclosures"][0]["passages"][1]["citation_id"]][
+            "quote"
+        ]
+        in report
+    )
     assert payload["news"][0]["content"] and payload["news"][0]["publisher"]
     assert payload["news"][0]["event_date"] is None
     assert payload["selected_financial_observations"] and payload["calculations"]
-    assert "financial_warnings" in payload and "review_warnings" in payload["calculations"][0]
+    assert (
+        "financial_warnings" in payload
+        and "review_warning_ids" in payload["calculations"][0]
+        and "warning_registry" in payload
+    )
     for record in payload["recent_disclosures"]:
         for passage in record["passages"]:
             assert passage["citation_id"] in payload["citations"]

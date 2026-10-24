@@ -3,6 +3,8 @@
 import re
 from datetime import date
 
+from finsight.research.selection import select_passages
+
 
 def valid_date(value):
     """Strict ISO calendar dates only; labels and malformed dates cannot rank latest."""
@@ -110,37 +112,32 @@ def recent_evidence(documents):
             )
         )
     output = []
-    for label, doc in groups + supplementary:
-        passages = (
-            excerpt(
-                doc,
-                [
-                    r"(?:revenue|sales|income|cash).{0,180}(?:increased|decreased|growth|decline)",
-                    r"(?:due to|driven by|primarily|reflect).{0,100}(?:revenue|sales|cost|demand)",
-                    r"(?:quarter|months|year).{0,50}ended",
-                    r"financial results|guidance|outlook",
-                ],
-                3,
-            )
-            if doc.status == "read"
-            else []
+    unique_supplements, supplement_signatures, duplicate_documents = [], {}, {}
+    for label, doc in supplementary:
+        records = select_passages(doc, supplementary=True)
+        signature = tuple(
+            doc.passages[i].text for r in records for i in [*r["context_indices"], r["index"]]
         )
-        passages = [
-            p
-            for p in passages
-            if not re.search(r"conference call|webcast|live streaming", p.text, re.I)
-        ]
-        # Preserve source period headings even when separate from a selected narrative paragraph.
-        context = [
-            p
-            for p in doc.passages[:500]
-            if re.search(
-                r"(?:three|six|nine|twelve|3|6|9|12) months ended|(?:quarter|year) ended|half.year|year.to.date",
-                p.text,
-                re.I,
-            )
-        ][:2]
-        selected = list(dict.fromkeys(context + passages)) if doc.status == "read" else []
+        if signature and signature in supplement_signatures:
+            duplicate_documents.setdefault(supplement_signatures[signature], []).append(doc.id)
+        else:
+            if signature:
+                supplement_signatures[signature] = doc.id
+            unique_supplements.append((label, doc))
+    # At most two undated supplements; no undated record displaces dated evidence.
+    for label, doc in groups + unique_supplements[:2]:
+        records = select_passages(doc, supplementary=valid_date(doc.published) is None)
+        indices = list(
+            dict.fromkeys(i for r in records for i in [*r["context_indices"], r["index"]])
+        )
+        selected = [doc.passages[i] for i in indices]
+        # Small unquantified disclosures can still supply exact period context, without a forced finding.
+        if not selected and doc.status == "read":
+            selected = [
+                p
+                for p in excerpt(doc, [r"financial results|quarter|months ended"], 1)
+                if len(p.text) <= 1600
+            ]
         warnings = []
         if valid_date(doc.period) is None:
             warnings.append(
@@ -155,6 +152,9 @@ def recent_evidence(documents):
                 "label": label,
                 "document": doc,
                 "passages": selected,
+                "records": records,
+                "duplicate_document_ids": duplicate_documents.get(doc.id, []),
+                "selection_limit": "Six primary passages per dated document, three context passages per primary; at most two single-passage undated supplements.",
                 "latest_eligible": valid_date(doc.published) is not None,
                 "date_warnings": warnings,
             }

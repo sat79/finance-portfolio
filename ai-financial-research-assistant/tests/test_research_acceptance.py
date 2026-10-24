@@ -180,7 +180,7 @@ def test_supplementary_dates_survive_report_and_model_without_completing_coverag
     assert "Supplementary evidence" in report and TEXT in report
     recent = payload["recent_disclosures"]
     assert len(recent) == 1 and not recent[0]["latest_eligible"] and recent[0]["date_warnings"]
-    assert recent[0]["passages"][0]["quote"] == TEXT
+    assert payload["citations"][recent[0]["passages"][0]["citation_id"]]["quote"] == TEXT
     assert any("recent interim/earnings" in missing for missing in assess(research)["missing"])
 
 

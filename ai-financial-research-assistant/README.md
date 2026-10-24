@@ -2,7 +2,7 @@
 
 Enter a company name, confirm the entity, retrieve official documents and recent news, then download a cited research report. FinSight combines deterministic financial analysis with attributed disclosure excerpts; optional model narration is disabled unless explicitly configured and approved.
 
-**Status:** the [23 October review](docs/news-review-2026-10-23.md) validates live original Guardian articles for Apple and Microsoft and the canonical Microsoft IR endpoint. Fresh KSPI research has 21/21 official documents and 27 annual observations; its independent feed has no matching article, so coverage remains partial. Official documents, financial extraction and independent news are reported separately. **185 tests pass**, with three production-browser journeys validated. Read the [Kaspi analytical critique](docs/kspi-analytical-review-2026-10-23.md) alongside the complete report and bundle. Paid model calls remain disabled; annual extraction scope remains **KSPI, AAPL and MSFT only**.
+**Status:** the [24 October analytical selection review](docs/analytical-selection-2026-10-24.md) demonstrates better quarterly results, operating-driver and credit-risk selection, with four or five Key findings before the detailed report. **194 tests pass**, with three fresh production-browser journeys validated. Open the [complete reports and downloadable evidence bundles](docs/review-artifacts/2026-10-24/README.md). Kaspi has 21/21 official documents and 27 annual observations; its independent feed has no matching article, so coverage remains partial. Official, financial and independent-news coverage stay separate. Paid model calls remain disabled; reviewed annual extraction remains **KSPI, AAPL and MSFT only**. The [Kaspi analyst critique](docs/kspi-analytical-review-2026-10-23.md) remains a benchmark, not application content.
 
 ## What works
 
@@ -10,6 +10,7 @@ Enter a company name, confirm the entity, retrieve official documents and recent
 - Annual/interim filings, linked earnings exhibits and bounded investor-relations discovery, with dated/hash-backed document registers and real text locations.
 - Adjustable recent-news window, company versus independent-source labels, duplicate handling and honest headline-only access states.
 - Business/revenue descriptions, annual trends, cash/position caveats, management quotations, developments, risks, questions and research conclusion with citations.
+- Prioritized Key findings with exact source statements, annual calculations and unresolved questions; bounded recent-document selection retains nearby context and shares the same evidence with the optional model input.
 - Deterministic arithmetic and review-warning propagation; KSPI financial-group safeguards remain intact.
 - Markdown report and ZIP evidence pack, including financial XLSX where supported. Existing CSV and explicitly fictional offline examples remain available.
 
