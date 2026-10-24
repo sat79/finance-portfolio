@@ -1,0 +1,84 @@
+{
+  "checked_at": "2026-10-21T01:07:07.613915+00:00",
+  "companies": [
+    {
+      "query": "Apple",
+      "validation": "FAILED",
+      "reason": "SEC connection failed after three attempts. Check network access to www.sec.gov and data.sec.gov. No fallback was substituted.",
+      "attempted_at": "2026-10-21T01:06:48.557077+00:00",
+      "finished_at": "2026-10-21T01:06:51.574990+00:00",
+      "cache_policy": "fresh, bypass caches",
+      "source_access": [
+        {
+          "url": "https://www.sec.gov/files/company_tickers_exchange.json",
+          "attempted_at": "2026-10-21T01:06:48.557087+00:00",
+          "status": "failed",
+          "reason": "SEC connection failed after three attempts. Check network access to www.sec.gov and data.sec.gov. No fallback was substituted."
+        }
+      ],
+      "documents": 0,
+      "read_documents": 0,
+      "news_items": 0,
+      "news_coverage": "not attempted: company resolution failed",
+      "financial_coverage": "not attempted: company resolution failed",
+      "model_calls": 0,
+      "actual_model_cost_usd": 0
+    },
+    {
+      "query": "Microsoft",
+      "validation": "FAILED",
+      "reason": "SEC connection failed after three attempts. Check network access to www.sec.gov and data.sec.gov. No fallback was substituted.",
+      "attempted_at": "2026-10-21T01:06:51.575009+00:00",
+      "finished_at": "2026-10-21T01:06:55.585064+00:00",
+      "cache_policy": "fresh, bypass caches",
+      "source_access": [
+        {
+          "url": "https://www.sec.gov/files/company_tickers_exchange.json",
+          "attempted_at": "2026-10-21T01:06:51.575015+00:00",
+          "status": "failed",
+          "reason": "SEC connection failed after three attempts. Check network access to www.sec.gov and data.sec.gov. No fallback was substituted."
+        }
+      ],
+      "documents": 0,
+      "read_documents": 0,
+      "news_items": 0,
+      "news_coverage": "not attempted: company resolution failed",
+      "financial_coverage": "not attempted: company resolution failed",
+      "model_calls": 0,
+      "actual_model_cost_usd": 0
+    },
+    {
+      "query": "Kaspi.kz",
+      "validation": "FAILED",
+      "reason": "SEC connection failed after three attempts. Check network access to www.sec.gov and data.sec.gov. No fallback was substituted.",
+      "attempted_at": "2026-10-21T01:06:55.585083+00:00",
+      "finished_at": "2026-10-21T01:06:59.594474+00:00",
+      "cache_policy": "fresh, bypass caches",
+      "source_access": [
+        {
+          "url": "https://www.sec.gov/files/company_tickers_exchange.json",
+          "attempted_at": "2026-10-21T01:06:55.585088+00:00",
+          "status": "failed",
+          "reason": "SEC connection failed after three attempts. Check network access to www.sec.gov and data.sec.gov. No fallback was substituted."
+        }
+      ],
+      "documents": 0,
+      "read_documents": 0,
+      "news_items": 0,
+      "news_coverage": "not attempted: company resolution failed",
+      "financial_coverage": "not attempted: company resolution failed",
+      "model_calls": 0,
+      "actual_model_cost_usd": 0
+    }
+  ],
+  "disambiguation_and_unsupported": {
+    "American": {
+      "validation": "FAILED",
+      "reason": "SEC connection failed after three attempts. Check network access to www.sec.gov and data.sec.gov. No fallback was substituted."
+    },
+    "NonexistentPrivateExampleZZZ": {
+      "validation": "FAILED",
+      "reason": "SEC connection failed after three attempts. Check network access to www.sec.gov and data.sec.gov. No fallback was substituted."
+    }
+  }
+}

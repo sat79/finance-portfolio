@@ -1,0 +1,2038 @@
+{
+  "checked_at": "2026-10-23T02:13:14.400839+00:00",
+  "companies": [
+    {
+      "query": "Apple",
+      "attempted_at": "2026-10-23T02:11:51.887621+00:00",
+      "finished_at": "2026-10-23T02:12:21.137471+00:00",
+      "research_cutoff": "2026-10-23T02:11:53.510243+00:00",
+      "cache_policy": "fresh, bypass caches",
+      "source_access": [
+        {
+          "url": "https://www.sec.gov/files/company_tickers_exchange.json",
+          "attempted_at": "2026-10-23T02:11:51.887630+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:11:53.481437+00:00",
+          "cached": false,
+          "sha256": "6c29e2e3db973d4479875164603c2434f81ad22e14c9f1694999aca9cca246cb"
+        },
+        {
+          "url": "https://data.sec.gov/submissions/CIK0000320193.json",
+          "attempted_at": "2026-10-23T02:11:53.510310+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:11:55.722329+00:00",
+          "cached": false,
+          "sha256": "19e5c0f5a01b7b8350e8d33f25d98117be1750c3108a08dae63a2ae3ce2b8146"
+        },
+        {
+          "url": "https://www.sec.gov/files/company_tickers.json",
+          "attempted_at": "2026-10-23T02:12:17.437509+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:18.052342+00:00",
+          "cached": false,
+          "sha256": "2fa1116adcb69cdd9d834ca4fd868c1e3d97ef45b3679da058529a8922673897"
+        },
+        {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+          "attempted_at": "2026-10-23T02:12:18.063781+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:20.052929+00:00",
+          "cached": false,
+          "sha256": "73a86c6aedc31f77cac2ea4df5f80f0b3bd7e6eb58bb4e01444fbedf3afb9c43"
+        },
+        {
+          "url": "https://data.sec.gov/submissions/CIK0000320193.json",
+          "attempted_at": "2026-10-23T02:12:20.101150+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:20.670380+00:00",
+          "cached": false,
+          "sha256": "19e5c0f5a01b7b8350e8d33f25d98117be1750c3108a08dae63a2ae3ce2b8146"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+          "attempted_at": "2026-10-23T02:11:55.724904+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:11:56.244170+00:00",
+          "sha256": "d80e668b7cffb89948c598dadeb89d7d8acd9f11add58a61de9081fde12a5a19",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+          "attempted_at": "2026-10-23T02:11:56.325585+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:11:57.242292+00:00",
+          "sha256": "799aa781b4758a40c9d3ed2abd591cb2d11becdc53e94f1ca421c7120f1f7979",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/aapl-20260328.htm",
+          "attempted_at": "2026-10-23T02:11:57.298912+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:11:58.138487+00:00",
+          "sha256": "f68d6f0dcf2cf0b3e1778f62646045e6519e88c1b7b181b31c565b54c420c409",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/aapl-20251227.htm",
+          "attempted_at": "2026-10-23T02:11:58.193605+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:11:59.270029+00:00",
+          "sha256": "16812f9b6bded29d7c0f6490750a32186d1efb8eae2831cf9cb9f18732b3fd9c",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126035325/ef20081427_8ka.htm",
+          "attempted_at": "2026-10-23T02:11:59.315778+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:00.078923+00:00",
+          "sha256": "0bd99820fb70fe3e7b1486e2b0c97f3fbcfb8c0ff01a3800876d34815a120188",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/aapl-20260730.htm",
+          "attempted_at": "2026-10-23T02:12:00.082703+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:01.098342+00:00",
+          "sha256": "ca03ec3b300279dc2fc1761b8a68ece4018fe4383d1e2d4a033c41987b727d75",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/a8-kex991q3202606272026.htm",
+          "attempted_at": "2026-10-23T02:12:01.103096+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:02.061975+00:00",
+          "sha256": "2d652b5d88f2633b9b09432622ddfe3a05f2493f58bd7d85c61ee8026cdd69a1",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000011/aapl-20260430.htm",
+          "attempted_at": "2026-10-23T02:12:02.073176+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:03.127560+00:00",
+          "sha256": "780f667678d1a27c60dce3ff860f70b09cc2df4538725a7b29fd4cb5d4530bd0",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000011/a8-kex991q2202603282026.htm",
+          "attempted_at": "2026-10-23T02:12:03.131393+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:04.048206+00:00",
+          "sha256": "977b8b4c23349933ef0be2fc8bb66c26b0e0998bec8e35a00aa0eb1c0d68ed0b",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126015711/ef20071035_8k.htm",
+          "attempted_at": "2026-10-23T02:12:04.058745+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:05.064436+00:00",
+          "sha256": "9a2887c7035bcd195744f820445f91d0864f66ed2f4d08db5ff7158331b2c775",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126006577/ef20060722_8k.htm",
+          "attempted_at": "2026-10-23T02:12:05.067898+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:06.073924+00:00",
+          "sha256": "e074db6710a427c7bb46311f6a4a80b2e13b4064e28ab52cb9bfa7be8ba01129",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000005/aapl-20260129.htm",
+          "attempted_at": "2026-10-23T02:12:06.079475+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:07.092014+00:00",
+          "sha256": "7e712b4f4fb068614d0a5c1f47097a43fed9a95b403895f2e572bd028693ff62",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000005/a8-kex991q1202612272025.htm",
+          "attempted_at": "2026-10-23T02:12:07.095820+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:08.076169+00:00",
+          "sha256": "6691e14e13a7c24969e70d595ca2169af09ef8f20ed9f61f19495f9854accf95",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126000199/ef20060722_8k.htm",
+          "attempted_at": "2026-10-23T02:12:08.086583+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:09.056558+00:00",
+          "sha256": "b18cc63205876c2c0267eeedaf5d0de55ed28124857d80b31d409710264c9f92",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000114036125044561/ef20060722_8k.htm",
+          "attempted_at": "2026-10-23T02:12:09.059807+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:10.489249+00:00",
+          "sha256": "6435159a561acf411b16aedab4a3b1a4ac5e63c5279ac2e6f7425eef8bab77d9",
+          "cached": false
+        },
+        {
+          "url": "https://investor.apple.com/investor-relations/default.aspx",
+          "attempted_at": "2026-10-23T02:12:10.493271+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:11.467560+00:00",
+          "sha256": "73ef2bccf5b67a04e467a0ff3f2c644348dcb1900e14d6ccc4ce151cae5e5586",
+          "cached": false
+        },
+        {
+          "url": "https://news.google.com/rss/search?q=%22Apple%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+          "attempted_at": "2026-10-23T02:12:11.474756+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:13.694643+00:00",
+          "sha256": "cd233aafcebfd41bab921a77740b0ee81fc9c9510bf97ba83430cbabde11919b",
+          "cached": false
+        },
+        {
+          "url": "https://www.theguardian.com/technology/apple/rss",
+          "attempted_at": "2026-10-23T02:12:13.704319+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:14.824978+00:00",
+          "sha256": "3b40ae3816831fba203482ee1197fba3a68ffa9e463a6c6917c31423ec2039a4",
+          "cached": false
+        },
+        {
+          "url": "https://www.theguardian.com/technology/2026/sep/09/apple-product-showcase-ceo-john-ternus",
+          "attempted_at": "2026-10-23T02:12:14.828783+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:17.422089+00:00",
+          "sha256": "1f2616ea7e0cbdb37a68b87dca6006fe08ba63bbaa484531e10b461c33a1d6f8",
+          "cached": false
+        }
+      ],
+      "outcome": {
+        "status": "complete",
+        "missing": [],
+        "read_documents": 16,
+        "financial_observations": 40,
+        "official_documents": {
+          "status": "available",
+          "read": 16,
+          "registered": 16,
+          "recent_passages_available": true
+        },
+        "financial": {
+          "status": "available",
+          "observations": 40,
+          "missing_latest_core_metrics": [],
+          "scope": "Reviewed annual extraction only: Apple (AAPL), Microsoft (MSFT), Kaspi.kz (KSPI). Interim figures remain quoted evidence."
+        },
+        "independent_news": {
+          "status": "selected_article_text_read",
+          "label": "Selected original article text read",
+          "discovered": 3,
+          "articles_with_cited_text": 1,
+          "stage": "completed",
+          "scope": "One reviewed public publisher, one article maximum; not exhaustive independent coverage."
+        },
+        "scope": "Complete means the bounded research checks passed, not exhaustive coverage or verified claims."
+      },
+      "document_register": [
+        {
+          "id": "D1",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+          "period": "2025-09-27",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:11:56.244170+00:00",
+          "cached": false,
+          "sha256": "d80e668b7cffb89948c598dadeb89d7d8acd9f11add58a61de9081fde12a5a19"
+        },
+        {
+          "id": "D2",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+          "period": "2026-06-27",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:11:57.242292+00:00",
+          "cached": false,
+          "sha256": "799aa781b4758a40c9d3ed2abd591cb2d11becdc53e94f1ca421c7120f1f7979"
+        },
+        {
+          "id": "D3",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000013/aapl-20260328.htm",
+          "period": "2026-03-28",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:11:58.138487+00:00",
+          "cached": false,
+          "sha256": "f68d6f0dcf2cf0b3e1778f62646045e6519e88c1b7b181b31c565b54c420c409"
+        },
+        {
+          "id": "D4",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000006/aapl-20251227.htm",
+          "period": "2025-12-27",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:11:59.270029+00:00",
+          "cached": false,
+          "sha256": "16812f9b6bded29d7c0f6490750a32186d1efb8eae2831cf9cb9f18732b3fd9c"
+        },
+        {
+          "id": "D5",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126035325/ef20081427_8ka.htm",
+          "period": "2026-04-17",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:00.078923+00:00",
+          "cached": false,
+          "sha256": "0bd99820fb70fe3e7b1486e2b0c97f3fbcfb8c0ff01a3800876d34815a120188"
+        },
+        {
+          "id": "D6",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/aapl-20260730.htm",
+          "period": "2026-07-30",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:01.098342+00:00",
+          "cached": false,
+          "sha256": "ca03ec3b300279dc2fc1761b8a68ece4018fe4383d1e2d4a033c41987b727d75"
+        },
+        {
+          "id": "E7",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/a8-kex991q3202606272026.htm",
+          "period": "2026-07-30",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:02.061975+00:00",
+          "cached": false,
+          "sha256": "2d652b5d88f2633b9b09432622ddfe3a05f2493f58bd7d85c61ee8026cdd69a1"
+        },
+        {
+          "id": "D7",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000011/aapl-20260430.htm",
+          "period": "2026-04-30",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:03.127560+00:00",
+          "cached": false,
+          "sha256": "780f667678d1a27c60dce3ff860f70b09cc2df4538725a7b29fd4cb5d4530bd0"
+        },
+        {
+          "id": "E9",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000011/a8-kex991q2202603282026.htm",
+          "period": "2026-04-30",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:04.048206+00:00",
+          "cached": false,
+          "sha256": "977b8b4c23349933ef0be2fc8bb66c26b0e0998bec8e35a00aa0eb1c0d68ed0b"
+        },
+        {
+          "id": "D8",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126015711/ef20071035_8k.htm",
+          "period": "2026-04-17",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:05.064436+00:00",
+          "cached": false,
+          "sha256": "9a2887c7035bcd195744f820445f91d0864f66ed2f4d08db5ff7158331b2c775"
+        },
+        {
+          "id": "D9",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126006577/ef20060722_8k.htm",
+          "period": "2026-02-24",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:06.073924+00:00",
+          "cached": false,
+          "sha256": "e074db6710a427c7bb46311f6a4a80b2e13b4064e28ab52cb9bfa7be8ba01129"
+        },
+        {
+          "id": "D10",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000005/aapl-20260129.htm",
+          "period": "2026-01-29",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:07.092014+00:00",
+          "cached": false,
+          "sha256": "7e712b4f4fb068614d0a5c1f47097a43fed9a95b403895f2e572bd028693ff62"
+        },
+        {
+          "id": "E13",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000005/a8-kex991q1202612272025.htm",
+          "period": "2026-01-29",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:08.076169+00:00",
+          "cached": false,
+          "sha256": "6691e14e13a7c24969e70d595ca2169af09ef8f20ed9f61f19495f9854accf95"
+        },
+        {
+          "id": "D11",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126000199/ef20060722_8k.htm",
+          "period": "2025-12-30",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:09.056558+00:00",
+          "cached": false,
+          "sha256": "b18cc63205876c2c0267eeedaf5d0de55ed28124857d80b31d409710264c9f92"
+        },
+        {
+          "id": "D12",
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000114036125044561/ef20060722_8k.htm",
+          "period": "2025-12-04",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:10.489249+00:00",
+          "cached": false,
+          "sha256": "6435159a561acf411b16aedab4a3b1a4ac5e63c5279ac2e6f7425eef8bab77d9"
+        },
+        {
+          "id": "IR1",
+          "url": "https://investor.apple.com/investor-relations/default.aspx",
+          "period": "Not established",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:11.467560+00:00",
+          "cached": false,
+          "sha256": "73ef2bccf5b67a04e467a0ff3f2c644348dcb1900e14d6ccc4ce151cae5e5586"
+        },
+        {
+          "id": "NDocN7febf8d308",
+          "url": "https://www.theguardian.com/technology/2026/sep/09/apple-product-showcase-ceo-john-ternus",
+          "period": "Not established",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:17.422089+00:00",
+          "cached": false,
+          "sha256": "1f2616ea7e0cbdb37a68b87dca6006fe08ba63bbaa484531e10b461c33a1d6f8"
+        }
+      ],
+      "news_content_read": 2,
+      "independent_articles_read": 1,
+      "news_records": [
+        {
+          "title": "Apple\u2019s new CEO introduces himself at annual showcase: \u2018I continue to be inspired every single day\u2019",
+          "publisher": "The Guardian",
+          "published": "2026-09-09T19:07:53+00:00",
+          "event_date": null,
+          "url": "https://www.theguardian.com/technology/2026/sep/09/apple-product-showcase-ceo-john-ternus",
+          "access": "selected_source_text_read; not independently verified",
+          "retrieved_at": "2026-10-23T02:12:17.422089+00:00",
+          "sha256": "1f2616ea7e0cbdb37a68b87dca6006fe08ba63bbaa484531e10b461c33a1d6f8",
+          "discovery": {
+            "url": "https://www.theguardian.com/technology/apple/rss",
+            "retrieved_at": "2026-10-23T02:12:14.824978+00:00",
+            "sha256": "3b40ae3816831fba203482ee1197fba3a68ffa9e463a6c6917c31423ec2039a4",
+            "cached": false,
+            "status": "retrieved",
+            "scope": "Public RSS feed only; not an archive search. Relevant older stories may be absent."
+          }
+        },
+        {
+          "title": "Apple unveils folding iPhone Duo as new CEO takes center stage",
+          "publisher": "The Guardian",
+          "published": "2026-09-09T18:45:46+00:00",
+          "event_date": null,
+          "url": "https://www.theguardian.com/technology/2026/sep/08/apple-new-folding-iphone",
+          "access": "discovery_only; independent article budget exhausted",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://www.theguardian.com/technology/apple/rss",
+            "retrieved_at": "2026-10-23T02:12:14.824978+00:00",
+            "sha256": "3b40ae3816831fba203482ee1197fba3a68ffa9e463a6c6917c31423ec2039a4",
+            "cached": false,
+            "status": "retrieved",
+            "scope": "Public RSS feed only; not an archive search. Relevant older stories may be absent."
+          }
+        },
+        {
+          "title": "Who is John Ternus, Apple\u2019s new CEO?",
+          "publisher": "The Guardian",
+          "published": "2026-09-01T17:33:01+00:00",
+          "event_date": null,
+          "url": "https://www.theguardian.com/technology/2026/apr/20/john-ternus-apple-ceo-tim-cook",
+          "access": "discovery_only; independent article budget exhausted",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://www.theguardian.com/technology/apple/rss",
+            "retrieved_at": "2026-10-23T02:12:14.824978+00:00",
+            "sha256": "3b40ae3816831fba203482ee1197fba3a68ffa9e463a6c6917c31423ec2039a4",
+            "cached": false,
+            "status": "retrieved",
+            "scope": "Public RSS feed only; not an archive search. Relevant older stories may be absent."
+          }
+        },
+        {
+          "title": "Apple reports third quarter results",
+          "publisher": "Company disclosure via SEC",
+          "published": "2026-07-30",
+          "event_date": null,
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000018/a8-kex991q3202606272026.htm",
+          "access": "selected_source_text_read; not independently verified",
+          "retrieved_at": "2026-10-23T02:12:02.061975+00:00",
+          "sha256": "2d652b5d88f2633b9b09432622ddfe3a05f2493f58bd7d85c61ee8026cdd69a1",
+          "discovery": {}
+        },
+        {
+          "title": "Apple CEO Tim Cook is stepping down, John Ternus set to replace him - ABC News - Breaking News, Latest News and Videos",
+          "publisher": "ABC News - Breaking News, Latest News and Videos",
+          "published": "2026-10-21T17:39:35+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOTXg5VFBDbk1xMmlfZEdLVW1sOW5pOUd5ZWY5NWtFbzFwQmpDMzQ3c1lrVjhyVEVpZmhuZmh5X0VHeVVNV1d5d3VWTi1jazI5QjRoRkFrMTd1TnJER0lkS05hTGR4WTQyNUFNeDBOMkRBRFhPNlFkQ2tNbDdJUGdJc0lVTWVQbWo3OW56OFdn0gGTAUFVX3lxTE9Zbjg0dnVYX2NodkpINTY0UXJaNGdlYUp5MXNFcTJ2c3ZRQW5lVE5rX1Z6dEtYUVJBdjdJRmVsMjJtN21MVWhlZFBveE9SYmJMeDM5VTRfQWUyejNTYnY3RlBBdjd0OWgwOXRwaWtEN0x1Y0czWXhuRlJSWVlQUy11LXE1TDNrUTAzZlFRWGw0OG5zaw?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Apple%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:12:13.694643+00:00",
+            "sha256": "cd233aafcebfd41bab921a77740b0ee81fc9c9510bf97ba83430cbabde11919b",
+            "cached": false
+          }
+        },
+        {
+          "title": "Apple CEO John Ternus Explains What Makes Good Product Design - MacRumors",
+          "publisher": "MacRumors",
+          "published": "2026-10-21T07:03:00+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFAzVXUtWG42M25YdDh4d3lhMXRpNGlhSy1ibWgyM19PcXdfQ0sxUG5pM3htX0xnYWJTUVlZa3pGc1VkanRrMGNVN3lzdVhnLUZMUXQ1OWxzeXFRX1JzNXdSbk5FMWNUTHVRT1Ywd1lfX0p1MWZuYWlhYkVR?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Apple%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:12:13.694643+00:00",
+            "sha256": "cd233aafcebfd41bab921a77740b0ee81fc9c9510bf97ba83430cbabde11919b",
+            "cached": false
+          }
+        },
+        {
+          "title": "Apple Earnings and the AI Trade at a Crossroads - CME Group",
+          "publisher": "CME Group",
+          "published": "2026-10-21T00:40:29+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPOTZLVjNydzJPaEYyVHVEd1RNeE9hRzVVamUyZGExNXBNWUdQN3J5VDRlYzNnMVNrYjNYQVBFRWxQMnpaaG5TQWlFdnNOMEYxRTNCd0FpeldtQVk2Yzk0U1k0dG5wRDltNmZQRjdlbjNjSkwxSzJvUXVLSHgwcVJHVXFVZkdSdFRDX0xjM25iY1pmVEhyQ2JDMWRsQQ?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Apple%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:12:13.694643+00:00",
+            "sha256": "cd233aafcebfd41bab921a77740b0ee81fc9c9510bf97ba83430cbabde11919b",
+            "cached": false
+          }
+        },
+        {
+          "title": "Apple CEO John Ternus says design still means everything & includes whimsey - AppleInsider",
+          "publisher": "AppleInsider",
+          "published": "2026-10-20T21:23:00+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQMnNScXZmS3FGNFBBZGg3ZVZsdmRwUVphV09wWk9sMVVMYXNuYndHclZ0VFQwOXF0U3E1RW5ZUUtrN2JrYlNtRDhPNGFuakVNeGlhSzg5cHRSVXI4bnBaSmdxZVRDMW9IaW5Zb2tkRndFQUJGUWptN0tTeVFBTW1Qcm1zbC1ydmlSdXNDQVllSEgwVk9wekI1SG44NlNGaG40QTgwRjZOZlNiNVpjSGRjM0NoZlBuSzQ?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Apple%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:12:13.694643+00:00",
+            "sha256": "cd233aafcebfd41bab921a77740b0ee81fc9c9510bf97ba83430cbabde11919b",
+            "cached": false
+          }
+        },
+        {
+          "title": "Apple\u2019s $250M Siri Settlement Is Taking Claims. Find Out If You Qualify - CNET",
+          "publisher": "CNET",
+          "published": "2026-10-18T18:00:00+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPVXhBQUpHcHV6YnAtMHZvVm1RSjM3X0Zlc2Y4ZW1HZlN5U21HNkM0UDNUdFd6ZTF5Q1I3Vy1WTjB5cFZLdlJ6TGNWcTNMSzZPaC1GNXdYRUp2cllqQ0c4NFIyck9LUnMzU3p2MnNiZzZyTkNhSE9TUHg5WGpQU0owMHVFa3J4eFJmT2pMXzN5TVFQNnZjQ1hOUnBOUnQ?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Apple%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:12:13.694643+00:00",
+            "sha256": "cd233aafcebfd41bab921a77740b0ee81fc9c9510bf97ba83430cbabde11919b",
+            "cached": false
+          }
+        },
+        {
+          "title": "Tim Cook says late Apple cofounder Steve Jobs gave him this advice before becoming CEO - Fortune",
+          "publisher": "Fortune",
+          "published": "2026-10-18T13:16:00+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQNnVadmtteUgxM2FTLXFab0VqU0MxcDVCMVJieFV2cFlOb25kYUZZSXR5UGdIeUxETzhiVDRMSGJxMEpUMFVwV3kyVW5tWXpLV1hZVXB2MnpWQkpMcm5vNTFyMVc5ZlJyU3lpdFZQT2ZSM3Vjd09ObjJpcEVaMmd3WV9nOUVsTlpsNVpFN2lEelVZLTFwSUpUSk1YVmhSZUVuMktIUHRTUXR6dTktb3ZkUzRXemFGRkZtOXRQX1JGVWhPOTg?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Apple%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:12:13.694643+00:00",
+            "sha256": "cd233aafcebfd41bab921a77740b0ee81fc9c9510bf97ba83430cbabde11919b",
+            "cached": false
+          }
+        },
+        {
+          "title": "Apple CEO John Ternus Calls Early Foldables \u201cKind of Cheap and Crappy\u201d - Gadget Review",
+          "publisher": "Gadget Review",
+          "published": "2026-10-15T17:51:55+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQemQ4MEY5NU5EUjZFbnpCQ1ZIeHBxaUJpMjM4WXYtdC1Hcmg1Y01EWEd4bndEZ1RobzhOREJVeFRNVENhZmI1UmwtRmpLeEQ0ZUZraDJsTUk5VDhGN2tBU01RZUNmd3RZMTBod3JWLUpYRDBKQ0tnY1ZYcXlKT1FlX3hYdlF2Mkp0MHR2OGh3UC0wRzBnTk5FSm5MWWFDQQ?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Apple%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:12:13.694643+00:00",
+            "sha256": "cd233aafcebfd41bab921a77740b0ee81fc9c9510bf97ba83430cbabde11919b",
+            "cached": false
+          }
+        },
+        {
+          "title": "Apple Bank CEO seeks to \u2018punch through to consciousness\u2019 - Banking Dive",
+          "publisher": "Banking Dive",
+          "published": "2026-10-15T13:24:31+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOOExITHM5am0tNmpTYm5DamZwWVJtVXU0eXZrQmNsSFMwSVYyeWMzQkVhM3I3TzFhR2RjNDJCX3luQkp0enQtZTk1MlBaOWZPd1ZSelBpYzF0LW5ybVhyYmFEUGlSbHhZMC00cVVKTmt3WWkwZVBaX0xrR3VZczRCZXBPZGlUT3U5SUp2UnkxTHFkWTg0U2ZZ?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Apple%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:12:13.694643+00:00",
+            "sha256": "cd233aafcebfd41bab921a77740b0ee81fc9c9510bf97ba83430cbabde11919b",
+            "cached": false
+          }
+        },
+        {
+          "title": "John Ternus Is Engineering a New Era for Apple: The Best Inventions of 2026 - Time Magazine",
+          "publisher": "Time Magazine",
+          "published": "2026-10-15T11:29:20+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE95R1dGTlFwMVVWQkhtUGp4eEd6VEtJN0hkU0xKQUNmbXFpdk9kNkRwQW81RDdkS2tIQkMtRDZGNlRmcXUza3ZLejc3dGxfWENZMGZZaEt4ZzNjUVlYTkx1aXJTdWgxYVhvT252czlDbDZsSGM2?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Apple%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:12:13.694643+00:00",
+            "sha256": "cd233aafcebfd41bab921a77740b0ee81fc9c9510bf97ba83430cbabde11919b",
+            "cached": false
+          }
+        },
+        {
+          "title": "John Ternus Takes Next Big Swing as Apple CEO With HomeView Tablet - WSJ",
+          "publisher": "WSJ",
+          "published": "2026-10-13T07:00:00+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPZEdZMldycmpZdTcwUFh1WldpMDhBMlUyVDgtNlpWdkgwQkdiN0xvYklXUGRYdmI3Z0ZYX0VqN1RpR3B4d1NhTkJiQjJlbmxELTUzaUZQdEF0emZYTkZYTFNVNGpJSkxTazVhN3FzbzRKRENhZWFPWTVaaS1DODFhQU4zYUk0bk5wMUlXSDRBUjg4ck1YX0MxZ3RiRVlKTmVwZEE?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Apple%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:12:13.694643+00:00",
+            "sha256": "cd233aafcebfd41bab921a77740b0ee81fc9c9510bf97ba83430cbabde11919b",
+            "cached": false
+          }
+        },
+        {
+          "title": "Tim Cook's Final Apple Earnings Call Showed the Company Made More Quarterly Revenue Than It Booked in All of Fiscal 2011, the Year He Became CEO. What Does That Growth Curve Mean for Apple Under John Ternus? - Yahoo Finance",
+          "publisher": "Yahoo Finance",
+          "published": "2026-10-10T07:00:00+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPbXh4QXg2QklxVVBZc0tGSFUwbE9GeEZaTllPdjlMZ2VPWkMzVEVZcTM4c09TU2d4akhyR0JKc1dESXVlcHQ0aUpmQlZFdi1vMEl5OTdzSzVveTdCc254WWV4LUFOVWoyTElyX01SaWxZQkk3MF90a1R4WmlHb3FhcnphSmhaLV9SQVBmSFJyNzBqZDN1bDdoZld6WQ?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Apple%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:12:13.694643+00:00",
+            "sha256": "cd233aafcebfd41bab921a77740b0ee81fc9c9510bf97ba83430cbabde11919b",
+            "cached": false
+          }
+        },
+        {
+          "title": "Apple\u2019s New CEO Honored Steve Jobs With One Line. It Shows How to Lead After a Legend - Inc.com",
+          "publisher": "Inc.com",
+          "published": "2026-10-09T07:00:00+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNUmw3S2NXYThjbk16TjdSRjJvd1NuMUtpQ3JmVFZMUENxZ0Zwa2RJNWZfWWV2bmI5QzFtSkhoSVBwU3dGRUNEUHh6UVEwbEJ1X0MxY0V4ZnFteGp0Yk5UQ0VVbnNWcDc3WDZQb0RFZGV2dWtiVG9OZXA1c2txaDhCMUNaUGdsUG5SUVp0bHVWVHdoNnljQmpKOXV5ZmVzTHdDOGdVZFNNbTR2UkVsSUtyRDl3Ukh2bEdWcklkZXpJNzZxU28?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Apple%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:12:13.694643+00:00",
+            "sha256": "cd233aafcebfd41bab921a77740b0ee81fc9c9510bf97ba83430cbabde11919b",
+            "cached": false
+          }
+        }
+      ],
+      "recent_selections": [
+        {
+          "label": "Latest interim filing",
+          "id": "D2",
+          "published": "2026-07-31",
+          "period": "2026-06-27",
+          "latest_eligible": true,
+          "date_warnings": [],
+          "selected_passages": 5
+        },
+        {
+          "label": "Latest accessible earnings/results disclosure",
+          "id": "E7",
+          "published": "2026-07-30",
+          "period": "2026-07-30",
+          "latest_eligible": true,
+          "date_warnings": [],
+          "selected_passages": 3
+        }
+      ],
+      "ticker": "AAPL",
+      "matched_listings": 3,
+      "seconds_including_search_and_export": 29.3,
+      "stage_seconds": {
+        "Company resolution": 2.214,
+        "Official documents": 15.75,
+        "Recent news": 2.23,
+        "Independent news": 1.124,
+        "Financial extraction": 3.246,
+        "total": 27.209
+      },
+      "documents": 17,
+      "read_documents": 17,
+      "news_items": 16,
+      "news_stage": "completed",
+      "financial_coverage": true,
+      "citations": 74,
+      "model_calls": 0,
+      "actual_model_cost_usd": 0,
+      "limitations": [
+        "IR discovery is limited to the reviewed issuer landing page and at most 2 directly linked presentation/earnings documents. JavaScript-only links, external CDN hosts and unlinked presentations may be unavailable.",
+        "No directly linked presentation/earnings document discovered on the retrieved IR page; presentation coverage is incomplete.",
+        "Evidence is limited to SEC recent filings and linked exhibits. Standalone IR-site documents/presentations are not exhaustively searched; inaccessible or unlinked presentations remain missing.",
+        "Google News links remain discovery-only. The separate Guardian route reads at most one relevant public article. Company-name/keyword searches can miss events or include namesakes; relevance needs review. Coverage is not exhaustive; zero results does not establish no news.",
+        "News budget: 12 most recently published feed stories retained after deduplication; additional stories omitted. Coverage is incomplete."
+      ],
+      "validation": "COMPLETE"
+    },
+    {
+      "query": "Microsoft",
+      "attempted_at": "2026-10-23T02:12:21.223199+00:00",
+      "finished_at": "2026-10-23T02:12:40.449198+00:00",
+      "research_cutoff": "2026-10-23T02:12:21.635717+00:00",
+      "cache_policy": "fresh, bypass caches",
+      "source_access": [
+        {
+          "url": "https://www.sec.gov/files/company_tickers_exchange.json",
+          "attempted_at": "2026-10-23T02:12:21.223219+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:21.605662+00:00",
+          "cached": false,
+          "sha256": "6c29e2e3db973d4479875164603c2434f81ad22e14c9f1694999aca9cca246cb"
+        },
+        {
+          "url": "https://data.sec.gov/submissions/CIK0000789019.json",
+          "attempted_at": "2026-10-23T02:12:21.635790+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:22.965313+00:00",
+          "cached": false,
+          "sha256": "a9a65d8640cde1fe6fd7cf0219d5b948f431bf4f8b7954de4386d62f7eaa2523"
+        },
+        {
+          "url": "https://www.sec.gov/files/company_tickers.json",
+          "attempted_at": "2026-10-23T02:12:36.897824+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:37.361791+00:00",
+          "cached": false,
+          "sha256": "2fa1116adcb69cdd9d834ca4fd868c1e3d97ef45b3679da058529a8922673897"
+        },
+        {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json",
+          "attempted_at": "2026-10-23T02:12:37.367459+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:39.407610+00:00",
+          "cached": false,
+          "sha256": "dd0308149a8e96497989ed7c690b5a49a00bef9ceafbb24638bda41e8ae938dd"
+        },
+        {
+          "url": "https://data.sec.gov/submissions/CIK0000789019.json",
+          "attempted_at": "2026-10-23T02:12:39.430233+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:39.963275+00:00",
+          "cached": false,
+          "sha256": "a9a65d8640cde1fe6fd7cf0219d5b948f431bf4f8b7954de4386d62f7eaa2523"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+          "attempted_at": "2026-10-23T02:12:22.967392+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:24.122780+00:00",
+          "sha256": "5dac429c932fc3f9d0cd81955af56dead5b068826e2c26b483d229c890c184c6",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965d8k.htm",
+          "attempted_at": "2026-10-23T02:12:24.511754+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:24.850406+00:00",
+          "sha256": "56b33d1eb94b706bfc6f142e846636fdb166a75e69d1323cc588c2929ecca1de",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965dex991.htm",
+          "attempted_at": "2026-10-23T02:12:24.853547+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:25.846350+00:00",
+          "sha256": "0d881d4a4aa793bffd4f49c52a5ed0758d791fd70eaf3ceddce4df7ae8b8542e",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-20260729.htm",
+          "attempted_at": "2026-10-23T02:12:25.848831+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:26.855827+00:00",
+          "sha256": "eac97afbf56e6c51d7a772d7c7613a526ccbd5480a61080a6d75b65b46b22342",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm",
+          "attempted_at": "2026-10-23T02:12:26.860544+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:27.944402+00:00",
+          "sha256": "f66826892359e771678ae2e72f693a43d6851b636936b4b8b32b661b32cb6a1b",
+          "cached": false
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/investor/default",
+          "attempted_at": "2026-10-23T02:12:27.983117+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:30.598982+00:00",
+          "sha256": "99ed4c7299875e50b51491b57c2865ed4abf18d058196519c30d7cc8893d6857",
+          "cached": false
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q4/press-release-webcast",
+          "attempted_at": "2026-10-23T02:12:30.615597+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:31.307290+00:00",
+          "sha256": "05287e97aef86e8b6347586db6a4cfbc2414fc23d7f0bc772d3906dc454389b8",
+          "cached": false
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast",
+          "attempted_at": "2026-10-23T02:12:31.353739+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:32.114944+00:00",
+          "sha256": "05287e97aef86e8b6347586db6a4cfbc2414fc23d7f0bc772d3906dc454389b8",
+          "cached": false
+        },
+        {
+          "url": "https://news.google.com/rss/search?q=%22Microsoft%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+          "attempted_at": "2026-10-23T02:12:32.162848+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:34.390950+00:00",
+          "sha256": "fcdbd6fdc83f4183bd22aef5f77000f8915d91b547ebff6e7005f4305c9b2a1a",
+          "cached": false
+        },
+        {
+          "url": "https://www.theguardian.com/technology/microsoft/rss",
+          "attempted_at": "2026-10-23T02:12:34.403831+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:35.736815+00:00",
+          "sha256": "41d84eeee3a92ff585cbbdb32b55625475b9793bd9725bdcdc1ed387187ff6ed",
+          "cached": false
+        },
+        {
+          "url": "https://www.theguardian.com/technology/2026/oct/12/ai-less-regulated-than-milk-microsoft-president-calls-for-tougher-rules",
+          "attempted_at": "2026-10-23T02:12:35.761807+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:36.879566+00:00",
+          "sha256": "7cd1ab0f33db3f07cfdff3d16858a3ea61fcde305b1b89f0ce4a2db2ad1fc65b",
+          "cached": false
+        }
+      ],
+      "outcome": {
+        "status": "complete",
+        "missing": [],
+        "read_documents": 8,
+        "financial_observations": 40,
+        "official_documents": {
+          "status": "available",
+          "read": 8,
+          "registered": 8,
+          "recent_passages_available": true
+        },
+        "financial": {
+          "status": "available",
+          "observations": 40,
+          "missing_latest_core_metrics": [],
+          "scope": "Reviewed annual extraction only: Apple (AAPL), Microsoft (MSFT), Kaspi.kz (KSPI). Interim figures remain quoted evidence."
+        },
+        "independent_news": {
+          "status": "selected_article_text_read",
+          "label": "Selected original article text read",
+          "discovered": 1,
+          "articles_with_cited_text": 1,
+          "stage": "completed",
+          "scope": "One reviewed public publisher, one article maximum; not exhaustive independent coverage."
+        },
+        "scope": "Complete means the bounded research checks passed, not exhaustive coverage or verified claims."
+      },
+      "document_register": [
+        {
+          "id": "D1",
+          "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630.htm",
+          "period": "2026-06-30",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:24.122780+00:00",
+          "cached": false,
+          "sha256": "5dac429c932fc3f9d0cd81955af56dead5b068826e2c26b483d229c890c184c6"
+        },
+        {
+          "id": "D2",
+          "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965d8k.htm",
+          "period": "2026-09-02",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:24.850406+00:00",
+          "cached": false,
+          "sha256": "56b33d1eb94b706bfc6f142e846636fdb166a75e69d1323cc588c2929ecca1de"
+        },
+        {
+          "id": "E3",
+          "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965dex991.htm",
+          "period": "2026-09-02",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:25.846350+00:00",
+          "cached": false,
+          "sha256": "0d881d4a4aa793bffd4f49c52a5ed0758d791fd70eaf3ceddce4df7ae8b8542e"
+        },
+        {
+          "id": "D3",
+          "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-20260729.htm",
+          "period": "2026-07-29",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:26.855827+00:00",
+          "cached": false,
+          "sha256": "eac97afbf56e6c51d7a772d7c7613a526ccbd5480a61080a6d75b65b46b22342"
+        },
+        {
+          "id": "E5",
+          "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm",
+          "period": "2026-07-29",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:27.944402+00:00",
+          "cached": false,
+          "sha256": "f66826892359e771678ae2e72f693a43d6851b636936b4b8b32b661b32cb6a1b"
+        },
+        {
+          "id": "IR1",
+          "url": "https://www.microsoft.com/en-us/investor/default",
+          "period": "Not established",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:30.598982+00:00",
+          "cached": false,
+          "sha256": "99ed4c7299875e50b51491b57c2865ed4abf18d058196519c30d7cc8893d6857"
+        },
+        {
+          "id": "IR2",
+          "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2026-Q4/press-release-webcast",
+          "period": "Not established",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:31.307290+00:00",
+          "cached": false,
+          "sha256": "05287e97aef86e8b6347586db6a4cfbc2414fc23d7f0bc772d3906dc454389b8"
+        },
+        {
+          "id": "IR3",
+          "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast",
+          "period": "Not established",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:32.114944+00:00",
+          "cached": false,
+          "sha256": "05287e97aef86e8b6347586db6a4cfbc2414fc23d7f0bc772d3906dc454389b8"
+        },
+        {
+          "id": "NDocN9348a6c236",
+          "url": "https://www.theguardian.com/technology/2026/oct/12/ai-less-regulated-than-milk-microsoft-president-calls-for-tougher-rules",
+          "period": "Not established",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:36.879566+00:00",
+          "cached": false,
+          "sha256": "7cd1ab0f33db3f07cfdff3d16858a3ea61fcde305b1b89f0ce4a2db2ad1fc65b"
+        }
+      ],
+      "news_content_read": 3,
+      "independent_articles_read": 1,
+      "news_records": [
+        {
+          "title": "AI less regulated than milk, Microsoft president says in warning over safety",
+          "publisher": "The Guardian",
+          "published": "2026-10-12T07:52:46+00:00",
+          "event_date": null,
+          "url": "https://www.theguardian.com/technology/2026/oct/12/ai-less-regulated-than-milk-microsoft-president-calls-for-tougher-rules",
+          "access": "selected_source_text_read; not independently verified",
+          "retrieved_at": "2026-10-23T02:12:36.879566+00:00",
+          "sha256": "7cd1ab0f33db3f07cfdff3d16858a3ea61fcde305b1b89f0ce4a2db2ad1fc65b",
+          "discovery": {
+            "url": "https://www.theguardian.com/technology/microsoft/rss",
+            "retrieved_at": "2026-10-23T02:12:35.736815+00:00",
+            "sha256": "41d84eeee3a92ff585cbbdb32b55625475b9793bd9725bdcdc1ed387187ff6ed",
+            "cached": false,
+            "status": "retrieved",
+            "scope": "Public RSS feed only; not an archive search. Relevant older stories may be absent."
+          }
+        },
+        {
+          "title": "Exhibit to 8-K \u2014 2026-09-02: d291965dex991.htm",
+          "publisher": "Company disclosure via SEC",
+          "published": "2026-09-02",
+          "event_date": null,
+          "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526380280/d291965dex991.htm",
+          "access": "selected_source_text_read; not independently verified",
+          "retrieved_at": "2026-10-23T02:12:25.846350+00:00",
+          "sha256": "0d881d4a4aa793bffd4f49c52a5ed0758d791fd70eaf3ceddce4df7ae8b8542e",
+          "discovery": {}
+        },
+        {
+          "title": "Microsoft Cloud and AI Strength Fuels Fourth Quarter Results",
+          "publisher": "Company disclosure via SEC",
+          "published": "2026-07-29",
+          "event_date": null,
+          "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm",
+          "access": "selected_source_text_read; not independently verified",
+          "retrieved_at": "2026-10-23T02:12:27.944402+00:00",
+          "sha256": "f66826892359e771678ae2e72f693a43d6851b636936b4b8b32b661b32cb6a1b",
+          "discovery": {}
+        },
+        {
+          "title": "Microsoft Stock Could Be Closer to Its Next Big Breakout Than Investors Think - Yahoo Finance",
+          "publisher": "Yahoo Finance",
+          "published": "2026-10-22T15:30:56+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQV0dLdDBXQzBZTkhHc1c5NndxeDVIN0RUSXU3NzZQVExSLWg1OHRaVmtKMU5NUmhVOXlmd0ZEaVluVDR5Qy1LbWkyemlYbnJSMWhyU2ZucnhmWkJaOU9SbkVUYkdOanFDTWJmcUlRcVBDdXU5NVN2bzJpZEV3WEZnUGl6MkVlb2paTTFEVHlSSW05Qmo0Y1gtN2xLNER5em8?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Microsoft%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:12:34.390950+00:00",
+            "sha256": "fcdbd6fdc83f4183bd22aef5f77000f8915d91b547ebff6e7005f4305c9b2a1a",
+            "cached": false
+          }
+        },
+        {
+          "title": "Microsoft Stock Is Up 10% This Year. Is It Still a Buy Ahead of Earnings? - Morningstar",
+          "publisher": "Morningstar",
+          "published": "2026-10-22T10:14:41+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPdmgwWEQ1dHZBelU5NFR0b25faUlicnpVcEQxOUppR3FsaV90WTNTYTRzbTdGQVZSNGJ0RTNOaDgxaWNNZkh1N0RFekFKMGRORHB5dVhscG45b09pYXE4Qy02dElFQTRzMUlVVG45NGZyeEs0OFJLSlY2aTZaQnpfVUZqTDB1ZVYySlBkT29TV0FCMGQ2S2JpdXplMlhrNV83QXc?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Microsoft%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:12:34.390950+00:00",
+            "sha256": "fcdbd6fdc83f4183bd22aef5f77000f8915d91b547ebff6e7005f4305c9b2a1a",
+            "cached": false
+          }
+        },
+        {
+          "title": "Hacking attempts surge as companies, governments rush to patch PHP flaws - Reuters",
+          "publisher": "Reuters",
+          "published": "2026-10-22T04:08:00+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPdktBazJSdlhwYU9JVlI3SEFkZ2k1V0plWjZ6N2RxOFdmZ3VubFZmM01zbGhsX2k1Z3dWQ1pwZjdQeS1Sa3NFN1ltampIQjhmT2t5Sk5KV1luajZoa3JqUzVCRjRFV2ptT2loWVFkYWRnVGFPZWh1VjRtMlo0aE1Nc3FGemtOOVZxNUItM2ZYOGMyaDN1c1RfdlhFZFpZclNYdnF6RWdmZjVicWhXMGs1NUx1SkNHWGNY?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Microsoft%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:12:34.390950+00:00",
+            "sha256": "fcdbd6fdc83f4183bd22aef5f77000f8915d91b547ebff6e7005f4305c9b2a1a",
+            "cached": false
+          }
+        },
+        {
+          "title": "Microsoft taps Stripe co-founder John Collison for its board as two longtime directors depart - GeekWire",
+          "publisher": "GeekWire",
+          "published": "2026-10-21T21:55:50+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPbzNqX2twTEFFYTJ5RVZ4Rld1OTU2NWpNVk54X2xtTU8yYjhNamt3bVlsak82STQwc3MwZkJOQmRNTlRZa0JIcEJlM0ZlSXRmQlV4eHN0Q0pUVHFFbmxiU3JRajRxbHpEX2JiUVFocE5fUE53V2UyRkpOcGNQUE9IbHBqRE51QzhKUEd3Slktd19UY1FsbmZoejRjMzhuMWVuZk5JSVNGVEV1WlZJczJITVh5QTlRclZOTWEwMHpDQldlZw?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Microsoft%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:12:34.390950+00:00",
+            "sha256": "fcdbd6fdc83f4183bd22aef5f77000f8915d91b547ebff6e7005f4305c9b2a1a",
+            "cached": false
+          }
+        },
+        {
+          "title": "Steve Ballmer Is Worth $164 Billion, After Being Kicked Out Of Microsoft - Yahoo Finance",
+          "publisher": "Yahoo Finance",
+          "published": "2026-10-21T18:51:59+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPaWhDd0lPajB1bl9pYXd6TFRzc05zcC1MS1pjQVRobXV3bEJmc2FsdGlacVpIaXpMRnlKSEQ4aEdkc0J5MjlYYzZITnB1eTZWQjhHZDFrTGtVZVAwU3BqOFNULXUxQWl0dmw1ZlR1QTYwQzBYdDNDeGFoRkgyUkxEaTUxSUY2NVQ1MjRUZ055VFZxTTluSGlkVklqaHQ?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Microsoft%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:12:34.390950+00:00",
+            "sha256": "fcdbd6fdc83f4183bd22aef5f77000f8915d91b547ebff6e7005f4305c9b2a1a",
+            "cached": false
+          }
+        },
+        {
+          "title": "Microsoft and Alphabet opt out of tokenized stocks in latest blow to ambitious plan from OKX and NYSE parent firm - Fortune",
+          "publisher": "Fortune",
+          "published": "2026-10-21T17:08:00+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOTEpGTXJ6c3M1V3lVWXVITzBBRGFJVXp3TVhRSlBhNDBYanhiZDVJd015ODdleEtJTHFrYVpPRTl4bHpDOFR0MXVRXy1UYVdZdlFnNThtclMtb1V3U1gwZk5CNHFiSV84YmcwNXdxRENrUThuN0MyNEtJT1Ywb25qZU5VNVdQTkdZZjNfaHJiWDVNd2M?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Microsoft%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:12:34.390950+00:00",
+            "sha256": "fcdbd6fdc83f4183bd22aef5f77000f8915d91b547ebff6e7005f4305c9b2a1a",
+            "cached": false
+          }
+        },
+        {
+          "title": "Jim Cramer and Ken Fisher\u2019s AI Pick: Microsoft (MSFT) - Yahoo Finance",
+          "publisher": "Yahoo Finance",
+          "published": "2026-10-21T13:23:54+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOb1pmemlxTW5xT1NRanZxNjRjNG04bF9iSnEwQzV1enVSSWNoR1ZZQVB4QjA3MWFrSnJXTllUTU5fbmUzUDhHZXdSQ3d6LWo3c0Z2Ukp4UFhHUldSUXVsVjdqcWUxczg3X1dfUVFUU2VHR1ViNzd5dHFFODMycEdtdXBDbTUxUHFMU2FfaTlvaEJuYms?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Microsoft%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:12:34.390950+00:00",
+            "sha256": "fcdbd6fdc83f4183bd22aef5f77000f8915d91b547ebff6e7005f4305c9b2a1a",
+            "cached": false
+          }
+        },
+        {
+          "title": "Earnings Preview: What to Expect From Microsoft\u2019s Report - Yahoo Finance",
+          "publisher": "Yahoo Finance",
+          "published": "2026-10-21T13:09:44+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQMGZ2YWp2d0RyYU1ycUpfUnl0WWM4V0RIaWZOem9rUldkbkVUdmNZWVhmYmdjb3FLSVRiVmhDQ1Fsblk1UElVWG5nLW5YZWx2aF94Z0tKU01fLXQzWTJ4ZHZqeXR4WlI3Y2pEU3dqbjRvaDRwZjlIMmVHU29menpzNFdIc2tkTWFsVWJkX1ZxVVFWaGFYSmszNmphU0t5Zi10RFM5TjRlYWs?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Microsoft%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:12:34.390950+00:00",
+            "sha256": "fcdbd6fdc83f4183bd22aef5f77000f8915d91b547ebff6e7005f4305c9b2a1a",
+            "cached": false
+          }
+        },
+        {
+          "title": "What Did It Take To Hold Microsoft Stock? - Trefis",
+          "publisher": "Trefis",
+          "published": "2026-10-21T12:31:16+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNVUZXd2JseWdVcHRISWE0REhteHB2SkozZFpuWmtkYjdXNUw5U3FjUDJpRUZoY205TWpNVl9SUElON0dyYWQ2aVk5ekJjX1hGanZGbVdjLW9KazRyVWJpVUlxVVNHQXFXUzlVQjhpY3FvcGREV2l1a3JOVXVnYm5Bel9CTWtEWDJMX1p2UGRJQWVac1BuaVA2VjV6eFYwOENQSFlr?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Microsoft%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:12:34.390950+00:00",
+            "sha256": "fcdbd6fdc83f4183bd22aef5f77000f8915d91b547ebff6e7005f4305c9b2a1a",
+            "cached": false
+          }
+        },
+        {
+          "title": "Morgan Stanley sees new hurdle for Microsoft stock - TheStreet",
+          "publisher": "TheStreet",
+          "published": "2026-10-20T20:00:00+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1fYVo0Tk5hcjF1cHFlX2JaOG9KZm1zZmdXY0poR09pOF93TDNCQkdUNkZ4ODhwRmNIcTJpcmVoaWhRQWFzbjV5V3psUTJKMzkxMlh5NlMyZkxrVm5EYWE1cnhoYjdsdk5sVlowSDR4WjlfV05ROXFmbXRRUUFUeW8?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Microsoft%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:12:34.390950+00:00",
+            "sha256": "fcdbd6fdc83f4183bd22aef5f77000f8915d91b547ebff6e7005f4305c9b2a1a",
+            "cached": false
+          }
+        },
+        {
+          "title": "Microsoft shuts the door on The Garage, the central program behind its hackathon and maker spaces - GeekWire",
+          "publisher": "GeekWire",
+          "published": "2026-10-20T17:53:47+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQcWJmcTRFNWo5S0Z2ZUpsMzZlZ01YLUQwanFyalZyLVBfOGR5cEUtUUdGc1h1RmpoNjFaY25Ra1djdERXSlBwNWoydU5QYmhOc3lyRUlzWDZSb1NGdVh3OEZRQk1iWWZ6WjVrMnBCVVZTeTh0RzlWR2NseGpXaDRNR1NGTW5ycFRIV0F1V0dvckt6ZFF6c3JPU3hULVJaVjBvS3c5UWl6U19qcjVoNnUyeU12Z0FXclg3dEhyY003OG80aF9lOWc?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Microsoft%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:12:34.390950+00:00",
+            "sha256": "fcdbd6fdc83f4183bd22aef5f77000f8915d91b547ebff6e7005f4305c9b2a1a",
+            "cached": false
+          }
+        },
+        {
+          "title": "The non-gamer CEO racing to save Microsoft\u2019s Xbox - Fortune",
+          "publisher": "Fortune",
+          "published": "2026-10-20T16:10:00+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOUGJabWtwdEFBZENLOHpvUDBFbWx1VWpIWjJ1bHF3eUx5SlhXZVRJYkRkTkFjSm9JdGJNYWpHNU5vR0lEaE9EZDdRVXZpMzd3N2ljeEhpX1RfM1BZd1Z5MnVVWFpJSVhmY2V4Q3FMY29nY2FUWGZtT1JTUmNNREduT0dqWEJIM0E?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Microsoft%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:12:34.390950+00:00",
+            "sha256": "fcdbd6fdc83f4183bd22aef5f77000f8915d91b547ebff6e7005f4305c9b2a1a",
+            "cached": false
+          }
+        }
+      ],
+      "recent_selections": [
+        {
+          "label": "Latest accessible earnings/results disclosure",
+          "id": "E5",
+          "published": "2026-07-29",
+          "period": "2026-07-29",
+          "latest_eligible": true,
+          "date_warnings": [],
+          "selected_passages": 4
+        },
+        {
+          "label": "Supplementary evidence \u2014 Publication date unavailable; excluded from latest ranking",
+          "id": "IR2",
+          "published": "Not established",
+          "period": "Not established",
+          "latest_eligible": false,
+          "date_warnings": [
+            "Report-period date unavailable or invalid; no reporting period inferred.",
+            "Publication date unavailable or invalid; supplementary only, not latest evidence."
+          ],
+          "selected_passages": 3
+        },
+        {
+          "label": "Supplementary evidence \u2014 Publication date unavailable; excluded from latest ranking",
+          "id": "IR3",
+          "published": "Not established",
+          "period": "Not established",
+          "latest_eligible": false,
+          "date_warnings": [
+            "Report-period date unavailable or invalid; no reporting period inferred.",
+            "Publication date unavailable or invalid; supplementary only, not latest evidence."
+          ],
+          "selected_passages": 3
+        }
+      ],
+      "ticker": "MSFT",
+      "matched_listings": 1,
+      "seconds_including_search_and_export": 19.26,
+      "stage_seconds": {
+        "Company resolution": 1.331,
+        "Official documents": 9.196,
+        "Recent news": 2.241,
+        "Independent news": 1.358,
+        "Financial extraction": 3.079,
+        "total": 18.368
+      },
+      "documents": 9,
+      "read_documents": 9,
+      "news_items": 15,
+      "news_stage": "completed",
+      "financial_coverage": true,
+      "citations": 79,
+      "model_calls": 0,
+      "actual_model_cost_usd": 0,
+      "limitations": [
+        "IR discovery is limited to the reviewed issuer landing page and at most 2 directly linked presentation/earnings documents. JavaScript-only links, external CDN hosts and unlinked presentations may be unavailable.",
+        "Evidence is limited to SEC recent filings and linked exhibits. Standalone IR-site documents/presentations are not exhaustively searched; inaccessible or unlinked presentations remain missing.",
+        "Google News links remain discovery-only. The separate Guardian route reads at most one relevant public article. Company-name/keyword searches can miss events or include namesakes; relevance needs review. Coverage is not exhaustive; zero results does not establish no news.",
+        "News budget: 12 most recently published feed stories retained after deduplication; additional stories omitted. Coverage is incomplete."
+      ],
+      "validation": "COMPLETE"
+    },
+    {
+      "query": "Kaspi.kz",
+      "attempted_at": "2026-10-23T02:12:40.509880+00:00",
+      "finished_at": "2026-10-23T02:13:12.971925+00:00",
+      "research_cutoff": "2026-10-23T02:12:41.147537+00:00",
+      "cache_policy": "fresh, bypass caches",
+      "source_access": [
+        {
+          "url": "https://www.sec.gov/files/company_tickers_exchange.json",
+          "attempted_at": "2026-10-23T02:12:40.509895+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:41.122391+00:00",
+          "cached": false,
+          "sha256": "6c29e2e3db973d4479875164603c2434f81ad22e14c9f1694999aca9cca246cb"
+        },
+        {
+          "url": "https://data.sec.gov/submissions/CIK0001985487.json",
+          "attempted_at": "2026-10-23T02:12:41.147582+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:42.305625+00:00",
+          "cached": false,
+          "sha256": "19039c42c58b97a14629c77be8e4c800405055a706bc59712d2a56c6a1ecabbe"
+        },
+        {
+          "url": "https://www.sec.gov/files/company_tickers.json",
+          "attempted_at": "2026-10-23T02:13:09.771079+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:13:10.416724+00:00",
+          "cached": false,
+          "sha256": "2fa1116adcb69cdd9d834ca4fd868c1e3d97ef45b3679da058529a8922673897"
+        },
+        {
+          "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001985487.json",
+          "attempted_at": "2026-10-23T02:13:10.421082+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:13:11.575246+00:00",
+          "cached": false,
+          "sha256": "98abecb18c939175625b0518f376045b3aa29fe8a9adb415ad5b508e39ceaee1"
+        },
+        {
+          "url": "https://data.sec.gov/submissions/CIK0001985487.json",
+          "attempted_at": "2026-10-23T02:13:11.576066+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:13:12.359120+00:00",
+          "cached": false,
+          "sha256": "19039c42c58b97a14629c77be8e4c800405055a706bc59712d2a56c6a1ecabbe"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000008/kspi-20251231.htm",
+          "attempted_at": "2026-10-23T02:12:42.306482+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:43.409125+00:00",
+          "sha256": "7c2b45a6e625f6e6304d8d7eb8728f7faa0f5cebf86144e4abd66c5d8e44d9a8",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000028/kaspi.kz_form_6-k_sept_1.htm",
+          "attempted_at": "2026-10-23T02:12:44.001633+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:44.406196+00:00",
+          "sha256": "108f7b73a228d51dd3a5b6199d82ca2adcb233255a5ddbde13da77e117aa0bae",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000028/kspi-ex99_1.htm",
+          "attempted_at": "2026-10-23T02:12:44.409073+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:45.319167+00:00",
+          "sha256": "508264c5f22edb3c8d5ab4b64936fd1244e0a10f95073d03d8c44f16976e621d",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000026/kaspi.kz_form_6-k_aug_12.htm",
+          "attempted_at": "2026-10-23T02:12:45.320427+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:46.341334+00:00",
+          "sha256": "5aac340143964e21ca2cf2b972e860c4680de46c495d59c481a194a694ea8c04",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000026/kspi-ex99_1.htm",
+          "attempted_at": "2026-10-23T02:12:46.344024+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:47.409150+00:00",
+          "sha256": "68371d60f79921a28c8c1d6016c76f52ad12c3293d145f046301abb53aaef708",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000024/kaspi.kz_form_6-k_aug_10.htm",
+          "attempted_at": "2026-10-23T02:12:47.482071+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:48.319831+00:00",
+          "sha256": "0d271d4dbac9ac0d4ad501450f6f414122859873be9b9d89eba8b19860b8588b",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000024/kspi-ex99_1.htm",
+          "attempted_at": "2026-10-23T02:12:48.322621+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:49.341480+00:00",
+          "sha256": "91d8b2da22bfa393f741de43c20176fba9cb8bffdc8f5e334a6ce5d43a2fcdff",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000024/kspi-ex99_2.htm",
+          "attempted_at": "2026-10-23T02:12:49.348710+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:50.383447+00:00",
+          "sha256": "89475e22d441c4c6407a33bda64fa103473b7b0e5dcea9f47ac9cea840098186",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000022/kaspi.kz_form_6-k_june_1.htm",
+          "attempted_at": "2026-10-23T02:12:50.384826+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:51.346491+00:00",
+          "sha256": "2855f10344280ca3ce3ef2f8f0698be5697a90b21e787342630c144725733433",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000022/kspi-ex99_1.htm",
+          "attempted_at": "2026-10-23T02:12:51.349278+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:52.340628+00:00",
+          "sha256": "8c6f3e95fd448f65b97241626fc395be0eef5b07bb71bf7000bc72a4b36e03c8",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000020/kaspi.kz_form_6-k_may_14.htm",
+          "attempted_at": "2026-10-23T02:12:52.342098+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:53.311410+00:00",
+          "sha256": "79b72ef7e36f4a3ec4483fea21327d745f6e8682c4395d44017ecf547dd08cdc",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000020/kspi-ex99_1.htm",
+          "attempted_at": "2026-10-23T02:12:53.314144+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:54.358225+00:00",
+          "sha256": "35adeeda3309c726204861d10d81fc7aa2384a2c8aeebb693a491168c5a6e003",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000018/kaspi.kz_form_6-k_may_12.htm",
+          "attempted_at": "2026-10-23T02:12:54.423783+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:55.321466+00:00",
+          "sha256": "9d2ad8a4851a14646ff7a2d18d6837b8ae5b8ad349ef31b05320d4520daf21ce",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000018/kspi-ex99_1.htm",
+          "attempted_at": "2026-10-23T02:12:55.324037+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:56.325184+00:00",
+          "sha256": "82928c30a4432770b010a49b0efcce3d388fc758871b75d22978a3dacfee88e5",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000015/kaspi.kz_form_6-k_may_11.htm",
+          "attempted_at": "2026-10-23T02:12:56.327012+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:57.367991+00:00",
+          "sha256": "f646699d5bbb9b6a8172dd8d085121a4cd15636ffdd9aa7361fbb40ade6e3be6",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000015/kspi-ex99_1.htm",
+          "attempted_at": "2026-10-23T02:12:57.370777+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:58.420864+00:00",
+          "sha256": "eec4bd78809e1dda329debf13343c8b6457e87896a7943147872016fd0b1a9d2",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000013/kaspi.kz_form_6-k_april_.htm",
+          "attempted_at": "2026-10-23T02:12:58.427202+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:12:59.323449+00:00",
+          "sha256": "7152d174fb39fd67489cf9fc93c30eb90a061e37f2e26fa909a581112a9024e9",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000013/kspi-ex99_1.htm",
+          "attempted_at": "2026-10-23T02:12:59.326140+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:13:00.396116+00:00",
+          "sha256": "959d20895059f6c3925d9cda73d4f4260b703f4978555d25f8ac872bc8cc7b97",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000010/kaspi.kz_form_6-k_april_.htm",
+          "attempted_at": "2026-10-23T02:13:00.398802+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:13:01.379061+00:00",
+          "sha256": "bd5b3badaf9d647bb8ec05cdf77692d084a3fde8daca147831746948cee66b74",
+          "cached": false
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000010/kspi-ex99_1.htm",
+          "attempted_at": "2026-10-23T02:13:01.381530+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:13:02.322890+00:00",
+          "sha256": "fb13169defacfa4611c1bc198676df6bda14b5562d53bdcf50ba7d4bb67fd3e0",
+          "cached": false
+        },
+        {
+          "url": "https://ir.kaspi.kz/",
+          "attempted_at": "2026-10-23T02:13:02.324884+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:13:07.794665+00:00",
+          "sha256": "92d14d39613225eb6ed96fc003eff09680e8f65515dbfc7b16d11b71fed16fae",
+          "cached": false
+        },
+        {
+          "url": "https://news.google.com/rss/search?q=%22Kaspi.kz%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+          "attempted_at": "2026-10-23T02:13:07.797063+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:13:08.625389+00:00",
+          "sha256": "8f2368d7511469b803788f4d13f50f12e804ec89e1f46a2c35ddeb82cb5b3f6a",
+          "cached": false
+        },
+        {
+          "url": "https://www.theguardian.com/business/banking/rss",
+          "attempted_at": "2026-10-23T02:13:08.630483+00:00",
+          "status": "retrieved",
+          "retrieved_at": "2026-10-23T02:13:09.755789+00:00",
+          "sha256": "002b8ec599dfc5bd31a77d26614f338bce9499b698098ef5295788ddd9b61ea7",
+          "cached": false
+        }
+      ],
+      "outcome": {
+        "status": "partial",
+        "missing": [
+          "No independent original article text was read; independent news remains discovery-only or unavailable.",
+          "One or more evidence stages failed, were skipped or returned partial coverage."
+        ],
+        "read_documents": 20,
+        "financial_observations": 27,
+        "official_documents": {
+          "status": "available",
+          "read": 21,
+          "registered": 21,
+          "recent_passages_available": true
+        },
+        "financial": {
+          "status": "available",
+          "observations": 27,
+          "missing_latest_core_metrics": [],
+          "scope": "Reviewed annual extraction only: Apple (AAPL), Microsoft (MSFT), Kaspi.kz (KSPI). Interim figures remain quoted evidence."
+        },
+        "independent_news": {
+          "status": "no_matching_article",
+          "label": "Feed retrieved; no matching article",
+          "discovered": 0,
+          "articles_with_cited_text": 0,
+          "stage": "partial: no relevant independent article discovered",
+          "scope": "One reviewed public publisher, one article maximum; not exhaustive independent coverage."
+        },
+        "scope": "Complete means the bounded research checks passed, not exhaustive coverage or verified claims."
+      },
+      "document_register": [
+        {
+          "id": "D1",
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000008/kspi-20251231.htm",
+          "period": "2025-12-31",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:43.409125+00:00",
+          "cached": false,
+          "sha256": "7c2b45a6e625f6e6304d8d7eb8728f7faa0f5cebf86144e4abd66c5d8e44d9a8"
+        },
+        {
+          "id": "D2",
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000028/kaspi.kz_form_6-k_sept_1.htm",
+          "period": "2026-09-10",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:44.406196+00:00",
+          "cached": false,
+          "sha256": "108f7b73a228d51dd3a5b6199d82ca2adcb233255a5ddbde13da77e117aa0bae"
+        },
+        {
+          "id": "E3",
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000028/kspi-ex99_1.htm",
+          "period": "2026-09-10",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:45.319167+00:00",
+          "cached": false,
+          "sha256": "508264c5f22edb3c8d5ab4b64936fd1244e0a10f95073d03d8c44f16976e621d"
+        },
+        {
+          "id": "D3",
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000026/kaspi.kz_form_6-k_aug_12.htm",
+          "period": "2026-08-12",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:46.341334+00:00",
+          "cached": false,
+          "sha256": "5aac340143964e21ca2cf2b972e860c4680de46c495d59c481a194a694ea8c04"
+        },
+        {
+          "id": "E5",
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000026/kspi-ex99_1.htm",
+          "period": "2026-08-12",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:47.409150+00:00",
+          "cached": false,
+          "sha256": "68371d60f79921a28c8c1d6016c76f52ad12c3293d145f046301abb53aaef708"
+        },
+        {
+          "id": "D4",
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000024/kaspi.kz_form_6-k_aug_10.htm",
+          "period": "2026-08-10",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:48.319831+00:00",
+          "cached": false,
+          "sha256": "0d271d4dbac9ac0d4ad501450f6f414122859873be9b9d89eba8b19860b8588b"
+        },
+        {
+          "id": "E7",
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000024/kspi-ex99_1.htm",
+          "period": "2026-08-10",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:49.341480+00:00",
+          "cached": false,
+          "sha256": "91d8b2da22bfa393f741de43c20176fba9cb8bffdc8f5e334a6ce5d43a2fcdff"
+        },
+        {
+          "id": "E8",
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000024/kspi-ex99_2.htm",
+          "period": "2026-08-10",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:50.383447+00:00",
+          "cached": false,
+          "sha256": "89475e22d441c4c6407a33bda64fa103473b7b0e5dcea9f47ac9cea840098186"
+        },
+        {
+          "id": "D5",
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000022/kaspi.kz_form_6-k_june_1.htm",
+          "period": "2026-06-12",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:51.346491+00:00",
+          "cached": false,
+          "sha256": "2855f10344280ca3ce3ef2f8f0698be5697a90b21e787342630c144725733433"
+        },
+        {
+          "id": "E10",
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000022/kspi-ex99_1.htm",
+          "period": "2026-06-12",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:52.340628+00:00",
+          "cached": false,
+          "sha256": "8c6f3e95fd448f65b97241626fc395be0eef5b07bb71bf7000bc72a4b36e03c8"
+        },
+        {
+          "id": "D6",
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000020/kaspi.kz_form_6-k_may_14.htm",
+          "period": "2026-05-14",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:53.311410+00:00",
+          "cached": false,
+          "sha256": "79b72ef7e36f4a3ec4483fea21327d745f6e8682c4395d44017ecf547dd08cdc"
+        },
+        {
+          "id": "E12",
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000020/kspi-ex99_1.htm",
+          "period": "2026-05-14",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:54.358225+00:00",
+          "cached": false,
+          "sha256": "35adeeda3309c726204861d10d81fc7aa2384a2c8aeebb693a491168c5a6e003"
+        },
+        {
+          "id": "D7",
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000018/kaspi.kz_form_6-k_may_12.htm",
+          "period": "2026-05-12",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:55.321466+00:00",
+          "cached": false,
+          "sha256": "9d2ad8a4851a14646ff7a2d18d6837b8ae5b8ad349ef31b05320d4520daf21ce"
+        },
+        {
+          "id": "E14",
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000018/kspi-ex99_1.htm",
+          "period": "2026-05-12",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:56.325184+00:00",
+          "cached": false,
+          "sha256": "82928c30a4432770b010a49b0efcce3d388fc758871b75d22978a3dacfee88e5"
+        },
+        {
+          "id": "D8",
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000015/kaspi.kz_form_6-k_may_11.htm",
+          "period": "2026-05-11",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:57.367991+00:00",
+          "cached": false,
+          "sha256": "f646699d5bbb9b6a8172dd8d085121a4cd15636ffdd9aa7361fbb40ade6e3be6"
+        },
+        {
+          "id": "E16",
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000015/kspi-ex99_1.htm",
+          "period": "2026-05-11",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:58.420864+00:00",
+          "cached": false,
+          "sha256": "eec4bd78809e1dda329debf13343c8b6457e87896a7943147872016fd0b1a9d2"
+        },
+        {
+          "id": "D9",
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000013/kaspi.kz_form_6-k_april_.htm",
+          "period": "2026-04-24",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:12:59.323449+00:00",
+          "cached": false,
+          "sha256": "7152d174fb39fd67489cf9fc93c30eb90a061e37f2e26fa909a581112a9024e9"
+        },
+        {
+          "id": "E18",
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000013/kspi-ex99_1.htm",
+          "period": "2026-04-24",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:13:00.396116+00:00",
+          "cached": false,
+          "sha256": "959d20895059f6c3925d9cda73d4f4260b703f4978555d25f8ac872bc8cc7b97"
+        },
+        {
+          "id": "D10",
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000010/kaspi.kz_form_6-k_april_.htm",
+          "period": "2026-04-16",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:13:01.379061+00:00",
+          "cached": false,
+          "sha256": "bd5b3badaf9d647bb8ec05cdf77692d084a3fde8daca147831746948cee66b74"
+        },
+        {
+          "id": "E20",
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000010/kspi-ex99_1.htm",
+          "period": "2026-04-16",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:13:02.322890+00:00",
+          "cached": false,
+          "sha256": "fb13169defacfa4611c1bc198676df6bda14b5562d53bdcf50ba7d4bb67fd3e0"
+        },
+        {
+          "id": "IR1",
+          "url": "https://ir.kaspi.kz/",
+          "period": "Not established",
+          "status": "read",
+          "retrieved_at": "2026-10-23T02:13:07.794665+00:00",
+          "cached": false,
+          "sha256": "92d14d39613225eb6ed96fc003eff09680e8f65515dbfc7b16d11b71fed16fae"
+        }
+      ],
+      "news_content_read": 3,
+      "independent_articles_read": 0,
+      "news_records": [
+        {
+          "title": "Joint Stock Company Kaspi.kz (Nasdaq: KSPI) announces that the following resolutions were duly passed at its Extraordinary General Meeting on 09 September 2026:",
+          "publisher": "Company disclosure via SEC",
+          "published": "2026-09-10",
+          "event_date": "2026-09-09",
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000028/kspi-ex99_1.htm",
+          "access": "selected_source_text_read; not independently verified",
+          "retrieved_at": "2026-10-23T02:12:45.319167+00:00",
+          "sha256": "508264c5f22edb3c8d5ab4b64936fd1244e0a10f95073d03d8c44f16976e621d",
+          "discovery": {}
+        },
+        {
+          "title": "Interim financial disclosure \u2014 2026-08-12",
+          "publisher": "Company disclosure via SEC",
+          "published": "2026-08-12",
+          "event_date": null,
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000026/kspi-ex99_1.htm",
+          "access": "selected_source_text_read; not independently verified",
+          "retrieved_at": "2026-10-23T02:12:47.409150+00:00",
+          "sha256": "68371d60f79921a28c8c1d6016c76f52ad12c3293d145f046301abb53aaef708",
+          "discovery": {}
+        },
+        {
+          "title": "Kaspi.kz 2Q & 1H 2026 Financial Results",
+          "publisher": "Company disclosure via SEC",
+          "published": "2026-08-10",
+          "event_date": null,
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000024/kspi-ex99_1.htm",
+          "access": "selected_source_text_read; not independently verified",
+          "retrieved_at": "2026-10-23T02:12:49.341480+00:00",
+          "sha256": "91d8b2da22bfa393f741de43c20176fba9cb8bffdc8f5e334a6ce5d43a2fcdff",
+          "discovery": {}
+        },
+        {
+          "title": "Exhibit to 6-K \u2014 2026-08-10: kspi-ex99_2.htm",
+          "publisher": "Company disclosure via SEC",
+          "published": "2026-08-10",
+          "event_date": null,
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000024/kspi-ex99_2.htm",
+          "access": "discovery_only; selected-content budget exhausted",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {}
+        },
+        {
+          "title": "Kaspi.kz JSC (KSPI) Position Valued at 7x P/E Amid Financial Model and Country Risks - Yahoo Finance",
+          "publisher": "Yahoo Finance",
+          "published": "2026-10-15T12:50:14+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPRG5wMG5lNTJiWHZWOGdTNFJsOGVCdTlzYUs2ZG9zNnJyTjBLVTE2MEdoWmlhRlByWFMxeFlRci1tWDk2elpOS3N0LVhCT1NYU25KZXp1MkF3S2tvVnVib1p4WURRcFFUTDFJZWM4RGNiT0cxQ29PYWhYNzUzRzc0NUlGbGdjZVFwMXRCb2VCbW1rZUkxSHc?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Kaspi.kz%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:13:08.625389+00:00",
+            "sha256": "8f2368d7511469b803788f4d13f50f12e804ec89e1f46a2c35ddeb82cb5b3f6a",
+            "cached": false
+          }
+        },
+        {
+          "title": "KSPI Stock Price, Quote & News - Syfe",
+          "publisher": "Syfe",
+          "published": "2026-10-15T05:57:55+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBac2N1bWIwX1B1WUZ0b3pzQ3BZeG8yZ0c4QjB2aEcwLTJmc1lUS2tFcjVTeVljYlhuMHdTZVExbWx3emxJV0I0aUc2dw?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Kaspi.kz%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:13:08.625389+00:00",
+            "sha256": "8f2368d7511469b803788f4d13f50f12e804ec89e1f46a2c35ddeb82cb5b3f6a",
+            "cached": false
+          }
+        },
+        {
+          "title": "Kaspi.kz to Announce Third Quarter & 9-Month 2026 Financial Results on 9 November - Yahoo Finance",
+          "publisher": "Yahoo Finance",
+          "published": "2026-10-12T07:00:00+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPaXNxSTczdTR2QUlHbzVEWldQOFR6Qkp0Qzh5ZzJxNTh6RVJZc3VQRWpIMjYzZXN0dTduUWg3eUYxcTlpMXh1a19KREl0U2RWZUY4aGlaaWlfMGJkZ0VucmVUbVVwdFZaRzNzVlRzMkhURGVkU2E1YWdfT2RzcTNWVXJSNlNkX190RF82RkRQYWY1RTkyYlJSNFZMUmQ?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Kaspi.kz%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:13:08.625389+00:00",
+            "sha256": "8f2368d7511469b803788f4d13f50f12e804ec89e1f46a2c35ddeb82cb5b3f6a",
+            "cached": false
+          }
+        },
+        {
+          "title": "Mikhail Lomtadze unveils \"Kasper\": A Personal AI Assistant from Kaspi.kz - Forbes.kz",
+          "publisher": "Forbes.kz",
+          "published": "2026-10-11T04:12:15+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQWGxWZHNyMl9RTmNFWURaSHRYSlJmYm44b1BHR0MyVkJqNGdXbXAzTkdYZG1Hd0xDeDVGaVpaT0Q0MktmWmxoOUU3aUZNN3U5WURtWWZDMzNSS2U1ZW9pc0dLZmZiblZidzNjbVhGSkNwN0VMWVlMbnVSa3prdkU2djRYaktUX3JfR2ZWMS1lQlVLUklBMDdkcA?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Kaspi.kz%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:13:08.625389+00:00",
+            "sha256": "8f2368d7511469b803788f4d13f50f12e804ec89e1f46a2c35ddeb82cb5b3f6a",
+            "cached": false
+          }
+        },
+        {
+          "title": "Kaspi.kz turns Jackie Chan into \u2018Jackie-zhan\u2019 in new GForce Grey campaign - Campaign Brief Asia",
+          "publisher": "Campaign Brief Asia",
+          "published": "2026-10-08T07:00:00+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOUEhrZkZ6RS01SGVHSmx5c243QVk5OEZKYmVSOFVjakszcHQ1c0p2STNTZ1dqLUdyZkhEbUFDUWNZNlNFQVNtS2Q5dHlPaENRMVVTUFhCNzdfYXpjVUhkQXBJWGZOTEFaUmRzTFlfZDNpd0RzcFFmQlY1YVh0TE1oMl95R21XQjdrbFV5RGdZTl9pclRZcGRuY2E4RTdLc2V2SE9JdVlWYXBVUGhlbWE5UURMMA?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Kaspi.kz%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:13:08.625389+00:00",
+            "sha256": "8f2368d7511469b803788f4d13f50f12e804ec89e1f46a2c35ddeb82cb5b3f6a",
+            "cached": false
+          }
+        },
+        {
+          "title": "Kaspi.kz: Dividend Raise, Despite Hepsiburada Likely Still Dragging (NASDAQ:KSPI) - Seeking Alpha",
+          "publisher": "Seeking Alpha",
+          "published": "2026-09-25T07:00:00+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNNXlBeWJUM1hCekdjX1dXNzZLc2JiQW0wVGdsUXJ6QmppVFpUNGNtVUVRa1paOWFnby0tZGkxNFFrdXNCY1Azc3I1RlNhWnRUdEg1cUhNNGRxVGhEWnVHdHk1a0RNN0lQNUxSNTFWcTZKS1BUYnVjbXVyT2ZFdE9WY052d0ZYLVhGSmw1bnhSTHY1WUphMkJoTlNJaUFRZnA5VDRSdjBmdzU?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Kaspi.kz%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:13:08.625389+00:00",
+            "sha256": "8f2368d7511469b803788f4d13f50f12e804ec89e1f46a2c35ddeb82cb5b3f6a",
+            "cached": false
+          }
+        },
+        {
+          "title": "Kaspi keeps Buy rating with strong fintech grow... - Pluang",
+          "publisher": "Pluang",
+          "published": "2026-09-25T07:00:00+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOOEEyY0JweHJmNmxJanpsN1B1Vkwwa1lBR2ZJX0FaQ0xPT0JNSmdkbmdtcUItUVU5V1pzMnJYT2FaYjdLNWIxV0dUSXJqelBtODV2ZW8xUFlIWm9WelFTeGMxVllROXVRejA0TE9OUnZzdmtQQzdvRWszRzdSRjFVUlpRdXp3SEE0ZWZxeGU5TnhmdEg2LUN5d2licw?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Kaspi.kz%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:13:08.625389+00:00",
+            "sha256": "8f2368d7511469b803788f4d13f50f12e804ec89e1f46a2c35ddeb82cb5b3f6a",
+            "cached": false
+          }
+        },
+        {
+          "title": "One million customers have used Kasper \u2013 Kaspi.kz\u2019s personal AI assistant - Qazinform",
+          "publisher": "Qazinform",
+          "published": "2026-09-23T13:40:03+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOV21LV3Y4eFRHNnFuX2x6eHhiM2ZKUldWWGFvSklyYWZhZHZnN3MzZ2JZb3hxTzgxVWRFM2thakpZMHJMTWpoakctU0pDUmFoMTRtLVZNRl81cktEM0lBejlrUjBCQ1VQT0VoUzcyOWJHbkhQWUtic05vamdkbFNMNlJOSUJCZFNnSWdDZEEwaVA1T0lKOWl4eXFyQzhiaHNreEdRSS130gGmAUFVX3lxTE9pMWNSXzVMMS1ZZGphbUNmVC1hVHBKVXZUT1d4a0ZvSUJyek9kM1IyRWgzT19VRENBZE1uUDRzZWNrZVBmbzczaXdYRlR1eE5EbEJzczJkWHFUX3BDOThVZlNoZ0NRNDBQOXdDYTIxTm9ocUNEWlUyRS1YRVBDM1hxc3lOSkI0WlQtOF8ycGJrS25nRVlVNnpZTlhWM3NkNlZ3OVdzZkE?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Kaspi.kz%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:13:08.625389+00:00",
+            "sha256": "8f2368d7511469b803788f4d13f50f12e804ec89e1f46a2c35ddeb82cb5b3f6a",
+            "cached": false
+          }
+        },
+        {
+          "title": "How customer needs drive Kaspi.kz\u2019s decisions - Kursiv Media",
+          "publisher": "Kursiv Media",
+          "published": "2026-09-23T07:00:00+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNZXZvb3pqMmx1UE1kQjlVbDF6Ti04WXhWSFBCUDhKcGJweTI2NkM1TW9JQkMyczlOR0ZoTnZOQ3ZqdW04TlRwdXFfZThwUk9VN0JTRUs3OTh4aVhNeUNiMUMyVEl6Q2hZT0w4Nms5ajhTUTVXQWVpRjZDODZuY2JtQlQ0YjNiWnpIcGo0?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Kaspi.kz%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:13:08.625389+00:00",
+            "sha256": "8f2368d7511469b803788f4d13f50f12e804ec89e1f46a2c35ddeb82cb5b3f6a",
+            "cached": false
+          }
+        },
+        {
+          "title": "Top 3 Dividend Stocks With Yield Over 6% To Watch - Simply Wall Street",
+          "publisher": "Simply Wall Street",
+          "published": "2026-09-22T07:00:00+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQZDV3UTc4bGNIbVo0djlqTlAyNGVKOHpUc1hrbVlfTWdYRE9Ebjl6UW5pOUpScVpyZDhxSG8zd1djRkh3X1VLdElzNGoxekNhM3d2LW5fLXNtWDBUMm9Wai1CXy1Lb3cwTHJpRG1mNElIaWFNRW11endFS3Jha0NYM2RHby1GdHBkXzRkUThEdGVKSy1RT3VYa29sb1NIbmxoRmNINFVvU2hCQm5acDlnU0hxTmsyVUZtemFldUhsd3hDSUI4eFgw0gHMAUFVX3lxTFBocHVsZmp5ekpnNGNhLWtXZVBCY09qak9pOXRQM0NBSG9ObnVTSG9mRHlCMFdIOGl3WW12V0t5WXlLM2hFZXZ3MnNDUmNZT3FiZklCekFQbUV6c05UVHl0eU9VSkRBc3RacWZiUkRUb1hJMzZaeGM1R01BWGEzNk1XQ2N5WG5QMXNUaFpBRWVhWE1ZdXVGZHBwR3ZpNTJ5Y0FIbUQ0dV9iMng4Smx3Qy1vcTE3cmZPVFBhUG9rMkFvTWczYW92czNvNFBIUQ?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Kaspi.kz%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:13:08.625389+00:00",
+            "sha256": "8f2368d7511469b803788f4d13f50f12e804ec89e1f46a2c35ddeb82cb5b3f6a",
+            "cached": false
+          }
+        },
+        {
+          "title": "Novo Nordisk And 2 Other Top Dividend Stocks - Simply Wall Street",
+          "publisher": "Simply Wall Street",
+          "published": "2026-09-22T07:00:00+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNZ1g2RzZaWkJONkZ3c2Y5a3plYnF2ZnRJZzU5WnlXYTlleDQzWTJ0MktiakpHQ0pyYVhGM3h6em94cVVZTTBUU1hQSDBSdWhxelZ4eC12NVJ3X1RRSUt6Tk5hWUdfV29XcHJfVzZON3UxRno4eDhUaTBhMC1JVG5CQ0FwQ2JpTG0wV19sUkR2ZWxIMU9obWtsNkl2SVFHbmpFN2FqUmNwSGJreW1SaGJuNDB5T0FEb0VvWDVHZWpJa3pPbHEwelc0VWpnb2FqZURWX3fSAdcBQVVfeXFMT3VvaDVuQTNHajctZ0xfdVdnYzAwSi1nbUFYaENzR0Z2VXRHcE9CR2s0Tkx3OHdwM1RXSG8yMXNiYzA0QTRyZ3A2M3FsYTZ0Q3U3TW5BeUVMNWk4NzJ0Q01TWTBIdkhZcUFTZkV2UE5BQlFuU1FlRkhqS1dPYmRVZ0V0azNSVEIxaWNVOURXdjFyV0xJNUpuOGt2NjJ1VEhtbHRCWHZrRTJEZ1ducm5QaHFDcHdISVVMVERBSFBQWmt6WVQxS2REZ08zbkFSSmZHUHFSWVJCMDA?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Kaspi.kz%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:13:08.625389+00:00",
+            "sha256": "8f2368d7511469b803788f4d13f50f12e804ec89e1f46a2c35ddeb82cb5b3f6a",
+            "cached": false
+          }
+        },
+        {
+          "title": "Kaspi.kz Reports Q2 2026 Results: Full Earnings Call Transcript - Benzinga",
+          "publisher": "Benzinga",
+          "published": "2026-09-21T07:00:00+00:00",
+          "event_date": null,
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPZ0V0OVN4OHN0dlZfNHBMSjA1TUt6Um16dmhDVTc0d1pWbnR4ZDhDd3IwTTZQcEl0cENWN3g5M0hkclNLY2RORFctakpTWk5zVXprRjRtRnNhVEVTeEhHNzhaWVBMVmU2cnctWVlFNHhBdElELVBRdTQwMnh3dk9jUFBYZThhdzB4eWtqaWxZeWJodWJMaUw3RWRIeW42Vm1US0p6RW5VTG5zVFE?oc=5",
+          "access": "discovery_only; article not read",
+          "retrieved_at": "",
+          "sha256": "",
+          "discovery": {
+            "url": "https://news.google.com/rss/search?q=%22Kaspi.kz%22+%28earnings+OR+revenue+OR+acquisition+OR+financing+OR+regulation+OR+lawsuit+OR+management+OR+CEO+OR+dividend+OR+guidance%29+after%3A2026-07-25+before%3A2026-10-24&hl=en-US&gl=US&ceid=US%3Aen",
+            "retrieved_at": "2026-10-23T02:13:08.625389+00:00",
+            "sha256": "8f2368d7511469b803788f4d13f50f12e804ec89e1f46a2c35ddeb82cb5b3f6a",
+            "cached": false
+          }
+        }
+      ],
+      "recent_selections": [
+        {
+          "label": "Latest interim filing",
+          "id": "E5",
+          "published": "2026-08-12",
+          "period": "2026-08-12",
+          "latest_eligible": true,
+          "date_warnings": [],
+          "selected_passages": 5
+        },
+        {
+          "label": "Latest accessible earnings/results disclosure",
+          "id": "E7",
+          "published": "2026-08-10",
+          "period": "2026-08-10",
+          "latest_eligible": true,
+          "date_warnings": [],
+          "selected_passages": 3
+        }
+      ],
+      "ticker": "KSPI",
+      "matched_listings": 1,
+      "seconds_including_search_and_export": 32.5,
+      "stage_seconds": {
+        "Company resolution": 1.159,
+        "Official documents": 25.49,
+        "Recent news": 0.834,
+        "Independent news": 1.128,
+        "Financial extraction": 2.593,
+        "total": 31.242
+      },
+      "documents": 21,
+      "read_documents": 21,
+      "news_items": 16,
+      "news_stage": "completed",
+      "financial_coverage": true,
+      "citations": 65,
+      "model_calls": 0,
+      "actual_model_cost_usd": 0,
+      "limitations": [
+        "IR discovery is limited to the reviewed issuer landing page and at most 2 directly linked presentation/earnings documents. JavaScript-only links, external CDN hosts and unlinked presentations may be unavailable.",
+        "No directly linked presentation/earnings document discovered on the retrieved IR page; presentation coverage is incomplete.",
+        "Evidence is limited to SEC recent filings and linked exhibits. Standalone IR-site documents/presentations are not exhaustively searched; inaccessible or unlinked presentations remain missing.",
+        "Google News links remain discovery-only. The separate Guardian route reads at most one relevant public article. Company-name/keyword searches can miss events or include namesakes; relevance needs review. Coverage is not exhaustive; zero results does not establish no news.",
+        "News budget: 12 most recently published feed stories retained after deduplication; additional stories omitted. Coverage is incomplete.",
+        "No relevant Guardian article discovered in the public feed/window. This bounded feed is not an archive search; independent article coverage remains missing."
+      ],
+      "validation": "PARTIAL"
+    }
+  ],
+  "disambiguation_and_unsupported": {
+    "American": [
+      {
+        "name": "AMERICAN BATTERY MATERIALS, INC.",
+        "ticker": "BLTH",
+        "cik": "0001487718"
+      },
+      {
+        "name": "AMERICAN BATTERY TECHNOLOGY Co",
+        "ticker": "ABAT",
+        "cik": "0001576873"
+      },
+      {
+        "name": "AMERICAN COASTAL INSURANCE Corp",
+        "ticker": "ACIC",
+        "cik": "0001401521"
+      },
+      {
+        "name": "AMERICAN EAGLE OUTFITTERS INC",
+        "ticker": "AEO",
+        "cik": "0000919012"
+      },
+      {
+        "name": "AMERICAN ELECTRIC POWER CO INC",
+        "ticker": "AEP",
+        "cik": "0000004904"
+      },
+      {
+        "name": "AMERICAN EXPRESS CO",
+        "ticker": "AXP",
+        "cik": "0000004962"
+      },
+      {
+        "name": "AMERICAN FINANCIAL GROUP INC",
+        "ticker": "AFG",
+        "cik": "0001042046"
+      },
+      {
+        "name": "AMERICAN FINANCIAL GROUP INC",
+        "ticker": "AFGB",
+        "cik": "0001042046"
+      },
+      {
+        "name": "AMERICAN FINANCIAL GROUP INC",
+        "ticker": "AFGC",
+        "cik": "0001042046"
+      },
+      {
+        "name": "AMERICAN FINANCIAL GROUP INC",
+        "ticker": "AFGD",
+        "cik": "0001042046"
+      }
+    ],
+    "NonexistentPrivateExampleZZZ": []
+  },
+  "render_note": "Coverage display labels updated from the same freshly retrieved evidence; original cutoff/retrieval times preserved. No replay substituted for source requests."
+}

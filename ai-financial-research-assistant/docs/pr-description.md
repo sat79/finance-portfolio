@@ -1,0 +1,21 @@
+FinSight takes a company name through entity confirmation, bounded official/news retrieval, a cited report, citation inspection and downloadable evidence/financial workbooks. This follow-up improves automated analytical usefulness while retaining reviewed annual extraction for **Apple, Microsoft and Kaspi.kz only**, financial-group accounting controls, metric/period/currency/source claim checks, and spending safeguards.
+
+The old selector missed short quarterly results, operating drivers and credit-risk paragraphs while favoring generic text. Recent-document selection now ranks those evidence categories separately, preserves nearby period/heading/unit context and exact provenance, and deduplicates repeated measures and supplementary disclosures. Selection is bounded: two dated documents, six primary passages per document, three context passages per primary, plus at most two single-passage undated supplements. Undated material cannot displace dated latest evidence.
+
+A new **Key findings** section presents three to five supported findings where available, separating verbatim reported facts, management explanations, existing annual calculations and unresolved questions. It does not manufacture causal explanations or force findings with insufficient evidence. Selected passages appear consistently in the report and optional model evidence; actual quotes and deduplicated warnings resolve through shared registers. Annual/interim, reported/constant-currency, GAAP/non-GAAP, group/parent and Kaspi safeguards remain explicit. Semantic entailment is not claimed.
+
+**Concrete evaluation:** using identical fresh source snapshots, 11/11 hand-reviewed target passages appear in both outputs, versus 4/11 before. Kaspi now includes consolidated 2Q results, GMV/monetization and Stage 3 restructured-loan stocks; Apple adds the interim product-margin/tariff explanation; Microsoft adds the short revenue bullet and Intelligent Cloud segment result. This is a small development benchmark, not exhaustive or held-out accuracy evaluation.
+
+**Fresh production-app validation, 24 October 2026:** all three real Chromium journeys passed company-name search, entity confirmation, uncached evidence retrieval, Key findings/report review, citation inspection and ZIP/XLSX download. No replay substituted for these runs.
+
+| Company | Official documents read | Annual observations | Independent originals with cited text | Findings | Outcome |
+|---|---:|---:|---:|---:|---|
+| Apple | 16/16 | 40 | 1 | 4 | Complete bounded checks |
+| Microsoft | 8/8 | 40 | 1 | 5 | Complete bounded checks |
+| Kaspi.kz | 21/21 | 27 | 0: feed retrieved, no matching article | 5 | Partial |
+
+**194 tests pass**; Ruff lint/formatting and dependency checks pass. Nine new regression cases cover changed selection, context, deduplication, insufficient evidence, explanation labels, quote preservation, warning/calculation references and excerpt exports. Prior date, financial, citation-binding and spending tests remain passing.
+
+Review the [complete updated reports and evidence downloads](https://github.com/sat79/finance-portfolio/tree/feat/finsight-research-mvp/ai-financial-research-assistant/docs/review-artifacts/2026-10-24) and [before/after evaluation, verification and limits](https://github.com/sat79/finance-portfolio/blob/feat/finsight-research-mvp/ai-financial-research-assistant/docs/analytical-selection-2026-10-24.md). Each ZIP includes report, citations, model evidence, source/news registers, coverage, source snapshot and financial workbook. Independent articles retain all cited excerpts and provenance; uncited article bodies are not redistributed. The separate 23 October Kaspi analyst memo remains unchanged and is not application content.
+
+Remaining gaps: heuristic materiality and explanation labels; table-only/long-passages omissions; no comparable-scope causal bridge, full bank capital/distribution analysis or semantic verification. Kaspi independent-news absence stays prominent. Ready for one supervised, explicitly authorized small synthesis pilot after model/pricing verification, not autonomous research conclusions. A disabled bounded packet and clearly illustrative cost scenario are included for review. **Paid model calls: 0; spend: $0. No merge or deployment.**

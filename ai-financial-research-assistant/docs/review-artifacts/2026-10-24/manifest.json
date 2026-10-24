@@ -1,0 +1,29 @@
+[
+  {
+    "ticker": "KSPI",
+    "cutoff": "2026-10-24 14:29:56.314960+00:00",
+    "source": "Fresh uncached production-app browser download; report extracted verbatim from ZIP",
+    "bundle_sha256": "5d128c12dbfede64c4058f380c4565808f627a92e17c6e5c1d1b74b09718ce37",
+    "report_sha256": "977c14b75173d74865eba3d1d2a2396a8e008eefcebf03dc356b070aba86d2b4",
+    "findings": 5,
+    "model_calls": 0
+  },
+  {
+    "ticker": "AAPL",
+    "cutoff": "2026-10-24 14:29:08.662766+00:00",
+    "source": "Fresh uncached production-app browser download; report extracted verbatim from ZIP",
+    "bundle_sha256": "f9b3bd1118d4c2d815725ff9069266b9dac6c003c80d0af730ab511c9ffff7a7",
+    "report_sha256": "7a44eda0224ed9c609d0b37c699ef1d6cfc6eee396d02dbd7c9e381b4b95bb3d",
+    "findings": 4,
+    "model_calls": 0
+  },
+  {
+    "ticker": "MSFT",
+    "cutoff": "2026-10-24 14:29:36.613874+00:00",
+    "source": "Fresh uncached production-app browser download; report extracted verbatim from ZIP",
+    "bundle_sha256": "073aefbb0f70152fa0bb8e4b833af490edd8d5ac450366bdcdb49030031bd324",
+    "report_sha256": "1fe58a5339d182a908fd5520083787cc0b4b138081d178c838e2aba405a6bc44",
+    "findings": 5,
+    "model_calls": 0
+  }
+]

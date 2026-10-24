@@ -1,0 +1,31 @@
+[
+  {
+    "url": "https://data.sec.gov/submissions/CIK0000320193.json",
+    "attempted_at": "2026-10-22T21:02:04.848365+00:00",
+    "status": 200,
+    "bytes": 163778,
+    "content_type": "application/json",
+    "location": null
+  },
+  {
+    "url": "https://news.google.com/rss/search?q=Apple+earnings&hl=en-US&gl=US&ceid=US:en",
+    "attempted_at": "2026-10-22T21:02:05.530577+00:00",
+    "status": 200,
+    "bytes": 129838,
+    "content_type": "application/xml; charset=utf-8",
+    "location": null
+  },
+  {
+    "url": "https://api.github.com/repos/sat79/finance-portfolio/pulls/1",
+    "attempted_at": "2026-10-22T21:02:07.141803+00:00",
+    "status": 200,
+    "bytes": 18643,
+    "content_type": "application/json; charset=utf-8",
+    "location": null
+  },
+  {
+    "url": "https://www.theguardian.com/technology/apple/rss",
+    "attempted_at": "2026-10-22T21:02:08.925658+00:00",
+    "error": "HTTPSConnectionPool(host='www.theguardian.com', port=443): Max retries exceeded with url: /technology/apple/rss (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))"
+  }
+]
