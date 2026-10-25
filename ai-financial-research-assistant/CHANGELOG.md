@@ -1,3 +1,11 @@
+# 25 October 2026 — supervised MVP acceptance preparation
+
+- Expose structural table support, ambiguity, unsupported layouts and budget omissions in the opening report/UI coverage; successful retrieval no longer conceals analytical gaps.
+- Recognise common operating-cash labels and rank supported financial/segment tables before unchanged budgets. Retain Apple 8/8 reviewed targets; Microsoft known-target follow-up improves 2/5 → 4/5. Original frozen evaluations remain untouched; reconciliations still abstain.
+- Prepare a single-request provider pilot, JSON-object output, proxy-compatible secret binding, latency/usage/failure audit and combined evidence/analysis download. Strengthen no-retry enforcement without relaxing numerical/citation safeguards.
+- 219 tests pass; three fresh production-browser journeys pass. Provider synthesis remains unrun: official pricing/model/API requests receive proxy 403 and no API credential is configured. Draft requirements saved for review/publication; current prices are not verified. No paid calls, merge, deployment, valuation or coverage expansion.
+- [Reports, evidence bundles, frozen-target comparison, exact candidate request and evaluation checklist](docs/review-artifacts/2026-10-25-mvp/README.md).
+
 # 25 October 2026 — structural table evidence and completed synthesis
 
 - Add bounded HTML row/cell evidence using original spans, headings, dates, units and source positions. Preserve existing B-citation IDs; ambiguous/unsupported layouts abstain instead of guessing from flattened numbers. No table figures enter normalized annual facts or model numerical claims.

@@ -47,6 +47,11 @@ with sync_playwright() as p:
         page.get_by_role("heading", name="Research report:", exact=False).wait_for()
         page.get_by_role("heading", name="Research conclusion", exact=False).wait_for()
         assert "TEST REPLAY" not in page.inner_text("body")
+        expect(page.get_by_text("Table analytical evidence:", exact=False).first).to_be_visible()
+        page.get_by_role(
+            "heading", name="Research report:", exact=False
+        ).scroll_into_view_if_needed()
+        page.screenshot(path=str(output / f"{ticker}-coverage.png"))
         assert page.locator('a[href^="https://www.sec.gov/Archives/"]').count() > 0
         page.get_by_role("heading", name="Key findings", exact=True).scroll_into_view_if_needed()
         page.screenshot(path=str(output / f"{ticker}-report.png"))
@@ -87,6 +92,12 @@ with sync_playwright() as p:
                 key in coverage for key in ["official_documents", "financial", "independent_news"]
             )
             assert coverage["independent_news"]["label"] in report
+            assert coverage["tables"]["summary"] in report
+            assert (
+                coverage["status"] == "partial"
+                if coverage["tables"]["status"] != "bounded"
+                else True
+            )
             for item in model["recent_disclosures"]:
                 for passage in item["passages"]:
                     assert passage["citation_id"] in citations
@@ -109,6 +120,10 @@ with sync_playwright() as p:
                     "download and inspect bundle",
                 ],
                 "model_calls": 0,
+                "retrieval_seconds": evidence["seconds"],
+                "source_failures": [
+                    a for a in evidence["access_attempts"] if a["status"] != "retrieved"
+                ],
                 "key_findings": len(model["key_findings"]),
                 "structured_table_records": len(table_ids),
             }

@@ -11,7 +11,7 @@ import streamlit as st
 
 from finsight.research.identity import find_companies
 from finsight.research.model_evidence import build_model_evidence, fact_text
-from finsight.research.narrative import ModelConfig, OpenAIProvider, estimate
+from finsight.research.narrative import ModelConfig, OpenAIProvider, api_key, estimate
 from finsight.research.outcomes import assess
 from finsight.research.report import build_report, report_bundle
 from finsight.research.workflow import run_research
@@ -128,6 +128,8 @@ def render_research():
         f"Annual financial extraction: **{coverage['financial']['status']}** · "
         f"Independent news: **{coverage['independent_news']['label']}**"
     )
+    st.write("**Table analytical evidence:** " + coverage["tables"]["summary"])
+    st.caption(coverage["tables"]["scope"])
     st.caption(
         f"Cut-off {result.cutoff.isoformat()} · measured retrieval/extraction time {result.seconds.get('total', 0):.1f}s · deterministic report: 0 model calls, $0 model cost. Optional narrative usage is shown separately below."
     )
@@ -194,7 +196,7 @@ def render_research():
         st.write(
             "The deterministic report above works without a model. A chat subscription does not provide API access. No model call happens automatically."
         )
-        if not os.environ.get("OPENAI_API_KEY") or os.environ.get("FINSIGHT_ENABLE_MODEL") != "1":
+        if not api_key() or os.environ.get("FINSIGHT_ENABLE_MODEL") != "1":
             st.info(
                 "Remaining setup step: configure an approved model API, model ID, current prices and spending cap locally. Model generation is disabled; actual usage is zero."
             )
@@ -225,6 +227,10 @@ def render_research():
                     st.error(str(exc))
             narrative = st.session_state.get("research_narrative")
             if narrative:
+                st.subheader("Application-generated analysis — human review required")
+                st.caption(
+                    "Produced by the configured API provider; separate from the earlier assistant-written synthesis exercise."
+                )
                 st.warning(narrative["review"])
                 for p in narrative["narrative"]["paragraphs"]:
                     st.text(f"{p['kind']}: {p['text']}")
@@ -238,6 +244,13 @@ def render_research():
                     json.dumps(narrative, indent=2),
                     "finsight-narrative.json",
                     "application/json",
+                    on_click="ignore",
+                )
+                st.download_button(
+                    "Download evidence and generated analysis",
+                    report_bundle(result, narrative=narrative),
+                    "finsight-research-with-analysis.zip",
+                    "application/zip",
                     on_click="ignore",
                 )
         except ValueError as exc:

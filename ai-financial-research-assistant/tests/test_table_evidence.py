@@ -5,7 +5,7 @@ import pytest
 
 from finsight.research.documents import extract, read_document
 from finsight.research.model_evidence import build_model_evidence
-from finsight.research.models import Document
+from finsight.research.models import Document, Passage
 from finsight.research.narrative import validate_narrative
 from finsight.research.report import build_report, report_bundle
 from finsight.research.tables import MAX_EVIDENCE_BYTES, extract_tables
@@ -182,3 +182,75 @@ def test_report_model_bundle_share_tables_without_normalizing_facts(dataset):
     old = replace(doc, tables=[], table_notes=[])
     r.documents[-1] = old
     assert "not reconstructed from flattened numbers" in build_report(r)[0]
+
+
+@pytest.mark.parametrize(
+    "label",
+    [
+        "Net cash from operations",
+        "Net cash provided by operating activities",
+        "Net cash used in operating activities",
+        "Net cash provided by operations",
+    ],
+)
+def test_common_operating_cash_labels_preserve_original_heading_and_values(label):
+    tables, _ = parse(
+        CONTEXT + "<table>" + HEAD + f"<tr><td>{label}</td>"
+        "<td>100</td><td>90</td><td>180</td><td>170</td></tr></table>"
+    )
+    row = tables[0]["rows"][0]
+    assert row["status"] == "structured" and row["label"] == label
+    assert row["values"][2]["column_headers"][0]["text"] == "Six Months Ended"
+
+
+def test_relevant_tables_rank_before_budget_without_promoting_ambiguous_rows():
+    def table(title, label, header=HEAD):
+        return (
+            f"<p>{title}</p><p>(In millions)</p><table>"
+            + header
+            + (f"<tr><td>{label}</td><td>100</td><td>90</td><td>180</td><td>170</td></tr></table>")
+        )
+
+    html = table("Comprehensive income statements", "Net income") * 4
+    html += table("Cash flows statements", "Net cash from operations")
+    html += table("Segment revenue and operating income", "Revenue")
+    html += table("Segment revenue and operating income", "Revenue", "")
+    tables, notes = parse(html)
+    assert [t["table"] for t in tables] == [6, 5, 1, 2]
+    assert "3 additional candidate" in notes[0]
+    assert any("3, 4, 7" in note for note in notes)
+
+
+def test_opening_coverage_exposes_table_omissions_even_when_source_is_read(dataset):
+    from test_research import report_fixture
+
+    from finsight.research.outcomes import assess
+
+    r = report_fixture(dataset)
+    tables, notes = parse((CONTEXT + "<table>" + HEAD + ROWS + "</table>") * 6)
+    r.documents.append(
+        Document(
+            "E9",
+            "Results",
+            "earnings/event exhibit",
+            r.documents[0].url,
+            "2026-08-01",
+            "2026-06-30",
+            status="read",
+            passages=[
+                Passage(
+                    "HTML text block 1",
+                    "Quarterly financial results for the three months ended June 30, 2026. These consolidated financial results include reported revenues and expenses.",
+                )
+            ],
+            tables=tables,
+            table_notes=notes,
+        )
+    )
+    coverage = assess(r)
+    assert coverage["tables"]["omitted_tables"] == 2
+    assert coverage["tables"]["status"] == "partial"
+    report = build_report(r)[0]
+    opening = report.split("## Key findings")[0]
+    assert "2 omitted tables" in opening and "None in the bounded checks" not in opening
+    assert build_model_evidence(r)["coverage"]["tables"] == coverage["tables"]

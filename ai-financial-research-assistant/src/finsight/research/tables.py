@@ -12,7 +12,8 @@ NUMBER = re.compile(r"^[($€£−–-]*\s*\d[\d,.]*\s*[)%]*$|^[—–-]$")
 MONTH = r"Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?"
 MONTH_WORD = r"\b(?:" + MONTH + r")\b"
 SCOPE = r"months? ended|years? ended|quarter|year.to.date|as (?:at|of)|balance sheets"
-METRIC = r"revenue|net sales|net income|net profit|operating income|cash.*operating|total assets|total liabilities|credit losses|restructured loans"
+OPERATING_CASH = r"cash.*(?:operating|from operations|(?:provided by|used in) operations)"
+METRIC = rf"revenue|net sales|net income|net profit|operating income|{OPERATING_CASH}|total assets|total liabilities|credit losses|restructured loans"
 
 
 def match(pattern, text):
@@ -286,6 +287,26 @@ def selected_table(table):
     return result
 
 
+def table_priority(table):
+    """Rank explicit financial headings before budgets; never infer a cell's accounting scope."""
+    title = " ".join(c["text"] for c in table["context"])
+    labels = " ".join(r["label"] for r in table["rows"])
+    if match(r"segment.*(?:revenue|income)|(?:revenue|income).*segment", title):
+        rank = 0
+    elif match(r"cash flows?|cash.*operations", title) or match(OPERATING_CASH, labels):
+        rank = 1
+    elif match(r"comprehensive", title):
+        rank = 4
+    elif match(r"income statements?|statements? of (?:income|operations)|financial results", title):
+        rank = 2
+    elif match(r"balance sheets|financial position", title):
+        rank = 3
+    else:
+        rank = 5
+    # A wholly ambiguous table cannot displace a table with supported rows.
+    return (not any(r["status"] == "structured" for r in table["rows"]), rank, table["table"])
+
+
 def extract_tables(content, media):
     if content.startswith(b"%PDF") or "html" not in media:
         return [], [
@@ -298,10 +319,18 @@ def extract_tables(content, media):
             t["errors"].append("Unclosed table; structure incomplete.")
     tables = [t for raw in parser.tables if (t := selected_table(raw)) is not None]
     unsupported = [t for t in tables if t["status"] == "unsupported"]
-    tables = [t for t in tables if t["status"] != "unsupported"]
+    tables = sorted([t for t in tables if t["status"] != "unsupported"], key=table_priority)
     notes = [
         f"Selected at most {MAX_TABLES} financial tables, {MAX_ROWS} rows per table and eight values per row; header limit 12 rows. {max(0, len(tables) - MAX_TABLES)} additional candidate tables omitted."
     ]
+    notes.append(
+        "Candidate tables ranked by supported rows and explicit financial/segment headings before existing budgets; original table and row ordinals preserved."
+    )
+    if len(tables) > MAX_TABLES:
+        notes.append(
+            "Table-count budget omitted candidate ordinals: "
+            + ", ".join(str(t["table"]) for t in tables[MAX_TABLES:])
+        )
     if parser.count > 200:
         notes.append("Only the first 200 HTML tables were inspected.")
     notes.extend(f"Table {t['table']} unsupported: {' '.join(t['notes'])}" for t in unsupported[:8])

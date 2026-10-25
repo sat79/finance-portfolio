@@ -82,7 +82,9 @@ def test_outcomes_require_substantive_evidence(research):
     independent.category = "independent reporting; synthetic test evidence"
     independent.url = "https://www.theguardian.com/business/2026/aug/02/synthetic-results"
     research.news.append(independent)
-    assert assess(research)["status"] == "complete"
+    assert assess(research)["status"] == "partial"
+    assert assess(research)["official_documents"]["status"] == "available"
+    assert assess(research)["tables"]["status"] == "unavailable"
     research.documents[1].status = "inaccessible"
     assert assess(research)["status"] == "partial"
     assert any("D2" in gap for gap in assess(research)["missing"])

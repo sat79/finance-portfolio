@@ -4,6 +4,7 @@ import json
 import os
 import re
 import threading
+import time
 from contextlib import contextmanager
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -45,6 +46,10 @@ unit, citation_ids and source_urls. Do not add prose to these records. The appli
 these records itself. No arithmetic, period conversion or reassignment of a figure is allowed.
 Preserve limitations, conflicts, missing data, annual/interim distinctions and KSPI safeguards.
 Source existence and exact excerpts do not establish semantic entailment of interpretations."""
+INSTRUCTIONS += """ Prioritize at most three material findings, then at most two unresolved
+analytical questions. Keep the prose concise. Do not force findings when evidence is insufficient.
+Unsupported and structured table records cannot support claims. Distinguish company-reported
+statements from independently verified facts; do not infer causation from concurrent changes."""
 
 
 class NarrativeProvider(Protocol):
@@ -58,6 +63,7 @@ class ModelConfig:
     output_per_million: Decimal
     cap_usd: Decimal
     max_output_tokens: int = 1200
+    max_requests: int = 1
 
     @classmethod
     def from_environment(cls):
@@ -98,6 +104,22 @@ def estimate(config: ModelConfig, evidence: dict):
         "max_output_tokens": config.max_output_tokens,
         "reserved_cost_usd": str(cost),
         "pricing": "User-configured rates; not a billing quote",
+    }
+
+
+def api_key():
+    # OPENAI_ is reserved for managed proxy bindings; retain the conventional local fallback.
+    return os.environ.get("FINSIGHT_OPENAI_API_KEY") or os.environ.get("OPENAI_API_KEY")
+
+
+def request_payload(config, evidence):
+    return {
+        "model": config.model,
+        "instructions": INSTRUCTIONS,
+        "input": json.dumps(evidence, ensure_ascii=False),
+        "max_output_tokens": config.max_output_tokens,
+        "store": False,
+        "text": {"format": {"type": "json_object"}},
     }
 
 
@@ -182,10 +204,10 @@ class OpenAIProvider:
             raise ValueError(
                 "Model generation is disabled or spending was not explicitly approved."
             )
-        key = os.environ.get("OPENAI_API_KEY")
+        key = api_key()
         if not key:
             raise ValueError(
-                "OPENAI_API_KEY is not configured. A chat subscription is not API access."
+                "FINSIGHT_OPENAI_API_KEY (or local OPENAI_API_KEY) is not configured. A chat subscription is not API access."
             )
         usage = estimate(self.config, evidence)
         reserve = Decimal(usage["reserved_cost_usd"])
@@ -204,6 +226,10 @@ class OpenAIProvider:
                 raise ValueError(
                     "Configured cumulative spending cap would be exceeded; no request sent."
                 )
+            if sum(r.get("status") == "reserved" for r in rows) >= self.config.max_requests:
+                raise ValueError(
+                    "Single-request pilot limit reached; no request sent. No automatic retries."
+                )
             with self.ledger.open("a") as handle:
                 handle.write(
                     json.dumps(
@@ -217,40 +243,45 @@ class OpenAIProvider:
                     + "\n"
                 )
         # Reserve persists even after timeout/failure, since a provider may have charged for a request.
+        started = time.monotonic()
+        record = {
+            "status": "failure",
+            "model": self.config.model,
+            "origin": "application model provider",
+            "provider_usage": None,
+            "actual_cost_usd": None,
+        }
         try:
             response = self.session.post(
                 "https://api.openai.com/v1/responses",
                 headers={"Authorization": f"Bearer {key}"},
-                json={
-                    "model": self.config.model,
-                    "instructions": INSTRUCTIONS,
-                    "input": json.dumps(evidence),
-                    "max_output_tokens": self.config.max_output_tokens,
-                    "store": False,
-                },
+                json=request_payload(self.config, evidence),
                 timeout=(5, 60),
                 allow_redirects=False,
             )
+            record["http_status"] = response.status_code
             if response.status_code != 200:
                 raise ValueError(
                     f"Model HTTP {response.status_code}; deterministic report preserved. Reservation retained."
                 )
             body = response.json()
+            record["provider_usage"] = body.get("usage")
+            record["provider_response_id"] = body.get("id")
+            record["provider_status"] = body.get("status")
             text = "".join(
                 part.get("text", "")
                 for item in body.get("output", [])
                 for part in item.get("content", [])
                 if part.get("type") == "output_text"
             )
-            record = {
-                "status": "response",
-                "at": datetime.now(timezone.utc).isoformat(),
-                "provider_usage": body.get("usage"),
-                "actual_cost_usd": None,
-            }
-            with budget_lock(self.ledger), self.ledger.open("a") as handle:
-                handle.write(json.dumps(record) + "\n")
+            record["provider_output_text"] = text
+            if body.get("status") not in {None, "completed"}:
+                raise ValueError(
+                    "Provider response incomplete; no narrative accepted. Reservation retained."
+                )
             result = validate_narrative(json.loads(text), evidence)
+            record["status"] = "validated_response"
+            record["latency_seconds"] = round(time.monotonic() - started, 3)
             return {
                 "narrative": result,
                 "usage": record,
@@ -266,6 +297,15 @@ class OpenAIProvider:
             AttributeError,
             json.JSONDecodeError,
         ) as exc:
+            record["failure"] = type(exc).__name__ + ": provider response unavailable/invalid"
             raise ValueError(
                 "Model response unavailable/invalid; deterministic report preserved. Reservation retained."
             ) from exc
+        except ValueError as exc:
+            record["failure"] = str(exc)
+            raise
+        finally:
+            record["at"] = datetime.now(timezone.utc).isoformat()
+            record["latency_seconds"] = round(time.monotonic() - started, 3)
+            with budget_lock(self.ledger), self.ledger.open("a") as handle:
+                handle.write(json.dumps(record) + "\n")

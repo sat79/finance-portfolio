@@ -94,6 +94,7 @@ def build_report(research: Research) -> tuple[str, dict]:
         "|---|---|---|",
         f"| Official documents | {coverage['official_documents']['status']}; {coverage['official_documents']['read']}/{coverage['official_documents']['registered']} registered documents read | Bounded SEC and reviewed IR sources; not exhaustive |",
         f"| Financial extraction | {coverage['financial']['status']}; {coverage['financial']['observations']} selected observations | Annual extraction: AAPL, MSFT and KSPI only; interim text is not normalized financial data |",
+        f"| Table analytical evidence | {safe(coverage['tables']['summary'])} | {safe(coverage['tables']['scope'])} |",
         f"| Independent news | {coverage['independent_news']['label']}; {coverage['independent_news']['articles_with_cited_text']} articles with cited text from {coverage['independent_news']['discovered']} direct discoveries | One reviewed public publisher; headline metadata is not article text |",
         "## What the business does and how it earns revenue",
     ]
@@ -499,12 +500,14 @@ def build_report(research: Research) -> tuple[str, dict]:
     return "\n\n".join(lines).replace("|\n\n|", "|\n|"), citations
 
 
-def report_bundle(research: Research) -> bytes:
+def report_bundle(research: Research, narrative=None) -> bytes:
     from finsight.research.model_evidence import build_model_evidence
 
     report, citations = build_report(research)
     output = io.BytesIO()
     with zipfile.ZipFile(output, "w", zipfile.ZIP_DEFLATED) as archive:
+        if narrative is not None:
+            archive.writestr("application-model-output.json", json.dumps(narrative, indent=2))
         archive.writestr("research-report.md", report)
         archive.writestr("coverage.json", json.dumps(assess(research), indent=2))
         archive.writestr(

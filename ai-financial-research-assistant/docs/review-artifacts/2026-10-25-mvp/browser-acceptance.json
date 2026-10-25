@@ -1,0 +1,327 @@
+[
+  {
+    "query": "Apple",
+    "ticker": "AAPL",
+    "attempted_at": "2026-10-25T20:06:24.286267+00:00",
+    "finished_at": "2026-10-25T20:06:57.827249+00:00",
+    "cutoff": "2026-10-25 20:06:25.641504+00:00",
+    "coverage": {
+      "status": "partial",
+      "missing": [
+        "Table evidence partial: 32 supported rows; 0 ambiguous rows, 5 unsupported tables, 6 omitted tables and 5 omitted candidate rows."
+      ],
+      "read_documents": 16,
+      "financial_observations": 40,
+      "official_documents": {
+        "status": "available",
+        "read": 16,
+        "registered": 16,
+        "recent_passages_available": true
+      },
+      "financial": {
+        "status": "available",
+        "observations": 40,
+        "missing_latest_core_metrics": [],
+        "scope": "Reviewed annual extraction only: Apple (AAPL), Microsoft (MSFT), Kaspi.kz (KSPI). Interim figures remain quoted evidence."
+      },
+      "tables": {
+        "status": "partial",
+        "structured_rows": 32,
+        "ambiguous_rows": 0,
+        "unsupported_tables": 5,
+        "omitted_tables": 6,
+        "omitted_rows": 5,
+        "summary": "Table evidence partial: 32 supported rows; 0 ambiguous rows, 5 unsupported tables, 6 omitted tables and 5 omitted candidate rows.",
+        "documents": [
+          {
+            "document_id": "D2",
+            "structured_rows": 14,
+            "ambiguous_rows": 0,
+            "unsupported_tables": 5,
+            "omitted_tables": 6,
+            "omitted_rows": 0,
+            "unknown_or_unavailable": false,
+            "notes": [
+              "Selected at most 4 financial tables, 12 rows per table and eight values per row; header limit 12 rows. 6 additional candidate tables omitted.",
+              "Candidate tables ranked by supported rows and explicit financial/segment headings before existing budgets; original table and row ordinals preserved.",
+              "Table-count budget omitted candidate ordinals: 16, 18, 19, 36, 32, 33",
+              "Table 20 unsupported: No supported metric-row layout; column-oriented or fragmented measures are not transposed by guessing.",
+              "Table 23 unsupported: No supported metric-row layout; column-oriented or fragmented measures are not transposed by guessing.",
+              "Table 28 unsupported: No supported metric-row layout; column-oriented or fragmented measures are not transposed by guessing.",
+              "Table 30 unsupported: Table exceeds 40 physical columns.",
+              "Table 31 unsupported: Table exceeds 40 physical columns."
+            ]
+          },
+          {
+            "document_id": "E7",
+            "structured_rows": 18,
+            "ambiguous_rows": 0,
+            "unsupported_tables": 0,
+            "omitted_tables": 0,
+            "omitted_rows": 5,
+            "unknown_or_unavailable": false,
+            "notes": [
+              "Selected at most 4 financial tables, 12 rows per table and eight values per row; header limit 12 rows. 0 additional candidate tables omitted.",
+              "Candidate tables ranked by supported rows and explicit financial/segment headings before existing budgets; original table and row ordinals preserved."
+            ]
+          }
+        ],
+        "scope": "Selected recent disclosures only; supported cell geometry is not normalized financial data or model claim support. Retrieval success does not establish analytical completeness."
+      },
+      "independent_news": {
+        "status": "selected_article_text_read",
+        "label": "Selected original article text read",
+        "discovered": 3,
+        "articles_with_cited_text": 1,
+        "stage": "completed",
+        "scope": "One reviewed public publisher, one article maximum; not exhaustive independent coverage."
+      },
+      "scope": "Complete means the bounded research checks passed, not exhaustive coverage or verified claims."
+    },
+    "fresh_source_retrievals": 23,
+    "citations": 112,
+    "document_count": 17,
+    "steps": [
+      "name search",
+      "entity confirmation",
+      "refresh source evidence",
+      "read report",
+      "inspect citation register",
+      "download and inspect bundle"
+    ],
+    "model_calls": 0,
+    "retrieval_seconds": {
+      "Company resolution": 0.457,
+      "Official documents": 15.942,
+      "Recent news": 1.316,
+      "Independent news": 0.861,
+      "Financial extraction": 2.788,
+      "total": 22.204
+    },
+    "source_failures": [],
+    "key_findings": 4,
+    "structured_table_records": 7
+  },
+  {
+    "query": "Microsoft",
+    "ticker": "MSFT",
+    "attempted_at": "2026-10-25T20:06:59.102430+00:00",
+    "finished_at": "2026-10-25T20:07:24.533380+00:00",
+    "cutoff": "2026-10-25 20:07:01.072840+00:00",
+    "coverage": {
+      "status": "partial",
+      "missing": [
+        "Table evidence partial: 21 supported rows; 0 ambiguous rows, 17 unsupported tables, 1 omitted tables and 3 omitted candidate rows."
+      ],
+      "read_documents": 8,
+      "financial_observations": 40,
+      "official_documents": {
+        "status": "available",
+        "read": 8,
+        "registered": 8,
+        "recent_passages_available": true
+      },
+      "financial": {
+        "status": "available",
+        "observations": 40,
+        "missing_latest_core_metrics": [],
+        "scope": "Reviewed annual extraction only: Apple (AAPL), Microsoft (MSFT), Kaspi.kz (KSPI). Interim figures remain quoted evidence."
+      },
+      "tables": {
+        "status": "partial",
+        "structured_rows": 21,
+        "ambiguous_rows": 0,
+        "unsupported_tables": 17,
+        "omitted_tables": 1,
+        "omitted_rows": 3,
+        "summary": "Table evidence partial: 21 supported rows; 0 ambiguous rows, 17 unsupported tables, 1 omitted tables and 3 omitted candidate rows.",
+        "documents": [
+          {
+            "document_id": "E5",
+            "structured_rows": 21,
+            "ambiguous_rows": 0,
+            "unsupported_tables": 6,
+            "omitted_tables": 1,
+            "omitted_rows": 3,
+            "unknown_or_unavailable": false,
+            "notes": [
+              "Selected at most 4 financial tables, 12 rows per table and eight values per row; header limit 12 rows. 1 additional candidate tables omitted.",
+              "Candidate tables ranked by supported rows and explicit financial/segment headings before existing budgets; original table and row ordinals preserved.",
+              "Table-count budget omitted candidate ordinals: 11",
+              "Table 1 unsupported: Explicit table scale/unit heading missing; amounts not mapped.",
+              "Table 2 unsupported: Explicit table scale/unit heading missing; amounts not mapped.",
+              "Table 3 unsupported: Explicit table scale/unit heading missing; amounts not mapped.",
+              "Table 4 unsupported: Explicit table scale/unit heading missing; amounts not mapped.",
+              "Table 5 unsupported: No supported metric-row layout; column-oriented or fragmented measures are not transposed by guessing.",
+              "Table 6 unsupported: Explicit table scale/unit heading missing; amounts not mapped."
+            ]
+          },
+          {
+            "document_id": "IR2",
+            "structured_rows": 0,
+            "ambiguous_rows": 0,
+            "unsupported_tables": 11,
+            "omitted_tables": 0,
+            "omitted_rows": 0,
+            "unknown_or_unavailable": false,
+            "notes": [
+              "Selected at most 4 financial tables, 12 rows per table and eight values per row; header limit 12 rows. 0 additional candidate tables omitted.",
+              "Candidate tables ranked by supported rows and explicit financial/segment headings before existing budgets; original table and row ordinals preserved.",
+              "Table 1 unsupported: Explicit table scale/unit heading missing; amounts not mapped.",
+              "Table 2 unsupported: Explicit table scale/unit heading missing; amounts not mapped.",
+              "Table 3 unsupported: Explicit table scale/unit heading missing; amounts not mapped.",
+              "Table 4 unsupported: Explicit table scale/unit heading missing; amounts not mapped.",
+              "Table 5 unsupported: No supported metric-row layout; column-oriented or fragmented measures are not transposed by guessing.",
+              "Table 6 unsupported: Explicit table scale/unit heading missing; amounts not mapped.",
+              "Table 7 unsupported: Explicit table scale/unit heading missing; amounts not mapped.",
+              "Table 8 unsupported: Explicit table scale/unit heading missing; amounts not mapped.",
+              "3 additional unsupported tables omitted from diagnostics."
+            ]
+          }
+        ],
+        "scope": "Selected recent disclosures only; supported cell geometry is not normalized financial data or model claim support. Retrieval success does not establish analytical completeness."
+      },
+      "independent_news": {
+        "status": "selected_article_text_read",
+        "label": "Selected original article text read",
+        "discovered": 1,
+        "articles_with_cited_text": 1,
+        "stage": "completed",
+        "scope": "One reviewed public publisher, one article maximum; not exhaustive independent coverage."
+      },
+      "scope": "Complete means the bounded research checks passed, not exhaustive coverage or verified claims."
+    },
+    "fresh_source_retrievals": 15,
+    "citations": 104,
+    "document_count": 9,
+    "steps": [
+      "name search",
+      "entity confirmation",
+      "refresh source evidence",
+      "read report",
+      "inspect citation register",
+      "download and inspect bundle"
+    ],
+    "model_calls": 0,
+    "retrieval_seconds": {
+      "Company resolution": 0.423,
+      "Official documents": 9.013,
+      "Recent news": 1.278,
+      "Independent news": 1.074,
+      "Financial extraction": 2.459,
+      "total": 15.335
+    },
+    "source_failures": [],
+    "key_findings": 5,
+    "structured_table_records": 5
+  },
+  {
+    "query": "Kaspi.kz",
+    "ticker": "KSPI",
+    "attempted_at": "2026-10-25T20:07:25.413160+00:00",
+    "finished_at": "2026-10-25T20:08:04.618273+00:00",
+    "cutoff": "2026-10-25 20:07:26.853221+00:00",
+    "coverage": {
+      "status": "partial",
+      "missing": [
+        "Table evidence partial: 22 supported rows; 1 ambiguous rows, 21 unsupported tables, 3 omitted tables and 0 omitted candidate rows. Some structural table coverage is unavailable or unassessed.",
+        "No independent original article text was read; independent news remains discovery-only or unavailable.",
+        "One or more evidence stages failed, were skipped or returned partial coverage."
+      ],
+      "read_documents": 20,
+      "financial_observations": 27,
+      "official_documents": {
+        "status": "available",
+        "read": 21,
+        "registered": 21,
+        "recent_passages_available": true
+      },
+      "financial": {
+        "status": "available",
+        "observations": 27,
+        "missing_latest_core_metrics": [],
+        "scope": "Reviewed annual extraction only: Apple (AAPL), Microsoft (MSFT), Kaspi.kz (KSPI). Interim figures remain quoted evidence."
+      },
+      "tables": {
+        "status": "partial",
+        "structured_rows": 22,
+        "ambiguous_rows": 1,
+        "unsupported_tables": 21,
+        "omitted_tables": 3,
+        "omitted_rows": 0,
+        "summary": "Table evidence partial: 22 supported rows; 1 ambiguous rows, 21 unsupported tables, 3 omitted tables and 0 omitted candidate rows. Some structural table coverage is unavailable or unassessed.",
+        "documents": [
+          {
+            "document_id": "E5",
+            "structured_rows": 22,
+            "ambiguous_rows": 1,
+            "unsupported_tables": 21,
+            "omitted_tables": 3,
+            "omitted_rows": 0,
+            "unknown_or_unavailable": false,
+            "notes": [
+              "Selected at most 4 financial tables, 12 rows per table and eight values per row; header limit 12 rows. 3 additional candidate tables omitted.",
+              "Candidate tables ranked by supported rows and explicit financial/segment headings before existing budgets; original table and row ordinals preserved.",
+              "Table-count budget omitted candidate ordinals: 52, 3, 5",
+              "Table 1 unsupported: No supported metric-row layout; column-oriented or fragmented measures are not transposed by guessing.",
+              "Table 7 unsupported: No supported metric-row layout; column-oriented or fragmented measures are not transposed by guessing.",
+              "Table 9 unsupported: No supported metric-row layout; column-oriented or fragmented measures are not transposed by guessing.",
+              "Table 11 unsupported: No supported metric-row layout; column-oriented or fragmented measures are not transposed by guessing.",
+              "Table 12 unsupported: Explicit table scale/unit heading missing; amounts not mapped.",
+              "Table 13 unsupported: Explicit table scale/unit heading missing; amounts not mapped.",
+              "Table 15 unsupported: Explicit table scale/unit heading missing; amounts not mapped.",
+              "Table 16 unsupported: Explicit table scale/unit heading missing; amounts not mapped.",
+              "13 additional unsupported tables omitted from diagnostics."
+            ]
+          },
+          {
+            "document_id": "E7",
+            "structured_rows": 0,
+            "ambiguous_rows": 0,
+            "unsupported_tables": 0,
+            "omitted_tables": 0,
+            "omitted_rows": 0,
+            "unknown_or_unavailable": true,
+            "notes": [
+              "Selected at most 4 financial tables, 12 rows per table and eight values per row; header limit 12 rows. 0 additional candidate tables omitted.",
+              "Candidate tables ranked by supported rows and explicit financial/segment headings before existing budgets; original table and row ordinals preserved."
+            ]
+          }
+        ],
+        "scope": "Selected recent disclosures only; supported cell geometry is not normalized financial data or model claim support. Retrieval success does not establish analytical completeness."
+      },
+      "independent_news": {
+        "status": "no_matching_article",
+        "label": "Feed retrieved; no matching article",
+        "discovered": 0,
+        "articles_with_cited_text": 0,
+        "stage": "partial: no relevant independent article discovered",
+        "scope": "One reviewed public publisher, one article maximum; not exhaustive independent coverage."
+      },
+      "scope": "Complete means the bounded research checks passed, not exhaustive coverage or verified claims."
+    },
+    "fresh_source_retrievals": 27,
+    "citations": 96,
+    "document_count": 21,
+    "steps": [
+      "name search",
+      "entity confirmation",
+      "refresh source evidence",
+      "read report",
+      "inspect citation register",
+      "download and inspect bundle"
+    ],
+    "model_calls": 0,
+    "retrieval_seconds": {
+      "Company resolution": 0.169,
+      "Official documents": 24.819,
+      "Recent news": 0.457,
+      "Independent news": 0.836,
+      "Financial extraction": 2.778,
+      "total": 29.175
+    },
+    "source_failures": [],
+    "key_findings": 5,
+    "structured_table_records": 4
+  }
+]

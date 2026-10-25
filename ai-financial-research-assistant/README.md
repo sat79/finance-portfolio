@@ -2,7 +2,7 @@
 
 Enter a company name, confirm the entity, retrieve official documents and recent news, then download a cited research report. FinSight combines deterministic financial analysis with attributed disclosure excerpts; optional model narration is disabled unless explicitly configured and approved.
 
-**Status:** the [25 October table-evidence and completed-synthesis review](docs/review-artifacts/2026-10-25-tables/README.md) supplies fresh reports/bundles for all three supported companies and an actual 256-word Kaspi brief with a scored citation audit. Structural HTML tables retain source headers, dates, units and cell provenance; ambiguous layouts abstain. The original Apple 4/8 check is preserved, with 8/8 now covered; a different Microsoft layout exposes remaining omissions (2/5 targets retained). **207 tests and all three fresh browser journeys pass.** Ready for a supervised demo with visible limitations. Paid API calls remain disabled; no valuation or coverage expansion.
+**Status:** the [25 October MVP acceptance package](docs/review-artifacts/2026-10-25-mvp/README.md) supplies fresh reports and bundles for Apple, Microsoft and Kaspi.kz. Opening coverage now exposes unsupported/omitted tables separately from successful retrieval. Operating-cash labels and table prioritisation improve the retained Microsoft check from 2/5 to 4/5; the original results remain frozen. **219 tests and three fresh browser journeys pass.** The single-call provider pilot is prepared but blocked by OpenAI network access, a missing secure API binding and unverified current pricing. Paid calls remain disabled. Hold merge/deployment and full MVP-completion approval until real application-generated output is evaluated.
 
 ## What works
 

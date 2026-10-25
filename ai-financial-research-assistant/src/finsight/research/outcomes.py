@@ -1,7 +1,74 @@
 """Evidence-based outcomes, independent of whether a renderer produced Markdown."""
 
+import re
+
 from finsight.research.evidence import recent_evidence
 from finsight.research.publisher import guardian_article, guardian_endpoint
+
+
+def table_coverage(research):
+    """Assess selected recent documents separately from successful document retrieval."""
+    documents = []
+    for selected in recent_evidence(research.documents):
+        doc = selected["document"]
+        rows = [row for table in doc.tables for row in table["rows"]]
+        unsupported = sum(
+            note.startswith("Table ") and " unsupported:" in note for note in doc.table_notes
+        )
+        unsupported += sum(
+            int(m.group(1))
+            for note in doc.table_notes
+            if (m := re.match(r"(\d+) additional unsupported tables", note))
+        )
+        unsupported = max(unsupported, sum(t["status"] == "unsupported" for t in doc.tables))
+        omitted_tables = sum(
+            int(m.group(1))
+            for note in doc.table_notes
+            if (m := re.search(r"(\d+) additional candidate tables omitted", note))
+        ) + sum("structural evidence budget exceeded" in note for note in doc.table_notes)
+        documents.append(
+            {
+                "document_id": doc.id,
+                "structured_rows": sum(r["status"] == "structured" for r in rows),
+                "ambiguous_rows": sum(r["status"] != "structured" for r in rows),
+                "unsupported_tables": unsupported,
+                "omitted_tables": omitted_tables,
+                "omitted_rows": sum(t.get("omitted_candidate_rows", 0) for t in doc.tables),
+                "unknown_or_unavailable": not doc.tables
+                or any("first 200" in n for n in doc.table_notes),
+                "notes": doc.table_notes,
+            }
+        )
+    totals = {
+        k: sum(d[k] for d in documents)
+        for k in [
+            "structured_rows",
+            "ambiguous_rows",
+            "unsupported_tables",
+            "omitted_tables",
+            "omitted_rows",
+        ]
+    }
+    gap = (
+        not documents
+        or any(d["unknown_or_unavailable"] for d in documents)
+        or any(totals[k] for k in totals if k != "structured_rows")
+    )
+    status = "unavailable" if not totals["structured_rows"] else "partial" if gap else "bounded"
+    summary = (
+        f"Table evidence {status}: {totals['structured_rows']} supported rows; "
+        f"{totals['ambiguous_rows']} ambiguous rows, {totals['unsupported_tables']} unsupported tables, "
+        f"{totals['omitted_tables']} omitted tables and {totals['omitted_rows']} omitted candidate rows."
+    )
+    if any(d["unknown_or_unavailable"] for d in documents) or not documents:
+        summary += " Some structural table coverage is unavailable or unassessed."
+    return {
+        "status": status,
+        **totals,
+        "summary": summary,
+        "documents": documents,
+        "scope": "Selected recent disclosures only; supported cell geometry is not normalized financial data or model claim support. Retrieval success does not establish analytical completeness.",
+    }
 
 
 def independent_coverage(research):
@@ -62,6 +129,9 @@ def assess(research):
     financial = bool(research.dataset and research.dataset.selected)
     absent = set()
     missing = []
+    tables = table_coverage(research)
+    if tables["status"] != "bounded":
+        missing.append(tables["summary"])
     if research.stages.get("Company resolution") != "completed":
         missing.append("Company resolution did not complete in this run.")
     if not any(d.kind == "annual" for d in substantive):
@@ -140,6 +210,7 @@ def assess(research):
             "missing_latest_core_metrics": sorted(absent),
             "scope": "Reviewed annual extraction only: Apple (AAPL), Microsoft (MSFT), Kaspi.kz (KSPI). Interim figures remain quoted evidence.",
         },
+        "tables": tables,
         "independent_news": independent_coverage(research),
         "scope": "Complete means the bounded research checks passed, not exhaustive coverage or verified claims.",
     }
