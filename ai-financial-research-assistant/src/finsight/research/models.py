@@ -39,6 +39,8 @@ class Document:
     passages: list[Passage] = field(default_factory=list)
     limitations: list[str] = field(default_factory=list)
     cached: bool = False
+    tables: list[dict] = field(default_factory=list)
+    table_notes: list[str] = field(default_factory=list)
 
 
 @dataclass

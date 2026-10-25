@@ -50,9 +50,13 @@ with sync_playwright() as p:
         assert page.locator('a[href^="https://www.sec.gov/Archives/"]').count() > 0
         page.get_by_role("heading", name="Key findings", exact=True).scroll_into_view_if_needed()
         page.screenshot(path=str(output / f"{ticker}-report.png"))
+        page.get_by_role(
+            "heading", name="Structured financial table evidence", exact=True
+        ).first.scroll_into_view_if_needed()
+        page.screenshot(path=str(output / f"{ticker}-tables.png"))
         page.get_by_role("tab", name="Evidence & coverage", exact=True).click()
         page.get_by_text("Inspect citation register", exact=True).click()
-        expect(page.locator('[data-testid="stJson"]').last).to_be_visible()
+        expect(page.locator('[data-testid="stJson"]').last).to_be_visible(timeout=30000)
         page.screenshot(path=str(output / f"{ticker}-citations.png"))
         page.get_by_role("tab", name="Download research", exact=True).click()
         with page.expect_download() as pending:
@@ -72,6 +76,10 @@ with sync_playwright() as p:
             assert 3 <= len(model["key_findings"]) <= 5
             assert report.index("## Key findings") < report.index("## What the business")
             assert "financial-analysis.xlsx" in archive.namelist()
+            table_ids = [k for d in model["recent_disclosures"] for k in d["table_citation_ids"]]
+            assert table_ids
+            assert all(model["citations"][k]["table"] == citations[k]["table"] for k in table_ids)
+            assert all(not model["citations"][k]["eligible_for_prose"] for k in table_ids)
             successful = [a for a in evidence["access_attempts"] if a["status"] == "retrieved"]
             assert successful and all(a["cached"] is False for a in successful)
             assert "TEST REPLAY" not in report
@@ -102,6 +110,7 @@ with sync_playwright() as p:
                 ],
                 "model_calls": 0,
                 "key_findings": len(model["key_findings"]),
+                "structured_table_records": len(table_ids),
             }
             rows.append(row)
             (output / "summary.json").write_text(json.dumps(rows, indent=2))

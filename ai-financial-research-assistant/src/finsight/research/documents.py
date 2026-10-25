@@ -10,6 +10,7 @@ from pypdf.errors import PdfReadError
 
 from finsight.research.models import Document, Passage
 from finsight.research.publisher import guardian_article
+from finsight.research.tables import extract_tables
 from finsight.research.transport import EvidenceClient
 from finsight.sec import SECError
 
@@ -290,6 +291,7 @@ def retrieve_documents(
 
 def read_document(client, doc, *, refresh=False):
     doc.passages = []
+    doc.tables, doc.table_notes = [], []
     doc.retrieved_at, doc.sha256, doc.cached = "", "", False
     try:
         raw = client.get(doc.url, refresh=refresh)
@@ -309,6 +311,8 @@ def read_document(client, doc, *, refresh=False):
             return []
         doc.limitations.extend(notes)
         doc.status = "read" if any(len(p.text) > 80 for p in doc.passages) else "unreadable"
+        if doc.status == "read" and doc.kind != "news original":
+            doc.tables, doc.table_notes = extract_tables(raw.content, raw.media_type)
         if doc.status != "read":
             doc.limitations.append("No substantive extractable text; source was not analysed.")
         return links

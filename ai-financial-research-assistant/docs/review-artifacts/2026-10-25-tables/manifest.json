@@ -1,0 +1,160 @@
+[
+  {
+    "ticker": "AAPL",
+    "cutoff": "2026-10-25T11:02:11.012019+00:00",
+    "bundle_sha256": "32377bef30eb5dc244fab9f521f01b707eda0791183444eae12f8e741e3f32dc",
+    "report_sha256": "13d9c460ff54a0f061705c29727d27935f345f367f99b45ddb35c81a091fe436",
+    "final_parser_matches_browser_tables": true,
+    "report_matches_final_code": true,
+    "model_calls": 0,
+    "recent_table_evidence": [
+      {
+        "id": "D2",
+        "tables": [
+          {
+            "ordinal": 13,
+            "status": "structured",
+            "rows": 5,
+            "structured_rows": 5
+          },
+          {
+            "ordinal": 14,
+            "status": "structured",
+            "rows": 3,
+            "structured_rows": 3
+          },
+          {
+            "ordinal": 15,
+            "status": "structured",
+            "rows": 4,
+            "structured_rows": 4
+          },
+          {
+            "ordinal": 16,
+            "status": "structured",
+            "rows": 1,
+            "structured_rows": 1
+          }
+        ]
+      },
+      {
+        "id": "E7",
+        "tables": [
+          {
+            "ordinal": 1,
+            "status": "structured",
+            "rows": 12,
+            "structured_rows": 12
+          },
+          {
+            "ordinal": 2,
+            "status": "structured",
+            "rows": 4,
+            "structured_rows": 4
+          },
+          {
+            "ordinal": 3,
+            "status": "structured",
+            "rows": 2,
+            "structured_rows": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ticker": "MSFT",
+    "cutoff": "2026-10-25T11:02:49.286552+00:00",
+    "bundle_sha256": "020097a2e03924904207d530958bbf60b384d0f7aa180a76bd83940207aa10b9",
+    "report_sha256": "46d4d3b178adb086553d31ebc162ba3c9969088984d39a92834276e2fb788afd",
+    "final_parser_matches_browser_tables": true,
+    "report_matches_final_code": true,
+    "model_calls": 0,
+    "recent_table_evidence": [
+      {
+        "id": "E5",
+        "tables": [
+          {
+            "ordinal": 7,
+            "status": "structured",
+            "rows": 12,
+            "structured_rows": 12
+          },
+          {
+            "ordinal": 8,
+            "status": "structured",
+            "rows": 1,
+            "structured_rows": 1
+          },
+          {
+            "ordinal": 9,
+            "status": "structured",
+            "rows": 5,
+            "structured_rows": 5
+          },
+          {
+            "ordinal": 10,
+            "status": "structured",
+            "rows": 2,
+            "structured_rows": 2
+          }
+        ]
+      },
+      {
+        "id": "IR2",
+        "tables": [
+          {
+            "ordinal": 1,
+            "status": "unsupported",
+            "rows": 0,
+            "structured_rows": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ticker": "KSPI",
+    "cutoff": "2026-10-25T11:03:16.400541+00:00",
+    "bundle_sha256": "198944b33a888c19286e3912ebc0e20bac772dd2a647ecdf1bbc8996dd2c92a5",
+    "report_sha256": "8f4da6f15c95090562a1d4f02c708a821bec09f906a6db5b5f7e6efeee1e0623",
+    "final_parser_matches_browser_tables": true,
+    "report_matches_final_code": true,
+    "model_calls": 0,
+    "recent_table_evidence": [
+      {
+        "id": "E5",
+        "tables": [
+          {
+            "ordinal": 2,
+            "status": "partial",
+            "rows": 7,
+            "structured_rows": 6
+          },
+          {
+            "ordinal": 3,
+            "status": "partial",
+            "rows": 2,
+            "structured_rows": 0
+          },
+          {
+            "ordinal": 4,
+            "status": "structured",
+            "rows": 3,
+            "structured_rows": 3
+          },
+          {
+            "ordinal": 5,
+            "status": "partial",
+            "rows": 2,
+            "structured_rows": 0
+          }
+        ]
+      },
+      {
+        "id": "E7",
+        "tables": []
+      }
+    ]
+  }
+]

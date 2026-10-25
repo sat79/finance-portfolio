@@ -1,3 +1,11 @@
+# 25 October 2026 — structural table evidence and completed synthesis
+
+- Add bounded HTML row/cell evidence using original spans, headings, dates, units and source positions. Preserve existing B-citation IDs; ambiguous/unsupported layouts abstain instead of guessing from flattened numbers. No table figures enter normalized annual facts or model numerical claims.
+- Render compact source-header grids in reports and share the same structural records with model evidence and complete exports; preserve financial/period/citation/spend safeguards.
+- Retain the original frozen Apple 4/8 check. The four table omissions are now covered (8/8 reviewed groups), while an additional Microsoft layout yields 2/5; cash-label, table-budget and column-oriented reconciliation gaps remain visible.
+- Complete a 256-word assistant-produced Kaspi synthesis using only the prepared packet; self-review 7/8 with exact support/calculation checks and a prioritisation deduction. This is not application-provider output; no paid call occurred.
+- 207 tests pass, including 11 table regressions; lint/formatting/dependencies and all three fresh production-browser journeys pass. [Reports, bundles, completed brief and review](docs/review-artifacts/2026-10-25-tables/README.md). No merge, deployment, valuation or company expansion.
+
 # 25 October 2026 — presentation correction and supervised synthesis exercise
 
 - Default quoted disclosure statements to Company-reported statement instead of Reported fact; preserve exact quotes/citations and separate management-explanation/calculation labels. No new classifier.

@@ -239,6 +239,73 @@ def build_report(research: Research) -> tuple[str, dict]:
         lines.append(
             f"Filing/publication date: {doc.published}; SEC report-date metadata: {doc.period}; access: {doc.status}."
         )
+        lines.append("#### Structured financial table evidence")
+        lines.extend(safe(note) for note in doc.table_notes)
+        if not doc.tables:
+            lines.append(
+                "No structured financial rows available. Old snapshots/unsupported formats are not reconstructed from flattened numbers."
+            )
+        for table in doc.tables:
+            key = f"{doc.id}:T{table['table']}"
+            reference = cite(
+                key,
+                doc.url,
+                f"HTML table {table['table']}; source tag position {table['position']}",
+                kind="structured table excerpt",
+                table=table,
+                sha256=doc.sha256,
+                retrieved_at=doc.retrieved_at,
+                source_report_date=doc.period,
+            )
+            lines.append(f"**Table {table['table']}: {safe(table['status'])}** {reference}")
+            lines.append(" / ".join(safe(c["text"]) for c in table["context"]))
+            groups = {}
+            for row in table["rows"]:
+                row_key = f"{key}:R{row['row']}"
+                row_ref = cite(
+                    row_key,
+                    doc.url,
+                    f"HTML table {table['table']}, row {row['row']}",
+                    kind="structured table row",
+                    table_id=key,
+                    row_number=row["row"],
+                    sha256=doc.sha256,
+                    retrieved_at=doc.retrieved_at,
+                )
+                section = row["section"]["text"] if row["section"] else ""
+                if row["status"] != "structured":
+                    lines.append(
+                        f"**{safe(row['label'])}** {row_ref}: ambiguous / unsupported — {safe(row['reason'])}; no column mapping supplied."
+                    )
+                    continue
+                headings = tuple(
+                    " / ".join(h["text"] for h in value["column_headers"])
+                    for value in row["values"]
+                )
+                groups.setdefault(headings, []).append((row, row_ref, section))
+            for headings, rows in groups.items():
+                lines.append(
+                    "| Source row / citation | "
+                    + " | ".join(safe(h) for h in headings)
+                    + " | Nearest preceding row heading |"
+                )
+                lines.append("|" + "---|" * (len(headings) + 2))
+                for row, row_ref, section in rows:
+                    lines.append(
+                        f"| {safe(row['label'])} {row_ref} | "
+                        + " | ".join(safe(v["value_cell"]["text"]) for v in row["values"])
+                        + f" | {safe(section)} |"
+                    )
+            if groups:
+                lines.append(
+                    "Only identical source-header paths share a display grid. Row citations retain original cell coordinates/spans. A nearby row heading is context, not inferred segment membership."
+                )
+            lines.extend(safe(note) for note in table["notes"])
+            if table.get("omitted_candidate_rows"):
+                lines.append(
+                    f"Row budget omitted {table['omitted_candidate_rows']} candidates: "
+                    + safe(", ".join(table["omitted_row_labels"]))
+                )
         if selection["passages"]:
             lines.append(
                 "Selected passages and nearby period/section/unit context are quoted once below. Context does not assign a normalized period or scope to every figure."

@@ -92,6 +92,11 @@ def build_model_evidence(research, citations=None):
                 "source_report_date": doc.period,
                 "publication_date": doc.published,
                 "status": doc.status,
+                "table_citation_ids": [f"{doc.id}:T{t['table']}" for t in doc.tables],
+                "table_notes": doc.table_notes
+                or [
+                    "No original structural table evidence available; flattened numbers are not reconstructed."
+                ],
                 "passages": [
                     {
                         "citation_id": f"{doc.id}:B{doc.passages.index(p) + 1}",
@@ -110,6 +115,7 @@ def build_model_evidence(research, citations=None):
             "max_key_findings": 5,
         },
         "evidence_layout": "Recent passage references resolve to the single citation register, which contains actual source quotes, locators and provenance. Warning IDs resolve to warning_registry; no warning is omitted.",
+        "table_policy": "Structured table records preserve source cell geometry, column headings and units. They are not normalized financial observations or eligible free-prose/numerical claim records. Ambiguous/unsupported layouts are explicit; no annual substitution or currency inference.",
         "warning_registry": warning_registry,
         "key_findings": key_findings(research),
         "company": asdict(research.company),
