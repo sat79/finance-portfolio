@@ -1,3 +1,11 @@
+# 25 October 2026 — presentation correction and supervised synthesis exercise
+
+- Default quoted disclosure statements to Company-reported statement instead of Reported fact; preserve exact quotes/citations and separate management-explanation/calculation labels. No new classifier.
+- Remove repeated context and warning text from summary/conclusion while preserving full finding interpretation notes, financial warnings and source appendix. All 69 Kaspi citation records remain identical.
+- Prepare a concise Kaspi exercise with selected evidence, required limitations and a human prioritisation/support/period-scope/causation checklist; no output generated or model called.
+- Freshly retrieve one previously unused Apple FY2025 Q2 release. Freeze review targets before selection; 4/8 evidence groups selected, with four table-based omissions. No selector tuning.
+- 196 tests pass, including 11 targeted checks; lint/formatting and dependencies pass. [Updated report, bundle and review](docs/review-artifacts/2026-10-25/README.md). No coverage expansion, valuation, merge or deployment.
+
 # 24 October 2026 — automated analytical usefulness
 
 - Replace generic recent-document ranking with bounded topic selection for results, drivers, credit risk, explanations and capital actions; preserve short results, nearby period/heading/unit context and exact citation provenance.

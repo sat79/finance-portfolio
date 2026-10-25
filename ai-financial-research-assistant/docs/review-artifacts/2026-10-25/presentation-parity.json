@@ -1,0 +1,23 @@
+[
+  {
+    "company": "AAPL",
+    "mode": "offline rerender of existing snapshot",
+    "citations_preserved": 73,
+    "statement_text_and_references_unchanged": true,
+    "calculation_and_warning_records_unchanged": true
+  },
+  {
+    "company": "MSFT",
+    "mode": "offline rerender of existing snapshot",
+    "citations_preserved": 78,
+    "statement_text_and_references_unchanged": true,
+    "calculation_and_warning_records_unchanged": true
+  },
+  {
+    "company": "KSPI",
+    "mode": "offline rerender of existing snapshot",
+    "citations_preserved": 69,
+    "statement_text_and_references_unchanged": true,
+    "calculation_and_warning_records_unchanged": true
+  }
+]

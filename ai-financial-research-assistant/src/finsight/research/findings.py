@@ -76,7 +76,7 @@ def key_findings(research, selections=None):
                 {
                     "kind": "management explanation"
                     if re.search(CAUSE, s, re.I)
-                    else "reported fact",
+                    else "company-reported statement",
                     "text": s,
                     "citation_id": key,
                 }

@@ -351,8 +351,11 @@ def build_report(research: Research) -> tuple[str, dict]:
         for c in latest_results:
             refs = " ".join(f"[F{k}]({citations['F' + k]['url']})" for k in c.input_ids)
             lines.append(
-                f"- **Calculated latest-period finding:** {c.metric} = {c.value:,.2f} {c.unit}. {refs} {safe('; '.join(c.review_warnings))}"
+                f"- **Calculated latest-period finding:** {c.metric} = {c.value:,.2f} {c.unit}. {refs}"
             )
+        lines.append(
+            "Calculation-specific warnings remain in the detailed financial table and source/review warnings above."
+        )
     lines.append(
         "Next: resolve flagged disclosure/comparability issues, review the selected interim/earnings context and any missing releases, read discovery-only stories in full, and verify liquidity/capital and principal-risk notes before drawing stronger conclusions. Optional model narrative is a separate setup step; deterministic evidence and arithmetic remain available."
     )
@@ -375,7 +378,7 @@ def build_report(research: Research) -> tuple[str, dict]:
             )
     finding_lines = [
         "## Key findings",
-        "Prioritized by explicit evidence categories, not a claim of exhaustive materiality. Source statements, calculations and open questions remain separate.",
+        "Company quotations are not independently verified. Findings are prioritized by evidence category, not exhaustive materiality. Calculations and open questions remain separate; full period/scope cautions are in the Finding interpretation notes below.",
     ]
     calc_map = {f"C{i}": c for i, c in enumerate(calculate(data), 1)} if data else {}
     findings = key_findings(research, recent)
@@ -385,9 +388,6 @@ def build_report(research: Research) -> tuple[str, dict]:
         for key in finding["context_citation_ids"]:
             citation = citations[key]
             if key in finding_context_seen:
-                finding_lines.append(
-                    f"**Context already quoted above:** [{key}]({citation['url']})"
-                )
                 continue
             finding_context_seen.add(key)
             finding_lines.append(
@@ -406,7 +406,8 @@ def build_report(research: Research) -> tuple[str, dict]:
             )
         if finding["calculation_ids"]:
             finding_lines.append(f"**Boundary:** {safe(finding['boundary'])}")
-        finding_lines.append(f"**Unresolved analytical question:** {safe(finding['question'])}")
+        question = finding["question"].split("?", 1)[0] + "?"
+        finding_lines.append(f"**Unresolved analytical question:** {safe(question)}")
     if not findings:
         finding_lines.append(
             "Insufficient substantive evidence for prioritized findings; no finding was manufactured."
@@ -416,6 +417,15 @@ def build_report(research: Research) -> tuple[str, dict]:
             "Fewer than three supported findings were available; the report does not fill missing evidence with generic conclusions."
         )
     lines[findings_insert:findings_insert] = finding_lines
+    if findings:
+        lines.append("## Finding interpretation notes")
+        lines.append(
+            "Full cautions retained for each summary finding; these notes do not establish semantic verification."
+        )
+        for finding in findings:
+            lines.append(
+                f"- **{safe(finding['title'])}:** {safe(finding['question'])} {safe(finding['boundary'])}"
+            )
     lines.append("## Citation register")
     for key, value in citations.items():
         lines.append(f"- [{key}]({value['url']}): {safe(value['locator'])}")

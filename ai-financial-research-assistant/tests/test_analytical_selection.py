@@ -119,13 +119,65 @@ def test_split_explanations_are_exact_source_spans_not_generated_causes():
     text = "Company revenue increased 15% to USD1.1 billion. Net income was stable at USD259 million, even with higher funding costs."
     r = research(document(["Quarterly financial results", "2Q 2026 Highlights", text]))
     f = key_findings(r)[0]
-    assert {s["kind"] for s in f["statements"]} == {"reported fact", "management explanation"}
+    assert {s["kind"] for s in f["statements"]} == {
+        "company-reported statement",
+        "management explanation",
+    }
     assert all(s["text"] in text for s in f["statements"])
     assert "does not quantify" in f["question"]
     driver = "Commerce remained our main growth driver. GMV increased 28% to USD1.3 billion and purchases increased 33% year-over-year."
     f = key_findings(research(document(["Quarterly financial results", driver])))[0]
     assert f["statements"][0]["kind"] == "management explanation"
-    assert f["statements"][1]["kind"] == "reported fact"
+    assert f["statements"][1]["kind"] == "company-reported statement"
+
+
+def test_opinion_defaults_to_company_statement_without_losing_quotes_or_notes():
+    text = (
+        "Company revenue increased 15% to USD1.1 billion. We have the best products in the world."
+    )
+    r = research(document(["Quarterly financial results", "2Q 2026 Highlights", text]))
+    findings = key_findings(r)
+    report, citations = build_report(r)
+    payload = build_model_evidence(r)
+    assert findings[0]["statements"][1]["kind"] == "company-reported statement"
+    assert "**Reported fact" not in report
+    assert "**Company-reported statement (verbatim):**" in report
+    assert citations["D1:B3"]["quote"] == text
+    assert payload["citations"]["D1:B3"]["quote"] == text
+    assert payload["key_findings"] == findings
+    summary = report.split("## Key findings", 1)[1].split("## What the business", 1)[0]
+    notes = report.split("## Finding interpretation notes", 1)[1]
+    assert "does not quantify a causal bridge" not in summary
+    assert "does not quantify a causal bridge" in notes
+    for f in findings:
+        assert f["question"] in notes and f["boundary"] in notes
+
+
+def test_summary_deduplicates_context_and_preserves_calculation_labels(dataset):
+    from dataclasses import replace
+
+    from test_research import report_fixture
+
+    r = report_fixture(dataset)
+    r.documents.append(
+        replace(
+            document(
+                [
+                    "Quarterly financial results",
+                    "2Q 2026 Highlights",
+                    "Company revenue increased 15% to USD1.1 billion with net income of USD259 million.",
+                    "Cloud revenue increased 25% to USD400 million, supported by subscriptions growth.",
+                ]
+            ),
+            id="E1",
+        )
+    )
+    report, _ = build_report(r)
+    summary = report.split("## Key findings", 1)[1].split("## What the business", 1)[0]
+    assert summary.count("2Q 2026 Highlights") == 1
+    assert "Context already quoted above" not in summary
+    assert "**Deterministic annual calculation:**" in summary
+    assert "## Finding interpretation notes" in report
 
 
 def test_shorter_news_excerpt_cannot_overwrite_selected_full_quote():

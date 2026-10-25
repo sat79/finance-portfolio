@@ -1,0 +1,17 @@
+{
+  "rendered_at": "2026-10-25T00:13:00.818480+00:00",
+  "mode": "Offline presentation revision of the existing 24 October evidence; no fresh Kaspi retrieval or model call",
+  "source_cutoff": "2026-10-24T14:29:56.314960+00:00",
+  "base_commit": "25b142e",
+  "source_bundle_sha256": "5d128c12dbfede64c4058f380c4565808f627a92e17c6e5c1d1b74b09718ce37",
+  "bundle_sha256": "5d5fadd5459865b199a6bffbe52ff16dff037318e0a9eea704ae7afdd9abe885",
+  "report_sha256": "739eee4dd45c059b4a14c5c2c088a50f9ad9af4789a06dd4bdfeca70c88c98c0",
+  "citation_records_unchanged": 69,
+  "source_snapshot_unchanged": true,
+  "quantitative_evidence_and_warnings_unchanged": true,
+  "key_findings_words_before": 546,
+  "key_findings_words_after": 486,
+  "conclusion_words_before": 285,
+  "conclusion_words_after": 104,
+  "model_calls": 0
+}
