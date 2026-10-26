@@ -13,6 +13,48 @@ from finsight.research.narrative import ModelConfig, OpenAIProvider, estimate, r
 from finsight.research.report import report_bundle
 
 
+def test_compact_packet_preserves_exact_eligible_support_and_limitations():
+    from pathlib import Path
+
+    from finsight.research.model_evidence import compact_synthesis_evidence
+
+    bundle = Path(__file__).parents[1] / "docs/review-artifacts/2026-10-25-mvp/KSPI-research.zip"
+    with zipfile.ZipFile(bundle) as archive:
+        full = json.loads(archive.read("model-evidence.json"))
+    compact = compact_synthesis_evidence(full)
+    assert len(json.dumps(compact)) < len(json.dumps(full)) / 2
+    for key, claim in compact["quantitative_evidence"].items():
+        assert claim == full["quantitative_evidence"][key]
+        assert set(claim["citation_ids"]) <= compact["citations"].keys()
+    for key, source in compact["citations"].items():
+        assert source["eligible_for_prose"]
+        assert source["support_text"] == full["citations"][key]["support_text"]
+        assert "structured table" not in source["kind"]
+    assert compact["limitations"] == full["limitations"]
+    assert compact["financial_warnings"] == full["financial_warnings"]
+    assert compact["warning_registry"] == full["warning_registry"]
+    assert compact["coverage"]["missing"] == full["coverage"]["missing"]
+    for n in compact["news"]:
+        assert n["title"] and n["published"] and n["publisher"] and n["url"] and n["access"]
+        assert all(c["citation_id"] in compact["citations"] for c in n["content"])
+    assert full["coverage"]["tables"]["documents"]  # original package unmodified
+
+
+def test_maintained_model_pilot_uses_explicit_no_reasoning_and_standard_tier():
+    config = ModelConfig(
+        "gpt-6-luna",
+        Decimal(".125"),
+        Decimal(".5"),
+        Decimal(".01"),
+        max_output_tokens=2400,
+        reasoning_effort="none",
+    )
+    payload = request_payload(config, {"citations": {}})
+    assert payload["reasoning"] == {"effort": "none"}
+    assert payload["service_tier"] == "default"
+    assert payload["max_output_tokens"] == 2400 and payload["store"] is False
+
+
 def setup_provider(tmp_path, monkeypatch, output, status="completed"):
     monkeypatch.setenv("FINSIGHT_ENABLE_MODEL", "1")
     monkeypatch.setenv("FINSIGHT_OPENAI_API_KEY", "fictional-proxy-placeholder")

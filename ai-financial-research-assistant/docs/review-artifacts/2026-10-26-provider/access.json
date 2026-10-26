@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-10-26T00:53:25.061334+00:00",
+  "credential_present": false,
+  "model_calls": 0,
+  "paid_spend_usd": "0",
+  "requests": [
+    {
+      "url": "https://developers.openai.com/api/docs/deprecations",
+      "retrieved_at": "2026-10-26T00:53:23.825533+00:00",
+      "status": 200,
+      "redirect": null,
+      "saved_body": "0.txt",
+      "latency_seconds": 0.331
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/models/gpt-5-mini",
+      "retrieved_at": "2026-10-26T00:53:24.156515+00:00",
+      "status": 200,
+      "redirect": null,
+      "saved_body": "1.txt",
+      "latency_seconds": 0.389
+    },
+    {
+      "url": "https://openai.com/api/pricing/",
+      "retrieved_at": "2026-10-26T00:53:24.545271+00:00",
+      "status": 308,
+      "redirect": "/business/pricing/#api",
+      "latency_seconds": 0.247
+    },
+    {
+      "url": "https://api.openai.com/v1/models",
+      "retrieved_at": "2026-10-26T00:53:24.792216+00:00",
+      "status": 401,
+      "redirect": null,
+      "latency_seconds": 0.269
+    }
+  ]
+}

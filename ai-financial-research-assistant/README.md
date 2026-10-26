@@ -2,7 +2,7 @@
 
 Enter a company name, confirm the entity, retrieve official documents and recent news, then download a cited research report. FinSight combines deterministic financial analysis with attributed disclosure excerpts; optional model narration is disabled unless explicitly configured and approved.
 
-**Status:** the [25 October MVP acceptance package](docs/review-artifacts/2026-10-25-mvp/README.md) supplies fresh reports and bundles for Apple, Microsoft and Kaspi.kz. Opening coverage now exposes unsupported/omitted tables separately from successful retrieval. Operating-cash labels and table prioritisation improve the retained Microsoft check from 2/5 to 4/5; the original results remain frozen. **219 tests and three fresh browser journeys pass.** The single-call provider pilot is prepared but blocked by OpenAI network access, a missing secure API binding and unverified current pricing. Paid calls remain disabled. Hold merge/deployment and full MVP-completion approval until real application-generated output is evaluated.
+**Status:** [26 October provider preflight](docs/review-artifacts/2026-10-26-provider/README.md) verifies restored OpenAI network access, GPT-4.1 mini's retirement and current GPT-6 Luna pricing. A compact Kaspi request is ready: conservative charge allowance $0.0056555, one request under a $0.01 cap. The secure API credential and explicit spending approval remain outstanding; no actual model output is claimed. **221 tests pass.** [Three-company reports and browser acceptance](docs/review-artifacts/2026-10-25-mvp/README.md) remain available. Hold merge/deployment until the real application-generated output is evaluated.
 
 ## What works
 

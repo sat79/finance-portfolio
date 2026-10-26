@@ -64,6 +64,7 @@ class ModelConfig:
     cap_usd: Decimal
     max_output_tokens: int = 1200
     max_requests: int = 1
+    reasoning_effort: str | None = None
 
     @classmethod
     def from_environment(cls):
@@ -113,7 +114,7 @@ def api_key():
 
 
 def request_payload(config, evidence):
-    return {
+    payload = {
         "model": config.model,
         "instructions": INSTRUCTIONS,
         "input": json.dumps(evidence, ensure_ascii=False),
@@ -121,6 +122,10 @@ def request_payload(config, evidence):
         "store": False,
         "text": {"format": {"type": "json_object"}},
     }
+    if config.reasoning_effort is not None:
+        payload["reasoning"] = {"effort": config.reasoning_effort}
+        payload["service_tier"] = "default"
+    return payload
 
 
 def validate_narrative(value: dict, evidence: dict):
