@@ -1,5 +1,6 @@
 from pathlib import Path
 
+import pytest
 from streamlit.testing.v1 import AppTest
 
 from finsight.sec import SECError
@@ -124,6 +125,9 @@ def test_name_research_report_exports_and_failed_news_visible(monkeypatch, datas
     monkeypatch.setattr("finsight.research.ui.find_companies", lambda *args: [result.company])
     monkeypatch.setattr("finsight.research.ui.run_research", lambda *args, **kwargs: result)
     monkeypatch.setenv("SEC_USER_AGENT", "FinSight tests contact@example.org")
+    monkeypatch.setenv("FINSIGHT_ENABLE_MODEL", "0")
+    monkeypatch.delenv("FINSIGHT_OPENAI_API_KEY", raising=False)
+    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
     app = AppTest.from_file(str(APP), default_timeout=20).run()
     app.text_input[0].set_value("Fixture")
     app.button[0].click().run()
@@ -131,5 +135,59 @@ def test_name_research_report_exports_and_failed_news_visible(monkeypatch, datas
     assert not app.exception
     assert app.header[0].value == "Research report: Fixture Company"
     assert any("News request failed" in w.value for w in app.warning)
-    assert len(app.get("download_button")) == 2
+    assert len(app.get("download_button")) == 3
+    assert any("AI synthesis is disabled" in i.value for i in app.info)
+    assert not any(b.label == "Generate optional narrative" for b in app.button)
     assert any("Research conclusion" in m.value for m in app.markdown)
+
+
+@pytest.mark.parametrize("next_search", ["matched", "empty", "failed"])
+def test_new_search_clears_previous_research_and_narrative(monkeypatch, dataset, next_search):
+    from test_research import report_fixture
+
+    result = report_fixture(dataset)
+    monkeypatch.setenv("SEC_USER_AGENT", "FinSight tests contact@example.org")
+    monkeypatch.setattr("finsight.research.ui.find_companies", lambda *a: [result.company])
+    monkeypatch.setattr("finsight.research.ui.run_research", lambda *a, **k: result)
+    app = AppTest.from_file(str(APP), default_timeout=20).run()
+    app.text_input[0].set_value("First company")
+    app.button[0].click().run()
+    next(b for b in app.button if b.label == "Research selected company").click().run()
+    app.session_state["research_narrative"] = {"text": "Previous company analysis"}
+
+    def search(*args):
+        if next_search == "failed":
+            raise SECError("Synthetic search failure")
+        return [result.company] if next_search == "matched" else []
+
+    monkeypatch.setattr("finsight.research.ui.find_companies", search)
+    app.text_input[0].set_value("Next company")
+    next(b for b in app.button if b.label == "Find company").click().run()
+    assert not app.exception
+    assert "research_result" not in app.session_state
+    assert "research_narrative" not in app.session_state
+    assert not any(h.value.startswith("Research report:") for h in app.header)
+    assert not app.get("download_button")
+
+
+def test_changing_confirmed_entity_clears_previous_analysis(monkeypatch, dataset):
+    from dataclasses import replace
+
+    from test_research import report_fixture
+
+    result = report_fixture(dataset)
+    other = replace(result.company, name="Other fixture", ticker="OTHER", cik="0000000002")
+    monkeypatch.setenv("SEC_USER_AGENT", "FinSight tests contact@example.org")
+    monkeypatch.setattr("finsight.research.ui.find_companies", lambda *a: [result.company, other])
+    monkeypatch.setattr("finsight.research.ui.run_research", lambda *a, **k: result)
+    app = AppTest.from_file(str(APP), default_timeout=20).run()
+    app.text_input[0].set_value("Fixture")
+    app.button[0].click().run()
+    app.selectbox[0].set_value(result.company).run()
+    next(b for b in app.button if b.label == "Research selected company").click().run()
+    app.session_state["research_narrative"] = {"text": "Previous company analysis"}
+    app.selectbox[0].set_value(other).run()
+    assert not app.exception
+    assert not any(h.value.startswith("Research report:") for h in app.header)
+    assert "research_result" not in app.session_state
+    assert "research_narrative" not in app.session_state

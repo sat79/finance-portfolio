@@ -1,0 +1,33 @@
+{
+  "files": {
+    "AAPL-coverage.png": "d751f1ed28d2b3b0db1e703b6954acb3ebf202bdae0ed240fe229c6f9b088cc2",
+    "AAPL-manual-synthesis.zip": "4b3bc6001252d079b7bf1f80a81a17875c270480525982b1ebc0376d68d88808",
+    "AAPL-report.md": "a1173d68ec326dcdbbe43c0ad103e09a2c3f6e3385c99ae491fd5a6979e3f0d0",
+    "AAPL-research.zip": "bc553b5b769da647c361b45ac1b6f94ff0eba2aa3be08d984a2503c1dacbea60",
+    "KSPI-coverage.png": "270b0ed4ef25df22ddf208817baba59de87907f8f8893eae609b36f3ee4e7ee3",
+    "KSPI-manual-synthesis.zip": "80e19f5364179dc6d20c29f2d3530425e702ddb965962ed10f985f70c2180011",
+    "KSPI-report.md": "9c81ad8170a2ca571071a5180b4c00a98fdcd7c2da78250afe5df33abf56e71e",
+    "KSPI-research.zip": "ea5838fed4381da953c11b9f5a8145f2f2f3d7245437b106cd4f00bbc925f1c0",
+    "MSFT-coverage.png": "b196d320cf156b91bf52858fd3d6d04ed45cab522383cc24e739e5ac40e23252",
+    "MSFT-manual-synthesis.zip": "a86524938291481f0d4f45ea02c71f51a932be010a3ec7103abc6c6b6fa0959c",
+    "MSFT-report.md": "ad59cc9bdc7fbd2524f23835aaddf0eba1af2de42f84544322d9e59d7f009e33",
+    "MSFT-research.zip": "2de2b742b30065aa54188ec55864a0a4152b5fe33177ae8867d41e9f2224a003",
+    "README.md": "fd183f8136c30b2afa5349a910058f91bc60c90823895da81a795250fcc09e11",
+    "browser-acceptance.json": "91ed067f9db967040e421ebee369c2eb143a8ef9d49acf5726a9b421da0f3f04",
+    "codex-evaluation-sample.zip": "49c24e451472292c2517f6fe083a87b9cf684c6d2d67e45fb5d30dad7f520e6a",
+    "final-live-audit.json": "ed4cc4ad8ab34d5cf0ecd8305cefabbc508310bf2b08bfc37814346459389931",
+    "gemini-decision.md": "01240c0feeab22ff6726edf41461970cc17a85a32400399e20ba3abdd3b4d17d",
+    "gemini-documentation-access.json": "9c1a49f224a297263cce48eca112dcb50fb88a16ff43dc42483f7128fbdc85aa",
+    "initial-live-audit.json": "e48d9fd6996a28c235fc7446cf83c68a39e856ac6499e32dba10cdef9ed2095f",
+    "initial-manual-export-browser-failure.txt": "771fc9004669ba69736cbf7e7c66811787ae4f2034ca4e3c3d580b7e7e360cb0",
+    "initial-workflow-regressions.txt": "2ba1a0c18bf55975748b5299bc94324d34ae3f0bca0002e951fb6cae112607b3",
+    "sample/analysis.md": "bac7135f31820868722f6a026fab4c7883f27d626490533e8be3b98af4207622",
+    "sample/citation-audit.json": "97ff3fcfb6e99ed38d1c7beeb28409a22a018026cd2cd7d168ecad2faaf46a50",
+    "sample/evaluation.md": "9c95815e27f20f2f76977526187a87f507494b3c25fb2c3a9409be1709aa57c8",
+    "sample/initial-result.json": "d499fff760d5ff782def93fa4b2b7d372cfdab38d82b67b58d4d89b346c183b2",
+    "sample/initial-validation.json": "a782407975bb0dfef1bf226545cb978d6d0466cb6b26c6e0463c5a0f06f5e20c",
+    "sample/supplied-evidence.json": "a1a4b636281ce6f3bfbedc10d1c207aaf3c42b3e44076379bad581b0759e7134",
+    "source-link-checks.json": "c4c4a28147f657205e59afa9d24618849066f3ad9e4ded2611fe0fa83d2b9a44"
+  },
+  "verification": "Final reports/model packets and compact exports match application code. Initial Codex output and supplied packet hashes unchanged."
+}

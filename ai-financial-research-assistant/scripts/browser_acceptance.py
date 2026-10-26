@@ -38,6 +38,10 @@ with sync_playwright() as p:
             page.get_by_role("combobox").press("ArrowDown")
             page.get_by_role("option").filter(has_text="AAPL").click()
         expect(page.get_by_role("combobox")).to_have_value(re.compile(ticker))
+        expect(page.get_by_role("heading", name="Research report:", exact=False)).to_have_count(0)
+        expect(
+            page.get_by_role("button", name="Download research evidence bundle", exact=True)
+        ).to_have_count(0)
         print(f"Confirmed entity: {ticker}", flush=True)
         refresh = page.get_by_label("Refresh evidence from sources (otherwise reuse dated cache)")
         if not refresh.is_checked():
@@ -65,16 +69,42 @@ with sync_playwright() as p:
         page.screenshot(path=str(output / f"{ticker}-citations.png"))
         page.get_by_role("tab", name="Download research", exact=True).click()
         with page.expect_download() as pending:
+            page.get_by_role("button", name="Download research report (.md)", exact=True).click()
+        markdown = Path(pending.value.path()).read_bytes()
+        (output / f"{ticker}-report.md").write_bytes(markdown)
+        with page.expect_download() as pending:
+            page.get_by_role(
+                "button", name="Download compact evidence for manual ChatGPT use", exact=True
+            ).click()
+        manual = Path(pending.value.path()).read_bytes()
+        (output / f"{ticker}-manual-synthesis.zip").write_bytes(manual)
+        with zipfile.ZipFile(io.BytesIO(manual)) as pack:
+            compact = json.loads(pack.read("evidence.json"))
+            assert compact["company"]["ticker"] == ticker
+            assert "quantitative_claims" in pack.read("instructions.txt").decode()
+            assert "does not import" in pack.read("README.md").decode()
+        with page.expect_download() as pending:
             page.get_by_role("button", name="Download research evidence bundle", exact=True).click()
         payload = Path(pending.value.path()).read_bytes()
         (output / f"{ticker}-research.zip").write_bytes(payload)
         with zipfile.ZipFile(io.BytesIO(payload)) as archive:
             report = archive.read("research-report.md").decode()
+            assert report.encode() == markdown
             evidence = json.loads(archive.read("research-evidence.json"))
             citations = json.loads(archive.read("citations.json"))
             coverage = json.loads(archive.read("coverage.json"))
             model = json.loads(archive.read("model-evidence.json"))
             assert evidence["company"]["ticker"] == ticker and ticker in report
+            assert compact["research_cutoff"] == model["research_cutoff"]
+            assert compact["limitations"] == model["limitations"]
+            assert all(
+                v == model["quantitative_evidence"][k]
+                for k, v in compact["quantitative_evidence"].items()
+            )
+            assert all(
+                v["support_text"] == model["citations"][k]["support_text"]
+                for k, v in compact["citations"].items()
+            )
             assert evidence["model_usage"]["calls"] == 0
             assert "Latest interim and earnings evidence alongside the annual baseline" in report
             assert citations and model["recent_disclosures"]
@@ -113,11 +143,13 @@ with sync_playwright() as p:
                 "document_count": len(evidence["documents"]),
                 "steps": [
                     "name search",
+                    "previous report and downloads cleared",
                     "entity confirmation",
                     "refresh source evidence",
                     "read report",
                     "inspect citation register",
                     "download and inspect bundle",
+                    "download matching Markdown and API-free manual evidence pack",
                 ],
                 "model_calls": 0,
                 "retrieval_seconds": evidence["seconds"],

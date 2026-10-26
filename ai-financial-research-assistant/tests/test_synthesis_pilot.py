@@ -40,6 +40,30 @@ def test_compact_packet_preserves_exact_eligible_support_and_limitations():
     assert full["coverage"]["tables"]["documents"]  # original package unmodified
 
 
+def test_manual_export_reuses_compact_packet_and_instructions_without_provider(
+    dataset, monkeypatch
+):
+    from test_research import report_fixture
+
+    from finsight.research.model_evidence import build_model_evidence, compact_synthesis_evidence
+    from finsight.research.narrative import INSTRUCTIONS
+    from finsight.research.report import manual_synthesis_bundle
+
+    def forbidden(*args, **kwargs):
+        raise AssertionError("Export must not call a model provider")
+
+    monkeypatch.setattr(OpenAIProvider, "generate", forbidden)
+    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
+    monkeypatch.delenv("FINSIGHT_OPENAI_API_KEY", raising=False)
+    research = report_fixture(dataset)
+    with zipfile.ZipFile(io.BytesIO(manual_synthesis_bundle(research))) as z:
+        assert json.loads(z.read("evidence.json")) == compact_synthesis_evidence(
+            build_model_evidence(research)
+        )
+        assert z.read("instructions.txt").decode() == INSTRUCTIONS
+        assert "does not import or automatically validate" in z.read("README.md").decode()
+
+
 def test_maintained_model_pilot_uses_explicit_no_reasoning_and_standard_tier():
     config = ModelConfig(
         "gpt-6-luna",

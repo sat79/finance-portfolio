@@ -13,7 +13,7 @@ from finsight.research.identity import find_companies
 from finsight.research.model_evidence import build_model_evidence, fact_text
 from finsight.research.narrative import ModelConfig, OpenAIProvider, api_key, estimate
 from finsight.research.outcomes import assess
-from finsight.research.report import build_report, report_bundle
+from finsight.research.report import build_report, manual_synthesis_bundle, report_bundle
 from finsight.research.workflow import run_research
 from finsight.sec import SECClient, SECError
 
@@ -68,6 +68,10 @@ def render_research():
     if company is None:
         st.info("Select a legal entity before starting research.")
         return
+    previous = st.session_state.get("research_result")
+    if previous and previous.company.cik != company.cik:
+        st.session_state.pop("research_result", None)
+        st.session_state.pop("research_narrative", None)
     st.caption(
         "Financial extraction: "
         + (
@@ -108,7 +112,7 @@ def render_research():
     result = st.session_state.get("research_result")
     if not result:
         return
-    if result.company.cik != company.cik or result.news_start != start or result.news_end != end:
+    if result.news_start != start or result.news_end != end:
         st.info(
             "The report below retains its original company/date settings. Click Research selected company to apply your changed selection."
         )
@@ -192,13 +196,27 @@ def render_research():
         st.caption(
             "Bundle: report, citation register, document/news registers, evidence snapshot and financial workbook when supported. Review warnings remain in all applicable outputs."
         )
+        st.download_button(
+            "Download compact evidence for manual ChatGPT use",
+            manual_synthesis_bundle(result, citations),
+            "finsight-manual-synthesis.zip",
+            "application/zip",
+            on_click="ignore",
+        )
+        st.caption(
+            "Manual pack: compact evidence.json, the existing synthesis instructions and a short guide. "
+            "No API key or model call is needed. Review any chat-generated sample yourself; the app does not import chat responses."
+        )
     with st.expander("Optional model narrative — separate API setup and spending approval"):
         st.write(
             "The deterministic report above works without a model. A chat subscription does not provide API access. No model call happens automatically."
         )
         if not api_key() or os.environ.get("FINSIGHT_ENABLE_MODEL") != "1":
             st.info(
-                "Remaining setup step: configure an approved model API, model ID, current prices and spending cap locally. Model generation is disabled; actual usage is zero."
+                "AI synthesis is disabled. Search, source retrieval, financial calculations, citations "
+                "and all report/evidence downloads work without a model API key. Only automatic "
+                "narrative generation needs a configured provider and spending approval. "
+                "Use Download research for the manual ChatGPT evidence pack. No model call was made here."
             )
             return
         try:

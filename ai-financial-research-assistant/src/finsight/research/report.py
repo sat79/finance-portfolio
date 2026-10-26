@@ -500,6 +500,32 @@ def build_report(research: Research) -> tuple[str, dict]:
     return "\n\n".join(lines).replace("|\n\n|", "|\n|"), citations
 
 
+def manual_synthesis_bundle(research: Research, citations=None) -> bytes:
+    """Export the existing compact evidence and rules; no chat connection or model call."""
+    from finsight.research.model_evidence import build_model_evidence, compact_synthesis_evidence
+    from finsight.research.narrative import INSTRUCTIONS
+
+    evidence = compact_synthesis_evidence(build_model_evidence(research, citations))
+    output = io.BytesIO()
+    with zipfile.ZipFile(output, "w", zipfile.ZIP_DEFLATED) as archive:
+        archive.writestr("evidence.json", json.dumps(evidence, ensure_ascii=False, indent=2))
+        archive.writestr("instructions.txt", INSTRUCTIONS)
+        archive.writestr(
+            "README.md",
+            "# Manual synthesis evidence pack\n\n"
+            f"Company: {research.company.name} ({research.company.ticker}). "
+            f"Research cutoff: {research.cutoff.isoformat()}.\n\n"
+            "Extract this ZIP. In your own ChatGPT conversation, attach evidence.json and "
+            "paste instructions.txt. Ask for a sample using only that evidence. "
+            "This app does not send anything to ChatGPT or call a model during export.\n\n"
+            "Keep the result labelled as a manual ChatGPT/Codex sample, not an application-provider "
+            "response. The app does not import or automatically validate chat responses. "
+            "Review source quotes, exact numerical records, periods, scope, limitations and "
+            "unsupported causation. The complete research bundle retains the full appendix.\n",
+        )
+    return output.getvalue()
+
+
 def report_bundle(research: Research, narrative=None) -> bytes:
     from finsight.research.model_evidence import build_model_evidence
 

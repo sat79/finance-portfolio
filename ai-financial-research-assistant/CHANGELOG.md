@@ -1,3 +1,12 @@
+# 26 October 2026 — usable no-API workflow and evaluated Codex sample
+
+- Fix stale report/narrative display when switching the confirmed legal entity; verify new submitted, empty and failed searches clear previous results.
+- Add a compact manual-ChatGPT ZIP using the existing evidence selector and synthesis rules. Search, deterministic analysis, evidence viewing and downloads remain usable with synthesis disabled; no chat integration/import system.
+- Preserve a Codex-generated Kaspi sample and its first validator result: five paragraphs and three exact quantitative records pass, with a 7/8 human self-review and explicit analytical omission. No provider output, usage, latency or cost is invented.
+- 226 tests and all three fresh production-browser journeys pass, including all downloads and citation/date checks. Preserve the initial entity-regression failure and a stale-process manual-download timeout; final reruns pass.
+- Gemini documentation requests are blocked by proxy 403; current eligibility/model/quota claims remain unverified. No provider adapter or model API request was added.
+- [Reviewable reports, sample, evidence, limitations and next actions](docs/review-artifacts/2026-10-26-no-api/README.md).
+
 # 25 October 2026 — supervised MVP acceptance preparation
 
 - Expose structural table support, ambiguity, unsupported layouts and budget omissions in the opening report/UI coverage; successful retrieval no longer conceals analytical gaps.

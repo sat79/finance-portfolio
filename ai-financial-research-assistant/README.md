@@ -2,7 +2,7 @@
 
 Enter a company name, confirm the entity, retrieve official documents and recent news, then download a cited research report. FinSight combines deterministic financial analysis with attributed disclosure excerpts; optional model narration is disabled unless explicitly configured and approved.
 
-**Status:** [26 October provider preflight](docs/review-artifacts/2026-10-26-provider/README.md) verifies restored OpenAI network access, GPT-4.1 mini's retirement and current GPT-6 Luna pricing. A compact Kaspi request is ready: conservative charge allowance $0.0056555, one request under a $0.01 cap. The secure API credential and explicit spending approval remain outstanding; no actual model output is claimed. **221 tests pass.** [Three-company reports and browser acceptance](docs/review-artifacts/2026-10-25-mvp/README.md) remain available. Hold merge/deployment until the real application-generated output is evaluated.
+**Status:** the [26 October no-API handover](docs/review-artifacts/2026-10-26-no-api/README.md) provides fresh AAPL/MSFT/KSPI reports, full evidence and compact manual-ChatGPT downloads. Search/entity changes clear previous analysis. A clearly labelled Codex sample passes the existing validator and scores 7/8 in human self-review; it is not an application-provider response. **226 tests and all three fresh browser journeys pass.** Ready for supervised no-API demonstrations with partial table/news coverage visible. Actual provider synthesis and deployment remain unverified; Gemini's current free-tier documentation is blocked by network policy. No external model API calls, billing changes, merge or deployment.
 
 ## What works
 

@@ -1,0 +1,223 @@
+{
+  "type": "Mechanical citation/record audit; not semantic verification",
+  "paragraphs": [
+    {
+      "paragraph": 1,
+      "citation_ids": [
+        "E7:B24",
+        "E7:B19",
+        "E7:B4"
+      ],
+      "support": [
+        {
+          "citation_id": "E7:B24",
+          "quote": "Kaspi.kz revenue increased 15% year-over-year to KZT1.1 trillion ($2.3 billion). Adjusted EBITDA increased 5% year-over-year to KZT397 billion ($826 million). Net income was stable at KZT259 billion ($539 million), even with investments in T\u00fcrkiye and high funding costs in Kazakhstan.",
+          "exact_substring": true,
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000024/kspi-ex99_1.htm",
+          "locator": "HTML text block 24"
+        },
+        {
+          "citation_id": "E7:B19",
+          "quote": "Fintech revenue increased 23% year-over-year to KZT455 billion ($946 million), supported by 18% growth in average net loan portfolio. Adjusted EBITDA increased 6% year-over-year to KZT171 billion ($356 million), with growth continuing to reflect higher funding costs.",
+          "exact_substring": true,
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000024/kspi-ex99_1.htm",
+          "locator": "HTML text block 19"
+        },
+        {
+          "citation_id": "E7:B4",
+          "quote": "Almaty, Kazakhstan, 10 August 2026 \u2013 Joint Stock Company Kaspi.kz (\u201cKaspi.kz\u201d) (Nasdaq:KSPI) today published its unaudited consolidated IFRS financial results for the quarter and first half ended 30 June 2026 (\u201c2Q and 1H 2026\u201d).",
+          "exact_substring": true,
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000024/kspi-ex99_1.htm",
+          "locator": "HTML text block 4"
+        }
+      ]
+    },
+    {
+      "paragraph": 2,
+      "citation_ids": [
+        "E7:B9",
+        "E7:B74",
+        "E7:B4"
+      ],
+      "support": [
+        {
+          "citation_id": "E7:B9",
+          "quote": "e-Commerce continued to be our main growth driver. Constant-currency e-Commerce GMV increased 28% year-over-year to KZT1.3 trillion ($2.6 billion), while purchases increased 33% year-over-year.",
+          "exact_substring": true,
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000024/kspi-ex99_1.htm",
+          "locator": "HTML text block 9"
+        },
+        {
+          "citation_id": "E7:B74",
+          "quote": "We\u2019re also seeing good results growing revenue from value-added services, namely advertising and delivery. During 2Q 2026, constant currency VAS revenue increased 49% year-over-year. As a result, e-Commerce 3P take rate increased 160 bps year-over-year to 16.1%, and e-Commerce revenue grew significantly faster than GMV. During 2Q 2026, e-Commerce revenue increased 35% year-over-year on a constant currency basis to KZT394 billion ($820 million).",
+          "exact_substring": true,
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000024/kspi-ex99_1.htm",
+          "locator": "HTML text block 74"
+        },
+        {
+          "citation_id": "E7:B4",
+          "quote": "Almaty, Kazakhstan, 10 August 2026 \u2013 Joint Stock Company Kaspi.kz (\u201cKaspi.kz\u201d) (Nasdaq:KSPI) today published its unaudited consolidated IFRS financial results for the quarter and first half ended 30 June 2026 (\u201c2Q and 1H 2026\u201d).",
+          "exact_substring": true,
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000024/kspi-ex99_1.htm",
+          "locator": "HTML text block 4"
+        }
+      ]
+    },
+    {
+      "paragraph": 3,
+      "citation_ids": [
+        "E5:B2151"
+      ],
+      "support": [
+        {
+          "citation_id": "E5:B2151",
+          "quote": "As at 31 December 2025 and 30 June 2026, the Group\u2019s restructured loans in Stage 3 amounted to the gross carrying amount of KZT 145,302 million and KZT 178,567 million, respectively.",
+          "exact_substring": true,
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000026/kspi-ex99_1.htm",
+          "locator": "HTML text block 2151"
+        }
+      ]
+    },
+    {
+      "paragraph": 4,
+      "citation_ids": [
+        "E7:B19",
+        "E7:B24",
+        "Fd263c4ad59b3d9845882"
+      ],
+      "support": [
+        {
+          "citation_id": "E7:B19",
+          "quote": "Fintech revenue increased 23% year-over-year to KZT455 billion ($946 million), supported by 18% growth in average net loan portfolio. Adjusted EBITDA increased 6% year-over-year to KZT171 billion ($356 million), with growth continuing to reflect higher funding costs.",
+          "exact_substring": true,
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000024/kspi-ex99_1.htm",
+          "locator": "HTML text block 19"
+        },
+        {
+          "citation_id": "E7:B24",
+          "quote": "Kaspi.kz revenue increased 15% year-over-year to KZT1.1 trillion ($2.3 billion). Adjusted EBITDA increased 5% year-over-year to KZT397 billion ($826 million). Net income was stable at KZT259 billion ($539 million), even with investments in T\u00fcrkiye and high funding costs in Kazakhstan.",
+          "exact_substring": true,
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000024/kspi-ex99_1.htm",
+          "locator": "HTML text block 24"
+        },
+        {
+          "citation_id": "Fd263c4ad59b3d9845882",
+          "quote": "net_income | 2025-01-01 to 2025-12-31 | 1067707000000 KZT | currency KZT",
+          "exact_substring": true,
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000008/0001985487-26-000008-index.html",
+          "locator": "ifrs-full:ProfitLoss; 2025-01-01 to 2025-12-31; accession 0001985487-26-000008"
+        }
+      ]
+    },
+    {
+      "paragraph": 5,
+      "citation_ids": [
+        "E5:B2151"
+      ],
+      "support": [
+        {
+          "citation_id": "E5:B2151",
+          "quote": "As at 31 December 2025 and 30 June 2026, the Group\u2019s restructured loans in Stage 3 amounted to the gross carrying amount of KZT 145,302 million and KZT 178,567 million, respectively.",
+          "exact_substring": true,
+          "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000026/kspi-ex99_1.htm",
+          "locator": "HTML text block 2151"
+        }
+      ]
+    }
+  ],
+  "quantitative_claims": [
+    {
+      "evidence_id": "C7",
+      "all_fields_equal": true,
+      "checked_fields": [
+        "evidence_id",
+        "metric",
+        "value",
+        "period_start",
+        "period_end",
+        "currency",
+        "unit",
+        "citation_ids",
+        "source_urls"
+      ],
+      "record": {
+        "evidence_id": "C7",
+        "metric": "net_margin",
+        "value": "41.73652808120826678924995142",
+        "period_start": "2024-01-01",
+        "period_end": "2024-12-31",
+        "currency": "KZT",
+        "unit": "percent",
+        "citation_ids": [
+          "Fcca88fe8bd6a79f4c722",
+          "F45938352051ff703ee85"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000008/0001985487-26-000008-index.html"
+        ]
+      }
+    },
+    {
+      "evidence_id": "C9",
+      "all_fields_equal": true,
+      "checked_fields": [
+        "evidence_id",
+        "metric",
+        "value",
+        "period_start",
+        "period_end",
+        "currency",
+        "unit",
+        "citation_ids",
+        "source_urls"
+      ],
+      "record": {
+        "evidence_id": "C9",
+        "metric": "revenue_growth",
+        "value": "59.78770660259478483948066390",
+        "period_start": "2025-01-01",
+        "period_end": "2025-12-31",
+        "currency": "KZT",
+        "unit": "percent",
+        "citation_ids": [
+          "Fcca88fe8bd6a79f4c722",
+          "F41c1bef463b894b62aa0"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000008/0001985487-26-000008-index.html"
+        ]
+      }
+    },
+    {
+      "evidence_id": "C11",
+      "all_fields_equal": true,
+      "checked_fields": [
+        "evidence_id",
+        "metric",
+        "value",
+        "period_start",
+        "period_end",
+        "currency",
+        "unit",
+        "citation_ids",
+        "source_urls"
+      ],
+      "record": {
+        "evidence_id": "C11",
+        "metric": "net_margin",
+        "value": "26.38871656820908366974998480",
+        "period_start": "2025-01-01",
+        "period_end": "2025-12-31",
+        "currency": "KZT",
+        "unit": "percent",
+        "citation_ids": [
+          "F41c1bef463b894b62aa0",
+          "Fd263c4ad59b3d9845882"
+        ],
+        "source_urls": [
+          "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000008/0001985487-26-000008-index.html"
+        ]
+      }
+    }
+  ]
+}
