@@ -1,0 +1,16 @@
+{
+  "origin": "Codex-generated evaluation sample from this conversation",
+  "application_provider_response": false,
+  "source_packet_sha256": "a1a4b636281ce6f3bfbedc10d1c207aaf3c42b3e44076379bad581b0759e7134",
+  "initial_result_sha256": "d499fff760d5ff782def93fa4b2b7d372cfdab38d82b67b58d4d89b346c183b2",
+  "evaluated_at": "2026-10-26T15:46:57.531781+00:00",
+  "external_model_api_calls": 0,
+  "provider_usage": null,
+  "provider_latency_seconds": null,
+  "provider_cost_usd": null,
+  "corrections": [],
+  "validation": "passed",
+  "validation_failures": [],
+  "paragraphs": 5,
+  "quantitative_claims": 3
+}

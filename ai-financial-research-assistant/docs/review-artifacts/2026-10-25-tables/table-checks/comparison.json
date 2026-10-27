@@ -1,0 +1,1105 @@
+{
+  "parser_sha256": "04157adb3213c5cc8b6855569522b26855adb15a5bd4b868f9c8c8641f6daa2a",
+  "results": [
+    {
+      "company": "Apple",
+      "frozen_original_result": {
+        "selected_groups": 4,
+        "total_groups": 8,
+        "path": "../../2026-10-25/unused-disclosure/frozen-result.json",
+        "sha256": "29767650c3b6b82abb284576de3b3e3947775582f8db37d7fabf2b7be7cc934b"
+      },
+      "current_groups_retained": 8,
+      "total_groups": 8,
+      "four_prose_targets_unchanged": true,
+      "table_targets": [
+        {
+          "target": "Services revenue",
+          "success": true,
+          "citation": "H1:T1:R6",
+          "values": [
+            {
+              "value_cell": {
+                "row": 6,
+                "cell": 2,
+                "position": [
+                  10,
+                  16853
+                ],
+                "text": "26,645",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 2,
+                "column": 4
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 2,
+                  "position": [
+                    10,
+                    11596
+                  ],
+                  "text": "Three Months Ended",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 9,
+                  "column": 4
+                },
+                {
+                  "row": 3,
+                  "cell": 2,
+                  "position": [
+                    10,
+                    12129
+                  ],
+                  "text": "March 29, 2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 4
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 6,
+                "cell": 5,
+                "position": [
+                  10,
+                  17268
+                ],
+                "text": "23,867",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 2,
+                "column": 10
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 2,
+                  "position": [
+                    10,
+                    11596
+                  ],
+                  "text": "Three Months Ended",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 9,
+                  "column": 4
+                },
+                {
+                  "row": 3,
+                  "cell": 4,
+                  "position": [
+                    10,
+                    12449
+                  ],
+                  "text": "March 30, 2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 10
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 6,
+                "cell": 8,
+                "position": [
+                  10,
+                  17683
+                ],
+                "text": "52,985",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 2,
+                "column": 16
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 4,
+                  "position": [
+                    10,
+                    11859
+                  ],
+                  "text": "Six Months Ended",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 9,
+                  "column": 16
+                },
+                {
+                  "row": 3,
+                  "cell": 6,
+                  "position": [
+                    10,
+                    12740
+                  ],
+                  "text": "March 29, 2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 16
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 6,
+                "cell": 11,
+                "position": [
+                  10,
+                  18098
+                ],
+                "text": "46,984",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 2,
+                "column": 22
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 4,
+                  "position": [
+                    10,
+                    11859
+                  ],
+                  "text": "Six Months Ended",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 9,
+                  "column": 16
+                },
+                {
+                  "row": 3,
+                  "cell": 8,
+                  "position": [
+                    10,
+                    13060
+                  ],
+                  "text": "March 30, 2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 22
+                }
+              ]
+            }
+          ],
+          "units": [
+            {
+              "text": "(In millions, except number of shares, which are reflected in thousands, and per-share amounts)",
+              "position": [
+                10,
+                10571
+              ]
+            }
+          ]
+        },
+        {
+          "target": "Greater China revenue",
+          "success": true,
+          "citation": "H1:T1:R35",
+          "values": [
+            {
+              "value_cell": {
+                "row": 35,
+                "cell": 2,
+                "position": [
+                  10,
+                  66144
+                ],
+                "text": "16,002",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 2,
+                "column": 4
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 2,
+                  "position": [
+                    10,
+                    11596
+                  ],
+                  "text": "Three Months Ended",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 9,
+                  "column": 4
+                },
+                {
+                  "row": 3,
+                  "cell": 2,
+                  "position": [
+                    10,
+                    12129
+                  ],
+                  "text": "March 29, 2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 4
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 35,
+                "cell": 5,
+                "position": [
+                  10,
+                  66559
+                ],
+                "text": "16,372",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 2,
+                "column": 10
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 2,
+                  "position": [
+                    10,
+                    11596
+                  ],
+                  "text": "Three Months Ended",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 9,
+                  "column": 4
+                },
+                {
+                  "row": 3,
+                  "cell": 4,
+                  "position": [
+                    10,
+                    12449
+                  ],
+                  "text": "March 30, 2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 10
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 35,
+                "cell": 8,
+                "position": [
+                  10,
+                  66974
+                ],
+                "text": "34,515",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 2,
+                "column": 16
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 4,
+                  "position": [
+                    10,
+                    11859
+                  ],
+                  "text": "Six Months Ended",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 9,
+                  "column": 16
+                },
+                {
+                  "row": 3,
+                  "cell": 6,
+                  "position": [
+                    10,
+                    12740
+                  ],
+                  "text": "March 29, 2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 16
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 35,
+                "cell": 11,
+                "position": [
+                  10,
+                  67389
+                ],
+                "text": "37,191",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 2,
+                "column": 22
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 4,
+                  "position": [
+                    10,
+                    11859
+                  ],
+                  "text": "Six Months Ended",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 9,
+                  "column": 16
+                },
+                {
+                  "row": 3,
+                  "cell": 8,
+                  "position": [
+                    10,
+                    13060
+                  ],
+                  "text": "March 30, 2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 22
+                }
+              ]
+            }
+          ],
+          "units": [
+            {
+              "text": "(In millions, except number of shares, which are reflected in thousands, and per-share amounts)",
+              "position": [
+                10,
+                10571
+              ]
+            }
+          ]
+        },
+        {
+          "target": "Group net income",
+          "success": true,
+          "citation": "H1:T1:R23",
+          "values": [
+            {
+              "value_cell": {
+                "row": 23,
+                "cell": 3,
+                "position": [
+                  10,
+                  45810
+                ],
+                "text": "24,780",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 5
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 2,
+                  "position": [
+                    10,
+                    11596
+                  ],
+                  "text": "Three Months Ended",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 9,
+                  "column": 4
+                },
+                {
+                  "row": 3,
+                  "cell": 2,
+                  "position": [
+                    10,
+                    12129
+                  ],
+                  "text": "March 29, 2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 4
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 23,
+                "cell": 7,
+                "position": [
+                  10,
+                  46512
+                ],
+                "text": "23,636",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 11
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 2,
+                  "position": [
+                    10,
+                    11596
+                  ],
+                  "text": "Three Months Ended",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 9,
+                  "column": 4
+                },
+                {
+                  "row": 3,
+                  "cell": 4,
+                  "position": [
+                    10,
+                    12449
+                  ],
+                  "text": "March 30, 2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 10
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 23,
+                "cell": 11,
+                "position": [
+                  10,
+                  47214
+                ],
+                "text": "61,110",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 17
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 4,
+                  "position": [
+                    10,
+                    11859
+                  ],
+                  "text": "Six Months Ended",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 9,
+                  "column": 16
+                },
+                {
+                  "row": 3,
+                  "cell": 6,
+                  "position": [
+                    10,
+                    12740
+                  ],
+                  "text": "March 29, 2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 16
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 23,
+                "cell": 15,
+                "position": [
+                  10,
+                  47916
+                ],
+                "text": "57,552",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 23
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 4,
+                  "position": [
+                    10,
+                    11859
+                  ],
+                  "text": "Six Months Ended",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 9,
+                  "column": 16
+                },
+                {
+                  "row": 3,
+                  "cell": 8,
+                  "position": [
+                    10,
+                    13060
+                  ],
+                  "text": "March 30, 2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 22
+                }
+              ]
+            }
+          ],
+          "units": [
+            {
+              "text": "(In millions, except number of shares, which are reflected in thousands, and per-share amounts)",
+              "position": [
+                10,
+                10571
+              ]
+            }
+          ]
+        },
+        {
+          "target": "YTD operating cash",
+          "success": true,
+          "citation": "H1:T3:R20",
+          "values": [
+            {
+              "value_cell": {
+                "row": 20,
+                "cell": 2,
+                "position": [
+                  10,
+                  145359
+                ],
+                "text": "53,887",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 2,
+                "column": 4
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 2,
+                  "position": [
+                    10,
+                    130574
+                  ],
+                  "text": "Six Months Ended",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 9,
+                  "column": 4
+                },
+                {
+                  "row": 3,
+                  "cell": 2,
+                  "position": [
+                    10,
+                    130844
+                  ],
+                  "text": "March 29, 2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 4
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 20,
+                "cell": 5,
+                "position": [
+                  10,
+                  145832
+                ],
+                "text": "62,585",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 2,
+                "column": 10
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 2,
+                  "position": [
+                    10,
+                    130574
+                  ],
+                  "text": "Six Months Ended",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 9,
+                  "column": 4
+                },
+                {
+                  "row": 3,
+                  "cell": 4,
+                  "position": [
+                    10,
+                    131164
+                  ],
+                  "text": "March 30, 2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 10
+                }
+              ]
+            }
+          ],
+          "units": [
+            {
+              "text": "(In millions)",
+              "position": [
+                10,
+                129938
+              ]
+            }
+          ]
+        }
+      ],
+      "remaining_omissions": {
+        "T1": [
+          "iPhone",
+          "Mac",
+          "iPad",
+          "Wearables, Home and Accessories",
+          "Services"
+        ],
+        "T2": [],
+        "T3": []
+      },
+      "source_sha256": "54d2f772ecc7b6e6fcf5149a2e2b7c735b5406b00f03cbb0533dc55f86e47123"
+    },
+    {
+      "company": "Microsoft",
+      "evaluated_at": "2026-10-25T11:05:56.019247+00:00",
+      "targets": [
+        {
+          "name": "total revenue",
+          "table": 4,
+          "label": "Total revenue",
+          "success": true,
+          "citation": "H1:T4:R11",
+          "values": [
+            {
+              "value_cell": {
+                "row": 11,
+                "cell": 3,
+                "position": [
+                  556,
+                  5
+                ],
+                "text": "70,066",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 3
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 3,
+                  "position": [
+                    468,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 3
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 11,
+                "cell": 5,
+                "position": [
+                  558,
+                  5
+                ],
+                "text": "61,858",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 5
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 5,
+                  "position": [
+                    470,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 5
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 11,
+                "cell": 7,
+                "position": [
+                  560,
+                  5
+                ],
+                "text": "205,283",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 7
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 7,
+                  "position": [
+                    472,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 11,
+                "cell": 9,
+                "position": [
+                  562,
+                  5
+                ],
+                "text": "180,395",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 9
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 9,
+                  "position": [
+                    474,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 9
+                }
+              ]
+            }
+          ],
+          "reason": "Structural headers and row cells retained"
+        },
+        {
+          "name": "group net income",
+          "table": 4,
+          "label": "Net income",
+          "success": true,
+          "citation": "H1:T4:R36",
+          "values": [
+            {
+              "value_cell": {
+                "row": 36,
+                "cell": 3,
+                "position": [
+                  831,
+                  5
+                ],
+                "text": "$25,824",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 3
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 3,
+                  "position": [
+                    468,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 3
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 36,
+                "cell": 5,
+                "position": [
+                  833,
+                  5
+                ],
+                "text": "$21,939",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 5
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 5,
+                  "position": [
+                    470,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 5
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 36,
+                "cell": 7,
+                "position": [
+                  835,
+                  5
+                ],
+                "text": "$74,599",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 7
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 7,
+                  "position": [
+                    472,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 36,
+                "cell": 9,
+                "position": [
+                  837,
+                  5
+                ],
+                "text": "$66,100",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 9
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 9,
+                  "position": [
+                    474,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 9
+                }
+              ]
+            }
+          ],
+          "reason": "Structural headers and row cells retained"
+        },
+        {
+          "name": "quarterly and YTD operating cash",
+          "table": 7,
+          "label": "Net cash from operations",
+          "success": false,
+          "citation": null,
+          "values": [],
+          "reason": "Row label not selected (cash from operations alias)"
+        },
+        {
+          "name": "Intelligent Cloud segment revenue",
+          "table": 8,
+          "label": "Intelligent Cloud",
+          "success": false,
+          "citation": null,
+          "values": [],
+          "reason": "Table omitted by four-table budget"
+        },
+        {
+          "name": "reported versus constant-currency revenue comparison",
+          "table": 1,
+          "label": "Revenue",
+          "success": false,
+          "citation": null,
+          "values": [],
+          "reason": "Column-oriented reconciliation explicitly unsupported"
+        }
+      ],
+      "selected_groups": 2,
+      "total_groups": 5,
+      "first_checkpoint_selection_unchanged": true,
+      "post_check_change": "Diagnostics identify column-oriented segment tables; synthetic regressions reject month prefixes inside other words and indistinguishable printed column headers. No selected numerical mapping changed from the retained first Microsoft checkpoint.",
+      "notes": [
+        "Selected at most 4 financial tables, 12 rows per table and eight values per row; header limit 12 rows. 1 additional candidate tables omitted.",
+        "Table 1 unsupported: No supported metric-row layout; column-oriented or fragmented measures are not transposed by guessing.",
+        "Table 2 unsupported: No supported metric-row layout; column-oriented or fragmented measures are not transposed by guessing.",
+        "Table 3 unsupported: No supported metric-row layout; column-oriented or fragmented measures are not transposed by guessing."
+      ],
+      "source_sha256": "79bff4ffb29ec5ace889c3d4fdaf5b88d46c473b1a3a54159e6fb21c0b85ac34"
+    }
+  ]
+}

@@ -1,0 +1,1037 @@
+{
+  "id": "H1",
+  "title": "Apple fiscal 2025 second-quarter results",
+  "kind": "earnings/event exhibit",
+  "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000055/a8-kex991q2202503292025.htm",
+  "published": "2025-05-01",
+  "period": "2025-03-29",
+  "retrieved_at": "2026-10-25T00:11:14.771459+00:00",
+  "sha256": "54d2f772ecc7b6e6fcf5149a2e2b7c735b5406b00f03cbb0533dc55f86e47123",
+  "status": "read",
+  "passages": [
+    {
+      "locator": "HTML text block 1",
+      "text": "EX-99.1 2 a8-kex991q2202503292025.htm EX-99.1",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 2",
+      "text": "Exhibit 99.1",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 3",
+      "text": "Apple reports second quarter results",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 4",
+      "text": "Services revenue reaches new all-time high",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 5",
+      "text": "EPS sets March quarter record",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 6",
+      "text": "CUPERTINO, CALIFORNIA \u2014 Apple\u00ae today announced financial results for its fiscal 2025 second quarter ended March 29, 2025. The Company posted quarterly revenue of $95.4 billion, up 5 percent year over year, and quarterly diluted earnings per share of $1.65, up 8 percent year over year.",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 7",
+      "text": "\u201cToday Apple is reporting strong quarterly results, including double-digit growth in Services,\u201d said Tim Cook, Apple\u2019s CEO. \u201cWe were happy to welcome iPhone 16e to our lineup, and to introduce powerful new Macs and iPads that take advantage of the extraordinary capabilities of Apple silicon. And we were proud to announce that we\u2019ve cut our carbon emissions by 60 percent over the past decade.\u201d",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 8",
+      "text": "\u201cOur March quarter business performance drove EPS growth of 8 percent and $24 billion in operating cash flow, allowing us to return $29 billion to shareholders,\u201d said Kevan Parekh, Apple\u2019s CFO. \u201cAnd thanks to our high levels of customer loyalty and satisfaction, our installed base of active devices once again reached a new all-time high across all product categories and geographic segments.\u201d",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 9",
+      "text": "Apple\u2019s board of directors has declared a cash dividend of $0.26 per share of the Company\u2019s common stock, an increase of 4 percent. The dividend is payable on May 15, 2025 to shareholders of record as of the close of business on May 12, 2025. The board of directors has also authorized an additional program to repurchase up to $100 billion of the Company\u2019s common stock.",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 10",
+      "text": "Apple will provide live streaming of its Q2 2025 financial results conference call beginning at 2:00 p.m. PT on May 1, 2025 at apple.com/investor/earnings-call. The webcast will be available for replay for approximately two weeks thereafter.",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 11",
+      "text": "Apple periodically provides information for investors on its corporate website, apple.com, and its investor relations website, investor.apple.com. This includes press releases and other information about financial performance, reports filed or furnished with the SEC, information on corporate governance, and details related to its annual meeting of shareholders.",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 12",
+      "text": "This press release contains forward-looking statements, within the meaning of the Private Securities Litigation Reform Act of 1995. These forward-looking statements include without limitation those about the Company\u2019s plan for return of capital, payment of its quarterly dividend, and future business plans. These statements involve risks and uncertainties, and actual results may differ materially from any future results expressed or implied by the forward-looking statements. Risks and uncertainties include without limitation: effects of global and regional economic conditions, including as a result of government policies, trade and other international disputes, geopolitical tensions, conflict, terrorism, natural disasters, and public health issues; risks relating to the design, manufacture, introduction, and transition of products and services in highly competitive and rapidly changing markets, including from reliance on third parties for components, technology, manufacturing, applications, support, and content; risks relating to information technology system failures, network disruptions, and failure to protect, loss of, or unauthorized access to, or release of, data; and effects of unfavorable legal proceedings, government investigations, and complex and changing laws and regulations. More information on these risks and other potential factors that could affect the Company\u2019s business, reputation, results of operations, financial condition, and stock price is included in the Company\u2019s filings with the SEC, including in the \u201cRisk Factors\u201d and \u201cManagement\u2019s Discussion and Analysis of Financial Condition and Results of Operations\u201d sections of the Company\u2019s most recently filed periodic reports on Form 10-K and Form 10-Q and subsequent filings. The Company assumes no obligation to update any forward-looking statements, which speak only as of the date they are made.",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 13",
+      "text": "Apple revolutionized personal technology with the introduction of the Macintosh in 1984. Today, Apple leads the world in innovation with iPhone, iPad, Mac, AirPods, Apple Watch, and Apple Vision Pro. Apple\u2019s six software platforms \u2014 iOS, iPadOS, macOS, watchOS, visionOS, and tvOS \u2014 provide seamless experiences across all Apple devices and empower people with breakthrough services including the App Store, Apple Music, Apple Pay, iCloud, and Apple TV+. Apple\u2019s more than 150,000 employees are dedicated to making the best products on earth and to leaving the world better than we found it.",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 14",
+      "text": "Press Contact:",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 15",
+      "text": "Josh Rosenstock",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 16",
+      "text": "Apple",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 17",
+      "text": "jrosenstock@apple.com",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 18",
+      "text": "(408) 862-1142",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 19",
+      "text": "Investor Relations Contact:",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 20",
+      "text": "Suhasini Chandramouli",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 21",
+      "text": "Apple",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 22",
+      "text": "suhasini@apple.com",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 23",
+      "text": "(408) 974-3123",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 24",
+      "text": "NOTE TO EDITORS: For additional information visit Apple Newsroom (www.apple.com/newsroom), or email Apple\u2019s Media Helpline at media.help@apple.com.",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 25",
+      "text": "\u00a9 2025 Apple Inc. All rights reserved. Apple and the Apple logo are trademarks of Apple. Other company and product names may be trademarks of their respective owners.",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 26",
+      "text": "Apple Inc.",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 27",
+      "text": "CONDENSED CONSOLIDATED STATEMENTS OF OPERATIONS (Unaudited)",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 28",
+      "text": "(In millions, except number of shares, which are reflected in thousands, and per-share amounts)",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 29",
+      "text": "Three Months Ended Six Months Ended",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 30",
+      "text": "March 29,",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 31",
+      "text": "2025 March 30,",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 32",
+      "text": "2024 March 29,",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 33",
+      "text": "2025 March 30,",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 34",
+      "text": "2024",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 35",
+      "text": "Net sales:",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 36",
+      "text": "Products $ 68,714 $ 66,886 $ 166,674 $ 163,344",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 37",
+      "text": "Services 26,645 23,867 52,985 46,984",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 38",
+      "text": "Total net sales (1)",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 39",
+      "text": "95,359 90,753 219,659 210,328",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 40",
+      "text": "Cost of sales:",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 41",
+      "text": "Products 44,030 42,424 103,477 100,864",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 42",
+      "text": "Services 6,462 6,058 13,040 12,338",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 43",
+      "text": "Total cost of sales 50,492 48,482 116,517 113,202",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 44",
+      "text": "Gross margin 44,867 42,271 103,142 97,126",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 45",
+      "text": "Operating expenses:",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 46",
+      "text": "Research and development",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 47",
+      "text": "8,550 7,903 16,818 15,599",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 48",
+      "text": "Selling, general and administrative",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 49",
+      "text": "6,728 6,468 13,903 13,254",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 50",
+      "text": "Total operating expenses",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 51",
+      "text": "15,278 14,371 30,721 28,853",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 52",
+      "text": "Operating income",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 53",
+      "text": "29,589 27,900 72,421 68,273",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 54",
+      "text": "Other income/(expense), net",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 55",
+      "text": "(279) 158 (527) 108",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 56",
+      "text": "Income before provision for income taxes",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 57",
+      "text": "29,310 28,058 71,894 68,381",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 58",
+      "text": "Provision for income taxes",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 59",
+      "text": "4,530 4,422 10,784 10,829",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 60",
+      "text": "Net income",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 61",
+      "text": "$ 24,780 $ 23,636 $ 61,110 $ 57,552",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 62",
+      "text": "Earnings per share:",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 63",
+      "text": "Basic",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 64",
+      "text": "$ 1.65 $ 1.53 $ 4.06 $ 3.72",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 65",
+      "text": "Diluted",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 66",
+      "text": "$ 1.65 $ 1.53 $ 4.05 $ 3.71",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 67",
+      "text": "Shares used in computing earnings per share:",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 68",
+      "text": "Basic",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 69",
+      "text": "14,994,082 15,405,856 15,037,903 15,457,810",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 70",
+      "text": "Diluted",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 71",
+      "text": "15,056,133 15,464,709 15,103,499 15,520,675",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 72",
+      "text": "(1) Net sales by reportable segment:",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 73",
+      "text": "Americas",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 74",
+      "text": "$ 40,315 $ 37,273 $ 92,963 $ 87,703",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 75",
+      "text": "Europe",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 76",
+      "text": "24,454 24,123 58,315 54,520",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 77",
+      "text": "Greater China",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 78",
+      "text": "16,002 16,372 34,515 37,191",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 79",
+      "text": "Japan",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 80",
+      "text": "7,298 6,262 16,285 14,029",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 81",
+      "text": "Rest of Asia Pacific",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 82",
+      "text": "7,290 6,723 17,581 16,885",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 83",
+      "text": "Total net sales",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 84",
+      "text": "$ 95,359 $ 90,753 $ 219,659 $ 210,328",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 85",
+      "text": "(1) Net sales by category:",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 86",
+      "text": "iPhone",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 87",
+      "text": "$ 46,841 $ 45,963 $ 115,979 $ 115,665",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 88",
+      "text": "Mac",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 89",
+      "text": "7,949 7,451 16,936 15,231",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 90",
+      "text": "iPad",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 91",
+      "text": "6,402 5,559 14,490 12,582",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 92",
+      "text": "Wearables, Home and Accessories",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 93",
+      "text": "7,522 7,913 19,269 19,866",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 94",
+      "text": "Services",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 95",
+      "text": "26,645 23,867 52,985 46,984",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 96",
+      "text": "Total net sales",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 97",
+      "text": "$ 95,359 $ 90,753 $ 219,659 $ 210,328",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 98",
+      "text": "Apple Inc.",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 99",
+      "text": "CONDENSED CONSOLIDATED BALANCE SHEETS (Unaudited)",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 100",
+      "text": "(In millions, except number of shares, which are reflected in thousands, and par value)",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 101",
+      "text": "March 29,",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 102",
+      "text": "2025 September 28,",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 103",
+      "text": "2024",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 104",
+      "text": "ASSETS:",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 105",
+      "text": "Current assets:",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 106",
+      "text": "Cash and cash equivalents",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 107",
+      "text": "$ 28,162 $ 29,943",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 108",
+      "text": "Marketable securities",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 109",
+      "text": "20,336 35,228",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 110",
+      "text": "Accounts receivable, net",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 111",
+      "text": "26,136 33,410",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 112",
+      "text": "Vendor non-trade receivables",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 113",
+      "text": "23,662 32,833",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 114",
+      "text": "Inventories",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 115",
+      "text": "6,269 7,286",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 116",
+      "text": "Other current assets",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 117",
+      "text": "14,109 14,287",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 118",
+      "text": "Total current assets",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 119",
+      "text": "118,674 152,987",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 120",
+      "text": "Non-current assets:",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 121",
+      "text": "Marketable securities",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 122",
+      "text": "84,424 91,479",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 123",
+      "text": "Property, plant and equipment, net",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 124",
+      "text": "46,876 45,680",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 125",
+      "text": "Other non-current assets",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 126",
+      "text": "81,259 74,834",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 127",
+      "text": "Total non-current assets",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 128",
+      "text": "212,559 211,993",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 129",
+      "text": "Total assets",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 130",
+      "text": "$ 331,233 $ 364,980",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 131",
+      "text": "LIABILITIES AND SHAREHOLDERS\u2019 EQUITY:",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 132",
+      "text": "Current liabilities:",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 133",
+      "text": "Accounts payable",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 134",
+      "text": "$ 54,126 $ 68,960",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 135",
+      "text": "Other current liabilities",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 136",
+      "text": "61,849 78,304",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 137",
+      "text": "Deferred revenue",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 138",
+      "text": "8,976 8,249",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 139",
+      "text": "Commercial paper",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 140",
+      "text": "5,982 9,967",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 141",
+      "text": "Term debt",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 142",
+      "text": "13,638 10,912",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 143",
+      "text": "Total current liabilities",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 144",
+      "text": "144,571 176,392",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 145",
+      "text": "Non-current liabilities:",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 146",
+      "text": "Term debt",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 147",
+      "text": "78,566 85,750",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 148",
+      "text": "Other non-current liabilities",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 149",
+      "text": "41,300 45,888",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 150",
+      "text": "Total non-current liabilities",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 151",
+      "text": "119,866 131,638",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 152",
+      "text": "Total liabilities",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 153",
+      "text": "264,437 308,030",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 154",
+      "text": "Commitments and contingencies",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 155",
+      "text": "Shareholders\u2019 equity:",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 156",
+      "text": "Common stock and additional paid-in capital, $0.00001 par value: 50,400,000 shares authorized; 14,939,315 and 15,116,786 shares issued and outstanding, respectively",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 157",
+      "text": "88,711 83,276",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 158",
+      "text": "Accumulated deficit (15,552) (19,154)",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 159",
+      "text": "Accumulated other comprehensive loss (6,363) (7,172)",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 160",
+      "text": "Total shareholders\u2019 equity",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 161",
+      "text": "66,796 56,950",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 162",
+      "text": "Total liabilities and shareholders\u2019 equity",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 163",
+      "text": "$ 331,233 $ 364,980",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 164",
+      "text": "Apple Inc.",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 165",
+      "text": "CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS (Unaudited)",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 166",
+      "text": "(In millions)",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 167",
+      "text": "Six Months Ended",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 168",
+      "text": "March 29,",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 169",
+      "text": "2025 March 30,",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 170",
+      "text": "2024",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 171",
+      "text": "Cash, cash equivalents, and restricted cash and cash equivalents, beginning balances $ 29,943 $ 30,737",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 172",
+      "text": "Operating activities:",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 173",
+      "text": "Net income 61,110 57,552",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 174",
+      "text": "Adjustments to reconcile net income to cash generated by operating activities:",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 175",
+      "text": "Depreciation and amortization 5,741 5,684",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 176",
+      "text": "Share-based compensation expense 6,512 5,961",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 177",
+      "text": "Other (2,217) (1,971)",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 178",
+      "text": "Changes in operating assets and liabilities:",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 179",
+      "text": "Accounts receivable, net 7,266 7,727",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 180",
+      "text": "Vendor non-trade receivables 9,171 12,164",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 181",
+      "text": "Inventories 858 53",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 182",
+      "text": "Other current and non-current assets (4,371) (4,438)",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 183",
+      "text": "Accounts payable (14,604) (16,710)",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 184",
+      "text": "Other current and non-current liabilities (15,579) (3,437)",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 185",
+      "text": "Cash generated by operating activities 53,887 62,585",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 186",
+      "text": "Investing activities:",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 187",
+      "text": "Purchases of marketable securities (12,442) (25,042)",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 188",
+      "text": "Proceeds from maturities of marketable securities 26,587 27,462",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 189",
+      "text": "Proceeds from sales of marketable securities 5,210 4,314",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 190",
+      "text": "Payments for acquisition of property, plant and equipment (6,011) (4,388)",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 191",
+      "text": "Other (635) (729)",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 192",
+      "text": "Cash generated by investing activities 12,709 1,617",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 193",
+      "text": "Financing activities:",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 194",
+      "text": "Payments for taxes related to net share settlement of equity awards (3,205) (2,875)",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 195",
+      "text": "Payments for dividends and dividend equivalents (7,614) (7,535)",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 196",
+      "text": "Repurchases of common stock (49,504) (43,344)",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 197",
+      "text": "Repayments of term debt (4,009) (3,150)",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 198",
+      "text": "Repayments of commercial paper, net (3,968) (3,982)",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 199",
+      "text": "Other (77) (132)",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 200",
+      "text": "Cash used in financing activities (68,377) (61,018)",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 201",
+      "text": "Increase/(Decrease) in cash, cash equivalents, and restricted cash and cash equivalents (1,781) 3,184",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 202",
+      "text": "Cash, cash equivalents, and restricted cash and cash equivalents, ending balances $ 28,162 $ 33,921",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 203",
+      "text": "Supplemental cash flow disclosure:",
+      "heading": ""
+    },
+    {
+      "locator": "HTML text block 204",
+      "text": "Cash paid for income taxes, net $ 31,683 $ 14,531",
+      "heading": ""
+    }
+  ],
+  "limitations": [
+    "HTML locations refer to normalized text blocks, not printed pages. Tables are text-extracted; quantitative analysis uses validated CompanyFacts."
+  ],
+  "cached": false
+}

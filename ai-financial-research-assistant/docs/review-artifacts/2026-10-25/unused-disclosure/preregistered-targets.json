@@ -1,0 +1,86 @@
+{
+  "registered_at": "2026-10-25T00:11:29.487918+00:00",
+  "method": "Manual source review before executing selector on this disclosure; no application rules edited. Not a randomized or statistically representative benchmark.",
+  "targets": [
+    {
+      "topic": "quarterly revenue/EPS",
+      "required_blocks": [
+        "H1:B6"
+      ]
+    },
+    {
+      "topic": "management Services/installed-product discussion",
+      "required_blocks": [
+        "H1:B7"
+      ]
+    },
+    {
+      "topic": "CFO quarterly cash generation and shareholder returns",
+      "required_blocks": [
+        "H1:B8"
+      ]
+    },
+    {
+      "topic": "dividend and repurchase authorization",
+      "required_blocks": [
+        "H1:B9"
+      ]
+    },
+    {
+      "topic": "Services numerical quarterly/YTD revenue",
+      "required_blocks": [
+        "H1:B27",
+        "H1:B28",
+        "H1:B29",
+        "H1:B30",
+        "H1:B31",
+        "H1:B32",
+        "H1:B33",
+        "H1:B34",
+        "H1:B37"
+      ]
+    },
+    {
+      "topic": "Greater China quarterly/YTD revenue",
+      "required_blocks": [
+        "H1:B27",
+        "H1:B28",
+        "H1:B29",
+        "H1:B30",
+        "H1:B31",
+        "H1:B32",
+        "H1:B33",
+        "H1:B34",
+        "H1:B77",
+        "H1:B78"
+      ]
+    },
+    {
+      "topic": "group net income quarterly/YTD",
+      "required_blocks": [
+        "H1:B27",
+        "H1:B28",
+        "H1:B29",
+        "H1:B30",
+        "H1:B31",
+        "H1:B32",
+        "H1:B33",
+        "H1:B34",
+        "H1:B60",
+        "H1:B61"
+      ]
+    },
+    {
+      "topic": "YTD operating cash flow",
+      "required_blocks": [
+        "H1:B165",
+        "H1:B166",
+        "H1:B167",
+        "H1:B168",
+        "H1:B169",
+        "H1:B170",
+        "H1:B185"
+      ]
+    }
+  ]
+}

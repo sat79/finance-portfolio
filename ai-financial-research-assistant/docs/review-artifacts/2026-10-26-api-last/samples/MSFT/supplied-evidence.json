@@ -1,0 +1,898 @@
+{
+  "selection_budget": {
+    "latest_documents": 2,
+    "supplementary_documents": 2,
+    "primary_passages_per_latest": 6,
+    "context_passages_per_primary": 3,
+    "max_passage_characters": 1600,
+    "max_key_findings": 5
+  },
+  "evidence_layout": "Compact pilot subset of existing key findings and their annual calculation inputs. Quotes resolve to citations.support_text; news content references the same register. Full evidence remains in the source bundle. All warnings and coverage summaries retained. No table or discovery-only content can support claims.",
+  "table_policy": "Structured table records preserve source cell geometry, column headings and units. They are not normalized financial observations or eligible free-prose/numerical claim records. Ambiguous/unsupported layouts are explicit; no annual substitution or currency inference.",
+  "warning_registry": {
+    "W1": "LATER_COMPARATIVE: Value comes from a later filing's comparative disclosure."
+  },
+  "key_findings": [
+    {
+      "title": "Latest reported results",
+      "topic": "results",
+      "statements": [
+        {
+          "kind": "company-reported statement",
+          "citation_id": "E5:B6"
+        },
+        {
+          "kind": "company-reported statement",
+          "citation_id": "E5:B10"
+        }
+      ],
+      "context_citation_ids": [
+        "E5:B4"
+      ],
+      "calculation_ids": [],
+      "question": "What explains the reported movement after separating reporting scope, currency and one-off items? The selected evidence does not quantify a causal bridge.",
+      "boundary": "Source statements are not independently verified. Preserve the quoted period, units and named entity/measure; no annualization or scope substitution."
+    },
+    {
+      "title": "Annual reported growth and profitability",
+      "topic": "annual_calculations",
+      "statements": [],
+      "context_citation_ids": [],
+      "calculation_ids": [
+        "C15",
+        "C17",
+        "C19"
+      ],
+      "question": "Are the annual observations comparable in business scope and accounting basis? These calculations do not establish organic growth or explain a newer quarter.",
+      "boundary": "Annual group net-income margin is not parent-attributable profit or operating margin. Reported growth is not constant-currency growth. See all input warnings."
+    },
+    {
+      "title": "Operating drivers",
+      "topic": "drivers",
+      "statements": [
+        {
+          "kind": "company-reported statement",
+          "citation_id": "E5:B72"
+        },
+        {
+          "kind": "company-reported statement",
+          "citation_id": "E5:B17"
+        }
+      ],
+      "context_citation_ids": [
+        "E5:B4"
+      ],
+      "calculation_ids": [],
+      "question": "How do the named operating measures translate into comparable revenue and profit? Keep segment measures, volumes and reported/constant-currency growth separate.",
+      "boundary": "Source statements are not independently verified. Preserve the quoted period, units and named entity/measure; no annualization or scope substitution."
+    },
+    {
+      "title": "Management's explanation",
+      "topic": "explanation",
+      "statements": [
+        {
+          "kind": "company-reported statement",
+          "citation_id": "E5:B15"
+        }
+      ],
+      "context_citation_ids": [
+        "E5:B4"
+      ],
+      "calculation_ids": [],
+      "question": "Does other evidence corroborate this management explanation, and how much of the movement does it explain? No causal contribution is calculated here.",
+      "boundary": "Source statements are not independently verified. Preserve the quoted period, units and named entity/measure; no annualization or scope substitution."
+    },
+    {
+      "title": "Capital and distributions",
+      "topic": "capital",
+      "statements": [
+        {
+          "kind": "company-reported statement",
+          "citation_id": "E5:B82"
+        }
+      ],
+      "context_citation_ids": [
+        "E5:B4"
+      ],
+      "calculation_ids": [],
+      "question": "What cash, funding, approvals and restrictions support this action? A proposal or approval is not proof of payment or sustainable distributions.",
+      "boundary": "Source statements are not independently verified. Preserve the quoted period, units and named entity/measure; no annualization or scope substitution."
+    }
+  ],
+  "company": {
+    "name": "MICROSOFT CORP",
+    "ticker": "MSFT",
+    "exchange": "Nasdaq",
+    "cik": "0000789019",
+    "country": "United States",
+    "currency": "USD",
+    "supported": true,
+    "identity_url": "https://data.sec.gov/submissions/CIK0000789019.json"
+  },
+  "identity_evidence": {
+    "url": "https://data.sec.gov/submissions/CIK0000789019.json",
+    "retrieved_at": "2026-10-26 15:57:14.642286+00:00",
+    "sha256": "22800a3276f133e71ef0cf04083dd0d8e7e87a073b39a6a0752cfbcd4294dbbd",
+    "cached": false
+  },
+  "research_cutoff": "2026-10-26T15:57:14.131422+00:00",
+  "news_window": {
+    "start": "2026-07-29",
+    "end": "2026-10-26"
+  },
+  "coverage": {
+    "status": "partial",
+    "missing": [
+      "Table evidence partial: 21 supported rows; 0 ambiguous rows, 17 unsupported tables, 1 omitted tables and 3 omitted candidate rows."
+    ],
+    "read_documents": 8,
+    "financial_observations": 40,
+    "official_documents": {
+      "status": "available",
+      "read": 8,
+      "registered": 8,
+      "recent_passages_available": true
+    },
+    "financial": {
+      "status": "available",
+      "observations": 40,
+      "missing_latest_core_metrics": [],
+      "scope": "Reviewed annual extraction only: Apple (AAPL), Microsoft (MSFT), Kaspi.kz (KSPI). Interim figures remain quoted evidence."
+    },
+    "tables": {
+      "status": "partial",
+      "structured_rows": 21,
+      "ambiguous_rows": 0,
+      "unsupported_tables": 17,
+      "omitted_tables": 1,
+      "omitted_rows": 3,
+      "summary": "Table evidence partial: 21 supported rows; 0 ambiguous rows, 17 unsupported tables, 1 omitted tables and 3 omitted candidate rows.",
+      "scope": "Selected recent disclosures only; supported cell geometry is not normalized financial data or model claim support. Retrieval success does not establish analytical completeness."
+    },
+    "independent_news": {
+      "status": "selected_article_text_read",
+      "label": "Selected original article text read",
+      "discovered": 1,
+      "articles_with_cited_text": 1,
+      "stage": "completed",
+      "scope": "One reviewed public publisher, one article maximum; not exhaustive independent coverage."
+    },
+    "scope": "Complete means the bounded research checks passed, not exhaustive coverage or verified claims."
+  },
+  "news": [
+    {
+      "id": "NE5",
+      "title": "Microsoft Cloud and AI Strength Fuels Fourth Quarter Results",
+      "publisher": "Company disclosure via SEC",
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm",
+      "published": "2026-07-29",
+      "event_date": null,
+      "category": "company announcement; date is SEC filing date",
+      "access": "selected_source_text_read; not independently verified",
+      "document_id": "E5",
+      "duplicate_urls": [],
+      "content": [
+        {
+          "citation_id": "E5:B4"
+        },
+        {
+          "citation_id": "E5:B10"
+        }
+      ],
+      "retrieved_at": "2026-10-26T15:57:20.328421+00:00",
+      "sha256": "5d7e2f77e7af504e18c2fcbcb981c34442a9570bc0d49cb06ac40f110e285052",
+      "access_notes": [
+        "Only the supplied source excerpts support analysis; publication/filing date is not an inferred event date."
+      ],
+      "event_date_source": {},
+      "discovery": {}
+    }
+  ],
+  "recent_disclosures": [
+    {
+      "label": "Latest accessible earnings/results disclosure",
+      "latest_eligible": true,
+      "date_warnings": [],
+      "duplicate_document_ids": [],
+      "document_id": "E5",
+      "source_report_date": "2026-07-29",
+      "publication_date": "2026-07-29",
+      "status": "read",
+      "passages": [
+        {
+          "citation_id": "E5:B4"
+        },
+        {
+          "citation_id": "E5:B6"
+        },
+        {
+          "citation_id": "E5:B72"
+        },
+        {
+          "citation_id": "E5:B15"
+        },
+        {
+          "citation_id": "E5:B17"
+        },
+        {
+          "citation_id": "E5:B82"
+        },
+        {
+          "citation_id": "E5:B10"
+        }
+      ]
+    }
+  ],
+  "citations": {
+    "F4e9f0568b5d590c97041": {
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html",
+      "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax; 2024-07-01 to 2025-06-30; accession 0001193125-26-323660",
+      "fact_id": "4e9f0568b5d590c97041",
+      "kind": "reported financial observation",
+      "metric": "revenue",
+      "value": "281724000000",
+      "currency": "USD",
+      "period_start": "2024-07-01",
+      "period_end": "2025-06-30",
+      "unit": "USD",
+      "source_id": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json#us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax",
+      "support_text": "revenue | 2024-07-01 to 2025-06-30 | 281724000000 USD | currency USD",
+      "warning_ids": [
+        "W1"
+      ],
+      "eligible_for_prose": true
+    },
+    "Fe022286bebbf9d545997": {
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html",
+      "locator": "us-gaap:NetIncomeLoss; 2024-07-01 to 2025-06-30; accession 0001193125-26-323660",
+      "fact_id": "e022286bebbf9d545997",
+      "kind": "reported financial observation",
+      "metric": "net_income",
+      "value": "101832000000",
+      "currency": "USD",
+      "period_start": "2024-07-01",
+      "period_end": "2025-06-30",
+      "unit": "USD",
+      "source_id": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json#us-gaap/NetIncomeLoss",
+      "support_text": "net_income | 2024-07-01 to 2025-06-30 | 101832000000 USD | currency USD",
+      "warning_ids": [
+        "W1"
+      ],
+      "eligible_for_prose": true
+    },
+    "Fbeb4c7e86fcf56e8dcd4": {
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html",
+      "locator": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax; 2025-07-01 to 2026-06-30; accession 0001193125-26-323660",
+      "fact_id": "beb4c7e86fcf56e8dcd4",
+      "kind": "reported financial observation",
+      "metric": "revenue",
+      "value": "331839000000",
+      "currency": "USD",
+      "period_start": "2025-07-01",
+      "period_end": "2026-06-30",
+      "unit": "USD",
+      "source_id": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json#us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax",
+      "support_text": "revenue | 2025-07-01 to 2026-06-30 | 331839000000 USD | currency USD",
+      "warning_ids": [],
+      "eligible_for_prose": true
+    },
+    "F1adea7e8a1abe3a2064b": {
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html",
+      "locator": "us-gaap:NetIncomeLoss; 2025-07-01 to 2026-06-30; accession 0001193125-26-323660",
+      "fact_id": "1adea7e8a1abe3a2064b",
+      "kind": "reported financial observation",
+      "metric": "net_income",
+      "value": "133749000000",
+      "currency": "USD",
+      "period_start": "2025-07-01",
+      "period_end": "2026-06-30",
+      "unit": "USD",
+      "source_id": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json#us-gaap/NetIncomeLoss",
+      "support_text": "net_income | 2025-07-01 to 2026-06-30 | 133749000000 USD | currency USD",
+      "warning_ids": [],
+      "eligible_for_prose": true
+    },
+    "E5:B4": {
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm",
+      "locator": "HTML text block 4",
+      "sha256": "5d7e2f77e7af504e18c2fcbcb981c34442a9570bc0d49cb06ac40f110e285052",
+      "kind": "disclosure excerpt",
+      "document_id": "E5",
+      "document_kind": "earnings/event exhibit",
+      "source_report_date": "2026-07-29",
+      "publication_date": "2026-07-29",
+      "period_basis": "quarterly (three months)",
+      "retrieved_at": "2026-10-26T15:57:20.328421+00:00",
+      "support_text": "REDMOND, Wash. — July 29, 2026 — Microsoft Corp. today announced the following results for the quarter ended June 30, 2026, as compared to the corresponding period of last fiscal year:",
+      "eligible_for_prose": true
+    },
+    "E5:B6": {
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm",
+      "locator": "HTML text block 6",
+      "sha256": "5d7e2f77e7af504e18c2fcbcb981c34442a9570bc0d49cb06ac40f110e285052",
+      "kind": "disclosure excerpt",
+      "document_id": "E5",
+      "document_kind": "earnings/event exhibit",
+      "source_report_date": "2026-07-29",
+      "publication_date": "2026-07-29",
+      "period_basis": "duration not established from this excerpt",
+      "retrieved_at": "2026-10-26T15:57:20.328421+00:00",
+      "selection_topic": "results",
+      "context_citation_ids": [
+        "E5:B4"
+      ],
+      "support_text": "Revenue was $90.0 billion and increased 18% (up 17% in constant currency)",
+      "eligible_for_prose": true
+    },
+    "E5:B72": {
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm",
+      "locator": "HTML text block 72",
+      "sha256": "5d7e2f77e7af504e18c2fcbcb981c34442a9570bc0d49cb06ac40f110e285052",
+      "kind": "disclosure excerpt",
+      "document_id": "E5",
+      "document_kind": "earnings/event exhibit",
+      "source_report_date": "2026-07-29",
+      "publication_date": "2026-07-29",
+      "period_basis": "duration not established from this excerpt",
+      "retrieved_at": "2026-10-26T15:57:20.328421+00:00",
+      "selection_topic": "drivers",
+      "context_citation_ids": [
+        "E5:B4"
+      ],
+      "support_text": "Revenue in Intelligent Cloud was $39.3 billion and increased 32% (up 31% in constant currency), with the following business highlights:",
+      "eligible_for_prose": true
+    },
+    "E5:B15": {
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm",
+      "locator": "HTML text block 15",
+      "sha256": "5d7e2f77e7af504e18c2fcbcb981c34442a9570bc0d49cb06ac40f110e285052",
+      "kind": "disclosure excerpt",
+      "document_id": "E5",
+      "document_kind": "earnings/event exhibit",
+      "source_report_date": "2026-07-29",
+      "publication_date": "2026-07-29",
+      "period_basis": "quarterly (three months)",
+      "retrieved_at": "2026-10-26T15:57:20.328421+00:00",
+      "selection_topic": "explanation",
+      "context_citation_ids": [
+        "E5:B4"
+      ],
+      "support_text": "Several discrete items impacted our financial results in the quarter when compared to our forward-looking guidance provided on April 29, 2026, resulting in a benefit of $0.27 on diluted earnings per share. These include a $3.2 billion gain from our investment in Anthropic and lower-than-expected expenses related to the Voluntary Retirement Program which were partially offset by severance expense and impairment charges in XBOX. When adjusting for these items, we exceeded expectations across revenue, operating income, and diluted earnings per share.",
+      "eligible_for_prose": true
+    },
+    "E5:B17": {
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm",
+      "locator": "HTML text block 17",
+      "sha256": "5d7e2f77e7af504e18c2fcbcb981c34442a9570bc0d49cb06ac40f110e285052",
+      "kind": "disclosure excerpt",
+      "document_id": "E5",
+      "document_kind": "earnings/event exhibit",
+      "source_report_date": "2026-07-29",
+      "publication_date": "2026-07-29",
+      "period_basis": "quarterly (three months)",
+      "retrieved_at": "2026-10-26T15:57:20.328421+00:00",
+      "selection_topic": "drivers",
+      "context_citation_ids": [
+        "E5:B4"
+      ],
+      "support_text": "“We delivered a strong quarter to close out the fiscal year, highlighted by Microsoft Cloud revenue of $59.3 billion, up 27% year-over-year,” said Amy Hood, executive vice president and chief financial officer of Microsoft.",
+      "eligible_for_prose": true
+    },
+    "E5:B82": {
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm",
+      "locator": "HTML text block 82",
+      "sha256": "5d7e2f77e7af504e18c2fcbcb981c34442a9570bc0d49cb06ac40f110e285052",
+      "kind": "disclosure excerpt",
+      "document_id": "E5",
+      "document_kind": "earnings/event exhibit",
+      "source_report_date": "2026-07-29",
+      "publication_date": "2026-07-29",
+      "period_basis": "quarterly (three months)",
+      "retrieved_at": "2026-10-26T15:57:20.328421+00:00",
+      "selection_topic": "capital",
+      "context_citation_ids": [
+        "E5:B4"
+      ],
+      "support_text": "Microsoft returned $10.2 billion to shareholders in the form of dividends and share repurchases in the fourth quarter of fiscal year 2026.",
+      "eligible_for_prose": true
+    },
+    "E5:B10": {
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323632/msft-ex99_1.htm",
+      "locator": "HTML text block 10",
+      "sha256": "5d7e2f77e7af504e18c2fcbcb981c34442a9570bc0d49cb06ac40f110e285052",
+      "kind": "disclosure excerpt",
+      "document_id": "E5",
+      "document_kind": "earnings/event exhibit",
+      "source_report_date": "2026-07-29",
+      "publication_date": "2026-07-29",
+      "period_basis": "duration not established from this excerpt",
+      "retrieved_at": "2026-10-26T15:57:20.328421+00:00",
+      "selection_topic": "results",
+      "context_citation_ids": [
+        "E5:B4"
+      ],
+      "support_text": "Net income was $35.8 billion and increased 31% on a GAAP basis, and was $35.3 billion and increased 22% on a non-GAAP basis",
+      "eligible_for_prose": true
+    }
+  },
+  "selected_financial_observations": [
+    {
+      "company": "Microsoft Corporation",
+      "cik": "0000789019",
+      "metric": "revenue",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "value": "281724000000",
+      "original_value": "281724000000",
+      "currency": "USD",
+      "unit": "USD",
+      "start": "2024-07-01",
+      "end": "2025-06-30",
+      "fiscal_year": 2025,
+      "source_fiscal_year": 2026,
+      "fiscal_period": "FY",
+      "kind": "duration",
+      "form": "10-K",
+      "filed": "2026-07-29",
+      "accession": "0001193125-26-323660",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html",
+      "source_id": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json#us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax",
+      "status": "reported",
+      "warnings": [],
+      "evidence_id": "F4e9f0568b5d590c97041",
+      "review_warning_ids": [
+        "W1"
+      ]
+    },
+    {
+      "company": "Microsoft Corporation",
+      "cik": "0000789019",
+      "metric": "net_income",
+      "concept": "us-gaap:NetIncomeLoss",
+      "value": "101832000000",
+      "original_value": "101832000000",
+      "currency": "USD",
+      "unit": "USD",
+      "start": "2024-07-01",
+      "end": "2025-06-30",
+      "fiscal_year": 2025,
+      "source_fiscal_year": 2026,
+      "fiscal_period": "FY",
+      "kind": "duration",
+      "form": "10-K",
+      "filed": "2026-07-29",
+      "accession": "0001193125-26-323660",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html",
+      "source_id": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json#us-gaap/NetIncomeLoss",
+      "status": "reported",
+      "warnings": [],
+      "evidence_id": "Fe022286bebbf9d545997",
+      "review_warning_ids": [
+        "W1"
+      ]
+    },
+    {
+      "company": "Microsoft Corporation",
+      "cik": "0000789019",
+      "metric": "revenue",
+      "concept": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "value": "331839000000",
+      "original_value": "331839000000",
+      "currency": "USD",
+      "unit": "USD",
+      "start": "2025-07-01",
+      "end": "2026-06-30",
+      "fiscal_year": 2026,
+      "source_fiscal_year": 2026,
+      "fiscal_period": "FY",
+      "kind": "duration",
+      "form": "10-K",
+      "filed": "2026-07-29",
+      "accession": "0001193125-26-323660",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html",
+      "source_id": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json#us-gaap/RevenueFromContractWithCustomerExcludingAssessedTax",
+      "status": "reported",
+      "warnings": [],
+      "evidence_id": "Fbeb4c7e86fcf56e8dcd4",
+      "review_warning_ids": []
+    },
+    {
+      "company": "Microsoft Corporation",
+      "cik": "0000789019",
+      "metric": "net_income",
+      "concept": "us-gaap:NetIncomeLoss",
+      "value": "133749000000",
+      "original_value": "133749000000",
+      "currency": "USD",
+      "unit": "USD",
+      "start": "2025-07-01",
+      "end": "2026-06-30",
+      "fiscal_year": 2026,
+      "source_fiscal_year": 2026,
+      "fiscal_period": "FY",
+      "kind": "duration",
+      "form": "10-K",
+      "filed": "2026-07-29",
+      "accession": "0001193125-26-323660",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html",
+      "source_id": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000789019.json#us-gaap/NetIncomeLoss",
+      "status": "reported",
+      "warnings": [],
+      "evidence_id": "F1adea7e8a1abe3a2064b",
+      "review_warning_ids": []
+    }
+  ],
+  "calculations": [
+    {
+      "period_end": "2025-06-30",
+      "metric": "net_margin",
+      "value": "36.14601524896707415768624611",
+      "unit": "percent",
+      "formula": "net_income / revenue * 100",
+      "input_ids": [
+        "e022286bebbf9d545997",
+        "4e9f0568b5d590c97041"
+      ],
+      "status": "calculated",
+      "warning": null,
+      "review_warning_ids": [
+        "W1"
+      ],
+      "evidence_id": "C15"
+    },
+    {
+      "period_end": "2026-06-30",
+      "metric": "revenue_growth",
+      "value": "17.78868679984665843165651490",
+      "unit": "percent",
+      "formula": "(revenue / prior_revenue - 1) * 100",
+      "input_ids": [
+        "beb4c7e86fcf56e8dcd4",
+        "4e9f0568b5d590c97041"
+      ],
+      "status": "calculated",
+      "warning": null,
+      "review_warning_ids": [
+        "W1"
+      ],
+      "evidence_id": "C17"
+    },
+    {
+      "period_end": "2026-06-30",
+      "metric": "net_margin",
+      "value": "40.30538905915217921944075290",
+      "unit": "percent",
+      "formula": "net_income / revenue * 100",
+      "input_ids": [
+        "1adea7e8a1abe3a2064b",
+        "beb4c7e86fcf56e8dcd4"
+      ],
+      "status": "calculated",
+      "warning": null,
+      "review_warning_ids": [],
+      "evidence_id": "C19"
+    }
+  ],
+  "quantitative_evidence": {
+    "F4e9f0568b5d590c97041": {
+      "evidence_id": "F4e9f0568b5d590c97041",
+      "metric": "revenue",
+      "value": "281724000000",
+      "period_start": "2024-07-01",
+      "period_end": "2025-06-30",
+      "currency": "USD",
+      "unit": "USD",
+      "citation_ids": [
+        "F4e9f0568b5d590c97041"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html"
+      ]
+    },
+    "Fe022286bebbf9d545997": {
+      "evidence_id": "Fe022286bebbf9d545997",
+      "metric": "net_income",
+      "value": "101832000000",
+      "period_start": "2024-07-01",
+      "period_end": "2025-06-30",
+      "currency": "USD",
+      "unit": "USD",
+      "citation_ids": [
+        "Fe022286bebbf9d545997"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html"
+      ]
+    },
+    "Fbeb4c7e86fcf56e8dcd4": {
+      "evidence_id": "Fbeb4c7e86fcf56e8dcd4",
+      "metric": "revenue",
+      "value": "331839000000",
+      "period_start": "2025-07-01",
+      "period_end": "2026-06-30",
+      "currency": "USD",
+      "unit": "USD",
+      "citation_ids": [
+        "Fbeb4c7e86fcf56e8dcd4"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html"
+      ]
+    },
+    "F1adea7e8a1abe3a2064b": {
+      "evidence_id": "F1adea7e8a1abe3a2064b",
+      "metric": "net_income",
+      "value": "133749000000",
+      "period_start": "2025-07-01",
+      "period_end": "2026-06-30",
+      "currency": "USD",
+      "unit": "USD",
+      "citation_ids": [
+        "F1adea7e8a1abe3a2064b"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html"
+      ]
+    },
+    "C15": {
+      "evidence_id": "C15",
+      "metric": "net_margin",
+      "value": "36.14601524896707415768624611",
+      "period_start": "2024-07-01",
+      "period_end": "2025-06-30",
+      "currency": "USD",
+      "unit": "percent",
+      "citation_ids": [
+        "F4e9f0568b5d590c97041",
+        "Fe022286bebbf9d545997"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html"
+      ]
+    },
+    "C17": {
+      "evidence_id": "C17",
+      "metric": "revenue_growth",
+      "value": "17.78868679984665843165651490",
+      "period_start": "2025-07-01",
+      "period_end": "2026-06-30",
+      "currency": "USD",
+      "unit": "percent",
+      "citation_ids": [
+        "F4e9f0568b5d590c97041",
+        "Fbeb4c7e86fcf56e8dcd4"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html"
+      ]
+    },
+    "C19": {
+      "evidence_id": "C19",
+      "metric": "net_margin",
+      "value": "40.30538905915217921944075290",
+      "period_start": "2025-07-01",
+      "period_end": "2026-06-30",
+      "currency": "USD",
+      "unit": "percent",
+      "citation_ids": [
+        "Fbeb4c7e86fcf56e8dcd4",
+        "F1adea7e8a1abe3a2064b"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html"
+      ]
+    }
+  },
+  "financial_warnings": [
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2022-06-30",
+      "metric": "revenue"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2022-06-30",
+      "metric": "operating_profit"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2022-06-30",
+      "metric": "net_income"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2022-06-30",
+      "metric": "operating_cash_flow"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2022-06-30",
+      "metric": "capex"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2022-06-30",
+      "metric": "cash"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2022-06-30",
+      "metric": "assets"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2022-06-30",
+      "metric": "liabilities"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2023-06-30",
+      "metric": "revenue"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2023-06-30",
+      "metric": "operating_profit"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2023-06-30",
+      "metric": "net_income"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2023-06-30",
+      "metric": "operating_cash_flow"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2023-06-30",
+      "metric": "capex"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2023-06-30",
+      "metric": "cash"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2023-06-30",
+      "metric": "assets"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2023-06-30",
+      "metric": "liabilities"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2024-06-30",
+      "metric": "revenue"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2024-06-30",
+      "metric": "operating_profit"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2024-06-30",
+      "metric": "net_income"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2024-06-30",
+      "metric": "operating_cash_flow"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2024-06-30",
+      "metric": "capex"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2024-06-30",
+      "metric": "cash"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2024-06-30",
+      "metric": "assets"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2024-06-30",
+      "metric": "liabilities"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2025-06-30",
+      "metric": "revenue"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2025-06-30",
+      "metric": "operating_profit"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2025-06-30",
+      "metric": "net_income"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2025-06-30",
+      "metric": "operating_cash_flow"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2025-06-30",
+      "metric": "capex"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2025-06-30",
+      "metric": "cash"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2025-06-30",
+      "metric": "assets"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2025-06-30",
+      "metric": "liabilities"
+    },
+    {
+      "code": "POLICY",
+      "message": "Latest available annual filing observation for each exact fiscal interval and metric. Annual endpoints and fiscal-year labels anchored to the company's own annual disclosures. Same-date conflicts stay missing. Different concept values stay missing. Competing observations retained. This is not a historical point-in-time series.",
+      "period_end": null,
+      "metric": null
+    },
+    {
+      "code": "SCOPE",
+      "message": "US GAAP, USD, consolidated CompanyFacts and recent 10-K history only. Custom tags, segments, short transition years and accounting-basis changes need manual review.",
+      "period_end": null,
+      "metric": null
+    }
+  ],
+  "limitations": [
+    "IR discovery is limited to the reviewed issuer landing page and at most 2 directly linked presentation/earnings documents. JavaScript-only links, external CDN hosts and unlinked presentations may be unavailable.",
+    "Evidence is limited to SEC recent filings and linked exhibits. Standalone IR-site documents/presentations are not exhaustively searched; inaccessible or unlinked presentations remain missing.",
+    "Google News links remain discovery-only. The separate Guardian route reads at most one relevant public article. Company-name/keyword searches can miss events or include namesakes; relevance needs review. Coverage is not exhaustive; zero results does not establish no news.",
+    "News budget: 12 most recently published feed stories retained after deduplication; additional stories omitted. Coverage is incomplete."
+  ],
+  "claim_policy": "Numerical claims must copy an exact quantitative_evidence record; render them deterministically. Prose is unverified and requires exact supporting excerpts. Discovery-only news cannot support substantive claims."
+}

@@ -1,0 +1,16 @@
+{
+  "attempts": [
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025061032/msft-20250430.htm",
+      "attempted_at": "2026-10-25T10:50:30.917317+00:00",
+      "status": "retrieved",
+      "retrieved_at": "2026-10-25T10:50:31.977001+00:00",
+      "sha256": "b08fd24a1ab11e0de59359d5ed6a3ab25363ab1f0dedb4e65496df174089c9a9",
+      "cached": false
+    }
+  ],
+  "links": [
+    "msft-ex99_1.htm"
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025061032/msft-20250430.htm"
+}

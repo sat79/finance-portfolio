@@ -1,0 +1,14 @@
+{
+  "attempts": [
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000055/a8-kex991q2202503292025.htm",
+      "attempted_at": "2026-10-25T00:11:14.325683+00:00",
+      "status": "retrieved",
+      "retrieved_at": "2026-10-25T00:11:14.771459+00:00",
+      "sha256": "54d2f772ecc7b6e6fcf5149a2e2b7c735b5406b00f03cbb0533dc55f86e47123",
+      "cached": false
+    }
+  ],
+  "base_commit": "25b142e",
+  "selector_sha256": "1cd61b91bfc077c06325cda809487a92e2fd4e57e34b436a53a5e4c271c25a81"
+}

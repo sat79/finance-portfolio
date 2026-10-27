@@ -1,0 +1,26 @@
+{
+  "checks": [
+    "All three delivered reports/citations/model packets match final code",
+    "All successful browser source requests uncached",
+    "Original frozen Apple and Microsoft checkpoints unchanged",
+    "Pilot request exactly matches current Kaspi bundle"
+  ],
+  "artifacts": {
+    "AAPL-coverage.png": "6c9188cb883508af4778b6221d8b7cd09f5e4eab61131d084b0a0dcb069824a6",
+    "AAPL-report.md": "e2165c644effeb4bd9aa4508253895692126a1a3c2682ccb764b8b7ef9aa2bbb",
+    "AAPL-research.zip": "bdd2b6ef7d2cdd08135603f69ac2a373953b05061bce2ad48a31d7f70d556711",
+    "KSPI-coverage.png": "fb43c4ab8f0fb3f7685666037c732c8edaf7050e5f06569fe3a1aa8697028380",
+    "KSPI-report.md": "655729ab369c61495a3079884ad7d0dacf91152022fa3f7f2fece5d8f39d93cd",
+    "KSPI-research.zip": "08f3dbca907a6ed700c97abb317fb01f0f85eea9a35dc2c00b63baf5a3e2a595",
+    "MSFT-coverage.png": "7b00a582b261f4e5c8a1d03ac99732607578aaa11439fcbe87f2b0fb9f2c0f7c",
+    "MSFT-report.md": "e3336e48cfa518d6fc1873561dc53f47e8d8f24f96f47792dbe0bd6d74aea6ee",
+    "MSFT-research.zip": "19b6cab7f37ec61f6f100da0ed843776c7268f09c9ecfd267ff8fbb472cf073d",
+    "README.md": "cdd21c76733c78b965a20376ebe9b0446d2cee5bcf8b2dc498c7aea179fce34c",
+    "browser-acceptance.json": "645cf2d780d9eff4afe2c98b87058aa4685363b2ffa53b7ae381f5310799626c",
+    "pilot/evaluation.md": "24d2abb42354916d55a982f115e18e544af898bf16d49c12524db4fa2d3bee67",
+    "pilot/manifest.json": "91aefa275b08a83a06699917062863d5583c90c5b6c9c90b2e45c55a65f2a3ba",
+    "pilot/request.json": "36f2cce27ee6a29c5acfbfbf36cfbacd556d21d0cc29ba38f7ac14dc6a5dc7f8",
+    "provider-access.json": "03c6f3308e8781bf2ae9e3958617c7f42bdaf08f9a3722fb147718ec5be21e71",
+    "table-followup.json": "1c650eaef6c679f3fc5fa01c6900609d0126f7af8358d2b34d773d17008b278b"
+  }
+}

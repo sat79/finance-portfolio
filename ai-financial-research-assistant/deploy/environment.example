@@ -1,0 +1,8 @@
+# Nonsecret deployment template; not active configuration. No resources provisioned.
+# Supply SEC identification privately in the host's environment settings.
+SEC_USER_AGENT=FinSightAI replace-with-your-real-contact-email
+FINSIGHT_ENABLE_MODEL=0
+# A writable, persistent location owned by the application user.
+# Its model ledger must remain intact across restarts if paid synthesis is later authorized.
+FINSIGHT_CACHE_DIR=/var/lib/finsight/cache
+# No provider credential, model, rates or billing configuration belongs in this template.

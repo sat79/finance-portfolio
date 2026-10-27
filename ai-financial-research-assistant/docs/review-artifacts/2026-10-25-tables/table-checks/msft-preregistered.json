@@ -1,0 +1,33 @@
+{
+  "registered_at": "2026-10-25T10:53:46.441436+00:00",
+  "disclosure": "Microsoft FY2025 Q3, published 2025-04-30",
+  "method": "Manual source/layout inspection before invoking changed selector; no selection outcome yet. Parser development used Apple and synthetic tests. No claim of blind or randomized selection.",
+  "parser_sha256": "e464245d78af2812c10de1bf028f65039c5257ef03fbe19383bebcc0b4d38c25",
+  "targets": [
+    {
+      "name": "total revenue",
+      "table": 4,
+      "label": "Total revenue"
+    },
+    {
+      "name": "group net income",
+      "table": 4,
+      "label": "Net income"
+    },
+    {
+      "name": "quarterly and YTD operating cash",
+      "table": 7,
+      "label": "Net cash from operations"
+    },
+    {
+      "name": "Intelligent Cloud segment revenue",
+      "table": 8,
+      "label": "Intelligent Cloud"
+    },
+    {
+      "name": "reported versus constant-currency revenue comparison",
+      "table": 1,
+      "label": "Revenue"
+    }
+  ]
+}

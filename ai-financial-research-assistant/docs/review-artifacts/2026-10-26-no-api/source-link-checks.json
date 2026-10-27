@@ -1,0 +1,35 @@
+[
+  {
+    "ticker": "AAPL",
+    "citation_id": "F521d845b9fd9aa85226a",
+    "outcome": "retrieved",
+    "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019323000106/0000320193-23-000106-index.html",
+    "attempted_at": "2026-10-26T15:53:08.502320+00:00",
+    "status": "retrieved",
+    "retrieved_at": "2026-10-26T15:53:08.827842+00:00",
+    "sha256": "ce2b5125c09b615c9bc47ac81aebd2b2a396004f7da7c5fc4b75ab4878edf433",
+    "cached": false
+  },
+  {
+    "ticker": "MSFT",
+    "citation_id": "F30c05065132a0f9042a7",
+    "outcome": "retrieved",
+    "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017024087843/0000950170-24-087843-index.html",
+    "attempted_at": "2026-10-26T15:53:08.830916+00:00",
+    "status": "retrieved",
+    "retrieved_at": "2026-10-26T15:53:09.624629+00:00",
+    "sha256": "f8266d4636052bf338adc526865741d0369e5f2f5bb37385c54f56a8d6dddffc",
+    "cached": false
+  },
+  {
+    "ticker": "KSPI",
+    "citation_id": "F4cf766d15a9ef7b917a6",
+    "outcome": "retrieved",
+    "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000008/0001985487-26-000008-index.html",
+    "attempted_at": "2026-10-26T15:53:09.627448+00:00",
+    "status": "retrieved",
+    "retrieved_at": "2026-10-26T15:53:10.678049+00:00",
+    "sha256": "0d45fe4951da6db1ff5d0030e61f77e20a115643bb8a171276191c4191660d5a",
+    "cached": false
+  }
+]

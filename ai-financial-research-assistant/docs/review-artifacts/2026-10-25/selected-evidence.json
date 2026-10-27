@@ -1,0 +1,1068 @@
+{
+  "company": {
+    "name": "Joint Stock Co Kaspi.kz",
+    "ticker": "KSPI",
+    "exchange": "Nasdaq",
+    "cik": "0001985487",
+    "country": "Kazakhstan",
+    "currency": "KZT",
+    "supported": true,
+    "identity_url": "https://data.sec.gov/submissions/CIK0001985487.json"
+  },
+  "identity_evidence": {
+    "url": "https://data.sec.gov/submissions/CIK0001985487.json",
+    "retrieved_at": "2026-10-24 14:29:56.750494+00:00",
+    "sha256": "9f1ba8683e551887f45f2247d8aa82bc6e1fc89c234a632add0860033d397392",
+    "cached": false
+  },
+  "research_cutoff": "2026-10-24T14:29:56.314960+00:00",
+  "news_window": {
+    "start": "2026-07-27",
+    "end": "2026-10-24"
+  },
+  "coverage": {
+    "status": "partial",
+    "missing": [
+      "No independent original article text was read; independent news remains discovery-only or unavailable.",
+      "One or more evidence stages failed, were skipped or returned partial coverage."
+    ],
+    "read_documents": 20,
+    "financial_observations": 27,
+    "official_documents": {
+      "status": "available",
+      "read": 21,
+      "registered": 21,
+      "recent_passages_available": true
+    },
+    "financial": {
+      "status": "available",
+      "observations": 27,
+      "missing_latest_core_metrics": [],
+      "scope": "Reviewed annual extraction only: Apple (AAPL), Microsoft (MSFT), Kaspi.kz (KSPI). Interim figures remain quoted evidence."
+    },
+    "independent_news": {
+      "status": "no_matching_article",
+      "label": "Feed retrieved; no matching article",
+      "discovered": 0,
+      "articles_with_cited_text": 0,
+      "stage": "partial: no relevant independent article discovered",
+      "scope": "One reviewed public publisher, one article maximum; not exhaustive independent coverage."
+    },
+    "scope": "Complete means the bounded research checks passed, not exhaustive coverage or verified claims."
+  },
+  "key_findings": [
+    {
+      "title": "Latest reported results",
+      "topic": "results",
+      "statements": [
+        {
+          "kind": "company-reported statement",
+          "text": "Kaspi.kz revenue increased 15% year-over-year to KZT1.1 trillion ($2.3 billion).",
+          "citation_id": "E7:B24"
+        },
+        {
+          "kind": "company-reported statement",
+          "text": "Adjusted EBITDA increased 5% year-over-year to KZT397 billion ($826 million).",
+          "citation_id": "E7:B24"
+        },
+        {
+          "kind": "management explanation",
+          "text": "Net income was stable at KZT259 billion ($539 million), even with investments in Türkiye and high funding costs in Kazakhstan.",
+          "citation_id": "E7:B24"
+        }
+      ],
+      "context_citation_ids": [
+        "E7:B5",
+        "E7:B4"
+      ],
+      "calculation_ids": [],
+      "question": "What explains the reported movement after separating reporting scope, currency and one-off items? The selected evidence does not quantify a causal bridge.",
+      "boundary": "Source statements are not independently verified. Preserve the quoted period, units and named entity/measure; no annualization or scope substitution."
+    },
+    {
+      "title": "Annual reported growth and profitability",
+      "topic": "annual_calculations",
+      "statements": [],
+      "context_citation_ids": [],
+      "calculation_ids": [
+        "C7",
+        "C9",
+        "C11"
+      ],
+      "question": "Are the annual observations comparable in business scope and accounting basis? These calculations do not establish organic growth or explain a newer quarter.",
+      "boundary": "Annual group net-income margin is not parent-attributable profit or operating margin. Reported growth is not constant-currency growth. See all input warnings."
+    },
+    {
+      "title": "Operating drivers",
+      "topic": "drivers",
+      "statements": [
+        {
+          "kind": "management explanation",
+          "text": "e-Commerce continued to be our main growth driver.",
+          "citation_id": "E7:B9"
+        },
+        {
+          "kind": "company-reported statement",
+          "text": "Constant-currency e-Commerce GMV increased 28% year-over-year to KZT1.3 trillion ($2.6 billion), while purchases increased 33% year-over-year.",
+          "citation_id": "E7:B9"
+        },
+        {
+          "kind": "company-reported statement",
+          "text": "We’re also seeing good results growing revenue from value-added services, namely advertising and delivery.",
+          "citation_id": "E7:B74"
+        },
+        {
+          "kind": "company-reported statement",
+          "text": "During 2Q 2026, constant currency VAS revenue increased 49% year-over-year.",
+          "citation_id": "E7:B74"
+        },
+        {
+          "kind": "management explanation",
+          "text": "As a result, e-Commerce 3P take rate increased 160 bps year-over-year to 16.1%, and e-Commerce revenue grew significantly faster than GMV.",
+          "citation_id": "E7:B74"
+        },
+        {
+          "kind": "company-reported statement",
+          "text": "During 2Q 2026, e-Commerce revenue increased 35% year-over-year on a constant currency basis to KZT394 billion ($820 million).",
+          "citation_id": "E7:B74"
+        }
+      ],
+      "context_citation_ids": [
+        "E7:B5",
+        "E7:B4",
+        "E7:B65"
+      ],
+      "calculation_ids": [],
+      "question": "How do the named operating measures translate into comparable revenue and profit? Keep segment measures, volumes and reported/constant-currency growth separate.",
+      "boundary": "Source statements are not independently verified. Preserve the quoted period, units and named entity/measure; no annualization or scope substitution."
+    },
+    {
+      "title": "Credit-risk evidence",
+      "topic": "credit_risk",
+      "statements": [
+        {
+          "kind": "company-reported statement",
+          "text": "As at 31 December 2025 and 30 June 2026, the Group’s restructured loans in Stage 3 amounted to the gross carrying amount of KZT 145,302 million and KZT 178,567 million, respectively.",
+          "citation_id": "E5:B2151"
+        }
+      ],
+      "context_citation_ids": [],
+      "calculation_ids": [],
+      "question": "What are the exposure denominator, coverage and movements behind this disclosed risk measure? A loan subset is not total NPLs or a loss rate; balance-sheet dates are not quarterly flows.",
+      "boundary": "Source statements are not independently verified. Preserve the quoted period, units and named entity/measure; no annualization or scope substitution."
+    },
+    {
+      "title": "Management's explanation",
+      "topic": "explanation",
+      "statements": [
+        {
+          "kind": "management explanation",
+          "text": "Fintech revenue increased 23% year-over-year to KZT455 billion ($946 million), supported by 18% growth in average net loan portfolio.",
+          "citation_id": "E7:B19"
+        },
+        {
+          "kind": "management explanation",
+          "text": "Adjusted EBITDA increased 6% year-over-year to KZT171 billion ($356 million), with growth continuing to reflect higher funding costs.",
+          "citation_id": "E7:B19"
+        }
+      ],
+      "context_citation_ids": [
+        "E7:B5",
+        "E7:B4"
+      ],
+      "calculation_ids": [],
+      "question": "Does other evidence corroborate this management explanation, and how much of the movement does it explain? No causal contribution is calculated here.",
+      "boundary": "Source statements are not independently verified. Preserve the quoted period, units and named entity/measure; no annualization or scope substitution."
+    }
+  ],
+  "recent_disclosures": [
+    {
+      "label": "Latest interim filing",
+      "latest_eligible": true,
+      "date_warnings": [],
+      "duplicate_document_ids": [],
+      "document_id": "E5",
+      "source_report_date": "2026-08-12",
+      "publication_date": "2026-08-12",
+      "status": "read",
+      "passages": [
+        {
+          "citation_id": "E5:B2151"
+        },
+        {
+          "citation_id": "E5:B2321"
+        },
+        {
+          "citation_id": "E5:B2339"
+        },
+        {
+          "citation_id": "E5:B2742"
+        },
+        {
+          "citation_id": "E5:B2791"
+        }
+      ]
+    },
+    {
+      "label": "Latest accessible earnings/results disclosure",
+      "latest_eligible": true,
+      "date_warnings": [],
+      "duplicate_document_ids": [],
+      "document_id": "E7",
+      "source_report_date": "2026-08-10",
+      "publication_date": "2026-08-10",
+      "status": "read",
+      "passages": [
+        {
+          "citation_id": "E7:B5"
+        },
+        {
+          "citation_id": "E7:B4"
+        },
+        {
+          "citation_id": "E7:B24"
+        },
+        {
+          "citation_id": "E7:B9"
+        },
+        {
+          "citation_id": "E7:B19"
+        },
+        {
+          "citation_id": "E7:B65"
+        },
+        {
+          "citation_id": "E7:B74"
+        },
+        {
+          "citation_id": "E7:B7"
+        }
+      ]
+    }
+  ],
+  "warning_registry": {
+    "W1": "LATER_COMPARATIVE: Value comes from a later filing's comparative disclosure.",
+    "W2": "KSPI_REVENUE_BASIS: KSPI revenue is consolidated IFRS revenue after customer rewards. Segment revenue before rewards is a different measure; the older portfolio study uses that segment basis.",
+    "W3": "KSPI_SCOPE_CHANGE: FY2025 includes Hepsiburada and IAS 29 effects. Reported growth is not organic or constant-currency growth.",
+    "W4": "FINANCIAL_GROUP: KSPI includes lending and deposit-taking. CFO is not distributable cash. The simple CFO less PP&E proxy is suppressed; broad investment purchases remain separate.",
+    "W5": "PROFIT_DEFINITION: Group net income and income attributable to owners of the parent are separate. Pretax profit is not operating profit; no substitute operating margin is manufactured."
+  },
+  "financial_warnings": [
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2023-12-31",
+      "metric": "revenue"
+    },
+    {
+      "code": "MISSING_METRIC",
+      "message": "No supported operating_profit observation for this period.",
+      "period_end": "2023-12-31",
+      "metric": "operating_profit"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2023-12-31",
+      "metric": "net_income"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2023-12-31",
+      "metric": "operating_cash_flow"
+    },
+    {
+      "code": "MISSING_METRIC",
+      "message": "No supported capex observation for this period.",
+      "period_end": "2023-12-31",
+      "metric": "capex"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2023-12-31",
+      "metric": "cash"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2023-12-31",
+      "metric": "assets"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2023-12-31",
+      "metric": "liabilities"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2023-12-31",
+      "metric": "parent_net_income"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2023-12-31",
+      "metric": "pretax_profit"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2023-12-31",
+      "metric": "investment_purchases"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2024-12-31",
+      "metric": "revenue"
+    },
+    {
+      "code": "MISSING_METRIC",
+      "message": "No supported operating_profit observation for this period.",
+      "period_end": "2024-12-31",
+      "metric": "operating_profit"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2024-12-31",
+      "metric": "net_income"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2024-12-31",
+      "metric": "operating_cash_flow"
+    },
+    {
+      "code": "MISSING_METRIC",
+      "message": "No supported capex observation for this period.",
+      "period_end": "2024-12-31",
+      "metric": "capex"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2024-12-31",
+      "metric": "cash"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2024-12-31",
+      "metric": "assets"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2024-12-31",
+      "metric": "liabilities"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2024-12-31",
+      "metric": "parent_net_income"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2024-12-31",
+      "metric": "pretax_profit"
+    },
+    {
+      "code": "LATER_COMPARATIVE",
+      "message": "Value comes from a later filing's comparative disclosure.",
+      "period_end": "2024-12-31",
+      "metric": "investment_purchases"
+    },
+    {
+      "code": "MISSING_METRIC",
+      "message": "No supported operating_profit observation for this period.",
+      "period_end": "2025-12-31",
+      "metric": "operating_profit"
+    },
+    {
+      "code": "MISSING_METRIC",
+      "message": "No supported capex observation for this period.",
+      "period_end": "2025-12-31",
+      "metric": "capex"
+    },
+    {
+      "code": "POLICY",
+      "message": "Latest available annual filing observation for each exact fiscal interval and metric. Annual endpoints and fiscal-year labels anchored to the company's own annual disclosures. Same-date conflicts stay missing. Different concept values stay missing. Competing observations retained. This is not a historical point-in-time series.",
+      "period_end": null,
+      "metric": null
+    },
+    {
+      "code": "SCOPE",
+      "message": "IFRS, KZT, consolidated CompanyFacts and recent 20-F history only. Custom tags, segments, short transition years and accounting-basis changes need manual review.",
+      "period_end": null,
+      "metric": null
+    },
+    {
+      "code": "KSPI_REVENUE_BASIS",
+      "message": "KSPI revenue is consolidated IFRS revenue after customer rewards. Segment revenue before rewards is a different measure; the older portfolio study uses that segment basis.",
+      "period_end": null,
+      "metric": null
+    },
+    {
+      "code": "KSPI_SCOPE_CHANGE",
+      "message": "FY2025 includes Hepsiburada and IAS 29 effects. Reported growth is not organic or constant-currency growth.",
+      "period_end": null,
+      "metric": null
+    },
+    {
+      "code": "FINANCIAL_GROUP",
+      "message": "KSPI includes lending and deposit-taking. CFO is not distributable cash. The simple CFO less PP&E proxy is suppressed; broad investment purchases remain separate.",
+      "period_end": null,
+      "metric": null
+    },
+    {
+      "code": "PROFIT_DEFINITION",
+      "message": "Group net income and income attributable to owners of the parent are separate. Pretax profit is not operating profit; no substitute operating margin is manufactured.",
+      "period_end": null,
+      "metric": null
+    }
+  ],
+  "limitations": [
+    "IR discovery is limited to the reviewed issuer landing page and at most 2 directly linked presentation/earnings documents. JavaScript-only links, external CDN hosts and unlinked presentations may be unavailable.",
+    "No directly linked presentation/earnings document discovered on the retrieved IR page; presentation coverage is incomplete.",
+    "Evidence is limited to SEC recent filings and linked exhibits. Standalone IR-site documents/presentations are not exhaustively searched; inaccessible or unlinked presentations remain missing.",
+    "Google News links remain discovery-only. The separate Guardian route reads at most one relevant public article. Company-name/keyword searches can miss events or include namesakes; relevance needs review. Coverage is not exhaustive; zero results does not establish no news.",
+    "News budget: 12 most recently published feed stories retained after deduplication; additional stories omitted. Coverage is incomplete.",
+    "No relevant Guardian article discovered in the public feed/window. This bounded feed is not an archive search; independent article coverage remains missing."
+  ],
+  "claim_policy": "Numerical claims must copy an exact quantitative_evidence record; render them deterministically. Prose is unverified and requires exact supporting excerpts. Discovery-only news cannot support substantive claims.",
+  "selection_budget": {
+    "latest_documents": 2,
+    "supplementary_documents": 2,
+    "primary_passages_per_latest": 6,
+    "context_passages_per_primary": 3,
+    "max_passage_characters": 1600,
+    "max_key_findings": 5
+  },
+  "evidence_layout": "Recent passage references resolve to the single citation register, which contains actual source quotes, locators and provenance. Warning IDs resolve to warning_registry; no warning is omitted.",
+  "pilot_scope": "Offline prepared subset: latest selected disclosures and annual Key findings calculations only. No article text supplied, so no news claims are authorized. Coverage retains the independent-news limitation. The complete model-evidence.json is in the review ZIP.",
+  "citations": {
+    "Fcca88fe8bd6a79f4c722": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000008/0001985487-26-000008-index.html",
+      "locator": "ifrs-full:Revenue; 2024-01-01 to 2024-12-31; accession 0001985487-26-000008",
+      "fact_id": "cca88fe8bd6a79f4c722",
+      "kind": "reported financial observation",
+      "metric": "revenue",
+      "value": "2532156000000",
+      "currency": "KZT",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "KZT",
+      "source_id": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001985487.json#ifrs-full/Revenue",
+      "support_text": "revenue | 2024-01-01 to 2024-12-31 | 2532156000000 KZT | currency KZT",
+      "warning_ids": [
+        "W1",
+        "W2",
+        "W3",
+        "W4",
+        "W5"
+      ],
+      "eligible_for_prose": true
+    },
+    "F45938352051ff703ee85": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000008/0001985487-26-000008-index.html",
+      "locator": "ifrs-full:ProfitLoss; 2024-01-01 to 2024-12-31; accession 0001985487-26-000008",
+      "fact_id": "45938352051ff703ee85",
+      "kind": "reported financial observation",
+      "metric": "net_income",
+      "value": "1056834000000",
+      "currency": "KZT",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "unit": "KZT",
+      "source_id": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001985487.json#ifrs-full/ProfitLoss",
+      "support_text": "net_income | 2024-01-01 to 2024-12-31 | 1056834000000 KZT | currency KZT",
+      "warning_ids": [
+        "W1",
+        "W2",
+        "W3",
+        "W4",
+        "W5"
+      ],
+      "eligible_for_prose": true
+    },
+    "F41c1bef463b894b62aa0": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000008/0001985487-26-000008-index.html",
+      "locator": "ifrs-full:Revenue; 2025-01-01 to 2025-12-31; accession 0001985487-26-000008",
+      "fact_id": "41c1bef463b894b62aa0",
+      "kind": "reported financial observation",
+      "metric": "revenue",
+      "value": "4046074000000",
+      "currency": "KZT",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "KZT",
+      "source_id": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001985487.json#ifrs-full/Revenue",
+      "support_text": "revenue | 2025-01-01 to 2025-12-31 | 4046074000000 KZT | currency KZT",
+      "warning_ids": [
+        "W2",
+        "W3",
+        "W4",
+        "W5"
+      ],
+      "eligible_for_prose": true
+    },
+    "Fd263c4ad59b3d9845882": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000008/0001985487-26-000008-index.html",
+      "locator": "ifrs-full:ProfitLoss; 2025-01-01 to 2025-12-31; accession 0001985487-26-000008",
+      "fact_id": "d263c4ad59b3d9845882",
+      "kind": "reported financial observation",
+      "metric": "net_income",
+      "value": "1067707000000",
+      "currency": "KZT",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "unit": "KZT",
+      "source_id": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001985487.json#ifrs-full/ProfitLoss",
+      "support_text": "net_income | 2025-01-01 to 2025-12-31 | 1067707000000 KZT | currency KZT",
+      "warning_ids": [
+        "W2",
+        "W3",
+        "W4",
+        "W5"
+      ],
+      "eligible_for_prose": true
+    },
+    "E5:B2151": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000026/kspi-ex99_1.htm",
+      "locator": "HTML text block 2151",
+      "sha256": "1f98e471945c9de189a50ed2cab64b9b6423e41502581677fb72f135d565d4ad",
+      "quote": "As at 31 December 2025 and 30 June 2026, the Group’s restructured loans in Stage 3 amounted to the gross carrying amount of KZT 145,302 million and KZT 178,567 million, respectively.",
+      "kind": "disclosure excerpt",
+      "document_id": "E5",
+      "document_kind": "earnings/event exhibit",
+      "source_report_date": "2026-08-12",
+      "publication_date": "2026-08-12",
+      "period_basis": "duration not established from this excerpt",
+      "retrieved_at": "2026-10-24T14:30:02.539617+00:00",
+      "selection_topic": "credit_risk",
+      "context_citation_ids": [],
+      "support_text": "As at 31 December 2025 and 30 June 2026, the Group’s restructured loans in Stage 3 amounted to the gross carrying amount of KZT 145,302 million and KZT 178,567 million, respectively.",
+      "eligible_for_prose": true
+    },
+    "E5:B2321": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000026/kspi-ex99_1.htm",
+      "locator": "HTML text block 2321",
+      "sha256": "1f98e471945c9de189a50ed2cab64b9b6423e41502581677fb72f135d565d4ad",
+      "quote": "For the three and six months ended 30 June 2025 and 2026 (Unaudited)",
+      "kind": "disclosure excerpt",
+      "document_id": "E5",
+      "document_kind": "earnings/event exhibit",
+      "source_report_date": "2026-08-12",
+      "publication_date": "2026-08-12",
+      "period_basis": "quarterly (three months); year-to-date / half-year (six or nine months; inspect source)",
+      "retrieved_at": "2026-10-24T14:30:02.539617+00:00",
+      "support_text": "For the three and six months ended 30 June 2025 and 2026 (Unaudited)",
+      "eligible_for_prose": true
+    },
+    "E5:B2339": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000026/kspi-ex99_1.htm",
+      "locator": "HTML text block 2339",
+      "sha256": "1f98e471945c9de189a50ed2cab64b9b6423e41502581677fb72f135d565d4ad",
+      "quote": "According to IFRS 2, this accelerates the recognition of compensation expenses resulting in a higher proportion of expenses being recognised in the early years of overall plan.",
+      "kind": "disclosure excerpt",
+      "document_id": "E5",
+      "document_kind": "earnings/event exhibit",
+      "source_report_date": "2026-08-12",
+      "publication_date": "2026-08-12",
+      "period_basis": "duration not established from this excerpt",
+      "retrieved_at": "2026-10-24T14:30:02.539617+00:00",
+      "selection_topic": "explanation",
+      "context_citation_ids": [
+        "E5:B2321"
+      ],
+      "support_text": "According to IFRS 2, this accelerates the recognition of compensation expenses resulting in a higher proportion of expenses being recognised in the early years of overall plan.",
+      "eligible_for_prose": true
+    },
+    "E5:B2742": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000026/kspi-ex99_1.htm",
+      "locator": "HTML text block 2742",
+      "sha256": "1f98e471945c9de189a50ed2cab64b9b6423e41502581677fb72f135d565d4ad",
+      "quote": "For the three and six months ended 30 June 2025 and 2026 (Unaudited)",
+      "kind": "disclosure excerpt",
+      "document_id": "E5",
+      "document_kind": "earnings/event exhibit",
+      "source_report_date": "2026-08-12",
+      "publication_date": "2026-08-12",
+      "period_basis": "quarterly (three months); year-to-date / half-year (six or nine months; inspect source)",
+      "retrieved_at": "2026-10-24T14:30:02.539617+00:00",
+      "support_text": "For the three and six months ended 30 June 2025 and 2026 (Unaudited)",
+      "eligible_for_prose": true
+    },
+    "E5:B2791": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000026/kspi-ex99_1.htm",
+      "locator": "HTML text block 2791",
+      "sha256": "1f98e471945c9de189a50ed2cab64b9b6423e41502581677fb72f135d565d4ad",
+      "quote": "On 14 July 2026, the Group has completed acquisition of Rabobank A.Ş. At the time the interim condensed consolidated financial information was authorized for issue, the Group had not yet completed the accounting for the acquisition of Rabobank A.Ş. On 30 July 2026, the Company’s subsidiary Rabobank A.Ş. was renamed to Hepsi Bank A.Ş.",
+      "kind": "disclosure excerpt",
+      "document_id": "E5",
+      "document_kind": "earnings/event exhibit",
+      "source_report_date": "2026-08-12",
+      "publication_date": "2026-08-12",
+      "period_basis": "duration not established from this excerpt",
+      "retrieved_at": "2026-10-24T14:30:02.539617+00:00",
+      "selection_topic": "capital",
+      "context_citation_ids": [
+        "E5:B2742"
+      ],
+      "support_text": "On 14 July 2026, the Group has completed acquisition of Rabobank A.Ş. At the time the interim condensed consolidated financial information was authorized for issue, the Group had not yet completed the accounting for the acquisition of Rabobank A.Ş. On 30 July 2026, the Company’s subsidiary Rabobank A.Ş. was renamed to Hepsi Bank A.Ş.",
+      "eligible_for_prose": true
+    },
+    "E7:B5": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000024/kspi-ex99_1.htm",
+      "locator": "HTML text block 5",
+      "sha256": "6b5ce45197cf04d328c0206994fc200ac58c315a14256ae4c1d330ca297b8679",
+      "quote": "2Q 2026 Highlights",
+      "kind": "disclosure excerpt",
+      "document_id": "E7",
+      "document_kind": "earnings/event exhibit",
+      "source_report_date": "2026-08-10",
+      "publication_date": "2026-08-10",
+      "period_basis": "quarterly (three months)",
+      "retrieved_at": "2026-10-24T14:30:04.762708+00:00",
+      "support_text": "2Q 2026 Highlights",
+      "eligible_for_prose": true
+    },
+    "E7:B4": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000024/kspi-ex99_1.htm",
+      "locator": "HTML text block 4",
+      "sha256": "6b5ce45197cf04d328c0206994fc200ac58c315a14256ae4c1d330ca297b8679",
+      "quote": "Almaty, Kazakhstan, 10 August 2026 – Joint Stock Company Kaspi.kz (“Kaspi.kz”) (Nasdaq:KSPI) today published its unaudited consolidated IFRS financial results for the quarter and first half ended 30 June 2026 (“2Q and 1H 2026”).",
+      "kind": "disclosure excerpt",
+      "document_id": "E7",
+      "document_kind": "earnings/event exhibit",
+      "source_report_date": "2026-08-10",
+      "publication_date": "2026-08-10",
+      "period_basis": "quarterly (three months); year-to-date / half-year (six or nine months; inspect source)",
+      "retrieved_at": "2026-10-24T14:30:04.762708+00:00",
+      "support_text": "Almaty, Kazakhstan, 10 August 2026 – Joint Stock Company Kaspi.kz (“Kaspi.kz”) (Nasdaq:KSPI) today published its unaudited consolidated IFRS financial results for the quarter and first half ended 30 June 2026 (“2Q and 1H 2026”).",
+      "eligible_for_prose": true
+    },
+    "E7:B24": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000024/kspi-ex99_1.htm",
+      "locator": "HTML text block 24",
+      "sha256": "6b5ce45197cf04d328c0206994fc200ac58c315a14256ae4c1d330ca297b8679",
+      "quote": "Kaspi.kz revenue increased 15% year-over-year to KZT1.1 trillion ($2.3 billion). Adjusted EBITDA increased 5% year-over-year to KZT397 billion ($826 million). Net income was stable at KZT259 billion ($539 million), even with investments in Türkiye and high funding costs in Kazakhstan.",
+      "kind": "disclosure excerpt",
+      "document_id": "E7",
+      "document_kind": "earnings/event exhibit",
+      "source_report_date": "2026-08-10",
+      "publication_date": "2026-08-10",
+      "period_basis": "duration not established from this excerpt",
+      "retrieved_at": "2026-10-24T14:30:04.762708+00:00",
+      "selection_topic": "results",
+      "context_citation_ids": [
+        "E7:B5",
+        "E7:B4"
+      ],
+      "support_text": "Kaspi.kz revenue increased 15% year-over-year to KZT1.1 trillion ($2.3 billion). Adjusted EBITDA increased 5% year-over-year to KZT397 billion ($826 million). Net income was stable at KZT259 billion ($539 million), even with investments in Türkiye and high funding costs in Kazakhstan.",
+      "eligible_for_prose": true
+    },
+    "E7:B9": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000024/kspi-ex99_1.htm",
+      "locator": "HTML text block 9",
+      "sha256": "6b5ce45197cf04d328c0206994fc200ac58c315a14256ae4c1d330ca297b8679",
+      "quote": "e-Commerce continued to be our main growth driver. Constant-currency e-Commerce GMV increased 28% year-over-year to KZT1.3 trillion ($2.6 billion), while purchases increased 33% year-over-year.",
+      "kind": "disclosure excerpt",
+      "document_id": "E7",
+      "document_kind": "earnings/event exhibit",
+      "source_report_date": "2026-08-10",
+      "publication_date": "2026-08-10",
+      "period_basis": "duration not established from this excerpt",
+      "retrieved_at": "2026-10-24T14:30:04.762708+00:00",
+      "selection_topic": "drivers",
+      "context_citation_ids": [
+        "E7:B5",
+        "E7:B4"
+      ],
+      "support_text": "e-Commerce continued to be our main growth driver. Constant-currency e-Commerce GMV increased 28% year-over-year to KZT1.3 trillion ($2.6 billion), while purchases increased 33% year-over-year.",
+      "eligible_for_prose": true
+    },
+    "E7:B19": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000024/kspi-ex99_1.htm",
+      "locator": "HTML text block 19",
+      "sha256": "6b5ce45197cf04d328c0206994fc200ac58c315a14256ae4c1d330ca297b8679",
+      "quote": "Fintech revenue increased 23% year-over-year to KZT455 billion ($946 million), supported by 18% growth in average net loan portfolio. Adjusted EBITDA increased 6% year-over-year to KZT171 billion ($356 million), with growth continuing to reflect higher funding costs.",
+      "kind": "disclosure excerpt",
+      "document_id": "E7",
+      "document_kind": "earnings/event exhibit",
+      "source_report_date": "2026-08-10",
+      "publication_date": "2026-08-10",
+      "period_basis": "duration not established from this excerpt",
+      "retrieved_at": "2026-10-24T14:30:04.762708+00:00",
+      "selection_topic": "explanation",
+      "context_citation_ids": [
+        "E7:B5",
+        "E7:B4"
+      ],
+      "support_text": "Fintech revenue increased 23% year-over-year to KZT455 billion ($946 million), supported by 18% growth in average net loan portfolio. Adjusted EBITDA increased 6% year-over-year to KZT171 billion ($356 million), with growth continuing to reflect higher funding costs.",
+      "eligible_for_prose": true
+    },
+    "E7:B65": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000024/kspi-ex99_1.htm",
+      "locator": "HTML text block 65",
+      "sha256": "6b5ce45197cf04d328c0206994fc200ac58c315a14256ae4c1d330ca297b8679",
+      "quote": "Kaspi.kz 2Q 2026 Financials",
+      "kind": "disclosure excerpt",
+      "document_id": "E7",
+      "document_kind": "earnings/event exhibit",
+      "source_report_date": "2026-08-10",
+      "publication_date": "2026-08-10",
+      "period_basis": "quarterly (three months)",
+      "retrieved_at": "2026-10-24T14:30:04.762708+00:00",
+      "support_text": "Kaspi.kz 2Q 2026 Financials",
+      "eligible_for_prose": true
+    },
+    "E7:B74": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000024/kspi-ex99_1.htm",
+      "locator": "HTML text block 74",
+      "sha256": "6b5ce45197cf04d328c0206994fc200ac58c315a14256ae4c1d330ca297b8679",
+      "quote": "We’re also seeing good results growing revenue from value-added services, namely advertising and delivery. During 2Q 2026, constant currency VAS revenue increased 49% year-over-year. As a result, e-Commerce 3P take rate increased 160 bps year-over-year to 16.1%, and e-Commerce revenue grew significantly faster than GMV. During 2Q 2026, e-Commerce revenue increased 35% year-over-year on a constant currency basis to KZT394 billion ($820 million).",
+      "kind": "disclosure excerpt",
+      "document_id": "E7",
+      "document_kind": "earnings/event exhibit",
+      "source_report_date": "2026-08-10",
+      "publication_date": "2026-08-10",
+      "period_basis": "quarterly (three months)",
+      "retrieved_at": "2026-10-24T14:30:04.762708+00:00",
+      "selection_topic": "drivers",
+      "context_citation_ids": [
+        "E7:B65",
+        "E7:B4"
+      ],
+      "support_text": "We’re also seeing good results growing revenue from value-added services, namely advertising and delivery. During 2Q 2026, constant currency VAS revenue increased 49% year-over-year. As a result, e-Commerce 3P take rate increased 160 bps year-over-year to 16.1%, and e-Commerce revenue grew significantly faster than GMV. During 2Q 2026, e-Commerce revenue increased 35% year-over-year on a constant currency basis to KZT394 billion ($820 million).",
+      "eligible_for_prose": true
+    },
+    "E7:B7": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000024/kspi-ex99_1.htm",
+      "locator": "HTML text block 7",
+      "sha256": "6b5ce45197cf04d328c0206994fc200ac58c315a14256ae4c1d330ca297b8679",
+      "quote": "Our Board has proposed increasing the quarterly dividend by 18% to KZT1,000 per ADS, from KZT850 in 1Q 2026, subject to shareholder approval. The increase reflects our performance in the first half and confidence in the long-term growth outlook for Kaspi.kz.",
+      "kind": "disclosure excerpt",
+      "document_id": "E7",
+      "document_kind": "earnings/event exhibit",
+      "source_report_date": "2026-08-10",
+      "publication_date": "2026-08-10",
+      "period_basis": "quarterly (three months); year-to-date / half-year (six or nine months; inspect source)",
+      "retrieved_at": "2026-10-24T14:30:04.762708+00:00",
+      "selection_topic": "capital",
+      "context_citation_ids": [
+        "E7:B5",
+        "E7:B4"
+      ],
+      "support_text": "Our Board has proposed increasing the quarterly dividend by 18% to KZT1,000 per ADS, from KZT850 in 1Q 2026, subject to shareholder approval. The increase reflects our performance in the first half and confidence in the long-term growth outlook for Kaspi.kz.",
+      "eligible_for_prose": true
+    }
+  },
+  "quantitative_evidence": {
+    "Fcca88fe8bd6a79f4c722": {
+      "evidence_id": "Fcca88fe8bd6a79f4c722",
+      "metric": "revenue",
+      "value": "2532156000000",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "currency": "KZT",
+      "unit": "KZT",
+      "citation_ids": [
+        "Fcca88fe8bd6a79f4c722"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000008/0001985487-26-000008-index.html"
+      ]
+    },
+    "F45938352051ff703ee85": {
+      "evidence_id": "F45938352051ff703ee85",
+      "metric": "net_income",
+      "value": "1056834000000",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "currency": "KZT",
+      "unit": "KZT",
+      "citation_ids": [
+        "F45938352051ff703ee85"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000008/0001985487-26-000008-index.html"
+      ]
+    },
+    "F41c1bef463b894b62aa0": {
+      "evidence_id": "F41c1bef463b894b62aa0",
+      "metric": "revenue",
+      "value": "4046074000000",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "currency": "KZT",
+      "unit": "KZT",
+      "citation_ids": [
+        "F41c1bef463b894b62aa0"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000008/0001985487-26-000008-index.html"
+      ]
+    },
+    "Fd263c4ad59b3d9845882": {
+      "evidence_id": "Fd263c4ad59b3d9845882",
+      "metric": "net_income",
+      "value": "1067707000000",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "currency": "KZT",
+      "unit": "KZT",
+      "citation_ids": [
+        "Fd263c4ad59b3d9845882"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000008/0001985487-26-000008-index.html"
+      ]
+    },
+    "C7": {
+      "evidence_id": "C7",
+      "metric": "net_margin",
+      "value": "41.73652808120826678924995142",
+      "period_start": "2024-01-01",
+      "period_end": "2024-12-31",
+      "currency": "KZT",
+      "unit": "percent",
+      "citation_ids": [
+        "Fcca88fe8bd6a79f4c722",
+        "F45938352051ff703ee85"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000008/0001985487-26-000008-index.html"
+      ]
+    },
+    "C9": {
+      "evidence_id": "C9",
+      "metric": "revenue_growth",
+      "value": "59.78770660259478483948066390",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "currency": "KZT",
+      "unit": "percent",
+      "citation_ids": [
+        "Fcca88fe8bd6a79f4c722",
+        "F41c1bef463b894b62aa0"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000008/0001985487-26-000008-index.html"
+      ]
+    },
+    "C11": {
+      "evidence_id": "C11",
+      "metric": "net_margin",
+      "value": "26.38871656820908366974998480",
+      "period_start": "2025-01-01",
+      "period_end": "2025-12-31",
+      "currency": "KZT",
+      "unit": "percent",
+      "citation_ids": [
+        "F41c1bef463b894b62aa0",
+        "Fd263c4ad59b3d9845882"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000008/0001985487-26-000008-index.html"
+      ]
+    }
+  },
+  "calculations": [
+    {
+      "period_end": "2024-12-31",
+      "metric": "net_margin",
+      "value": "41.73652808120826678924995142",
+      "unit": "percent",
+      "formula": "net_income / revenue * 100",
+      "input_ids": [
+        "45938352051ff703ee85",
+        "cca88fe8bd6a79f4c722"
+      ],
+      "status": "calculated",
+      "warning": null,
+      "review_warning_ids": [
+        "W1",
+        "W2",
+        "W3",
+        "W4",
+        "W5"
+      ],
+      "evidence_id": "C7"
+    },
+    {
+      "period_end": "2025-12-31",
+      "metric": "revenue_growth",
+      "value": "59.78770660259478483948066390",
+      "unit": "percent",
+      "formula": "(revenue / prior_revenue - 1) * 100",
+      "input_ids": [
+        "41c1bef463b894b62aa0",
+        "cca88fe8bd6a79f4c722"
+      ],
+      "status": "calculated",
+      "warning": null,
+      "review_warning_ids": [
+        "W1",
+        "W2",
+        "W3",
+        "W4",
+        "W5"
+      ],
+      "evidence_id": "C9"
+    },
+    {
+      "period_end": "2025-12-31",
+      "metric": "net_margin",
+      "value": "26.38871656820908366974998480",
+      "unit": "percent",
+      "formula": "net_income / revenue * 100",
+      "input_ids": [
+        "d263c4ad59b3d9845882",
+        "41c1bef463b894b62aa0"
+      ],
+      "status": "calculated",
+      "warning": null,
+      "review_warning_ids": [
+        "W2",
+        "W3",
+        "W4",
+        "W5"
+      ],
+      "evidence_id": "C11"
+    }
+  ],
+  "selected_financial_observations": [
+    {
+      "company": "Joint Stock Company Kaspi.kz",
+      "cik": "0001985487",
+      "metric": "revenue",
+      "concept": "ifrs-full:Revenue",
+      "value": "2532156000000",
+      "original_value": "2532156000000",
+      "currency": "KZT",
+      "unit": "KZT",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "fiscal_year": 2024,
+      "source_fiscal_year": 2025,
+      "fiscal_period": "FY",
+      "kind": "duration",
+      "form": "20-F",
+      "filed": "2026-03-16",
+      "accession": "0001985487-26-000008",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000008/0001985487-26-000008-index.html",
+      "source_id": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001985487.json#ifrs-full/Revenue",
+      "status": "reported",
+      "warnings": [],
+      "evidence_id": "Fcca88fe8bd6a79f4c722",
+      "review_warning_ids": [
+        "W1",
+        "W2",
+        "W3",
+        "W4",
+        "W5"
+      ]
+    },
+    {
+      "company": "Joint Stock Company Kaspi.kz",
+      "cik": "0001985487",
+      "metric": "net_income",
+      "concept": "ifrs-full:ProfitLoss",
+      "value": "1056834000000",
+      "original_value": "1056834000000",
+      "currency": "KZT",
+      "unit": "KZT",
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "fiscal_year": 2024,
+      "source_fiscal_year": 2025,
+      "fiscal_period": "FY",
+      "kind": "duration",
+      "form": "20-F",
+      "filed": "2026-03-16",
+      "accession": "0001985487-26-000008",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000008/0001985487-26-000008-index.html",
+      "source_id": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001985487.json#ifrs-full/ProfitLoss",
+      "status": "reported",
+      "warnings": [],
+      "evidence_id": "F45938352051ff703ee85",
+      "review_warning_ids": [
+        "W1",
+        "W2",
+        "W3",
+        "W4",
+        "W5"
+      ]
+    },
+    {
+      "company": "Joint Stock Company Kaspi.kz",
+      "cik": "0001985487",
+      "metric": "revenue",
+      "concept": "ifrs-full:Revenue",
+      "value": "4046074000000",
+      "original_value": "4046074000000",
+      "currency": "KZT",
+      "unit": "KZT",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "fiscal_year": 2025,
+      "source_fiscal_year": 2025,
+      "fiscal_period": "FY",
+      "kind": "duration",
+      "form": "20-F",
+      "filed": "2026-03-16",
+      "accession": "0001985487-26-000008",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000008/0001985487-26-000008-index.html",
+      "source_id": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001985487.json#ifrs-full/Revenue",
+      "status": "reported",
+      "warnings": [],
+      "evidence_id": "F41c1bef463b894b62aa0",
+      "review_warning_ids": [
+        "W2",
+        "W3",
+        "W4",
+        "W5"
+      ]
+    },
+    {
+      "company": "Joint Stock Company Kaspi.kz",
+      "cik": "0001985487",
+      "metric": "net_income",
+      "concept": "ifrs-full:ProfitLoss",
+      "value": "1067707000000",
+      "original_value": "1067707000000",
+      "currency": "KZT",
+      "unit": "KZT",
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "fiscal_year": 2025,
+      "source_fiscal_year": 2025,
+      "fiscal_period": "FY",
+      "kind": "duration",
+      "form": "20-F",
+      "filed": "2026-03-16",
+      "accession": "0001985487-26-000008",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1985487/000198548726000008/0001985487-26-000008-index.html",
+      "source_id": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001985487.json#ifrs-full/ProfitLoss",
+      "status": "reported",
+      "warnings": [],
+      "evidence_id": "Fd263c4ad59b3d9845882",
+      "review_warning_ids": [
+        "W2",
+        "W3",
+        "W4",
+        "W5"
+      ]
+    }
+  ],
+  "exercise_status": "Prepared for supervised synthesis; no model executed. Use accompanying exercise.md and evaluation checklist. Source cutoff remains 24 October 2026."
+}

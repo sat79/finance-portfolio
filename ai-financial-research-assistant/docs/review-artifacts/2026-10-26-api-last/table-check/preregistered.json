@@ -1,0 +1,43 @@
+{
+  "method": "Targets fixed from raw source inspection before selector run and before rules change. Ordinals are review locators only, never application rules.",
+  "source_sha256": "b555be95c63ff3c389679a41225dff0ceebf824e1def6b73c4fa613d94fb44e0",
+  "targets": [
+    {
+      "name": "Group net income, quarter and six months",
+      "table": 5,
+      "row": 36
+    },
+    {
+      "name": "Operating cash, quarter and six months",
+      "table": 8,
+      "row": 26
+    },
+    {
+      "name": "Productivity segment revenue",
+      "table": 9,
+      "row": 9
+    },
+    {
+      "name": "Intelligent Cloud operating income",
+      "table": 9,
+      "row": 24
+    },
+    {
+      "name": "GAAP/non-GAAP adjustment bridge",
+      "table": 1,
+      "row": null
+    }
+  ],
+  "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526027198/msft-ex99_1.htm",
+  "access": [
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526027198/msft-ex99_1.htm",
+      "attempted_at": "2026-10-26T17:53:59.093631+00:00",
+      "status": "retrieved",
+      "retrieved_at": "2026-10-26T17:53:59.517300+00:00",
+      "sha256": "b555be95c63ff3c389679a41225dff0ceebf824e1def6b73c4fa613d94fb44e0",
+      "cached": false
+    }
+  ],
+  "prior_archive_url_hits": []
+}

@@ -1,0 +1,10 @@
+{
+  "official-source-excerpts.md": "34ec6011807da956565ea59f66f4ca44aae3d1d948b9e1909e345f40a4a24eb3",
+  "access.json": "edb16341dd14e95a75b8821555eac4c08b9c2f410f9578697bc66fe034e80131",
+  "model-verification.json": "272906334335acb7f9d69af183e31b70815f29298c06eefdc26560e3a7b86567",
+  "model-pricing-access.json": "40a3ece9da2cbaeb81c87f9d5b6ee03c5da50adcc28cba33bf84232c0dcb59d5",
+  "README.md": "89f8ff524d16118aee5d7653d6f9497a01c4aa1a3b3f6eab206b1a5a07003759",
+  "pilot/manifest.json": "f3d728a49b8d54a0cb6111b164f5ab0bf800ba9960051b6ed53ff5e3af4275f9",
+  "pilot/request.json": "868c2c73c0ed7c34ff846c2a573a3b6500e8cdb9f851483cc749380d8e60f839",
+  "pilot/evidence.json": "a1a4b636281ce6f3bfbedc10d1c207aaf3c42b3e44076379bad581b0759e7134"
+}

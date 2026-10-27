@@ -1,0 +1,24 @@
+{
+  "requests": [
+    {
+      "url": "https://openai.com/api/pricing/",
+      "error": "ProxyError",
+      "detail": "HTTPSConnectionPool(host='openai.com', port=443): Max retries exceeded with url: /api/pricing/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
+      "at": "2026-10-25T19:59:29.688363+00:00"
+    },
+    {
+      "url": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+      "error": "ProxyError",
+      "detail": "HTTPSConnectionPool(host='developers.openai.com', port=443): Max retries exceeded with url: /api/docs/models/gpt-4.1-mini (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
+      "at": "2026-10-25T19:59:29.692728+00:00"
+    },
+    {
+      "url": "https://api.openai.com/v1/models",
+      "error": "ProxyError",
+      "detail": "HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with url: /v1/models (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
+      "at": "2026-10-25T19:59:29.696736+00:00"
+    }
+  ],
+  "api_key_configured": false,
+  "model_enabled": false
+}

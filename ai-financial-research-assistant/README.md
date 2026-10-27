@@ -1,49 +1,90 @@
-# AI Financial Research Assistant — Learning Project
+# FinSight — Financial Research & Valuation Workspace
 
-**Status: Phase 1 — Python and financial reasoning (not yet an AI application)**
+Enter a company name, confirm the entity, retrieve official documents and recent news, then download a cited research report. FinSight combines deterministic financial analysis with attributed disclosure excerpts; optional model narration is disabled unless explicitly configured and approved.
 
-A practical project for learning how to build trustworthy AI tools for financial research. The long-term goal is to read public company reports, extract financial figures, calculate and check ratios, and generate source-backed analysis.
+**Status:** the [API-last handover](docs/review-artifacts/2026-10-26-api-last/README.md) contains fresh AAPL/MSFT/KSPI reports, complete evidence, compact exports and three labelled manual Codex samples with validation and human self-review. UI, pilot and eventual execution now share compact request preparation; the opening summary retains full cited evidence in the appendix. **232 tests, clean installation and all three fresh browser journeys pass.** Ready for a supervised no-API demo with partial table/news coverage visible. API access remains deferred; provider synthesis, native Mac execution and deployment are unverified. No external model calls, billing changes, merge or deployment.
 
-This project starts with **deterministic Python calculations**, because financial numbers should not be invented or calculated solely by a language model.
+## What works
 
-## Start here (no installation needed)
+- Name/ticker search, explicit ambiguous-entity confirmation and unsupported/private-company messaging.
+- Annual/interim filings, linked earnings exhibits and bounded investor-relations discovery, with dated/hash-backed document registers and real text locations.
+- Adjustable recent-news window, company versus independent-source labels, duplicate handling and honest headline-only access states.
+- Business/revenue descriptions, annual trends, cash/position caveats, management quotations, developments, risks, questions and research conclusion with citations.
+- Prioritized Key findings with exact source statements, annual calculations and unresolved questions; bounded recent-document selection retains nearby context and shares the same evidence with the optional model input.
+- Deterministic arithmetic and review-warning propagation; KSPI financial-group safeguards remain intact.
+- Markdown report and ZIP evidence pack, including financial XLSX where supported. Existing CSV and explicitly fictional offline examples remain available.
 
-1. Open [Lesson 01 in Google Colab](https://colab.research.google.com/github/sat79/finance-portfolio/blob/main/ai-financial-research-assistant/01_financial_metrics.ipynb).
-2. Click **Connect** if Colab asks for a runtime.
-3. From the **Runtime** menu, select **Run all**.
-4. Read the output, then do the exercise near the bottom: change the example 2024 revenue and re-run the calculations.
-5. Write what you learned in [LEARNING_LOG.md](LEARNING_LOG.md).
+Start with the [company research guide](docs/research-guide.md). No paid API is needed. SEC requests require a real identifying contact address in local configuration, not an API key.
 
-**Expected example output:**
-- Revenue growth, 2023–2024: **13.64%**
-- Operating margin 2023: **12.73%**
-- Operating margin 2024: **14.00%**
-- Margin improvement: **1.27 percentage points**
+## Install (Python 3.12)
 
-The company and numbers in this lesson are **fictional, for teaching purposes**. They are not investment research or investment advice.
+**First time on an Intel Mac?** Follow the [step-by-step Mac setup](docs/mac-setup.md), then the [company-name research guide](docs/research-guide.md). Native macOS and desktop Excel execution remain untested here; the guide distinguishes those checks from Linux validation.
 
-## Roadmap
+From the repository root:
 
-| Phase | Skill | Proof of work |
-|---|---|---|
-| 1 | AI basics, Python, ratio calculations | Reproducible notebook and learning log |
-| 2 | APIs, public filings, data validation | Traceable financial data extraction |
-| 3 | LLM APIs and retrieval (RAG) | Answers with document-level citations |
-| 4 | Evaluation, security, costs and deployment | Test results and live demonstration |
-| 5 | Career presentation and certification | Project demo, write-up and targeted CV evidence |
+```bash
+cd ai-financial-research-assistant
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python -m pip check
+```
 
-## Engineering principles
+Use `python3` if it is already Python 3.12. A separate environment avoids conflicts with the other portfolio projects. The tested full lock is `requirements-lock.txt`; direct version constraints live in `pyproject.toml`. Linux/Python 3.12.14 was tested. On an Intel Mac, install Python 3.12 from python.org if needed, then use the same Terminal commands. macOS installation has not been executed here.
 
-- Always distinguish **reported figures, derived calculations, and AI-generated commentary**.
-- Show source location, reporting year, units and accounting context for real figures.
-- Verify arithmetic in code, not by asking a model to guess the answer.
-- Use public data or explicitly synthetic examples; do not commit secrets or private information.
-- State limitations and failures clearly.
+## Run
 
-## Tools and cost
+```bash
+export FINSIGHT_ENABLE_MODEL=0
+bash scripts/start.sh
+```
 
-- **Python 3 in Google Colab:** can be used without local installation.
-- **GitHub:** source control and documentation.
-- No API keys, paid subscriptions, or external packages are needed for Lesson 01.
+Or run `bash scripts/start.sh`: it uses the project environment, prompts for SEC contact identification when needed, and binds the server to your own computer. It does not install dependencies, save the email, or automatically execute `.env`.
 
-This is a learning-stage project, and further functionality will be added as it is built and tested.
+Open the local address printed by Streamlit on your own machine. The default **Company research** mode starts with a name search; follow the [research guide](docs/research-guide.md). Select **Synthetic example → Load fictional example** for the fully offline walkthrough, or **Upload CSV** to supply your own data. Navigate **Financial statements → Ratios & trends → Sources & warnings → Export**. Both example CSVs are in `data/examples/`. CSV uploads are user-provided, never SEC-verified.
+
+For live SEC requests, set identification in your shell before starting the app:
+
+```bash
+export SEC_USER_AGENT='FinSightAI your-real-contact-email'
+```
+
+Replace the placeholder with your real contact email; do not commit it. You can keep the export command in an ignored `.env` file and run `source .env`. The app intentionally does not automatically execute `.env` files. Research access needs HTTPS to `www.sec.gov`, `data.sec.gov`, `news.google.com`, `investor.apple.com`, `www.microsoft.com` and `ir.kaspi.kz`; the narrow independent-news route also needs `www.theguardian.com`. Select **SEC company**, choose KSPI (default), Apple or Microsoft, and click **Fetch SEC annual data**. An access failure is displayed without substituting example data.
+
+The local cache defaults to `.cache/sec`; optionally set `FINSIGHT_CACHE_DIR` to another writable directory. **Clear session data** removes loaded data from the UI. It does not delete the public SEC disk cache. See [data handling and limitations](docs/limitations.md).
+
+## Verify
+
+```bash
+python -m pytest -q
+ruff check .
+ruff format --check .
+python scripts/validate_live.py --output exports/live-validation
+python scripts/validate_research.py --output exports/research-validation
+```
+
+The first three commands work offline after installation. The live script requires SEC identification and network access; exits nonzero when retrieval fails, writes the actual outcome, and does **not** mark independent reconciliation complete. An optional real-browser check is documented in [validation.md](docs/validation.md).
+
+To trace a figure, open **Sources & warnings**, find its metric and period, and follow the SEC filing-index link when available. Confirm the financial statement's definition, fiscal dates and units. For a CSV, inspect the supplied reference yourself. Calculated outputs carry `input_ids` pointing to source `fact_id`s in the export. The synthetic example has no real filing links.
+
+## Learn and inspect
+
+- [Beginner walkthrough and one exercise](docs/walkthrough.md)
+- [Intel Mac setup](docs/mac-setup.md) and [your acceptance checklist](docs/acceptance-test.md)
+- [Phase 1 quality review and fixes](docs/quality-review.md)
+- [Company-name-to-research implementation plan](docs/phase-2-proposal.md)
+- [Architecture/audit and ordered backlog](docs/audit-and-plan.md)
+- [Financial methodology and annual selection](docs/methodology.md)
+- [KSPI reporting definitions and financial-group controls](docs/kspi-methodology.md)
+- [Data dictionary and CSV schema](docs/data_dictionary.md)
+- [Validation results and remaining checks](docs/validation.md)
+- [Limitations and costs](docs/limitations.md)
+- [Changelog](CHANGELOG.md)
+
+The original [Lesson 01 notebook](01_financial_metrics.ipynb) and [learning log](LEARNING_LOG.md) are retained. The notebook remains a standalone Colab introduction with fictional values. For learning in Colab, clone the repository, install this project and run the pure Python functions/tests; an interactive Streamlit deployment or public tunnel is not part of these instructions.
+
+## Scope and financial interpretation
+
+SEC scope: KSPI (IFRS, KZT, 20-F), Apple and Microsoft (US GAAP, USD, 10-K), with recent annual filings and explicit standard tags. The policy selects latest available compatible observations, retains competitors and flags uncertainty; it is not historical point-in-time reconstruction. For Apple/Microsoft, the free-cash-flow proxy is **CFO less purchases of PP&E**, not complete FCFF. For KSPI it is suppressed: bank cash flows are not distributable cash. KSPI revenue is after customer rewards; group/parent profit and broader investment purchases remain separate. See [KSPI methodology](docs/kspi-methodology.md). Losses are valid, missing figures are never zero-filled, and no business causes are invented.
+
+Document research and an optional model-provider interface are implemented; valuation, hosting and deployment remain outside scope. No service was deployed, no paid resources were created and no licence was added. Review current SEC terms before public hosting or redistributing real-company data.

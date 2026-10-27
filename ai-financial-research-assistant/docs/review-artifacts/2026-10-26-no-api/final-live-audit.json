@@ -1,0 +1,80 @@
+[
+  {
+    "ticker": "AAPL",
+    "cutoff": "2026-10-26T15:56:36.889311+00:00",
+    "outcome": "partial",
+    "official": {
+      "status": "available",
+      "read": 16,
+      "registered": 16,
+      "recent_passages_available": true
+    },
+    "annual_observations": 40,
+    "independent_news": {
+      "status": "selected_article_text_read",
+      "label": "Selected original article text read",
+      "discovered": 3,
+      "articles_with_cited_text": 1,
+      "stage": "completed",
+      "scope": "One reviewed public publisher, one article maximum; not exhaustive independent coverage."
+    },
+    "tables": "Table evidence partial: 32 supported rows; 0 ambiguous rows, 5 unsupported tables, 6 omitted tables and 5 omitted candidate rows.",
+    "retrieval_seconds": 22.242,
+    "failed_requests": [],
+    "citation_date_quote_hash_checks": "passed",
+    "downloads_match_final_code": true,
+    "manual_export_matches_existing_compact_selector": true
+  },
+  {
+    "ticker": "MSFT",
+    "cutoff": "2026-10-26T15:57:14.131422+00:00",
+    "outcome": "partial",
+    "official": {
+      "status": "available",
+      "read": 8,
+      "registered": 8,
+      "recent_passages_available": true
+    },
+    "annual_observations": 40,
+    "independent_news": {
+      "status": "selected_article_text_read",
+      "label": "Selected original article text read",
+      "discovered": 1,
+      "articles_with_cited_text": 1,
+      "stage": "completed",
+      "scope": "One reviewed public publisher, one article maximum; not exhaustive independent coverage."
+    },
+    "tables": "Table evidence partial: 21 supported rows; 0 ambiguous rows, 17 unsupported tables, 1 omitted tables and 3 omitted candidate rows.",
+    "retrieval_seconds": 15.282,
+    "failed_requests": [],
+    "citation_date_quote_hash_checks": "passed",
+    "downloads_match_final_code": true,
+    "manual_export_matches_existing_compact_selector": true
+  },
+  {
+    "ticker": "KSPI",
+    "cutoff": "2026-10-26T15:57:40.865116+00:00",
+    "outcome": "partial",
+    "official": {
+      "status": "available",
+      "read": 21,
+      "registered": 21,
+      "recent_passages_available": true
+    },
+    "annual_observations": 27,
+    "independent_news": {
+      "status": "no_matching_article",
+      "label": "Feed retrieved; no matching article",
+      "discovered": 0,
+      "articles_with_cited_text": 0,
+      "stage": "partial: no relevant independent article discovered",
+      "scope": "One reviewed public publisher, one article maximum; not exhaustive independent coverage."
+    },
+    "tables": "Table evidence partial: 22 supported rows; 1 ambiguous rows, 21 unsupported tables, 3 omitted tables and 0 omitted candidate rows. Some structural table coverage is unavailable or unassessed.",
+    "retrieval_seconds": 29.327,
+    "failed_requests": [],
+    "citation_date_quote_hash_checks": "passed",
+    "downloads_match_final_code": true,
+    "manual_export_matches_existing_compact_selector": true
+  }
+]

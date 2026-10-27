@@ -1,0 +1,54 @@
+{
+  "prepared_at": "2026-10-25T20:08:58.605472+00:00",
+  "state": "blocked_before_spending_authorization",
+  "company": {
+    "name": "Joint Stock Co Kaspi.kz",
+    "ticker": "KSPI",
+    "exchange": "Nasdaq",
+    "cik": "0001985487",
+    "country": "Kazakhstan",
+    "currency": "KZT",
+    "supported": true,
+    "identity_url": "https://data.sec.gov/submissions/CIK0001985487.json"
+  },
+  "research_cutoff": "2026-10-25T20:07:26.853221+00:00",
+  "candidate_model": "gpt-4.1-mini",
+  "compatibility": "Responses API with JSON-object output; candidate based on known interface, current official documentation and account access not yet verified",
+  "pricing_status": "UNVERIFIED planning scenario only; official pricing request denied by runtime proxy",
+  "pricing_sources_to_verify": [
+    "https://openai.com/api/pricing/",
+    "https://developers.openai.com/api/docs/models/gpt-4.1-mini"
+  ],
+  "scenario_input_usd_per_million": "0.40",
+  "scenario_output_usd_per_million": "1.60",
+  "scenario_estimate": {
+    "input_token_allowance": 212499,
+    "max_output_tokens": 1200,
+    "reserved_cost_usd": "0.0869196",
+    "pricing": "User-configured rates; not a billing quote"
+  },
+  "proposed_fixed_cap_usd": "0.25",
+  "max_requests": 1,
+  "automatic_retries": 0,
+  "request_sha256": "36f2cce27ee6a29c5acfbfbf36cfbacd556d21d0cc29ba38f7ac14dc6a5dc7f8",
+  "request_file_bytes": 232992,
+  "serialized_evidence_bytes": 210414,
+  "bundle_sha256": "08f3dbca907a6ed700c97abb317fb01f0f85eea9a35dc2c00b63baf5a3e2a595",
+  "model_calls": 0,
+  "actual_spend_usd": "0",
+  "provider_latency_seconds": null,
+  "provider_usage": null,
+  "application_generated_analysis": null,
+  "required_before_execution": [
+    "Publish reviewed narrow OpenAI host and FINSIGHT_OPENAI_API_KEY binding configuration; retest actual access.",
+    "Verify current official model compatibility, rates and account availability using no-cost requests.",
+    "Recompute this exact request estimate at verified rates, keep within fixed cap and obtain explicit approval for one request."
+  ],
+  "boundaries": [
+    "Only supplied evidence; no web tools, annual substitution or invented causation.",
+    "Quantitative claims must match full eligible records exactly, including metric, period, currency, unit and source.",
+    "Structured and unsupported tables are not eligible model claim support.",
+    "Prose support checks are mechanical; human review must assess relevance and causation.",
+    "Reservation survives timeout, invalid output or HTTP failure. Single-request ledger prevents retries."
+  ]
+}

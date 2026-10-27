@@ -1,0 +1,90 @@
+{
+  "prepared_at": "2026-10-26T00:57:12.465962+00:00",
+  "state": "blocked_before_spending_authorization",
+  "company": {
+    "name": "Joint Stock Co Kaspi.kz",
+    "ticker": "KSPI",
+    "exchange": "Nasdaq",
+    "cik": "0001985487",
+    "country": "Kazakhstan",
+    "currency": "KZT",
+    "supported": true,
+    "identity_url": "https://data.sec.gov/submissions/CIK0001985487.json"
+  },
+  "research_cutoff": "2026-10-25T20:07:26.853221+00:00",
+  "model": "gpt-6-luna",
+  "verification": {
+    "model": "gpt-6-luna",
+    "verified_at": "2026-10-26T00:53:53.826298+00:00",
+    "lifecycle": "Current recommended replacement for GPT-4.1 mini; no announced GPT-6 Luna shutdown in the retrieved deprecation page",
+    "retiring_model": "gpt-4.1-mini",
+    "retiring_model_shutdown": "2027-01-14",
+    "account_model_availability": "Unverified: API host reachable, GET /v1/models returned 401; no configured credential",
+    "input_usd_per_million": "0.10",
+    "cached_input_usd_per_million": "0.01",
+    "default_30m_cache_write_usd_per_million": "0.125",
+    "reservation_input_usd_per_million": "0.125",
+    "output_usd_per_million": "0.50",
+    "cap_usd": "0.01",
+    "max_output_tokens": 2400,
+    "reasoning_effort": "none",
+    "service_tier": "default",
+    "reservation_basis": "Conservative UTF-8 byte input allowance at the higher default cache-write rate; full maximum output allowance. No tools, long-context premium, regional processing or Fast tier requested. Cache writes replace rather than add to ordinary input pricing.",
+    "sources": [
+      {
+        "kind": "deprecations",
+        "url": "https://developers.openai.com/api/docs/deprecations",
+        "status": 200,
+        "sha256": "2aa6645af2073bebb20649ece02be2159017dee0e5da36a3009ac5832e51afb6"
+      },
+      {
+        "kind": "model",
+        "url": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+        "status": 200,
+        "sha256": "7b6541fa33cebb396188eec83e333ae56d92aee4661d3a3e116c4cf5371d643b"
+      },
+      {
+        "kind": "pricing",
+        "url": "https://developers.openai.com/api/docs/pricing",
+        "status": 200,
+        "sha256": "7f26b4094585e5a8ddfa9e42f433cb7ea858009ce006d1b32bd7a147a5f4407f"
+      },
+      {
+        "kind": "prompt-caching",
+        "url": "https://developers.openai.com/api/docs/guides/prompt-caching",
+        "status": 200,
+        "sha256": "99aa01ea1921c61d9bfb9f5b23e66e06fa274a8411e48afb1ea7341ecc1c0465"
+      }
+    ]
+  },
+  "estimated_maximum_charge": {
+    "input_token_allowance": 35644,
+    "max_output_tokens": 2400,
+    "reserved_cost_usd": "0.0056555",
+    "pricing": "User-configured rates; not a billing quote"
+  },
+  "proposed_fixed_cap_usd": "0.01",
+  "original_evidence_bytes": 210414,
+  "max_requests": 1,
+  "automatic_retries": 0,
+  "request_sha256": "868c2c73c0ed7c34ff846c2a573a3b6500e8cdb9f851483cc749380d8e60f839",
+  "request_file_bytes": 38059,
+  "serialized_evidence_bytes": 33559,
+  "bundle_sha256": "08f3dbca907a6ed700c97abb317fb01f0f85eea9a35dc2c00b63baf5a3e2a595",
+  "model_calls": 0,
+  "actual_spend_usd": "0",
+  "provider_latency_seconds": null,
+  "provider_usage": null,
+  "application_generated_analysis": null,
+  "required_before_execution": [
+    "Configure the missing FINSIGHT_OPENAI_API_KEY securely and verify authenticated availability of the selected model.",
+    "Obtain explicit approval of this exact request, displayed estimate and one-request cap before paid execution."
+  ],
+  "boundaries": [
+    "Only supplied evidence; no web tools, annual substitution or invented causation.",
+    "Quantitative claims must match full eligible records exactly, including metric, period, currency, unit and source.",
+    "Structured and unsupported tables are not eligible model claim support.",
+    "Prose support checks are mechanical; human review must assess relevance and causation.",
+    "Reservation survives timeout, invalid output or HTTP failure. Single-request ledger prevents retries."
+  ]
+}

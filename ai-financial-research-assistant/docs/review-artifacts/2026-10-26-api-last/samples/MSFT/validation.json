@@ -1,0 +1,109 @@
+{
+  "origin": "Manual Codex output from this conversation; not application-provider output",
+  "ticker": "MSFT",
+  "research_cutoff": "2026-10-26T15:57:14.131422+00:00",
+  "api_calls": 0,
+  "provider_usage": null,
+  "provider_latency_seconds": null,
+  "provider_cost_usd": null,
+  "result_sha256": "b66fc17817f6bd1bb1af09c13933fea6678ec1a7488ea163dce88091ba4e324f",
+  "validation_failures": [],
+  "corrections": [],
+  "paragraph_checks": [
+    {
+      "paragraph": 1,
+      "all_quotes_exact": true,
+      "citations": [
+        "E5:B10",
+        "E5:B15",
+        "E5:B4"
+      ],
+      "semantic_verification": "manual review required"
+    },
+    {
+      "paragraph": 2,
+      "all_quotes_exact": true,
+      "citations": [
+        "E5:B17",
+        "E5:B72",
+        "E5:B6",
+        "E5:B4"
+      ],
+      "semantic_verification": "manual review required"
+    },
+    {
+      "paragraph": 3,
+      "all_quotes_exact": true,
+      "citations": [
+        "E5:B82"
+      ],
+      "semantic_verification": "manual review required"
+    },
+    {
+      "paragraph": 4,
+      "all_quotes_exact": true,
+      "citations": [
+        "E5:B15",
+        "E5:B10"
+      ],
+      "semantic_verification": "manual review required"
+    },
+    {
+      "paragraph": 5,
+      "all_quotes_exact": true,
+      "citations": [
+        "E5:B72",
+        "E5:B82"
+      ],
+      "semantic_verification": "manual review required"
+    }
+  ],
+  "numerical_checks": [
+    {
+      "evidence_id": "C15",
+      "all_fields_equal": true,
+      "fields_checked": [
+        "evidence_id",
+        "metric",
+        "value",
+        "period_start",
+        "period_end",
+        "currency",
+        "unit",
+        "citation_ids",
+        "source_urls"
+      ]
+    },
+    {
+      "evidence_id": "C17",
+      "all_fields_equal": true,
+      "fields_checked": [
+        "evidence_id",
+        "metric",
+        "value",
+        "period_start",
+        "period_end",
+        "currency",
+        "unit",
+        "citation_ids",
+        "source_urls"
+      ]
+    },
+    {
+      "evidence_id": "C19",
+      "all_fields_equal": true,
+      "fields_checked": [
+        "evidence_id",
+        "metric",
+        "value",
+        "period_start",
+        "period_end",
+        "currency",
+        "unit",
+        "citation_ids",
+        "source_urls"
+      ]
+    }
+  ],
+  "validator": "passed"
+}

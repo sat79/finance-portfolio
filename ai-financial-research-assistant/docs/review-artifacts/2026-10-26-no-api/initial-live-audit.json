@@ -1,0 +1,71 @@
+[
+  {
+    "ticker": "AAPL",
+    "cutoff": "2026-10-26 15:43:56.480630+00:00",
+    "status": "partial",
+    "official": {
+      "status": "available",
+      "read": 16,
+      "registered": 16,
+      "recent_passages_available": true
+    },
+    "financial_observations": 40,
+    "independent_news": {
+      "status": "selected_article_text_read",
+      "label": "Selected original article text read",
+      "discovered": 3,
+      "articles_with_cited_text": 1,
+      "stage": "completed",
+      "scope": "One reviewed public publisher, one article maximum; not exhaustive independent coverage."
+    },
+    "retrieval_seconds": 22.202,
+    "date_link_quote_audit": "passed",
+    "failed_requests": []
+  },
+  {
+    "ticker": "MSFT",
+    "cutoff": "2026-10-26 15:44:32.978190+00:00",
+    "status": "partial",
+    "official": {
+      "status": "available",
+      "read": 8,
+      "registered": 8,
+      "recent_passages_available": true
+    },
+    "financial_observations": 40,
+    "independent_news": {
+      "status": "selected_article_text_read",
+      "label": "Selected original article text read",
+      "discovered": 1,
+      "articles_with_cited_text": 1,
+      "stage": "completed",
+      "scope": "One reviewed public publisher, one article maximum; not exhaustive independent coverage."
+    },
+    "retrieval_seconds": 14.563,
+    "date_link_quote_audit": "passed",
+    "failed_requests": []
+  },
+  {
+    "ticker": "KSPI",
+    "cutoff": "2026-10-26 15:44:58.228431+00:00",
+    "status": "partial",
+    "official": {
+      "status": "available",
+      "read": 21,
+      "registered": 21,
+      "recent_passages_available": true
+    },
+    "financial_observations": 27,
+    "independent_news": {
+      "status": "no_matching_article",
+      "label": "Feed retrieved; no matching article",
+      "discovered": 0,
+      "articles_with_cited_text": 0,
+      "stage": "partial: no relevant independent article discovered",
+      "scope": "One reviewed public publisher, one article maximum; not exhaustive independent coverage."
+    },
+    "retrieval_seconds": 28.622,
+    "date_link_quote_audit": "passed",
+    "failed_requests": []
+  }
+]

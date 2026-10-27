@@ -1,0 +1,154 @@
+{
+  "paragraphs": [
+    {
+      "kind": "interpretation",
+      "text": "Reported earnings need a quality-of-earnings review. The statement separates GAAP and non-GAAP net income, while a different paragraph discusses discrete items relative to prior guidance. These are different comparison bases; the guidance bridge is not a year-on-year earnings reconciliation.",
+      "citation_ids": [
+        "E5:B10",
+        "E5:B15",
+        "E5:B4"
+      ],
+      "support": [
+        {
+          "citation_id": "E5:B10",
+          "quote": "Net income was $35.8 billion and increased 31% on a GAAP basis, and was $35.3 billion and increased 22% on a non-GAAP basis"
+        },
+        {
+          "citation_id": "E5:B15",
+          "quote": "Several discrete items impacted our financial results in the quarter when compared to our forward-looking guidance provided on April 29, 2026, resulting in a benefit of $0.27 on diluted earnings per share. These include a $3.2 billion gain from our investment in Anthropic and lower-than-expected expenses related to the Voluntary Retirement Program which were partially offset by severance expense and impairment charges in XBOX. When adjusting for these items, we exceeded expectations across revenue, operating income, and diluted earnings per share."
+        },
+        {
+          "citation_id": "E5:B4",
+          "quote": "REDMOND, Wash. — July 29, 2026 — Microsoft Corp. today announced the following results for the quarter ended June 30, 2026, as compared to the corresponding period of last fiscal year:"
+        }
+      ]
+    },
+    {
+      "kind": "interpretation",
+      "text": "Microsoft Cloud and Intelligent Cloud provide evidence of growth but are distinct named measures. Reported and constant-currency changes also differ; the revenue statements do not quantify a contribution to group profit.",
+      "citation_ids": [
+        "E5:B17",
+        "E5:B72",
+        "E5:B6",
+        "E5:B4"
+      ],
+      "support": [
+        {
+          "citation_id": "E5:B17",
+          "quote": "“We delivered a strong quarter to close out the fiscal year, highlighted by Microsoft Cloud revenue of $59.3 billion, up 27% year-over-year,” said Amy Hood, executive vice president and chief financial officer of Microsoft."
+        },
+        {
+          "citation_id": "E5:B72",
+          "quote": "Revenue in Intelligent Cloud was $39.3 billion and increased 32% (up 31% in constant currency), with the following business highlights:"
+        },
+        {
+          "citation_id": "E5:B6",
+          "quote": "Revenue was $90.0 billion and increased 18% (up 17% in constant currency)"
+        },
+        {
+          "citation_id": "E5:B4",
+          "quote": "REDMOND, Wash. — July 29, 2026 — Microsoft Corp. today announced the following results for the quarter ended June 30, 2026, as compared to the corresponding period of last fiscal year:"
+        }
+      ]
+    },
+    {
+      "kind": "interpretation",
+      "text": "Shareholder returns are reported as having occurred, unlike a dividend proposal. The supplied statement does not establish their funding durability or the split between dividends and repurchases; assess these alongside cash generation and investment needs.",
+      "citation_ids": [
+        "E5:B82"
+      ],
+      "support": [
+        {
+          "citation_id": "E5:B82",
+          "quote": "Microsoft returned $10.2 billion to shareholders in the form of dividends and share repurchases in the fourth quarter of fiscal year 2026."
+        }
+      ]
+    },
+    {
+      "kind": "interpretation",
+      "text": "Which items recur, how do investment gains and restructuring effects reconcile to the year-on-year basis, and what explains operating performance on a comparable basis?",
+      "citation_ids": [
+        "E5:B15",
+        "E5:B10"
+      ],
+      "support": [
+        {
+          "citation_id": "E5:B15",
+          "quote": "Several discrete items impacted our financial results in the quarter when compared to our forward-looking guidance provided on April 29, 2026, resulting in a benefit of $0.27 on diluted earnings per share. These include a $3.2 billion gain from our investment in Anthropic and lower-than-expected expenses related to the Voluntary Retirement Program which were partially offset by severance expense and impairment charges in XBOX. When adjusting for these items, we exceeded expectations across revenue, operating income, and diluted earnings per share."
+        },
+        {
+          "citation_id": "E5:B10",
+          "quote": "Net income was $35.8 billion and increased 31% on a GAAP basis, and was $35.3 billion and increased 22% on a non-GAAP basis"
+        }
+      ]
+    },
+    {
+      "kind": "interpretation",
+      "text": "How do cloud growth and capacity spending translate into cash returns and sustainable distributions? The supplied revenue and shareholder-return statements leave that bridge unresolved.",
+      "citation_ids": [
+        "E5:B72",
+        "E5:B82"
+      ],
+      "support": [
+        {
+          "citation_id": "E5:B72",
+          "quote": "Revenue in Intelligent Cloud was $39.3 billion and increased 32% (up 31% in constant currency), with the following business highlights:"
+        },
+        {
+          "citation_id": "E5:B82",
+          "quote": "Microsoft returned $10.2 billion to shareholders in the form of dividends and share repurchases in the fourth quarter of fiscal year 2026."
+        }
+      ]
+    }
+  ],
+  "quantitative_claims": [
+    {
+      "evidence_id": "C15",
+      "metric": "net_margin",
+      "value": "36.14601524896707415768624611",
+      "period_start": "2024-07-01",
+      "period_end": "2025-06-30",
+      "currency": "USD",
+      "unit": "percent",
+      "citation_ids": [
+        "F4e9f0568b5d590c97041",
+        "Fe022286bebbf9d545997"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html"
+      ]
+    },
+    {
+      "evidence_id": "C17",
+      "metric": "revenue_growth",
+      "value": "17.78868679984665843165651490",
+      "period_start": "2025-07-01",
+      "period_end": "2026-06-30",
+      "currency": "USD",
+      "unit": "percent",
+      "citation_ids": [
+        "F4e9f0568b5d590c97041",
+        "Fbeb4c7e86fcf56e8dcd4"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html"
+      ]
+    },
+    {
+      "evidence_id": "C19",
+      "metric": "net_margin",
+      "value": "40.30538905915217921944075290",
+      "period_start": "2025-07-01",
+      "period_end": "2026-06-30",
+      "currency": "USD",
+      "unit": "percent",
+      "citation_ids": [
+        "Fbeb4c7e86fcf56e8dcd4",
+        "F1adea7e8a1abe3a2064b"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/0001193125-26-323660-index.html"
+      ]
+    }
+  ]
+}

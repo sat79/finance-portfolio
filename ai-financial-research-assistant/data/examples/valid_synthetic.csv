@@ -1,0 +1,25 @@
+schema_version,company,cik,fiscal_year,period_start,period_end,currency,unit,metric,value,source_reference
+1,Fixture Manufacturing (fictional),0000000001,2022,2021-07-01,2022-06-30,USD,USD,revenue,1000,Fictional teaching example; no real filing
+1,Fixture Manufacturing (fictional),0000000001,2022,2021-07-01,2022-06-30,USD,USD,operating_profit,100,Fictional teaching example; no real filing
+1,Fixture Manufacturing (fictional),0000000001,2022,2021-07-01,2022-06-30,USD,USD,net_income,80,Fictional teaching example; no real filing
+1,Fixture Manufacturing (fictional),0000000001,2022,2021-07-01,2022-06-30,USD,USD,operating_cash_flow,150,Fictional teaching example; no real filing
+1,Fixture Manufacturing (fictional),0000000001,2022,2021-07-01,2022-06-30,USD,USD,capex,50,Fictional teaching example; no real filing
+1,Fixture Manufacturing (fictional),0000000001,2022,2021-07-01,2022-06-30,USD,USD,cash,100,Fictional teaching example; no real filing
+1,Fixture Manufacturing (fictional),0000000001,2022,2021-07-01,2022-06-30,USD,USD,assets,2000,Fictional teaching example; no real filing
+1,Fixture Manufacturing (fictional),0000000001,2022,2021-07-01,2022-06-30,USD,USD,liabilities,900,Fictional teaching example; no real filing
+1,Fixture Manufacturing (fictional),0000000001,2023,2022-07-01,2023-06-30,USD,USD,revenue,1200,Fictional teaching example; no real filing
+1,Fixture Manufacturing (fictional),0000000001,2023,2022-07-01,2023-06-30,USD,USD,operating_profit,96,Fictional teaching example; no real filing
+1,Fixture Manufacturing (fictional),0000000001,2023,2022-07-01,2023-06-30,USD,USD,net_income,-24,Fictional teaching example; no real filing
+1,Fixture Manufacturing (fictional),0000000001,2023,2022-07-01,2023-06-30,USD,USD,operating_cash_flow,-20,Fictional teaching example; no real filing
+1,Fixture Manufacturing (fictional),0000000001,2023,2022-07-01,2023-06-30,USD,USD,capex,30,Fictional teaching example; no real filing
+1,Fixture Manufacturing (fictional),0000000001,2023,2022-07-01,2023-06-30,USD,USD,cash,80,Fictional teaching example; no real filing
+1,Fixture Manufacturing (fictional),0000000001,2023,2022-07-01,2023-06-30,USD,USD,assets,2100,Fictional teaching example; no real filing
+1,Fixture Manufacturing (fictional),0000000001,2023,2022-07-01,2023-06-30,USD,USD,liabilities,1000,Fictional teaching example; no real filing
+1,Fixture Manufacturing (fictional),0000000001,2024,2023-07-01,2024-06-30,USD,USD,revenue,1500,Fictional teaching example; no real filing
+1,Fixture Manufacturing (fictional),0000000001,2024,2023-07-01,2024-06-30,USD,USD,operating_profit,180,Fictional teaching example; no real filing
+1,Fixture Manufacturing (fictional),0000000001,2024,2023-07-01,2024-06-30,USD,USD,net_income,120,Fictional teaching example; no real filing
+1,Fixture Manufacturing (fictional),0000000001,2024,2023-07-01,2024-06-30,USD,USD,operating_cash_flow,220,Fictional teaching example; no real filing
+1,Fixture Manufacturing (fictional),0000000001,2024,2023-07-01,2024-06-30,USD,USD,capex,70,Fictional teaching example; no real filing
+1,Fixture Manufacturing (fictional),0000000001,2024,2023-07-01,2024-06-30,USD,USD,cash,130,Fictional teaching example; no real filing
+1,Fixture Manufacturing (fictional),0000000001,2024,2023-07-01,2024-06-30,USD,USD,assets,2300,Fictional teaching example; no real filing
+1,Fixture Manufacturing (fictional),0000000001,2024,2023-07-01,2024-06-30,USD,USD,liabilities,1100,Fictional teaching example; no real filing

@@ -1,0 +1,36 @@
+...F                                                                     [100%]
+=================================== FAILURES ===================================
+___________ test_changing_confirmed_entity_clears_previous_analysis ____________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7f8b4b898980>
+dataset = Dataset(company='Fixture Manufacturing (fictional)', cik='0000000001', origin='synthetic_fixture', fetched_at=datetime...EX: 'capex'>, <Metric.CASH: 'cash'>, <Metric.ASSETS: 'assets'>, <Metric.LIABILITIES: 'liabilities'>), source_hashes={})
+
+    def test_changing_confirmed_entity_clears_previous_analysis(monkeypatch, dataset):
+        from dataclasses import replace
+    
+        from test_research import report_fixture
+    
+        result = report_fixture(dataset)
+        other = replace(result.company, name="Other fixture", ticker="OTHER", cik="0000000002")
+        monkeypatch.setenv("SEC_USER_AGENT", "FinSight tests contact@example.org")
+        monkeypatch.setattr("finsight.research.ui.find_companies", lambda *a: [result.company, other])
+        monkeypatch.setattr("finsight.research.ui.run_research", lambda *a, **k: result)
+        app = AppTest.from_file(str(APP), default_timeout=20).run()
+        app.text_input[0].set_value("Fixture")
+        app.button[0].click().run()
+        app.selectbox[0].set_value(result.company).run()
+        next(b for b in app.button if b.label == "Research selected company").click().run()
+        app.session_state["research_narrative"] = {"text": "Previous company analysis"}
+        app.selectbox[0].set_value(other).run()
+        assert not app.exception
+>       assert not any(h.value.startswith("Research report:") for h in app.header)
+E       assert not True
+E        +  where True = any(<generator object test_changing_confirmed_entity_clears_previous_analysis.<locals>.<genexpr> at 0x7f8b3d5e9080>)
+
+tests/test_app.py:186: AssertionError
+----------------------------- Captured stderr call -----------------------------
+2026-10-26 15:43:13.981 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-26 15:43:14.216 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+=========================== short test summary info ============================
+FAILED tests/test_app.py::test_changing_confirmed_entity_clears_previous_analysis
+1 failed, 3 passed, 7 deselected in 2.11s

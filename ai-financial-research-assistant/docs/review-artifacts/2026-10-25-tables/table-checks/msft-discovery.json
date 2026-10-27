@@ -1,0 +1,21 @@
+{
+  "attempts": [
+    {
+      "url": "https://data.sec.gov/submissions/CIK0000789019.json",
+      "attempted_at": "2026-10-25T10:50:30.480109+00:00",
+      "status": "retrieved",
+      "retrieved_at": "2026-10-25T10:50:30.913790+00:00",
+      "cached": false,
+      "sha256": "22800a3276f133e71ef0cf04083dd0d8e7e87a073b39a6a0752cfbcd4294dbbd"
+    }
+  ],
+  "rows": [
+    {
+      "accessionNumber": "0000950170-25-061032",
+      "form": "8-K",
+      "filingDate": "2025-04-30",
+      "reportDate": "2025-04-30",
+      "primaryDocument": "msft-20250430.htm"
+    }
+  ]
+}

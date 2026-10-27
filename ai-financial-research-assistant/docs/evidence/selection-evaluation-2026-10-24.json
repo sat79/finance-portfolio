@@ -1,0 +1,213 @@
+[
+  {
+    "ticker": "KSPI",
+    "research_cutoff": "2026-10-24T09:17:52.287160+00:00",
+    "source_snapshot_sha256": "cf8a3e3d474a855c2fafb22a95e2d22b4cd7c7d82757727da0a36391d7406ecb",
+    "mode": "paired rendering of identical source snapshot; no new fetch",
+    "key_findings": 5,
+    "primary_passages": 8,
+    "recent_unique_citations": 13,
+    "model_bytes_before": 201754,
+    "model_bytes_after": 135407,
+    "targets": [
+      {
+        "id": "E7:B24",
+        "description": "consolidated quarterly result",
+        "before_in_report_and_payload": false,
+        "after_in_report_and_payload": true,
+        "after_selected_primary": true,
+        "quote": "Kaspi.kz revenue increased 15% year-over-year to KZT1.1 trillion ($2.3 billion). Adjusted EBITDA increased 5% year-over-year to KZT397 billion ($826 million). Net income was stable at KZT259 billion ($539 million), even with investments in T\u00fcrkiye and high funding costs in Kazakhstan."
+      },
+      {
+        "id": "E7:B9",
+        "description": "volume/GMV driver",
+        "before_in_report_and_payload": false,
+        "after_in_report_and_payload": true,
+        "after_selected_primary": true,
+        "quote": "e-Commerce continued to be our main growth driver. Constant-currency e-Commerce GMV increased 28% year-over-year to KZT1.3 trillion ($2.6 billion), while purchases increased 33% year-over-year."
+      },
+      {
+        "id": "E7:B74",
+        "description": "monetization/constant-currency driver (same measures as memo B11)",
+        "before_in_report_and_payload": false,
+        "after_in_report_and_payload": true,
+        "after_selected_primary": true,
+        "quote": "We\u2019re also seeing good results growing revenue from value-added services, namely advertising and delivery. During 2Q 2026, constant currency VAS revenue increased 49% year-over-year. As a result, e-Commerce 3P take rate increased 160 bps year-over-year to 16.1%, and e-Commerce revenue grew significantly faster than GMV. During 2Q 2026, e-Commerce revenue increased 35% year-over-year on a constant currency basis to KZT394 billion ($820 million)."
+      },
+      {
+        "id": "E7:B19",
+        "description": "funding-cost explanation",
+        "before_in_report_and_payload": true,
+        "after_in_report_and_payload": true,
+        "after_selected_primary": true,
+        "quote": "Fintech revenue increased 23% year-over-year to KZT455 billion ($946 million), supported by 18% growth in average net loan portfolio. Adjusted EBITDA increased 6% year-over-year to KZT171 billion ($356 million), with growth continuing to reflect higher funding costs."
+      },
+      {
+        "id": "E5:B2151",
+        "description": "Stage 3 restructured-loan stock",
+        "before_in_report_and_payload": false,
+        "after_in_report_and_payload": true,
+        "after_selected_primary": true,
+        "quote": "As at 31 December 2025 and 30 June 2026, the Group\u2019s restructured loans in Stage 3 amounted to the gross carrying amount of KZT 145,302 million and KZT 178,567 million, respectively."
+      }
+    ],
+    "coverage": {
+      "status": "partial",
+      "missing": [
+        "No independent original article text was read; independent news remains discovery-only or unavailable.",
+        "One or more evidence stages failed, were skipped or returned partial coverage."
+      ],
+      "read_documents": 20,
+      "financial_observations": 27,
+      "official_documents": {
+        "status": "available",
+        "read": 21,
+        "registered": 21,
+        "recent_passages_available": true
+      },
+      "financial": {
+        "status": "available",
+        "observations": 27,
+        "missing_latest_core_metrics": [],
+        "scope": "Reviewed annual extraction only: Apple (AAPL), Microsoft (MSFT), Kaspi.kz (KSPI). Interim figures remain quoted evidence."
+      },
+      "independent_news": {
+        "status": "no_matching_article",
+        "label": "Feed retrieved; no matching article",
+        "discovered": 0,
+        "articles_with_cited_text": 0,
+        "stage": "partial: no relevant independent article discovered",
+        "scope": "One reviewed public publisher, one article maximum; not exhaustive independent coverage."
+      },
+      "scope": "Complete means the bounded research checks passed, not exhaustive coverage or verified claims."
+    }
+  },
+  {
+    "ticker": "AAPL",
+    "research_cutoff": "2026-10-24T09:17:06.804865+00:00",
+    "source_snapshot_sha256": "caa1c78ca45bef505008df89cd1e9ef965b3ddd718fcc1044bf26347a26d88d9",
+    "mode": "paired rendering of identical source snapshot; no new fetch",
+    "key_findings": 4,
+    "primary_passages": 4,
+    "recent_unique_citations": 6,
+    "model_bytes_before": 185062,
+    "model_bytes_after": 150183,
+    "targets": [
+      {
+        "id": "E7:B6",
+        "description": "quarterly results and tariff qualifiers",
+        "before_in_report_and_payload": true,
+        "after_in_report_and_payload": true,
+        "after_selected_primary": true,
+        "quote": "CUPERTINO, CALIFORNIA \u2014 Apple\u00ae today announced financial results for its fiscal 2026 third quarter ended June 27, 2026. The Company posted quarterly revenue of $109.4 billion, up 16 percent year over year. Company gross margin was 50.1 percent, including a favorable impact of approximately 2 percentage points from tariff refunds. Diluted earnings per share was $2.02, up 29 percent year over year, and included a favorable impact of $0.11 from tariff refunds."
+      },
+      {
+        "id": "D2:B624",
+        "description": "product margin/mix and tariff explanation",
+        "before_in_report_and_payload": false,
+        "after_in_report_and_payload": true,
+        "after_selected_primary": true,
+        "quote": "Products gross margin and gross margin percentage increased during the third quarter and first nine months of 2026 compared to the same periods in 2025 primarily due to a different mix of products and tariff refunds, partially offset by higher costs, including memory."
+      }
+    ],
+    "coverage": {
+      "status": "complete",
+      "missing": [],
+      "read_documents": 16,
+      "financial_observations": 40,
+      "official_documents": {
+        "status": "available",
+        "read": 16,
+        "registered": 16,
+        "recent_passages_available": true
+      },
+      "financial": {
+        "status": "available",
+        "observations": 40,
+        "missing_latest_core_metrics": [],
+        "scope": "Reviewed annual extraction only: Apple (AAPL), Microsoft (MSFT), Kaspi.kz (KSPI). Interim figures remain quoted evidence."
+      },
+      "independent_news": {
+        "status": "selected_article_text_read",
+        "label": "Selected original article text read",
+        "discovered": 3,
+        "articles_with_cited_text": 1,
+        "stage": "completed",
+        "scope": "One reviewed public publisher, one article maximum; not exhaustive independent coverage."
+      },
+      "scope": "Complete means the bounded research checks passed, not exhaustive coverage or verified claims."
+    }
+  },
+  {
+    "ticker": "MSFT",
+    "research_cutoff": "2026-10-24T09:17:36.438802+00:00",
+    "source_snapshot_sha256": "c20cecd3f503aed417163013f2cdba54caf3de3b6f83cecf9c211271ba009ae1",
+    "mode": "paired rendering of identical source snapshot; no new fetch",
+    "key_findings": 5,
+    "primary_passages": 7,
+    "recent_unique_citations": 9,
+    "model_bytes_before": 190288,
+    "model_bytes_after": 159948,
+    "targets": [
+      {
+        "id": "E5:B6",
+        "description": "short reported/constant-currency revenue bullet",
+        "before_in_report_and_payload": false,
+        "after_in_report_and_payload": true,
+        "after_selected_primary": true,
+        "quote": "Revenue was $90.0 billion and increased 18% (up 17% in constant currency)"
+      },
+      {
+        "id": "E5:B10",
+        "description": "GAAP versus non-GAAP income",
+        "before_in_report_and_payload": true,
+        "after_in_report_and_payload": true,
+        "after_selected_primary": true,
+        "quote": "Net income was $35.8 billion and increased 31% on a GAAP basis, and was $35.3 billion and increased 22% on a non-GAAP basis"
+      },
+      {
+        "id": "E5:B15",
+        "description": "discrete EPS items",
+        "before_in_report_and_payload": true,
+        "after_in_report_and_payload": true,
+        "after_selected_primary": true,
+        "quote": "Several discrete items impacted our financial results in the quarter when compared to our forward-looking guidance provided on April 29, 2026, resulting in a benefit of $0.27 on diluted earnings per share. These include a $3.2 billion gain from our investment in Anthropic and lower-than-expected expenses related to the Voluntary Retirement Program which were partially offset by severance expense and impairment charges in XBOX. When adjusting for these items, we exceeded expectations across revenue, operating income, and diluted earnings per share."
+      },
+      {
+        "id": "E5:B72",
+        "description": "cloud segment driver",
+        "before_in_report_and_payload": false,
+        "after_in_report_and_payload": true,
+        "after_selected_primary": true,
+        "quote": "Revenue in Intelligent Cloud was $39.3 billion and increased 32% (up 31% in constant currency), with the following business highlights:"
+      }
+    ],
+    "coverage": {
+      "status": "complete",
+      "missing": [],
+      "read_documents": 8,
+      "financial_observations": 40,
+      "official_documents": {
+        "status": "available",
+        "read": 8,
+        "registered": 8,
+        "recent_passages_available": true
+      },
+      "financial": {
+        "status": "available",
+        "observations": 40,
+        "missing_latest_core_metrics": [],
+        "scope": "Reviewed annual extraction only: Apple (AAPL), Microsoft (MSFT), Kaspi.kz (KSPI). Interim figures remain quoted evidence."
+      },
+      "independent_news": {
+        "status": "selected_article_text_read",
+        "label": "Selected original article text read",
+        "discovered": 1,
+        "articles_with_cited_text": 1,
+        "stage": "completed",
+        "scope": "One reviewed public publisher, one article maximum; not exhaustive independent coverage."
+      },
+      "scope": "Complete means the bounded research checks passed, not exhaustive coverage or verified claims."
+    }
+  }
+]

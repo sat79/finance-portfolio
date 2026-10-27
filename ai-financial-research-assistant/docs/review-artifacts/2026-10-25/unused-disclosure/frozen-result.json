@@ -1,0 +1,182 @@
+{
+  "evaluated_at": "2026-10-25T00:11:30.151028+00:00",
+  "base_commit": "25b142e",
+  "selector_sha256": "1cd61b91bfc077c06325cda809487a92e2fd4e57e34b436a53a5e4c271c25a81",
+  "selection": [
+    {
+      "index": 5,
+      "topic": "results",
+      "score": 17,
+      "context_indices": []
+    },
+    {
+      "index": 7,
+      "topic": "drivers",
+      "score": 8,
+      "context_indices": [
+        5
+      ]
+    },
+    {
+      "index": 6,
+      "topic": "drivers",
+      "score": 6,
+      "context_indices": [
+        5
+      ]
+    },
+    {
+      "index": 8,
+      "topic": "capital",
+      "score": 7,
+      "context_indices": [
+        5
+      ]
+    }
+  ],
+  "selected_citation_ids": [
+    "H1:B6",
+    "H1:B7",
+    "H1:B8",
+    "H1:B9"
+  ],
+  "targets": [
+    {
+      "topic": "quarterly revenue/EPS",
+      "required_blocks": [
+        "H1:B6"
+      ],
+      "fully_selected": true,
+      "missing_blocks": []
+    },
+    {
+      "topic": "management Services/installed-product discussion",
+      "required_blocks": [
+        "H1:B7"
+      ],
+      "fully_selected": true,
+      "missing_blocks": []
+    },
+    {
+      "topic": "CFO quarterly cash generation and shareholder returns",
+      "required_blocks": [
+        "H1:B8"
+      ],
+      "fully_selected": true,
+      "missing_blocks": []
+    },
+    {
+      "topic": "dividend and repurchase authorization",
+      "required_blocks": [
+        "H1:B9"
+      ],
+      "fully_selected": true,
+      "missing_blocks": []
+    },
+    {
+      "topic": "Services numerical quarterly/YTD revenue",
+      "required_blocks": [
+        "H1:B27",
+        "H1:B28",
+        "H1:B29",
+        "H1:B30",
+        "H1:B31",
+        "H1:B32",
+        "H1:B33",
+        "H1:B34",
+        "H1:B37"
+      ],
+      "fully_selected": false,
+      "missing_blocks": [
+        "H1:B27",
+        "H1:B28",
+        "H1:B29",
+        "H1:B30",
+        "H1:B31",
+        "H1:B32",
+        "H1:B33",
+        "H1:B34",
+        "H1:B37"
+      ]
+    },
+    {
+      "topic": "Greater China quarterly/YTD revenue",
+      "required_blocks": [
+        "H1:B27",
+        "H1:B28",
+        "H1:B29",
+        "H1:B30",
+        "H1:B31",
+        "H1:B32",
+        "H1:B33",
+        "H1:B34",
+        "H1:B77",
+        "H1:B78"
+      ],
+      "fully_selected": false,
+      "missing_blocks": [
+        "H1:B27",
+        "H1:B28",
+        "H1:B29",
+        "H1:B30",
+        "H1:B31",
+        "H1:B32",
+        "H1:B33",
+        "H1:B34",
+        "H1:B77",
+        "H1:B78"
+      ]
+    },
+    {
+      "topic": "group net income quarterly/YTD",
+      "required_blocks": [
+        "H1:B27",
+        "H1:B28",
+        "H1:B29",
+        "H1:B30",
+        "H1:B31",
+        "H1:B32",
+        "H1:B33",
+        "H1:B34",
+        "H1:B60",
+        "H1:B61"
+      ],
+      "fully_selected": false,
+      "missing_blocks": [
+        "H1:B27",
+        "H1:B28",
+        "H1:B29",
+        "H1:B30",
+        "H1:B31",
+        "H1:B32",
+        "H1:B33",
+        "H1:B34",
+        "H1:B60",
+        "H1:B61"
+      ]
+    },
+    {
+      "topic": "YTD operating cash flow",
+      "required_blocks": [
+        "H1:B165",
+        "H1:B166",
+        "H1:B167",
+        "H1:B168",
+        "H1:B169",
+        "H1:B170",
+        "H1:B185"
+      ],
+      "fully_selected": false,
+      "missing_blocks": [
+        "H1:B165",
+        "H1:B166",
+        "H1:B167",
+        "H1:B168",
+        "H1:B169",
+        "H1:B170",
+        "H1:B185"
+      ]
+    }
+  ],
+  "rules_changed": false
+}

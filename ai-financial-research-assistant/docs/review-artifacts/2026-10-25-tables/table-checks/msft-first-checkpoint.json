@@ -1,0 +1,6065 @@
+{
+  "tables": [
+    {
+      "table": 4,
+      "position": [
+        446,
+        3
+      ],
+      "context": [
+        {
+          "text": "MICROSOFT CORPORATION",
+          "position": [
+            445,
+            315
+          ]
+        },
+        {
+          "text": "INCOME STATEMENTS",
+          "position": [
+            445,
+            798
+          ]
+        },
+        {
+          "text": "(In millions, except per share amounts) (Unaudited)",
+          "position": [
+            445,
+            1053
+          ]
+        }
+      ],
+      "status": "structured",
+      "notes": [
+        "Source cell text and spans only; no currency-code inference, arithmetic, annual substitution or normalized observations. Blank and currency/sign cells remain in source_cells."
+      ],
+      "rows": [
+        {
+          "row": 7,
+          "label": "Product",
+          "section": {
+            "row": 6,
+            "cell": 1,
+            "position": [
+              499,
+              5
+            ],
+            "text": "Revenue:",
+            "tag": "td",
+            "rowspan": 1,
+            "colspan": 1,
+            "column": 1
+          },
+          "source_cells": [
+            {
+              "row": 7,
+              "cell": 1,
+              "position": [
+                510,
+                5
+              ],
+              "text": "Product",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 1
+            },
+            {
+              "row": 7,
+              "cell": 2,
+              "position": [
+                511,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 2
+            },
+            {
+              "row": 7,
+              "cell": 3,
+              "position": [
+                512,
+                5
+              ],
+              "text": "$15,319",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 3
+            },
+            {
+              "row": 7,
+              "cell": 4,
+              "position": [
+                513,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 4
+            },
+            {
+              "row": 7,
+              "cell": 5,
+              "position": [
+                514,
+                5
+              ],
+              "text": "$17,080",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 5
+            },
+            {
+              "row": 7,
+              "cell": 6,
+              "position": [
+                515,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 6
+            },
+            {
+              "row": 7,
+              "cell": 7,
+              "position": [
+                516,
+                5
+              ],
+              "text": "$46,810",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 7
+            },
+            {
+              "row": 7,
+              "cell": 8,
+              "position": [
+                517,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 8
+            },
+            {
+              "row": 7,
+              "cell": 9,
+              "position": [
+                518,
+                5
+              ],
+              "text": "$51,556",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 9
+            }
+          ],
+          "values": [
+            {
+              "value_cell": {
+                "row": 7,
+                "cell": 3,
+                "position": [
+                  512,
+                  5
+                ],
+                "text": "$15,319",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 3
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 3,
+                  "position": [
+                    468,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 3
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 7,
+                "cell": 5,
+                "position": [
+                  514,
+                  5
+                ],
+                "text": "$17,080",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 5
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 5,
+                  "position": [
+                    470,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 5
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 7,
+                "cell": 7,
+                "position": [
+                  516,
+                  5
+                ],
+                "text": "$46,810",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 7
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 7,
+                  "position": [
+                    472,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 7,
+                "cell": 9,
+                "position": [
+                  518,
+                  5
+                ],
+                "text": "$51,556",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 9
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 9,
+                  "position": [
+                    474,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 9
+                }
+              ]
+            }
+          ],
+          "status": "structured",
+          "reason": ""
+        },
+        {
+          "row": 8,
+          "label": "Service and other",
+          "section": {
+            "row": 6,
+            "cell": 1,
+            "position": [
+              499,
+              5
+            ],
+            "text": "Revenue:",
+            "tag": "td",
+            "rowspan": 1,
+            "colspan": 1,
+            "column": 1
+          },
+          "source_cells": [
+            {
+              "row": 8,
+              "cell": 1,
+              "position": [
+                521,
+                5
+              ],
+              "text": "Service and other",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 1
+            },
+            {
+              "row": 8,
+              "cell": 2,
+              "position": [
+                522,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 2
+            },
+            {
+              "row": 8,
+              "cell": 3,
+              "position": [
+                523,
+                5
+              ],
+              "text": "54,747",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 3
+            },
+            {
+              "row": 8,
+              "cell": 4,
+              "position": [
+                524,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 4
+            },
+            {
+              "row": 8,
+              "cell": 5,
+              "position": [
+                525,
+                5
+              ],
+              "text": "44,778",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 5
+            },
+            {
+              "row": 8,
+              "cell": 6,
+              "position": [
+                526,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 6
+            },
+            {
+              "row": 8,
+              "cell": 7,
+              "position": [
+                527,
+                5
+              ],
+              "text": "158,473",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 7
+            },
+            {
+              "row": 8,
+              "cell": 8,
+              "position": [
+                528,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 8
+            },
+            {
+              "row": 8,
+              "cell": 9,
+              "position": [
+                529,
+                5
+              ],
+              "text": "128,839",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 9
+            }
+          ],
+          "values": [
+            {
+              "value_cell": {
+                "row": 8,
+                "cell": 3,
+                "position": [
+                  523,
+                  5
+                ],
+                "text": "54,747",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 3
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 3,
+                  "position": [
+                    468,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 3
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 8,
+                "cell": 5,
+                "position": [
+                  525,
+                  5
+                ],
+                "text": "44,778",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 5
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 5,
+                  "position": [
+                    470,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 5
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 8,
+                "cell": 7,
+                "position": [
+                  527,
+                  5
+                ],
+                "text": "158,473",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 7
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 7,
+                  "position": [
+                    472,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 8,
+                "cell": 9,
+                "position": [
+                  529,
+                  5
+                ],
+                "text": "128,839",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 9
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 9,
+                  "position": [
+                    474,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 9
+                }
+              ]
+            }
+          ],
+          "status": "structured",
+          "reason": ""
+        },
+        {
+          "row": 11,
+          "label": "Total revenue",
+          "section": {
+            "row": 6,
+            "cell": 1,
+            "position": [
+              499,
+              5
+            ],
+            "text": "Revenue:",
+            "tag": "td",
+            "rowspan": 1,
+            "colspan": 1,
+            "column": 1
+          },
+          "source_cells": [
+            {
+              "row": 11,
+              "cell": 1,
+              "position": [
+                554,
+                5
+              ],
+              "text": "Total revenue",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 1
+            },
+            {
+              "row": 11,
+              "cell": 2,
+              "position": [
+                555,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 2
+            },
+            {
+              "row": 11,
+              "cell": 3,
+              "position": [
+                556,
+                5
+              ],
+              "text": "70,066",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 3
+            },
+            {
+              "row": 11,
+              "cell": 4,
+              "position": [
+                557,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 4
+            },
+            {
+              "row": 11,
+              "cell": 5,
+              "position": [
+                558,
+                5
+              ],
+              "text": "61,858",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 5
+            },
+            {
+              "row": 11,
+              "cell": 6,
+              "position": [
+                559,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 6
+            },
+            {
+              "row": 11,
+              "cell": 7,
+              "position": [
+                560,
+                5
+              ],
+              "text": "205,283",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 7
+            },
+            {
+              "row": 11,
+              "cell": 8,
+              "position": [
+                561,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 8
+            },
+            {
+              "row": 11,
+              "cell": 9,
+              "position": [
+                562,
+                5
+              ],
+              "text": "180,395",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 9
+            }
+          ],
+          "values": [
+            {
+              "value_cell": {
+                "row": 11,
+                "cell": 3,
+                "position": [
+                  556,
+                  5
+                ],
+                "text": "70,066",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 3
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 3,
+                  "position": [
+                    468,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 3
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 11,
+                "cell": 5,
+                "position": [
+                  558,
+                  5
+                ],
+                "text": "61,858",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 5
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 5,
+                  "position": [
+                    470,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 5
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 11,
+                "cell": 7,
+                "position": [
+                  560,
+                  5
+                ],
+                "text": "205,283",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 7
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 7,
+                  "position": [
+                    472,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 11,
+                "cell": 9,
+                "position": [
+                  562,
+                  5
+                ],
+                "text": "180,395",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 9
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 9,
+                  "position": [
+                    474,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 9
+                }
+              ]
+            }
+          ],
+          "status": "structured",
+          "reason": ""
+        },
+        {
+          "row": 15,
+          "label": "Product",
+          "section": {
+            "row": 14,
+            "cell": 1,
+            "position": [
+              587,
+              5
+            ],
+            "text": "Cost of revenue:",
+            "tag": "td",
+            "rowspan": 1,
+            "colspan": 1,
+            "column": 1
+          },
+          "source_cells": [
+            {
+              "row": 15,
+              "cell": 1,
+              "position": [
+                598,
+                5
+              ],
+              "text": "Product",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 1
+            },
+            {
+              "row": 15,
+              "cell": 2,
+              "position": [
+                599,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 2
+            },
+            {
+              "row": 15,
+              "cell": 3,
+              "position": [
+                600,
+                5
+              ],
+              "text": "3,037",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 3
+            },
+            {
+              "row": 15,
+              "cell": 4,
+              "position": [
+                601,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 4
+            },
+            {
+              "row": 15,
+              "cell": 5,
+              "position": [
+                602,
+                5
+              ],
+              "text": "4,339",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 5
+            },
+            {
+              "row": 15,
+              "cell": 6,
+              "position": [
+                603,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 6
+            },
+            {
+              "row": 15,
+              "cell": 7,
+              "position": [
+                604,
+                5
+              ],
+              "text": "10,187",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 7
+            },
+            {
+              "row": 15,
+              "cell": 8,
+              "position": [
+                605,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 8
+            },
+            {
+              "row": 15,
+              "cell": 9,
+              "position": [
+                606,
+                5
+              ],
+              "text": "13,834",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 9
+            }
+          ],
+          "values": [
+            {
+              "value_cell": {
+                "row": 15,
+                "cell": 3,
+                "position": [
+                  600,
+                  5
+                ],
+                "text": "3,037",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 3
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 3,
+                  "position": [
+                    468,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 3
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 15,
+                "cell": 5,
+                "position": [
+                  602,
+                  5
+                ],
+                "text": "4,339",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 5
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 5,
+                  "position": [
+                    470,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 5
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 15,
+                "cell": 7,
+                "position": [
+                  604,
+                  5
+                ],
+                "text": "10,187",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 7
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 7,
+                  "position": [
+                    472,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 15,
+                "cell": 9,
+                "position": [
+                  606,
+                  5
+                ],
+                "text": "13,834",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 9
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 9,
+                  "position": [
+                    474,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 9
+                }
+              ]
+            }
+          ],
+          "status": "structured",
+          "reason": ""
+        },
+        {
+          "row": 16,
+          "label": "Service and other",
+          "section": {
+            "row": 14,
+            "cell": 1,
+            "position": [
+              587,
+              5
+            ],
+            "text": "Cost of revenue:",
+            "tag": "td",
+            "rowspan": 1,
+            "colspan": 1,
+            "column": 1
+          },
+          "source_cells": [
+            {
+              "row": 16,
+              "cell": 1,
+              "position": [
+                609,
+                5
+              ],
+              "text": "Service and other",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 1
+            },
+            {
+              "row": 16,
+              "cell": 2,
+              "position": [
+                610,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 2
+            },
+            {
+              "row": 16,
+              "cell": 3,
+              "position": [
+                611,
+                5
+              ],
+              "text": "18,882",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 3
+            },
+            {
+              "row": 16,
+              "cell": 4,
+              "position": [
+                612,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 4
+            },
+            {
+              "row": 16,
+              "cell": 5,
+              "position": [
+                613,
+                5
+              ],
+              "text": "14,166",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 5
+            },
+            {
+              "row": 16,
+              "cell": 6,
+              "position": [
+                614,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 6
+            },
+            {
+              "row": 16,
+              "cell": 7,
+              "position": [
+                615,
+                5
+              ],
+              "text": "53,630",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 7
+            },
+            {
+              "row": 16,
+              "cell": 8,
+              "position": [
+                616,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 8
+            },
+            {
+              "row": 16,
+              "cell": 9,
+              "position": [
+                617,
+                5
+              ],
+              "text": "40,596",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 9
+            }
+          ],
+          "values": [
+            {
+              "value_cell": {
+                "row": 16,
+                "cell": 3,
+                "position": [
+                  611,
+                  5
+                ],
+                "text": "18,882",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 3
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 3,
+                  "position": [
+                    468,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 3
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 16,
+                "cell": 5,
+                "position": [
+                  613,
+                  5
+                ],
+                "text": "14,166",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 5
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 5,
+                  "position": [
+                    470,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 5
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 16,
+                "cell": 7,
+                "position": [
+                  615,
+                  5
+                ],
+                "text": "53,630",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 7
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 7,
+                  "position": [
+                    472,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 16,
+                "cell": 9,
+                "position": [
+                  617,
+                  5
+                ],
+                "text": "40,596",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 9
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 9,
+                  "position": [
+                    474,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 9
+                }
+              ]
+            }
+          ],
+          "status": "structured",
+          "reason": ""
+        },
+        {
+          "row": 19,
+          "label": "Total cost of revenue",
+          "section": {
+            "row": 14,
+            "cell": 1,
+            "position": [
+              587,
+              5
+            ],
+            "text": "Cost of revenue:",
+            "tag": "td",
+            "rowspan": 1,
+            "colspan": 1,
+            "column": 1
+          },
+          "source_cells": [
+            {
+              "row": 19,
+              "cell": 1,
+              "position": [
+                642,
+                5
+              ],
+              "text": "Total cost of revenue",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 1
+            },
+            {
+              "row": 19,
+              "cell": 2,
+              "position": [
+                643,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 2
+            },
+            {
+              "row": 19,
+              "cell": 3,
+              "position": [
+                644,
+                5
+              ],
+              "text": "21,919",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 3
+            },
+            {
+              "row": 19,
+              "cell": 4,
+              "position": [
+                645,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 4
+            },
+            {
+              "row": 19,
+              "cell": 5,
+              "position": [
+                646,
+                5
+              ],
+              "text": "18,505",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 5
+            },
+            {
+              "row": 19,
+              "cell": 6,
+              "position": [
+                647,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 6
+            },
+            {
+              "row": 19,
+              "cell": 7,
+              "position": [
+                648,
+                5
+              ],
+              "text": "63,817",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 7
+            },
+            {
+              "row": 19,
+              "cell": 8,
+              "position": [
+                649,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 8
+            },
+            {
+              "row": 19,
+              "cell": 9,
+              "position": [
+                650,
+                5
+              ],
+              "text": "54,430",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 9
+            }
+          ],
+          "values": [
+            {
+              "value_cell": {
+                "row": 19,
+                "cell": 3,
+                "position": [
+                  644,
+                  5
+                ],
+                "text": "21,919",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 3
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 3,
+                  "position": [
+                    468,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 3
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 19,
+                "cell": 5,
+                "position": [
+                  646,
+                  5
+                ],
+                "text": "18,505",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 5
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 5,
+                  "position": [
+                    470,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 5
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 19,
+                "cell": 7,
+                "position": [
+                  648,
+                  5
+                ],
+                "text": "63,817",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 7
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 7,
+                  "position": [
+                    472,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 19,
+                "cell": 9,
+                "position": [
+                  650,
+                  5
+                ],
+                "text": "54,430",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 9
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 9,
+                  "position": [
+                    474,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 9
+                }
+              ]
+            }
+          ],
+          "status": "structured",
+          "reason": ""
+        },
+        {
+          "row": 22,
+          "label": "Gross margin",
+          "section": {
+            "row": 14,
+            "cell": 1,
+            "position": [
+              587,
+              5
+            ],
+            "text": "Cost of revenue:",
+            "tag": "td",
+            "rowspan": 1,
+            "colspan": 1,
+            "column": 1
+          },
+          "source_cells": [
+            {
+              "row": 22,
+              "cell": 1,
+              "position": [
+                675,
+                5
+              ],
+              "text": "Gross margin",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 1
+            },
+            {
+              "row": 22,
+              "cell": 2,
+              "position": [
+                676,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 2
+            },
+            {
+              "row": 22,
+              "cell": 3,
+              "position": [
+                677,
+                5
+              ],
+              "text": "48,147",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 3
+            },
+            {
+              "row": 22,
+              "cell": 4,
+              "position": [
+                678,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 4
+            },
+            {
+              "row": 22,
+              "cell": 5,
+              "position": [
+                679,
+                5
+              ],
+              "text": "43,353",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 5
+            },
+            {
+              "row": 22,
+              "cell": 6,
+              "position": [
+                680,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 6
+            },
+            {
+              "row": 22,
+              "cell": 7,
+              "position": [
+                681,
+                5
+              ],
+              "text": "141,466",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 7
+            },
+            {
+              "row": 22,
+              "cell": 8,
+              "position": [
+                682,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 8
+            },
+            {
+              "row": 22,
+              "cell": 9,
+              "position": [
+                683,
+                5
+              ],
+              "text": "125,965",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 9
+            }
+          ],
+          "values": [
+            {
+              "value_cell": {
+                "row": 22,
+                "cell": 3,
+                "position": [
+                  677,
+                  5
+                ],
+                "text": "48,147",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 3
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 3,
+                  "position": [
+                    468,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 3
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 22,
+                "cell": 5,
+                "position": [
+                  679,
+                  5
+                ],
+                "text": "43,353",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 5
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 5,
+                  "position": [
+                    470,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 5
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 22,
+                "cell": 7,
+                "position": [
+                  681,
+                  5
+                ],
+                "text": "141,466",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 7
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 7,
+                  "position": [
+                    472,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 22,
+                "cell": 9,
+                "position": [
+                  683,
+                  5
+                ],
+                "text": "125,965",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 9
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 9,
+                  "position": [
+                    474,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 9
+                }
+              ]
+            }
+          ],
+          "status": "structured",
+          "reason": ""
+        },
+        {
+          "row": 23,
+          "label": "Research and development",
+          "section": {
+            "row": 14,
+            "cell": 1,
+            "position": [
+              587,
+              5
+            ],
+            "text": "Cost of revenue:",
+            "tag": "td",
+            "rowspan": 1,
+            "colspan": 1,
+            "column": 1
+          },
+          "source_cells": [
+            {
+              "row": 23,
+              "cell": 1,
+              "position": [
+                686,
+                5
+              ],
+              "text": "Research and development",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 1
+            },
+            {
+              "row": 23,
+              "cell": 2,
+              "position": [
+                687,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 2
+            },
+            {
+              "row": 23,
+              "cell": 3,
+              "position": [
+                688,
+                5
+              ],
+              "text": "8,198",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 3
+            },
+            {
+              "row": 23,
+              "cell": 4,
+              "position": [
+                689,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 4
+            },
+            {
+              "row": 23,
+              "cell": 5,
+              "position": [
+                690,
+                5
+              ],
+              "text": "7,653",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 5
+            },
+            {
+              "row": 23,
+              "cell": 6,
+              "position": [
+                691,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 6
+            },
+            {
+              "row": 23,
+              "cell": 7,
+              "position": [
+                692,
+                5
+              ],
+              "text": "23,659",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 7
+            },
+            {
+              "row": 23,
+              "cell": 8,
+              "position": [
+                693,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 8
+            },
+            {
+              "row": 23,
+              "cell": 9,
+              "position": [
+                694,
+                5
+              ],
+              "text": "21,454",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 9
+            }
+          ],
+          "values": [
+            {
+              "value_cell": {
+                "row": 23,
+                "cell": 3,
+                "position": [
+                  688,
+                  5
+                ],
+                "text": "8,198",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 3
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 3,
+                  "position": [
+                    468,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 3
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 23,
+                "cell": 5,
+                "position": [
+                  690,
+                  5
+                ],
+                "text": "7,653",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 5
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 5,
+                  "position": [
+                    470,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 5
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 23,
+                "cell": 7,
+                "position": [
+                  692,
+                  5
+                ],
+                "text": "23,659",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 7
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 7,
+                  "position": [
+                    472,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 23,
+                "cell": 9,
+                "position": [
+                  694,
+                  5
+                ],
+                "text": "21,454",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 9
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 9,
+                  "position": [
+                    474,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 9
+                }
+              ]
+            }
+          ],
+          "status": "structured",
+          "reason": ""
+        },
+        {
+          "row": 24,
+          "label": "Sales and marketing",
+          "section": {
+            "row": 14,
+            "cell": 1,
+            "position": [
+              587,
+              5
+            ],
+            "text": "Cost of revenue:",
+            "tag": "td",
+            "rowspan": 1,
+            "colspan": 1,
+            "column": 1
+          },
+          "source_cells": [
+            {
+              "row": 24,
+              "cell": 1,
+              "position": [
+                697,
+                5
+              ],
+              "text": "Sales and marketing",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 1
+            },
+            {
+              "row": 24,
+              "cell": 2,
+              "position": [
+                698,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 2
+            },
+            {
+              "row": 24,
+              "cell": 3,
+              "position": [
+                699,
+                5
+              ],
+              "text": "6,212",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 3
+            },
+            {
+              "row": 24,
+              "cell": 4,
+              "position": [
+                700,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 4
+            },
+            {
+              "row": 24,
+              "cell": 5,
+              "position": [
+                701,
+                5
+              ],
+              "text": "6,207",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 5
+            },
+            {
+              "row": 24,
+              "cell": 6,
+              "position": [
+                702,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 6
+            },
+            {
+              "row": 24,
+              "cell": 7,
+              "position": [
+                703,
+                5
+              ],
+              "text": "18,369",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 7
+            },
+            {
+              "row": 24,
+              "cell": 8,
+              "position": [
+                704,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 8
+            },
+            {
+              "row": 24,
+              "cell": 9,
+              "position": [
+                705,
+                5
+              ],
+              "text": "17,640",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 9
+            }
+          ],
+          "values": [
+            {
+              "value_cell": {
+                "row": 24,
+                "cell": 3,
+                "position": [
+                  699,
+                  5
+                ],
+                "text": "6,212",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 3
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 3,
+                  "position": [
+                    468,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 3
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 24,
+                "cell": 5,
+                "position": [
+                  701,
+                  5
+                ],
+                "text": "6,207",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 5
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 5,
+                  "position": [
+                    470,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 5
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 24,
+                "cell": 7,
+                "position": [
+                  703,
+                  5
+                ],
+                "text": "18,369",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 7
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 7,
+                  "position": [
+                    472,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 24,
+                "cell": 9,
+                "position": [
+                  705,
+                  5
+                ],
+                "text": "17,640",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 9
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 9,
+                  "position": [
+                    474,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 9
+                }
+              ]
+            }
+          ],
+          "status": "structured",
+          "reason": ""
+        },
+        {
+          "row": 25,
+          "label": "General and administrative",
+          "section": {
+            "row": 14,
+            "cell": 1,
+            "position": [
+              587,
+              5
+            ],
+            "text": "Cost of revenue:",
+            "tag": "td",
+            "rowspan": 1,
+            "colspan": 1,
+            "column": 1
+          },
+          "source_cells": [
+            {
+              "row": 25,
+              "cell": 1,
+              "position": [
+                708,
+                5
+              ],
+              "text": "General and administrative",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 1
+            },
+            {
+              "row": 25,
+              "cell": 2,
+              "position": [
+                709,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 2
+            },
+            {
+              "row": 25,
+              "cell": 3,
+              "position": [
+                710,
+                5
+              ],
+              "text": "1,737",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 3
+            },
+            {
+              "row": 25,
+              "cell": 4,
+              "position": [
+                711,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 4
+            },
+            {
+              "row": 25,
+              "cell": 5,
+              "position": [
+                712,
+                5
+              ],
+              "text": "1,912",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 5
+            },
+            {
+              "row": 25,
+              "cell": 6,
+              "position": [
+                713,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 6
+            },
+            {
+              "row": 25,
+              "cell": 7,
+              "position": [
+                714,
+                5
+              ],
+              "text": "5,233",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 7
+            },
+            {
+              "row": 25,
+              "cell": 8,
+              "position": [
+                715,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 8
+            },
+            {
+              "row": 25,
+              "cell": 9,
+              "position": [
+                716,
+                5
+              ],
+              "text": "5,363",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 9
+            }
+          ],
+          "values": [
+            {
+              "value_cell": {
+                "row": 25,
+                "cell": 3,
+                "position": [
+                  710,
+                  5
+                ],
+                "text": "1,737",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 3
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 3,
+                  "position": [
+                    468,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 3
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 25,
+                "cell": 5,
+                "position": [
+                  712,
+                  5
+                ],
+                "text": "1,912",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 5
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 5,
+                  "position": [
+                    470,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 5
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 25,
+                "cell": 7,
+                "position": [
+                  714,
+                  5
+                ],
+                "text": "5,233",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 7
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 7,
+                  "position": [
+                    472,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 25,
+                "cell": 9,
+                "position": [
+                  716,
+                  5
+                ],
+                "text": "5,363",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 9
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 9,
+                  "position": [
+                    474,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 9
+                }
+              ]
+            }
+          ],
+          "status": "structured",
+          "reason": ""
+        },
+        {
+          "row": 28,
+          "label": "Operating income",
+          "section": {
+            "row": 14,
+            "cell": 1,
+            "position": [
+              587,
+              5
+            ],
+            "text": "Cost of revenue:",
+            "tag": "td",
+            "rowspan": 1,
+            "colspan": 1,
+            "column": 1
+          },
+          "source_cells": [
+            {
+              "row": 28,
+              "cell": 1,
+              "position": [
+                741,
+                5
+              ],
+              "text": "Operating income",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 1
+            },
+            {
+              "row": 28,
+              "cell": 2,
+              "position": [
+                742,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 2
+            },
+            {
+              "row": 28,
+              "cell": 3,
+              "position": [
+                743,
+                5
+              ],
+              "text": "32,000",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 3
+            },
+            {
+              "row": 28,
+              "cell": 4,
+              "position": [
+                744,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 4
+            },
+            {
+              "row": 28,
+              "cell": 5,
+              "position": [
+                745,
+                5
+              ],
+              "text": "27,581",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 5
+            },
+            {
+              "row": 28,
+              "cell": 6,
+              "position": [
+                746,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 6
+            },
+            {
+              "row": 28,
+              "cell": 7,
+              "position": [
+                747,
+                5
+              ],
+              "text": "94,205",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 7
+            },
+            {
+              "row": 28,
+              "cell": 8,
+              "position": [
+                748,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 8
+            },
+            {
+              "row": 28,
+              "cell": 9,
+              "position": [
+                749,
+                5
+              ],
+              "text": "81,508",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 9
+            }
+          ],
+          "values": [
+            {
+              "value_cell": {
+                "row": 28,
+                "cell": 3,
+                "position": [
+                  743,
+                  5
+                ],
+                "text": "32,000",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 3
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 3,
+                  "position": [
+                    468,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 3
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 28,
+                "cell": 5,
+                "position": [
+                  745,
+                  5
+                ],
+                "text": "27,581",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 5
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 5,
+                  "position": [
+                    470,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 5
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 28,
+                "cell": 7,
+                "position": [
+                  747,
+                  5
+                ],
+                "text": "94,205",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 7
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 7,
+                  "position": [
+                    472,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 28,
+                "cell": 9,
+                "position": [
+                  749,
+                  5
+                ],
+                "text": "81,508",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 9
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 9,
+                  "position": [
+                    474,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 9
+                }
+              ]
+            }
+          ],
+          "status": "structured",
+          "reason": ""
+        },
+        {
+          "row": 36,
+          "label": "Net income",
+          "section": {
+            "row": 14,
+            "cell": 1,
+            "position": [
+              587,
+              5
+            ],
+            "text": "Cost of revenue:",
+            "tag": "td",
+            "rowspan": 1,
+            "colspan": 1,
+            "column": 1
+          },
+          "source_cells": [
+            {
+              "row": 36,
+              "cell": 1,
+              "position": [
+                829,
+                5
+              ],
+              "text": "Net income",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 1
+            },
+            {
+              "row": 36,
+              "cell": 2,
+              "position": [
+                830,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 2
+            },
+            {
+              "row": 36,
+              "cell": 3,
+              "position": [
+                831,
+                5
+              ],
+              "text": "$25,824",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 3
+            },
+            {
+              "row": 36,
+              "cell": 4,
+              "position": [
+                832,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 4
+            },
+            {
+              "row": 36,
+              "cell": 5,
+              "position": [
+                833,
+                5
+              ],
+              "text": "$21,939",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 5
+            },
+            {
+              "row": 36,
+              "cell": 6,
+              "position": [
+                834,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 6
+            },
+            {
+              "row": 36,
+              "cell": 7,
+              "position": [
+                835,
+                5
+              ],
+              "text": "$74,599",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 7
+            },
+            {
+              "row": 36,
+              "cell": 8,
+              "position": [
+                836,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 8
+            },
+            {
+              "row": 36,
+              "cell": 9,
+              "position": [
+                837,
+                5
+              ],
+              "text": "$66,100",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 9
+            }
+          ],
+          "values": [
+            {
+              "value_cell": {
+                "row": 36,
+                "cell": 3,
+                "position": [
+                  831,
+                  5
+                ],
+                "text": "$25,824",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 3
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 3,
+                  "position": [
+                    468,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 3
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 36,
+                "cell": 5,
+                "position": [
+                  833,
+                  5
+                ],
+                "text": "$21,939",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 5
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    461,
+                    5
+                  ],
+                  "text": "Three Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 5,
+                  "position": [
+                    470,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 5
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 36,
+                "cell": 7,
+                "position": [
+                  835,
+                  5
+                ],
+                "text": "$74,599",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 7
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 7,
+                  "position": [
+                    472,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 36,
+                "cell": 9,
+                "position": [
+                  837,
+                  5
+                ],
+                "text": "$66,100",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 9
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    463,
+                    5
+                  ],
+                  "text": "Nine Months Ended March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 9,
+                  "position": [
+                    474,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 9
+                }
+              ]
+            }
+          ],
+          "status": "structured",
+          "reason": ""
+        }
+      ],
+      "headers": [
+        {
+          "row": 2,
+          "cell": 3,
+          "position": [
+            461,
+            5
+          ],
+          "text": "Three Months Ended March 31,",
+          "tag": "td",
+          "rowspan": 1,
+          "colspan": 3,
+          "column": 3
+        },
+        {
+          "row": 2,
+          "cell": 5,
+          "position": [
+            463,
+            5
+          ],
+          "text": "Nine Months Ended March 31,",
+          "tag": "td",
+          "rowspan": 1,
+          "colspan": 3,
+          "column": 7
+        },
+        {
+          "row": 3,
+          "cell": 3,
+          "position": [
+            468,
+            5
+          ],
+          "text": "2025",
+          "tag": "td",
+          "rowspan": 1,
+          "colspan": 1,
+          "column": 3
+        },
+        {
+          "row": 3,
+          "cell": 5,
+          "position": [
+            470,
+            5
+          ],
+          "text": "2024",
+          "tag": "td",
+          "rowspan": 1,
+          "colspan": 1,
+          "column": 5
+        },
+        {
+          "row": 3,
+          "cell": 7,
+          "position": [
+            472,
+            5
+          ],
+          "text": "2025",
+          "tag": "td",
+          "rowspan": 1,
+          "colspan": 1,
+          "column": 7
+        },
+        {
+          "row": 3,
+          "cell": 9,
+          "position": [
+            474,
+            5
+          ],
+          "text": "2024",
+          "tag": "td",
+          "rowspan": 1,
+          "colspan": 1,
+          "column": 9
+        }
+      ],
+      "units": [
+        {
+          "text": "(In millions, except per share amounts) (Unaudited)",
+          "position": [
+            445,
+            1053
+          ]
+        }
+      ],
+      "omitted_candidate_rows": 3,
+      "omitted_row_labels": [
+        "Other expense, net",
+        "Income before income taxes",
+        "Provision for income taxes"
+      ]
+    },
+    {
+      "table": 5,
+      "position": [
+        954,
+        3
+      ],
+      "context": [
+        {
+          "text": "COMPREHENSIVE INCOME STATEMENTS",
+          "position": [
+            953,
+            300
+          ]
+        },
+        {
+          "text": "(In millions) (Unaudited)",
+          "position": [
+            953,
+            569
+          ]
+        }
+      ],
+      "status": "structured",
+      "notes": [
+        "Source cell text and spans only; no currency-code inference, arithmetic, annual substitution or normalized observations. Blank and currency/sign cells remain in source_cells."
+      ],
+      "rows": [
+        {
+          "row": 7,
+          "label": "Net income",
+          "section": null,
+          "source_cells": [
+            {
+              "row": 7,
+              "cell": 1,
+              "position": [
+                1014,
+                5
+              ],
+              "text": "Net income",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 1
+            },
+            {
+              "row": 7,
+              "cell": 2,
+              "position": [
+                1015,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 2
+            },
+            {
+              "row": 7,
+              "cell": 3,
+              "position": [
+                1016,
+                5
+              ],
+              "text": "$25,824",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 3
+            },
+            {
+              "row": 7,
+              "cell": 4,
+              "position": [
+                1017,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 4
+            },
+            {
+              "row": 7,
+              "cell": 5,
+              "position": [
+                1018,
+                5
+              ],
+              "text": "$21,939",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 5
+            },
+            {
+              "row": 7,
+              "cell": 6,
+              "position": [
+                1019,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 6
+            },
+            {
+              "row": 7,
+              "cell": 7,
+              "position": [
+                1020,
+                5
+              ],
+              "text": "$74,599",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 7
+            },
+            {
+              "row": 7,
+              "cell": 8,
+              "position": [
+                1021,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 8
+            },
+            {
+              "row": 7,
+              "cell": 9,
+              "position": [
+                1022,
+                5
+              ],
+              "text": "$66,100",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 9
+            }
+          ],
+          "values": [
+            {
+              "value_cell": {
+                "row": 7,
+                "cell": 3,
+                "position": [
+                  1016,
+                  5
+                ],
+                "text": "$25,824",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 3
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    969,
+                    5
+                  ],
+                  "text": "Three Months Ended",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 3,
+                  "position": [
+                    976,
+                    5
+                  ],
+                  "text": "March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 4,
+                  "cell": 3,
+                  "position": [
+                    983,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 3
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 7,
+                "cell": 5,
+                "position": [
+                  1018,
+                  5
+                ],
+                "text": "$21,939",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 5
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    969,
+                    5
+                  ],
+                  "text": "Three Months Ended",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 3,
+                  "position": [
+                    976,
+                    5
+                  ],
+                  "text": "March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 4,
+                  "cell": 5,
+                  "position": [
+                    985,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 5
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 7,
+                "cell": 7,
+                "position": [
+                  1020,
+                  5
+                ],
+                "text": "$74,599",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 7
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    971,
+                    5
+                  ],
+                  "text": "Nine Months Ended",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 5,
+                  "position": [
+                    978,
+                    5
+                  ],
+                  "text": "March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 4,
+                  "cell": 7,
+                  "position": [
+                    987,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 7,
+                "cell": 9,
+                "position": [
+                  1022,
+                  5
+                ],
+                "text": "$66,100",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 9
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    971,
+                    5
+                  ],
+                  "text": "Nine Months Ended",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 5,
+                  "position": [
+                    978,
+                    5
+                  ],
+                  "text": "March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 4,
+                  "cell": 9,
+                  "position": [
+                    989,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 9
+                }
+              ]
+            }
+          ],
+          "status": "structured",
+          "reason": ""
+        }
+      ],
+      "headers": [
+        {
+          "row": 2,
+          "cell": 3,
+          "position": [
+            969,
+            5
+          ],
+          "text": "Three Months Ended",
+          "tag": "td",
+          "rowspan": 1,
+          "colspan": 3,
+          "column": 3
+        },
+        {
+          "row": 2,
+          "cell": 5,
+          "position": [
+            971,
+            5
+          ],
+          "text": "Nine Months Ended",
+          "tag": "td",
+          "rowspan": 1,
+          "colspan": 3,
+          "column": 7
+        },
+        {
+          "row": 3,
+          "cell": 3,
+          "position": [
+            976,
+            5
+          ],
+          "text": "March 31,",
+          "tag": "td",
+          "rowspan": 1,
+          "colspan": 3,
+          "column": 3
+        },
+        {
+          "row": 3,
+          "cell": 5,
+          "position": [
+            978,
+            5
+          ],
+          "text": "March 31,",
+          "tag": "td",
+          "rowspan": 1,
+          "colspan": 3,
+          "column": 7
+        },
+        {
+          "row": 4,
+          "cell": 3,
+          "position": [
+            983,
+            5
+          ],
+          "text": "2025",
+          "tag": "td",
+          "rowspan": 1,
+          "colspan": 1,
+          "column": 3
+        },
+        {
+          "row": 4,
+          "cell": 5,
+          "position": [
+            985,
+            5
+          ],
+          "text": "2024",
+          "tag": "td",
+          "rowspan": 1,
+          "colspan": 1,
+          "column": 5
+        },
+        {
+          "row": 4,
+          "cell": 7,
+          "position": [
+            987,
+            5
+          ],
+          "text": "2025",
+          "tag": "td",
+          "rowspan": 1,
+          "colspan": 1,
+          "column": 7
+        },
+        {
+          "row": 4,
+          "cell": 9,
+          "position": [
+            989,
+            5
+          ],
+          "text": "2024",
+          "tag": "td",
+          "rowspan": 1,
+          "colspan": 1,
+          "column": 9
+        }
+      ],
+      "units": [
+        {
+          "text": "(In millions) (Unaudited)",
+          "position": [
+            953,
+            569
+          ]
+        }
+      ],
+      "omitted_candidate_rows": 0,
+      "omitted_row_labels": []
+    },
+    {
+      "table": 6,
+      "position": [
+        1172,
+        3
+      ],
+      "context": [
+        {
+          "text": "BALANCE SHEETS",
+          "position": [
+            1171,
+            300
+          ]
+        },
+        {
+          "text": "(In millions) (Unaudited)",
+          "position": [
+            1171,
+            552
+          ]
+        }
+      ],
+      "status": "structured",
+      "notes": [
+        "Source cell text and spans only; no currency-code inference, arithmetic, annual substitution or normalized observations. Blank and currency/sign cells remain in source_cells."
+      ],
+      "rows": [
+        {
+          "row": 26,
+          "label": "Total assets",
+          "section": {
+            "row": 6,
+            "cell": 1,
+            "position": [
+              1209,
+              5
+            ],
+            "text": "Current assets:",
+            "tag": "td",
+            "rowspan": 1,
+            "colspan": 1,
+            "column": 1
+          },
+          "source_cells": [
+            {
+              "row": 26,
+              "cell": 1,
+              "position": [
+                1349,
+                5
+              ],
+              "text": "Total assets",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 1
+            },
+            {
+              "row": 26,
+              "cell": 2,
+              "position": [
+                1350,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 2
+            },
+            {
+              "row": 26,
+              "cell": 3,
+              "position": [
+                1351,
+                5
+              ],
+              "text": "$562,624",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 3
+            },
+            {
+              "row": 26,
+              "cell": 4,
+              "position": [
+                1352,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 4
+            },
+            {
+              "row": 26,
+              "cell": 5,
+              "position": [
+                1353,
+                5
+              ],
+              "text": "$512,163",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 5
+            }
+          ],
+          "values": [
+            {
+              "value_cell": {
+                "row": 26,
+                "cell": 3,
+                "position": [
+                  1351,
+                  5
+                ],
+                "text": "$562,624",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 3
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    1183,
+                    5
+                  ],
+                  "text": "March 31, 2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 3
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 26,
+                "cell": 5,
+                "position": [
+                  1353,
+                  5
+                ],
+                "text": "$512,163",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 5
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    1185,
+                    5
+                  ],
+                  "text": "June 30, 2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 5
+                }
+              ]
+            }
+          ],
+          "status": "structured",
+          "reason": ""
+        },
+        {
+          "row": 36,
+          "label": "Short-term unearned revenue",
+          "section": {
+            "row": 30,
+            "cell": 1,
+            "position": [
+              1377,
+              5
+            ],
+            "text": "Current liabilities:",
+            "tag": "td",
+            "rowspan": 1,
+            "colspan": 1,
+            "column": 1
+          },
+          "source_cells": [
+            {
+              "row": 36,
+              "cell": 1,
+              "position": [
+                1419,
+                5
+              ],
+              "text": "Short-term unearned revenue",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 1
+            },
+            {
+              "row": 36,
+              "cell": 2,
+              "position": [
+                1420,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 2
+            },
+            {
+              "row": 36,
+              "cell": 3,
+              "position": [
+                1421,
+                5
+              ],
+              "text": "44,636",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 3
+            },
+            {
+              "row": 36,
+              "cell": 4,
+              "position": [
+                1422,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 4
+            },
+            {
+              "row": 36,
+              "cell": 5,
+              "position": [
+                1423,
+                5
+              ],
+              "text": "57,582",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 5
+            }
+          ],
+          "values": [
+            {
+              "value_cell": {
+                "row": 36,
+                "cell": 3,
+                "position": [
+                  1421,
+                  5
+                ],
+                "text": "44,636",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 3
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    1183,
+                    5
+                  ],
+                  "text": "March 31, 2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 3
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 36,
+                "cell": 5,
+                "position": [
+                  1423,
+                  5
+                ],
+                "text": "57,582",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 5
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    1185,
+                    5
+                  ],
+                  "text": "June 30, 2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 5
+                }
+              ]
+            }
+          ],
+          "status": "structured",
+          "reason": ""
+        },
+        {
+          "row": 43,
+          "label": "Long-term unearned revenue",
+          "section": {
+            "row": 30,
+            "cell": 1,
+            "position": [
+              1377,
+              5
+            ],
+            "text": "Current liabilities:",
+            "tag": "td",
+            "rowspan": 1,
+            "colspan": 1,
+            "column": 1
+          },
+          "source_cells": [
+            {
+              "row": 43,
+              "cell": 1,
+              "position": [
+                1468,
+                5
+              ],
+              "text": "Long-term unearned revenue",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 1
+            },
+            {
+              "row": 43,
+              "cell": 2,
+              "position": [
+                1469,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 2
+            },
+            {
+              "row": 43,
+              "cell": 3,
+              "position": [
+                1470,
+                5
+              ],
+              "text": "2,840",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 3
+            },
+            {
+              "row": 43,
+              "cell": 4,
+              "position": [
+                1471,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 4
+            },
+            {
+              "row": 43,
+              "cell": 5,
+              "position": [
+                1472,
+                5
+              ],
+              "text": "2,602",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 5
+            }
+          ],
+          "values": [
+            {
+              "value_cell": {
+                "row": 43,
+                "cell": 3,
+                "position": [
+                  1470,
+                  5
+                ],
+                "text": "2,840",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 3
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    1183,
+                    5
+                  ],
+                  "text": "March 31, 2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 3
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 43,
+                "cell": 5,
+                "position": [
+                  1472,
+                  5
+                ],
+                "text": "2,602",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 5
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    1185,
+                    5
+                  ],
+                  "text": "June 30, 2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 5
+                }
+              ]
+            }
+          ],
+          "status": "structured",
+          "reason": ""
+        },
+        {
+          "row": 49,
+          "label": "Total liabilities",
+          "section": {
+            "row": 30,
+            "cell": 1,
+            "position": [
+              1377,
+              5
+            ],
+            "text": "Current liabilities:",
+            "tag": "td",
+            "rowspan": 1,
+            "colspan": 1,
+            "column": 1
+          },
+          "source_cells": [
+            {
+              "row": 49,
+              "cell": 1,
+              "position": [
+                1510,
+                5
+              ],
+              "text": "Total liabilities",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 1
+            },
+            {
+              "row": 49,
+              "cell": 2,
+              "position": [
+                1511,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 2
+            },
+            {
+              "row": 49,
+              "cell": 3,
+              "position": [
+                1512,
+                5
+              ],
+              "text": "240,733",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 3
+            },
+            {
+              "row": 49,
+              "cell": 4,
+              "position": [
+                1513,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 4
+            },
+            {
+              "row": 49,
+              "cell": 5,
+              "position": [
+                1514,
+                5
+              ],
+              "text": "243,686",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 5
+            }
+          ],
+          "values": [
+            {
+              "value_cell": {
+                "row": 49,
+                "cell": 3,
+                "position": [
+                  1512,
+                  5
+                ],
+                "text": "240,733",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 3
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    1183,
+                    5
+                  ],
+                  "text": "March 31, 2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 3
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 49,
+                "cell": 5,
+                "position": [
+                  1514,
+                  5
+                ],
+                "text": "243,686",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 5
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    1185,
+                    5
+                  ],
+                  "text": "June 30, 2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 5
+                }
+              ]
+            }
+          ],
+          "status": "structured",
+          "reason": ""
+        },
+        {
+          "row": 62,
+          "label": "Total liabilities and stockholders' equity",
+          "section": {
+            "row": 53,
+            "cell": 1,
+            "position": [
+              1538,
+              5
+            ],
+            "text": "Stockholders' equity:",
+            "tag": "td",
+            "rowspan": 1,
+            "colspan": 1,
+            "column": 1
+          },
+          "source_cells": [
+            {
+              "row": 62,
+              "cell": 1,
+              "position": [
+                1601,
+                5
+              ],
+              "text": "Total liabilities and stockholders' equity",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 1
+            },
+            {
+              "row": 62,
+              "cell": 2,
+              "position": [
+                1602,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 2
+            },
+            {
+              "row": 62,
+              "cell": 3,
+              "position": [
+                1603,
+                5
+              ],
+              "text": "$562,624",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 3
+            },
+            {
+              "row": 62,
+              "cell": 4,
+              "position": [
+                1604,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 4
+            },
+            {
+              "row": 62,
+              "cell": 5,
+              "position": [
+                1605,
+                5
+              ],
+              "text": "$512,163",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 5
+            }
+          ],
+          "values": [
+            {
+              "value_cell": {
+                "row": 62,
+                "cell": 3,
+                "position": [
+                  1603,
+                  5
+                ],
+                "text": "$562,624",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 3
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    1183,
+                    5
+                  ],
+                  "text": "March 31, 2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 3
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 62,
+                "cell": 5,
+                "position": [
+                  1605,
+                  5
+                ],
+                "text": "$512,163",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 5
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    1185,
+                    5
+                  ],
+                  "text": "June 30, 2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 5
+                }
+              ]
+            }
+          ],
+          "status": "structured",
+          "reason": ""
+        }
+      ],
+      "headers": [
+        {
+          "row": 2,
+          "cell": 3,
+          "position": [
+            1183,
+            5
+          ],
+          "text": "March 31, 2025",
+          "tag": "td",
+          "rowspan": 1,
+          "colspan": 1,
+          "column": 3
+        },
+        {
+          "row": 2,
+          "cell": 5,
+          "position": [
+            1185,
+            5
+          ],
+          "text": "June 30, 2024",
+          "tag": "td",
+          "rowspan": 1,
+          "colspan": 1,
+          "column": 5
+        }
+      ],
+      "units": [
+        {
+          "text": "(In millions) (Unaudited)",
+          "position": [
+            1171,
+            552
+          ]
+        }
+      ],
+      "omitted_candidate_rows": 0,
+      "omitted_row_labels": []
+    },
+    {
+      "table": 7,
+      "position": [
+        1619,
+        3
+      ],
+      "context": [
+        {
+          "text": "CASH FLOWS STATEMENTS",
+          "position": [
+            1618,
+            300
+          ]
+        },
+        {
+          "text": "(In millions) (Unaudited)",
+          "position": [
+            1618,
+            559
+          ]
+        }
+      ],
+      "status": "structured",
+      "notes": [
+        "Source cell text and spans only; no currency-code inference, arithmetic, annual substitution or normalized observations. Blank and currency/sign cells remain in source_cells."
+      ],
+      "rows": [
+        {
+          "row": 8,
+          "label": "Net income",
+          "section": {
+            "row": 7,
+            "cell": 1,
+            "position": [
+              1679,
+              5
+            ],
+            "text": "Operations",
+            "tag": "td",
+            "rowspan": 1,
+            "colspan": 1,
+            "column": 1
+          },
+          "source_cells": [
+            {
+              "row": 8,
+              "cell": 1,
+              "position": [
+                1690,
+                5
+              ],
+              "text": "Net income",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 1
+            },
+            {
+              "row": 8,
+              "cell": 2,
+              "position": [
+                1691,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 2
+            },
+            {
+              "row": 8,
+              "cell": 3,
+              "position": [
+                1692,
+                5
+              ],
+              "text": "$25,824",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 3
+            },
+            {
+              "row": 8,
+              "cell": 4,
+              "position": [
+                1693,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 4
+            },
+            {
+              "row": 8,
+              "cell": 5,
+              "position": [
+                1694,
+                5
+              ],
+              "text": "$21,939",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 5
+            },
+            {
+              "row": 8,
+              "cell": 6,
+              "position": [
+                1695,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 6
+            },
+            {
+              "row": 8,
+              "cell": 7,
+              "position": [
+                1696,
+                5
+              ],
+              "text": "$74,599",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 7
+            },
+            {
+              "row": 8,
+              "cell": 8,
+              "position": [
+                1697,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 8
+            },
+            {
+              "row": 8,
+              "cell": 9,
+              "position": [
+                1698,
+                5
+              ],
+              "text": "$66,100",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 9
+            }
+          ],
+          "values": [
+            {
+              "value_cell": {
+                "row": 8,
+                "cell": 3,
+                "position": [
+                  1692,
+                  5
+                ],
+                "text": "$25,824",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 3
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    1634,
+                    5
+                  ],
+                  "text": "Three Months Ended",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 3,
+                  "position": [
+                    1641,
+                    5
+                  ],
+                  "text": "March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 4,
+                  "cell": 3,
+                  "position": [
+                    1648,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 3
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 8,
+                "cell": 5,
+                "position": [
+                  1694,
+                  5
+                ],
+                "text": "$21,939",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 5
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    1634,
+                    5
+                  ],
+                  "text": "Three Months Ended",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 3,
+                  "position": [
+                    1641,
+                    5
+                  ],
+                  "text": "March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 4,
+                  "cell": 5,
+                  "position": [
+                    1650,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 5
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 8,
+                "cell": 7,
+                "position": [
+                  1696,
+                  5
+                ],
+                "text": "$74,599",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 7
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    1636,
+                    5
+                  ],
+                  "text": "Nine Months Ended",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 5,
+                  "position": [
+                    1643,
+                    5
+                  ],
+                  "text": "March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 4,
+                  "cell": 7,
+                  "position": [
+                    1652,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 8,
+                "cell": 9,
+                "position": [
+                  1698,
+                  5
+                ],
+                "text": "$66,100",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 9
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    1636,
+                    5
+                  ],
+                  "text": "Nine Months Ended",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 5,
+                  "position": [
+                    1643,
+                    5
+                  ],
+                  "text": "March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 4,
+                  "cell": 9,
+                  "position": [
+                    1654,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 9
+                }
+              ]
+            }
+          ],
+          "status": "structured",
+          "reason": ""
+        },
+        {
+          "row": 20,
+          "label": "Unearned revenue",
+          "section": {
+            "row": 14,
+            "cell": 1,
+            "position": [
+              1756,
+              5
+            ],
+            "text": "Changes in operating assets and liabilities:",
+            "tag": "td",
+            "rowspan": 1,
+            "colspan": 1,
+            "column": 1
+          },
+          "source_cells": [
+            {
+              "row": 20,
+              "cell": 1,
+              "position": [
+                1822,
+                5
+              ],
+              "text": "Unearned revenue",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 1
+            },
+            {
+              "row": 20,
+              "cell": 2,
+              "position": [
+                1823,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 2
+            },
+            {
+              "row": 20,
+              "cell": 3,
+              "position": [
+                1824,
+                5
+              ],
+              "text": "(1,032)",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 3
+            },
+            {
+              "row": 20,
+              "cell": 4,
+              "position": [
+                1825,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 4
+            },
+            {
+              "row": 20,
+              "cell": 5,
+              "position": [
+                1826,
+                5
+              ],
+              "text": "(645)",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 5
+            },
+            {
+              "row": 20,
+              "cell": 6,
+              "position": [
+                1827,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 6
+            },
+            {
+              "row": 20,
+              "cell": 7,
+              "position": [
+                1828,
+                5
+              ],
+              "text": "(12,923)",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 7
+            },
+            {
+              "row": 20,
+              "cell": 8,
+              "position": [
+                1829,
+                5
+              ],
+              "text": "",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 8
+            },
+            {
+              "row": 20,
+              "cell": 9,
+              "position": [
+                1830,
+                5
+              ],
+              "text": "(10,309)",
+              "tag": "td",
+              "rowspan": 1,
+              "colspan": 1,
+              "column": 9
+            }
+          ],
+          "values": [
+            {
+              "value_cell": {
+                "row": 20,
+                "cell": 3,
+                "position": [
+                  1824,
+                  5
+                ],
+                "text": "(1,032)",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 3
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    1634,
+                    5
+                  ],
+                  "text": "Three Months Ended",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 3,
+                  "position": [
+                    1641,
+                    5
+                  ],
+                  "text": "March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 4,
+                  "cell": 3,
+                  "position": [
+                    1648,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 3
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 20,
+                "cell": 5,
+                "position": [
+                  1826,
+                  5
+                ],
+                "text": "(645)",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 5
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 3,
+                  "position": [
+                    1634,
+                    5
+                  ],
+                  "text": "Three Months Ended",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 3,
+                  "cell": 3,
+                  "position": [
+                    1641,
+                    5
+                  ],
+                  "text": "March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 3
+                },
+                {
+                  "row": 4,
+                  "cell": 5,
+                  "position": [
+                    1650,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 5
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 20,
+                "cell": 7,
+                "position": [
+                  1828,
+                  5
+                ],
+                "text": "(12,923)",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 7
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    1636,
+                    5
+                  ],
+                  "text": "Nine Months Ended",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 5,
+                  "position": [
+                    1643,
+                    5
+                  ],
+                  "text": "March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 4,
+                  "cell": 7,
+                  "position": [
+                    1652,
+                    5
+                  ],
+                  "text": "2025",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 7
+                }
+              ]
+            },
+            {
+              "value_cell": {
+                "row": 20,
+                "cell": 9,
+                "position": [
+                  1830,
+                  5
+                ],
+                "text": "(10,309)",
+                "tag": "td",
+                "rowspan": 1,
+                "colspan": 1,
+                "column": 9
+              },
+              "column_headers": [
+                {
+                  "row": 2,
+                  "cell": 5,
+                  "position": [
+                    1636,
+                    5
+                  ],
+                  "text": "Nine Months Ended",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 3,
+                  "cell": 5,
+                  "position": [
+                    1643,
+                    5
+                  ],
+                  "text": "March 31,",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 3,
+                  "column": 7
+                },
+                {
+                  "row": 4,
+                  "cell": 9,
+                  "position": [
+                    1654,
+                    5
+                  ],
+                  "text": "2024",
+                  "tag": "td",
+                  "rowspan": 1,
+                  "colspan": 1,
+                  "column": 9
+                }
+              ]
+            }
+          ],
+          "status": "structured",
+          "reason": ""
+        }
+      ],
+      "headers": [
+        {
+          "row": 2,
+          "cell": 3,
+          "position": [
+            1634,
+            5
+          ],
+          "text": "Three Months Ended",
+          "tag": "td",
+          "rowspan": 1,
+          "colspan": 3,
+          "column": 3
+        },
+        {
+          "row": 2,
+          "cell": 5,
+          "position": [
+            1636,
+            5
+          ],
+          "text": "Nine Months Ended",
+          "tag": "td",
+          "rowspan": 1,
+          "colspan": 3,
+          "column": 7
+        },
+        {
+          "row": 3,
+          "cell": 3,
+          "position": [
+            1641,
+            5
+          ],
+          "text": "March 31,",
+          "tag": "td",
+          "rowspan": 1,
+          "colspan": 3,
+          "column": 3
+        },
+        {
+          "row": 3,
+          "cell": 5,
+          "position": [
+            1643,
+            5
+          ],
+          "text": "March 31,",
+          "tag": "td",
+          "rowspan": 1,
+          "colspan": 3,
+          "column": 7
+        },
+        {
+          "row": 4,
+          "cell": 3,
+          "position": [
+            1648,
+            5
+          ],
+          "text": "2025",
+          "tag": "td",
+          "rowspan": 1,
+          "colspan": 1,
+          "column": 3
+        },
+        {
+          "row": 4,
+          "cell": 5,
+          "position": [
+            1650,
+            5
+          ],
+          "text": "2024",
+          "tag": "td",
+          "rowspan": 1,
+          "colspan": 1,
+          "column": 5
+        },
+        {
+          "row": 4,
+          "cell": 7,
+          "position": [
+            1652,
+            5
+          ],
+          "text": "2025",
+          "tag": "td",
+          "rowspan": 1,
+          "colspan": 1,
+          "column": 7
+        },
+        {
+          "row": 4,
+          "cell": 9,
+          "position": [
+            1654,
+            5
+          ],
+          "text": "2024",
+          "tag": "td",
+          "rowspan": 1,
+          "colspan": 1,
+          "column": 9
+        }
+      ],
+      "units": [
+        {
+          "text": "(In millions) (Unaudited)",
+          "position": [
+            1618,
+            559
+          ]
+        }
+      ],
+      "omitted_candidate_rows": 0,
+      "omitted_row_labels": []
+    }
+  ],
+  "notes": [
+    "Selected at most 4 financial tables, 12 rows per table and eight values per row; header limit 12 rows. 1 additional candidate tables omitted.",
+    "Table 1 unsupported: No supported metric-row layout; column-oriented or fragmented measures are not transposed by guessing."
+  ],
+  "evaluated_at": "2026-10-25T10:53:46.524572+00:00",
+  "parser_sha256": "e464245d78af2812c10de1bf028f65039c5257ef03fbe19383bebcc0b4d38c25"
+}

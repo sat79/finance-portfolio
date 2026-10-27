@@ -1,0 +1,28 @@
+{
+  "attempts": [
+    {
+      "url": "https://data.sec.gov/submissions/CIK0000320193.json",
+      "attempted_at": "2026-10-25T00:10:57.922807+00:00",
+      "status": "retrieved",
+      "retrieved_at": "2026-10-25T00:10:58.661880+00:00",
+      "cached": false,
+      "sha256": "5891cf875f690e38f26ca628f7091184c9d73ca34ca7646b9cecd5013aeac4ab"
+    }
+  ],
+  "rows": [
+    {
+      "accessionNumber": "0001140361-25-018400",
+      "form": "8-K",
+      "filingDate": "2025-05-12",
+      "reportDate": "2025-05-05",
+      "primaryDocument": "ef20048691_8k.htm"
+    },
+    {
+      "accessionNumber": "0000320193-25-000055",
+      "form": "8-K",
+      "filingDate": "2025-05-01",
+      "reportDate": "2025-05-01",
+      "primaryDocument": "aapl-20250501.htm"
+    }
+  ]
+}

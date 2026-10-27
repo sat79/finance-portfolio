@@ -1,0 +1,41 @@
+{
+  "annual_revenue_growth": {
+    "value": "59.78770660259478483948066390",
+    "unit": "percent",
+    "formula": "(FY2025 revenue / FY2024 revenue - 1) * 100",
+    "citations": [
+      "F41c1bef463b894b62aa0",
+      "Fcca88fe8bd6a79f4c722"
+    ],
+    "warning": "Reported consolidated growth, not organic or constant-currency; Hepsiburada/IAS 29 scope effects."
+  },
+  "annual_group_profit_growth": {
+    "value": "1.028827611526502743098727000",
+    "unit": "percent",
+    "formula": "(FY2025 group net income / FY2024 group net income - 1) * 100",
+    "citations": [
+      "Fd263c4ad59b3d9845882",
+      "F45938352051ff703ee85"
+    ],
+    "warning": "Group net income, not parent-attributable profit; scope changed."
+  },
+  "net_margin_2024": {
+    "value": "41.73652808120826678924995142",
+    "unit": "percent",
+    "formula": "FY2024 group net income / FY2024 revenue * 100",
+    "citations": [
+      "F45938352051ff703ee85",
+      "Fcca88fe8bd6a79f4c722"
+    ]
+  },
+  "net_margin_2025": {
+    "value": "26.38871656820908366974998480",
+    "unit": "percent",
+    "formula": "FY2025 group net income / FY2025 revenue * 100",
+    "citations": [
+      "Fd263c4ad59b3d9845882",
+      "F41c1bef463b894b62aa0"
+    ],
+    "warning": "Mixed group business model; not an operating margin or organic profitability comparison."
+  }
+}

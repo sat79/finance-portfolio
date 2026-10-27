@@ -1,0 +1,14 @@
+{
+  "input_token_allowance": 39788,
+  "max_output_tokens": 1200,
+  "reserved_cost_usd": "0.044588",
+  "pricing": "User-configured rates; not a billing quote",
+  "executed": false,
+  "paid_calls": 0,
+  "spend_usd": "0",
+  "pricing_status": "Illustrative unverified scenario only: $1 per million input tokens and $4 per million output tokens. Select model and verify current prices before explicit authorization.",
+  "proposed_single_run_cap_usd": "0.10",
+  "serialized_packet_bytes": 44765,
+  "packet_sha256": "8547a0a476984f28ff29ebe9feb9ec13cdcfca5c4c149a67f32408dd0b46be54",
+  "authorization_required": true
+}

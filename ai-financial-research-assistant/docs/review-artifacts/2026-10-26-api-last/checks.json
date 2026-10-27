@@ -1,0 +1,30 @@
+{
+  "existing_environment_suite": {
+    "passed": 232,
+    "seconds": 19.17
+  },
+  "fresh_linux_venv_suite": {
+    "passed": 232,
+    "seconds": 18.09
+  },
+  "lint": "passed",
+  "formatting": "58 files already formatted",
+  "pip_check": "No broken requirements found",
+  "launcher": "bash scripts/start.sh, localhost port 8525; Python 3.12; real browser acceptance",
+  "browser_source": "summary.json; refreshed original sources, no replay",
+  "intel_mac": {
+    "native_execution": "not tested",
+    "wheel_target": "macosx_12_0_x86_64, CPython 3.12, cp312, binary only",
+    "wheel_count": 48,
+    "download": "complete pinned requirements including pypdf"
+  },
+  "model_api_calls": 0,
+  "first_test_failure": "New metadata preservation test initially used headline/access_status instead of existing title/access fields; corrected test field names. No production behavior changed for this failure.",
+  "manual_sample_validation_failures": [],
+  "presentation_review_corrections": [
+    "Apple opening now includes reported revenue after release date and available management explanation.",
+    "Generic Microsoft forward-looking boilerplate is labelled as missing specific risk assessment."
+  ],
+  "test_fixture_correction": "The optional-provider UI test stub originally expected a disclosure citation in its small annual-only fixture; it now selects an eligible supplied citation. Production eligibility and numerical checks are unchanged.",
+  "launcher_restart": "A final restart on port 8525 failed because the old process still held that port. Latest build started on unused localhost port 8526; live three-company download acceptance was performed on 8525 before the final request-approval widget key change, which has an offline AppTest regression."
+}
