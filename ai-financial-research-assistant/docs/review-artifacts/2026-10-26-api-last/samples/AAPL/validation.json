@@ -1,0 +1,105 @@
+{
+  "origin": "Manual Codex output from this conversation; not application-provider output",
+  "ticker": "AAPL",
+  "research_cutoff": "2026-10-26T15:56:36.889311+00:00",
+  "api_calls": 0,
+  "provider_usage": null,
+  "provider_latency_seconds": null,
+  "provider_cost_usd": null,
+  "result_sha256": "f2040397d620780688c5eb27847dd99eb7a15299845204c77d3f02f689dec987",
+  "validation_failures": [],
+  "corrections": [],
+  "paragraph_checks": [
+    {
+      "paragraph": 1,
+      "all_quotes_exact": true,
+      "citations": [
+        "E7:B6"
+      ],
+      "semantic_verification": "manual review required"
+    },
+    {
+      "paragraph": 2,
+      "all_quotes_exact": true,
+      "citations": [
+        "D2:B624",
+        "D2:B606"
+      ],
+      "semantic_verification": "manual review required"
+    },
+    {
+      "paragraph": 3,
+      "all_quotes_exact": true,
+      "citations": [
+        "E7:B9"
+      ],
+      "semantic_verification": "manual review required"
+    },
+    {
+      "paragraph": 4,
+      "all_quotes_exact": true,
+      "citations": [
+        "D2:B624",
+        "E7:B6"
+      ],
+      "semantic_verification": "manual review required"
+    },
+    {
+      "paragraph": 5,
+      "all_quotes_exact": true,
+      "citations": [
+        "E7:B6",
+        "E7:B9"
+      ],
+      "semantic_verification": "manual review required"
+    }
+  ],
+  "numerical_checks": [
+    {
+      "evidence_id": "C15",
+      "all_fields_equal": true,
+      "fields_checked": [
+        "evidence_id",
+        "metric",
+        "value",
+        "period_start",
+        "period_end",
+        "currency",
+        "unit",
+        "citation_ids",
+        "source_urls"
+      ]
+    },
+    {
+      "evidence_id": "C17",
+      "all_fields_equal": true,
+      "fields_checked": [
+        "evidence_id",
+        "metric",
+        "value",
+        "period_start",
+        "period_end",
+        "currency",
+        "unit",
+        "citation_ids",
+        "source_urls"
+      ]
+    },
+    {
+      "evidence_id": "C19",
+      "all_fields_equal": true,
+      "fields_checked": [
+        "evidence_id",
+        "metric",
+        "value",
+        "period_start",
+        "period_end",
+        "currency",
+        "unit",
+        "citation_ids",
+        "source_urls"
+      ]
+    }
+  ],
+  "validator": "passed"
+}

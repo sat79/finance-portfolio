@@ -1,0 +1,68 @@
+[
+  {
+    "ticker": "AAPL",
+    "research_cutoff": "2026-10-26T18:04:07.460588+00:00",
+    "download_matches_shared_preparation": true,
+    "recorded_pricing_only_not_reverified": true,
+    "model": "gpt-6-luna",
+    "reasoning": "none",
+    "max_output_tokens": 2400,
+    "max_requests": 1,
+    "request_sha256": "23e2189ede836f37b976d7fad20e2b600afb2f54a0e9997c81d20b6ad0d037ab",
+    "estimate": {
+      "input_token_allowance": 32326,
+      "max_output_tokens": 2400,
+      "reserved_cost_usd": "0.00524075",
+      "pricing": "User-configured rates; not a billing quote"
+    },
+    "previous_compact_independent_articles": 0,
+    "updated_compact_independent_articles": 1,
+    "updated_compact_evidence_bytes": 30241,
+    "eligible_citations": 11,
+    "model_calls": 0
+  },
+  {
+    "ticker": "MSFT",
+    "research_cutoff": "2026-10-26T18:04:45.673930+00:00",
+    "download_matches_shared_preparation": true,
+    "recorded_pricing_only_not_reverified": true,
+    "model": "gpt-6-luna",
+    "reasoning": "none",
+    "max_output_tokens": 2400,
+    "max_requests": 1,
+    "request_sha256": "d73eb325acf0640c782fc2c48d35526d1b615352cb43f3aa5b5e227eb14ed92d",
+    "estimate": {
+      "input_token_allowance": 33727,
+      "max_output_tokens": 2400,
+      "reserved_cost_usd": "0.005415875",
+      "pricing": "User-configured rates; not a billing quote"
+    },
+    "previous_compact_independent_articles": 0,
+    "updated_compact_independent_articles": 1,
+    "updated_compact_evidence_bytes": 31642,
+    "eligible_citations": 13,
+    "model_calls": 0
+  },
+  {
+    "ticker": "KSPI",
+    "research_cutoff": "2026-10-26T18:05:16.641352+00:00",
+    "download_matches_shared_preparation": true,
+    "recorded_pricing_only_not_reverified": true,
+    "model": "gpt-6-luna",
+    "reasoning": "none",
+    "max_output_tokens": 2400,
+    "max_requests": 1,
+    "request_sha256": "2fdd2dceee4debe943d7862caa78fd2724ee429d67641e01a997ec82f3504ce6",
+    "estimate": {
+      "input_token_allowance": 35737,
+      "max_output_tokens": 2400,
+      "reserved_cost_usd": "0.005667125",
+      "pricing": "User-configured rates; not a billing quote"
+    },
+    "previous_compact_independent_articles": 0,
+    "updated_compact_independent_articles": 0,
+    "updated_compact_evidence_bytes": 33652,
+    "eligible_citations": 14,
+    "model_calls": 0
+  }
+]

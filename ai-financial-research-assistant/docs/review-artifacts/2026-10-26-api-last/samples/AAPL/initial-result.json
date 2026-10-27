@@ -1,0 +1,134 @@
+{
+  "paragraphs": [
+    {
+      "kind": "interpretation",
+      "text": "Treat earnings and margin momentum separately from revenue growth: the source identifies a discrete benefit to margin and per-share earnings but does not quantify a recurring baseline. A recurring-versus-discrete bridge is needed before extrapolation.",
+      "citation_ids": [
+        "E7:B6"
+      ],
+      "support": [
+        {
+          "citation_id": "E7:B6",
+          "quote": "CUPERTINO, CALIFORNIA — Apple® today announced financial results for its fiscal 2026 third quarter ended June 27, 2026. The Company posted quarterly revenue of $109.4 billion, up 16 percent year over year. Company gross margin was 50.1 percent, including a favorable impact of approximately 2 percentage points from tariff refunds. Diluted earnings per share was $2.02, up 29 percent year over year, and included a favorable impact of $0.11 from tariff refunds."
+        }
+      ]
+    },
+    {
+      "kind": "interpretation",
+      "text": "The product-margin explanation covers both quarterly and year-to-date comparisons. Product mix, tariff refunds and costs need separate treatment; the packet does not quantify each contribution or establish that the same mix persists.",
+      "citation_ids": [
+        "D2:B624",
+        "D2:B606"
+      ],
+      "support": [
+        {
+          "citation_id": "D2:B624",
+          "quote": "Products gross margin and gross margin percentage increased during the third quarter and first nine months of 2026 compared to the same periods in 2025 primarily due to a different mix of products and tariff refunds, partially offset by higher costs, including memory."
+        },
+        {
+          "citation_id": "D2:B606",
+          "quote": "Apple Inc. | Q3 2026 Form 10-Q | 15"
+        }
+      ]
+    },
+    {
+      "kind": "interpretation",
+      "text": "The announcement declares a dividend and names record and payable dates; it does not provide evidence of completed payment. Capital-return sustainability remains outside this packet.",
+      "citation_ids": [
+        "E7:B9"
+      ],
+      "support": [
+        {
+          "citation_id": "E7:B9",
+          "quote": "Apple’s board of directors has declared a cash dividend of $0.27 per share of the Company’s common stock. The dividend is payable on August 13, 2026, to shareholders of record as of the close of business on August 10, 2026."
+        }
+      ]
+    },
+    {
+      "kind": "interpretation",
+      "text": "What are the like-for-like product and Services margins after separating refunds, mix and cost changes, with quarterly and year-to-date comparisons kept separate?",
+      "citation_ids": [
+        "D2:B624",
+        "E7:B6"
+      ],
+      "support": [
+        {
+          "citation_id": "D2:B624",
+          "quote": "Products gross margin and gross margin percentage increased during the third quarter and first nine months of 2026 compared to the same periods in 2025 primarily due to a different mix of products and tariff refunds, partially offset by higher costs, including memory."
+        },
+        {
+          "citation_id": "E7:B6",
+          "quote": "CUPERTINO, CALIFORNIA — Apple® today announced financial results for its fiscal 2026 third quarter ended June 27, 2026. The Company posted quarterly revenue of $109.4 billion, up 16 percent year over year. Company gross margin was 50.1 percent, including a favorable impact of approximately 2 percentage points from tariff refunds. Diluted earnings per share was $2.02, up 29 percent year over year, and included a favorable impact of $0.11 from tariff refunds."
+        }
+      ]
+    },
+    {
+      "kind": "interpretation",
+      "text": "What disclosed evidence connects these results to cash generation, regional demand and spending needs, and confirms the announced dividend payment status?",
+      "citation_ids": [
+        "E7:B6",
+        "E7:B9"
+      ],
+      "support": [
+        {
+          "citation_id": "E7:B6",
+          "quote": "CUPERTINO, CALIFORNIA — Apple® today announced financial results for its fiscal 2026 third quarter ended June 27, 2026. The Company posted quarterly revenue of $109.4 billion, up 16 percent year over year. Company gross margin was 50.1 percent, including a favorable impact of approximately 2 percentage points from tariff refunds. Diluted earnings per share was $2.02, up 29 percent year over year, and included a favorable impact of $0.11 from tariff refunds."
+        },
+        {
+          "citation_id": "E7:B9",
+          "quote": "Apple’s board of directors has declared a cash dividend of $0.27 per share of the Company’s common stock. The dividend is payable on August 13, 2026, to shareholders of record as of the close of business on August 10, 2026."
+        }
+      ]
+    }
+  ],
+  "quantitative_claims": [
+    {
+      "evidence_id": "C15",
+      "metric": "net_margin",
+      "value": "23.97125576994386691728361911",
+      "period_start": "2023-10-01",
+      "period_end": "2024-09-28",
+      "currency": "USD",
+      "unit": "percent",
+      "citation_ids": [
+        "F95bc30d035960a52d18b",
+        "Fd2e887d5d4f6b456c6ab"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/0000320193-25-000079-index.html"
+      ]
+    },
+    {
+      "evidence_id": "C17",
+      "metric": "revenue_growth",
+      "value": "6.425511782832738757400232700",
+      "period_start": "2024-09-29",
+      "period_end": "2025-09-27",
+      "currency": "USD",
+      "unit": "percent",
+      "citation_ids": [
+        "F95bc30d035960a52d18b",
+        "F6c3f21f06c3999a7083b"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/0000320193-25-000079-index.html"
+      ]
+    },
+    {
+      "evidence_id": "C19",
+      "metric": "net_margin",
+      "value": "26.91506412181823861438241450",
+      "period_start": "2024-09-29",
+      "period_end": "2025-09-27",
+      "currency": "USD",
+      "unit": "percent",
+      "citation_ids": [
+        "F6c3f21f06c3999a7083b",
+        "F456440ede2d5a35bfb2a"
+      ],
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/0000320193-25-000079-index.html"
+      ]
+    }
+  ]
+}

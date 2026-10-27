@@ -62,9 +62,31 @@ class ModelConfig:
     input_per_million: Decimal
     output_per_million: Decimal
     cap_usd: Decimal
-    max_output_tokens: int = 1200
+    max_output_tokens: int = 2400
     max_requests: int = 1
-    reasoning_effort: str | None = None
+    reasoning_effort: str = "none"
+
+    def __post_init__(self):
+        if any(
+            not v.is_finite() or v <= 0
+            for v in [self.input_per_million, self.output_per_million, self.cap_usd]
+        ):
+            raise ValueError("Model prices and spending cap must be finite and positive.")
+        if not 256 <= self.max_output_tokens <= 2400 or self.max_requests != 1:
+            raise ValueError("Pilot requires 256–2400 output tokens and exactly one request.")
+        if self.reasoning_effort not in {"none", "low", "medium", "high", "xhigh", "max"}:
+            raise ValueError("Explicit supported reasoning effort is required.")
+
+    @classmethod
+    def from_verification(cls, record):
+        return cls(
+            record["model"],
+            Decimal(record["reservation_input_usd_per_million"]),
+            Decimal(record["output_usd_per_million"]),
+            Decimal(record["cap_usd"]),
+            max_output_tokens=int(record.get("max_output_tokens", 2400)),
+            reasoning_effort=record.get("reasoning_effort", "none"),
+        )
 
     @classmethod
     def from_environment(cls):
@@ -82,7 +104,12 @@ class ModelConfig:
                 "Optional model setup needs model ID, current input/output prices and a positive total spending cap."
             )
         try:
-            config = cls(values[0], *(Decimal(v) for v in values[1:]))
+            config = cls(
+                values[0],
+                *(Decimal(v) for v in values[1:]),
+                max_output_tokens=int(os.environ.get("FINSIGHT_MAX_OUTPUT_TOKENS", "2400")),
+                reasoning_effort=os.environ.get("FINSIGHT_REASONING_EFFORT", "none"),
+            )
         except InvalidOperation as exc:
             raise ValueError("Model prices and spending cap must be decimal numbers.") from exc
         if any(
@@ -204,7 +231,16 @@ class OpenAIProvider:
     def __init__(self, config: ModelConfig, ledger: Path, session=None):
         self.config, self.ledger, self.session = config, ledger, session or requests.Session()
 
-    def generate(self, evidence: dict, *, approved=False):
+    def generate(self, evidence: dict, *, approved=False, expected_request_sha256=None):
+        from finsight.research.preparation import prepare_request
+
+        prepared = prepare_request(evidence, self.config)
+        if (
+            expected_request_sha256 is not None
+            and prepared.request_sha256 != expected_request_sha256
+        ):
+            raise ValueError("Prepared request changed after review; no request sent.")
+        evidence = prepared.evidence
         if not approved or os.environ.get("FINSIGHT_ENABLE_MODEL") != "1":
             raise ValueError(
                 "Model generation is disabled or spending was not explicitly approved."
@@ -214,7 +250,7 @@ class OpenAIProvider:
             raise ValueError(
                 "FINSIGHT_OPENAI_API_KEY (or local OPENAI_API_KEY) is not configured. A chat subscription is not API access."
             )
-        usage = estimate(self.config, evidence)
+        usage = prepared.estimate
         reserve = Decimal(usage["reserved_cost_usd"])
         with budget_lock(self.ledger):
             self.ledger.parent.mkdir(parents=True, exist_ok=True)
@@ -242,6 +278,7 @@ class OpenAIProvider:
                             "status": "reserved",
                             "at": datetime.now(timezone.utc).isoformat(),
                             "model": self.config.model,
+                            "request_sha256": prepared.request_sha256,
                             **usage,
                         }
                     )
@@ -260,7 +297,7 @@ class OpenAIProvider:
             response = self.session.post(
                 "https://api.openai.com/v1/responses",
                 headers={"Authorization": f"Bearer {key}"},
-                json=request_payload(self.config, evidence),
+                json=prepared.payload,
                 timeout=(5, 60),
                 allow_redirects=False,
             )
@@ -291,6 +328,8 @@ class OpenAIProvider:
                 "narrative": result,
                 "usage": record,
                 "estimate": usage,
+                "request_sha256": prepared.request_sha256,
+                "supplied_evidence": evidence,
                 "limitations": evidence.get("limitations", []),
                 "financial_warnings": evidence.get("financial_warnings", []),
                 "review": "Unverified model interpretation: structured numerical records and exact cited excerpts checked. Prose relevance, causation and semantic entailment are not automatically verified; human review required.",

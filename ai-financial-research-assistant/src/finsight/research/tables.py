@@ -291,7 +291,7 @@ def table_priority(table):
     """Rank explicit financial headings before budgets; never infer a cell's accounting scope."""
     title = " ".join(c["text"] for c in table["context"])
     labels = " ".join(r["label"] for r in table["rows"])
-    if match(r"segment.*(?:revenue|income)|(?:revenue|income).*segment", title):
+    if match(r"segment results|segment.*(?:revenue|income)|(?:revenue|income).*segment", title):
         rank = 0
     elif match(r"cash flows?|cash.*operations", title) or match(OPERATING_CASH, labels):
         rank = 1

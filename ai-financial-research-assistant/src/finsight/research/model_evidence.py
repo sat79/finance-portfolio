@@ -7,6 +7,7 @@ from finsight.financials import calculate, review_notes
 from finsight.research.evidence import recent_evidence
 from finsight.research.findings import key_findings
 from finsight.research.outcomes import assess
+from finsight.research.publisher import guardian_article
 from finsight.research.report import build_report
 
 
@@ -34,7 +35,15 @@ def compact_synthesis_evidence(full):
     for claim in quantitative.values():
         refs.update(claim["citation_ids"])
     doc_ids = {r["document_id"] for r in result["recent_disclosures"] if r["latest_eligible"]}
-    news = [n for n in result["news"] if n["content"] and n["document_id"] in doc_ids][:3]
+    # Keep one already retrieved original article alongside latest official material.
+    # Discovery metadata never acquires claim eligibility through this selection.
+    independent = [n for n in result["news"] if n["content"] and guardian_article(n["url"])][:1]
+    official = [
+        n
+        for n in result["news"]
+        if n["content"] and n["document_id"] in doc_ids and not guardian_article(n["url"])
+    ][: 3 - len(independent)]
+    news = official + independent
     for n in news:
         for content in n["content"]:
             refs.add(content["citation_id"])
@@ -67,7 +76,7 @@ def compact_synthesis_evidence(full):
         ],
         news=news,
         recent_disclosures=recent,
-        evidence_layout="Compact pilot subset of existing key findings and their annual calculation inputs. Quotes resolve to citations.support_text; news content references the same register. Full evidence remains in the source bundle. All warnings and coverage summaries retained. No table or discovery-only content can support claims.",
+        evidence_layout="Compact subset of existing key findings, their annual calculation inputs and at most three readable news records, including at most one retrieved independent original article. Quotes resolve to citations.support_text; news content references the same register. Full evidence remains in the source bundle. All warnings and coverage summaries retained. No table or discovery-only content can support claims.",
     )
     return result
 

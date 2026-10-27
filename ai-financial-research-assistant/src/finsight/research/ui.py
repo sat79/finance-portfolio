@@ -10,9 +10,11 @@ import pandas as pd
 import streamlit as st
 
 from finsight.research.identity import find_companies
-from finsight.research.model_evidence import build_model_evidence, fact_text
-from finsight.research.narrative import ModelConfig, OpenAIProvider, api_key, estimate
+from finsight.research.model_evidence import build_model_evidence
+from finsight.research.narrative import ModelConfig, OpenAIProvider, api_key
 from finsight.research.outcomes import assess
+from finsight.research.preparation import prepare_request
+from finsight.research.presentation import display_fact
 from finsight.research.report import build_report, manual_synthesis_bundle, report_bundle
 from finsight.research.workflow import run_research
 from finsight.sec import SECClient, SECError
@@ -146,6 +148,12 @@ def render_research():
             for note in result.limitations:
                 st.warning(note)
     report, citations = build_report(result)
+    try:
+        config = ModelConfig.from_environment()
+        prepared = prepare_request(build_model_evidence(result, citations), config)
+        setup_error = None
+    except ValueError as exc:
+        config, prepared, setup_error = None, None, str(exc)
     report_tab, register_tab, export_tab = st.tabs(
         ["Company research report", "Evidence & coverage", "Download research"]
     )
@@ -198,7 +206,7 @@ def render_research():
         )
         st.download_button(
             "Download compact evidence for manual ChatGPT use",
-            manual_synthesis_bundle(result, citations),
+            manual_synthesis_bundle(result, citations, config=config),
             "finsight-manual-synthesis.zip",
             "application/zip",
             on_click="ignore",
@@ -211,6 +219,16 @@ def render_research():
         st.write(
             "The deterministic report above works without a model. A chat subscription does not provide API access. No model call happens automatically."
         )
+        if prepared:
+            st.json(
+                {
+                    **prepared.estimate,
+                    "request_sha256": prepared.request_sha256,
+                    "model": config.model,
+                    "reasoning_effort": config.reasoning_effort,
+                    "max_requests": config.max_requests,
+                }
+            )
         if not api_key() or os.environ.get("FINSIGHT_ENABLE_MODEL") != "1":
             st.info(
                 "AI synthesis is disabled. Search, source retrieval, financial calculations, citations "
@@ -220,17 +238,17 @@ def render_research():
             )
             return
         try:
-            config = ModelConfig.from_environment()
+            if setup_error:
+                raise ValueError(setup_error)
             if coverage["status"] == "failed":
                 st.info(
                     "No substantive evidence: optional generation is unavailable for this failed run."
                 )
                 return
-            evidence = build_model_evidence(result, citations)
-            usage = estimate(config, evidence)
-            st.json(usage)
+            evidence = prepared.evidence
             approved = st.checkbox(
-                "I approve this model request and its displayed maximum estimated charge under my configured total cap"
+                "I approve this model request and its displayed maximum estimated charge under my configured total cap",
+                key=f"approve_narrative_{prepared.request_sha256}",
             )
             if st.button("Generate optional narrative", disabled=not approved):
                 provider = OpenAIProvider(
@@ -239,7 +257,7 @@ def render_research():
                 )
                 try:
                     st.session_state.research_narrative = provider.generate(
-                        evidence, approved=approved
+                        evidence, approved=approved, expected_request_sha256=prepared.request_sha256
                     )
                 except (ValueError, OSError) as exc:
                     st.error(str(exc))
@@ -254,7 +272,7 @@ def render_research():
                     st.text(f"{p['kind']}: {p['text']}")
                     st.caption("Citations: " + ", ".join(p["citation_ids"]))
                 for claim in narrative["narrative"]["quantitative_claims"]:
-                    st.text("Bound financial record: " + fact_text(claim))
+                    st.text("Bound financial record (rounded display): " + display_fact(claim))
                     st.caption("Citations: " + ", ".join(claim["citation_ids"]))
                 st.json(narrative["usage"])
                 st.download_button(

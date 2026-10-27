@@ -2,7 +2,7 @@
 
 Enter a company name, confirm the entity, retrieve official documents and recent news, then download a cited research report. FinSight combines deterministic financial analysis with attributed disclosure excerpts; optional model narration is disabled unless explicitly configured and approved.
 
-**Status:** the [26 October no-API handover](docs/review-artifacts/2026-10-26-no-api/README.md) provides fresh AAPL/MSFT/KSPI reports, full evidence and compact manual-ChatGPT downloads. Search/entity changes clear previous analysis. A clearly labelled Codex sample passes the existing validator and scores 7/8 in human self-review; it is not an application-provider response. **226 tests and all three fresh browser journeys pass.** Ready for supervised no-API demonstrations with partial table/news coverage visible. Actual provider synthesis and deployment remain unverified; Gemini's current free-tier documentation is blocked by network policy. No external model API calls, billing changes, merge or deployment.
+**Status:** the [API-last handover](docs/review-artifacts/2026-10-26-api-last/README.md) contains fresh AAPL/MSFT/KSPI reports, complete evidence, compact exports and three labelled manual Codex samples with validation and human self-review. UI, pilot and eventual execution now share compact request preparation; the opening summary retains full cited evidence in the appendix. **232 tests, clean installation and all three fresh browser journeys pass.** Ready for a supervised no-API demo with partial table/news coverage visible. API access remains deferred; provider synthesis, native Mac execution and deployment are unverified. No external model calls, billing changes, merge or deployment.
 
 ## What works
 
@@ -18,7 +18,7 @@ Start with the [company research guide](docs/research-guide.md). No paid API is 
 
 ## Install (Python 3.12)
 
-**First time on an Intel Mac?** Follow the [step-by-step Mac setup](docs/mac-setup.md), then the [Apple → Microsoft → KSPI acceptance checklist](docs/acceptance-test.md). Native macOS and desktop Excel execution remain untested here; the guide distinguishes those checks from Linux validation.
+**First time on an Intel Mac?** Follow the [step-by-step Mac setup](docs/mac-setup.md), then the [company-name research guide](docs/research-guide.md). Native macOS and desktop Excel execution remain untested here; the guide distinguishes those checks from Linux validation.
 
 From the repository root:
 
@@ -35,7 +35,8 @@ Use `python3` if it is already Python 3.12. A separate environment avoids confli
 ## Run
 
 ```bash
-python -m streamlit run app/main.py
+export FINSIGHT_ENABLE_MODEL=0
+bash scripts/start.sh
 ```
 
 Or run `bash scripts/start.sh`: it uses the project environment, prompts for SEC contact identification when needed, and binds the server to your own computer. It does not install dependencies, save the email, or automatically execute `.env`.

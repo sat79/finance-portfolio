@@ -1,8 +1,8 @@
 # Run FinSight on your Intel Mac
 
-This guide is for your own local computer, with no hosting or paid API. Linux/Python 3.12.14 was tested. We also downloaded the complete pinned dependency set using Python 3.12 / Intel macOS **12 and 14** wheel targets. That is a package-availability check, **not an executed macOS installation**. Desktop Chrome/Excel acceptance remains yours to perform. macOS versions older than 12 have not been checked.
+This guide runs FinSight locally on an Intel Mac, without hosting or a model API. On 26 October 2026 we verified a **fresh Linux/Python 3.12 virtual environment**, the pinned install, dependency consistency, the offline suite and the real launcher/browser journey. We also downloaded every pinned dependency for Python 3.12 / Intel macOS 12 (including the PDF parser). Wheel availability is **not a native Mac installation test**. You must verify installation, Chrome and downloaded files on your Mac; macOS older than 12 is untested.
 
-For the new default name-to-report flow, follow [Research a company](research-guide.md) after launch. The earlier wheel checks predate the added PDF parser; native Mac installation of this revision remains untested.
+The reviewed company-research scope is **AAPL, MSFT and KSPI**. Keep API synthesis disabled throughout this walkthrough. See the [current handover](review-artifacts/2026-10-26-api-last/README.md) for the exact checks and limitations.
 
 ## 1. Check your computer and Python
 
@@ -57,13 +57,14 @@ python -m pip check
 python -m pytest -q
 ```
 
-`.venv` keeps this app's dependencies separate from your other portfolio projects. Activation makes `python` use that environment. Installation uses the committed version lock; `pip check` checks dependency compatibility; the offline suite should report **156 passed** at this revision. Installation needs Internet access; these tests do not need SEC access. Do not use `sudo pip`.
+`.venv` keeps this app's dependencies separate from your other portfolio projects. Activation makes `python` use that environment. Installation uses the committed version lock; `pip check` checks dependency compatibility; the offline suite should report **232 passed** at this revision. Installation needs Internet access; these tests do not need SEC access. Do not use `sudo pip`.
 
 If pip reports no compatible distribution, check Python is 3.12, `uname -m` is `x86_64`, and macOS is at least 12. Keep the exact error for troubleshooting rather than randomly changing dependency versions. A newer macOS version should not be installed solely on the strength of this guide.
 
 ## 4. Start with local SEC identification
 
 ```bash
+export FINSIGHT_ENABLE_MODEL=0
 bash scripts/start.sh
 ```
 
@@ -77,6 +78,7 @@ Alternatively, configure the current Terminal session explicitly, then launch:
 read -r "finsight_contact?Your SEC contact email: "
 export SEC_USER_AGENT="FinSightAI $finsight_contact"
 unset finsight_contact
+export FINSIGHT_ENABLE_MODEL=0
 bash scripts/start.sh
 ```
 
@@ -86,11 +88,13 @@ The `read` prompt above uses the default macOS **zsh** shell and keeps the enter
 
 Leave Terminal running. In Chrome, type `http://localhost:8501` into the address bar (on **your Mac**). If Streamlit prints a different port, use that port.
 
-1. Choose **SEC company**, select **AAPL — Apple Inc.**, and click **Fetch SEC annual data**.
-2. Wait for the retrieval spinner. Read any displayed access error; example data are never substituted.
-3. Review **Financial statements**, then **Ratios & trends**, then **Sources & warnings**.
-4. Open **Export → Download Excel workbook**. Find the download in Finder → Downloads and open it in Excel if you already have it. The app does not require an Excel subscription. CSV export is also available; any alternative spreadsheet program needs its own acceptance check.
-5. Follow the [three-company acceptance checklist](acceptance-test.md). Do not mark exercises complete until you have performed them.
+1. Leave **Company research** selected. Enter **Apple**, click **Find company**, and select **AAPL — Apple Inc.** from the possible matches. Confirm the legal name before clicking **Research selected company**.
+2. For a live check, enable **Refresh evidence from sources**. Read the resulting complete/partial/failed status. Successful retrieval does not mean all financial tables were supported. No fixture replaces a failed source request.
+3. Read **Opening summary**, then the evidence appendix. Keep annual calculations separate from interim figures and company explanations. Open **Evidence & coverage → Inspect citation register**; follow an SEC source link and compare the quoted passage and reporting period.
+4. In **Download research**, download the Markdown report, evidence ZIP and compact manual-synthesis ZIP. Unzip the evidence bundle and inspect `coverage.json`, `citations.json` and `financial-analysis.xlsx`. The workbook does not require the app to have an API key; opening it in Excel or another spreadsheet program is a local check you must perform.
+5. For manual ChatGPT use, unzip the compact pack and use `evidence.json` with `instructions.txt`. This sends nothing automatically. Label any resulting analysis as manual and review its citations. The app does not import chat responses.
+6. Search **Microsoft**, then **Kaspi.kz**. Confirm **MSFT** and **KSPI**. Before running each new search, verify the previous report and analysis have disappeared. Repeat the source/citation/download checks. Kaspi independent-news coverage remains unavailable in the reviewed route; do not treat discovery headlines as read articles.
+7. Leave the optional model section disabled. Automatic provider narrative is the final, separately approved stage, not a prerequisite for this workflow.
 
 For a network-independent check, choose **Synthetic example → Load fictional example**. FY2023 revenue is 1,200 USD and operating margin is 8%. Those numbers are fictional.
 
@@ -100,4 +104,4 @@ Click the Terminal window running Streamlit and press **Control+C** once. Closin
 
 Next time, enter the project folder and run `bash scripts/start.sh` again. Do not reinstall dependencies each time. Restart after updating Python packages or application code. If port 8501 is occupied, stop your earlier FinSight session or run `bash scripts/start.sh --server.port 8502`, then use that port in Chrome.
 
-For SEC 403/network errors, check identification, Internet access, and the displayed message. Required destinations are `www.sec.gov` and `data.sec.gov`. For 429 responses, wait before retrying; repeated refresh clicks will not help. For “cache not writable”, launch from your own project folder or set `FINSIGHT_CACHE_DIR` to a directory you own. Share the error message and Python/macOS versions for troubleshooting, but leave your email and `.env` out of screenshots/logs.
+For SEC 403/network errors, check identification, Internet access, and the displayed message. SEC destinations are `www.sec.gov` and `data.sec.gov`; the bounded research route also uses the reviewed company IR sites, Google News discovery and `www.theguardian.com` for selected original articles. See the deployment guide for the exact current allowlist. For 429 responses, wait before retrying; repeated refresh clicks will not help. For “cache not writable”, launch from your own project folder or set `FINSIGHT_CACHE_DIR` to a directory you own. Share the error message and Python/macOS versions for troubleshooting, but leave your email and `.env` out of screenshots/logs.

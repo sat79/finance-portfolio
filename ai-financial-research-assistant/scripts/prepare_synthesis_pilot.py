@@ -5,11 +5,10 @@ import hashlib
 import json
 import zipfile
 from datetime import datetime, timezone
-from decimal import Decimal
 from pathlib import Path
 
-from finsight.research.model_evidence import compact_synthesis_evidence
-from finsight.research.narrative import ModelConfig, estimate, request_payload
+from finsight.research.narrative import ModelConfig
+from finsight.research.preparation import prepare_request
 
 
 def main():
@@ -24,24 +23,16 @@ def main():
     )
     args = parser.parse_args()
     verification = json.loads(args.verification.read_text())
-    config = ModelConfig(
-        verification["model"],
-        Decimal(verification["reservation_input_usd_per_million"]),
-        Decimal(verification["output_usd_per_million"]),
-        Decimal(verification["cap_usd"]),
-        max_output_tokens=verification["max_output_tokens"],
-        reasoning_effort=verification["reasoning_effort"],
-    )
+    config = ModelConfig.from_verification(verification)
     with zipfile.ZipFile(args.bundle) as archive:
         evidence = json.loads(archive.read("model-evidence.json"))
     original_bytes = len(json.dumps(evidence, ensure_ascii=False).encode())
-    evidence = compact_synthesis_evidence(evidence)
-    payload = request_payload(config, evidence)
-    encoded = json.dumps(payload, ensure_ascii=False, indent=2).encode()
-    planned = estimate(config, evidence)
+    prepared = prepare_request(evidence, config)
+    evidence, payload = prepared.evidence, prepared.payload
+    encoded, planned = prepared.encoded, prepared.estimate
     manifest = {
         "prepared_at": datetime.now(timezone.utc).isoformat(),
-        "state": "blocked_before_spending_authorization",
+        "state": "prepared_offline_not_authorized_for_execution",
         "company": evidence["company"],
         "research_cutoff": evidence["research_cutoff"],
         "model": config.model,
@@ -61,7 +52,8 @@ def main():
         "provider_usage": None,
         "application_generated_analysis": None,
         "required_before_execution": [
-            "Configure the missing FINSIGHT_OPENAI_API_KEY securely and verify authenticated availability of the selected model.",
+            "At the final API stage, recheck model availability, deprecation, supported settings and current pricing; this preparation does not inspect credentials.",
+            "Configure secure provider access only when that final stage is authorized.",
             "Obtain explicit approval of this exact request, displayed estimate and one-request cap before paid execution.",
         ],
         "boundaries": [

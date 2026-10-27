@@ -382,18 +382,17 @@ def build_report(research: Research) -> tuple[str, dict]:
         lines.append(f"  **Analyst question, not a reported outcome:** {question}")
 
     lines.append("## Principal risks, contradictions and unanswered questions")
+    risk_passages = []
     if annual:
-        lines.extend(
-            quote(annual, p)
-            for p in excerpt(
-                annual,
-                [
-                    r"(?:could|may).{0,100}(?:adverse|adversely|material|risk)",
-                    r"(?:risk|uncertainty).{0,100}(?:business|operations|financial)",
-                ],
-                2,
-            )
+        risk_passages = excerpt(
+            annual,
+            [
+                r"(?:could|may).{0,100}(?:adverse|adversely|material|risk)",
+                r"(?:risk|uncertainty).{0,100}(?:business|operations|financial)",
+            ],
+            2,
         )
+        lines.extend(quote(annual, p) for p in risk_passages)
     if data:
         for warning in data.warnings:
             lines.append(
@@ -484,7 +483,109 @@ def build_report(research: Research) -> tuple[str, dict]:
         finding_lines.append(
             "Fewer than three supported findings were available; the report does not fill missing evidence with generic conclusions."
         )
-    lines[findings_insert:findings_insert] = finding_lines
+    summary = [
+        "## Opening summary",
+        "Company-reported excerpts and deterministic annual context; no causal bridge is inferred. Full quotations, periods, calculations and coverage diagnostics follow in the evidence appendix.",
+    ]
+
+    def short_reference(key, limit=360, text=None):
+        source = citations[key]
+        full = source.get("quote", "")
+        sentence = text or re.split(r"(?<=[.!?])\s+(?=[A-Z“])", full)[0]
+        assert sentence in full
+        text = sentence if len(sentence) <= limit else sentence[:limit]
+        truncated = " [excerpt truncated; see appendix]" if text != sentence else ""
+        return f"“{safe(text)}”{truncated} [{key}]({source['url']})"
+
+    if annual and business_passages(annual):
+        choices = business_passages(annual)
+        business = next(
+            (
+                p
+                for p in choices
+                if re.search(
+                    r"operates|designs|products include|offer an array|derive|generate",
+                    p.text,
+                    re.I,
+                )
+            ),
+            choices[0],
+        )
+        key = f"{annual.id}:B{annual.passages.index(business) + 1}"
+        summary.append("**Business model — annual baseline:** " + short_reference(key))
+    else:
+        summary.append("**Business model:** annual description unavailable; no generic substitute.")
+    for label, topic in [
+        ("Latest reported change", "results"),
+        ("Supported operating drivers", "drivers"),
+        ("Financial risks", "credit_risk"),
+    ]:
+        finding = next((f for f in findings if f["topic"] == topic and f["statements"]), None)
+        if finding is None and topic == "drivers":
+            finding = next(
+                (f for f in findings if f["topic"] == "explanation" and f["statements"]), None
+            )
+        if finding:
+            statement = finding["statements"][0]
+            if topic == "results":
+                statement = next(
+                    (
+                        s
+                        for s in finding["statements"]
+                        if re.search(r"revenue|net income|net profit|net sales", s["text"], re.I)
+                    ),
+                    statement,
+                )
+            key = statement["citation_id"]
+            context = next((k for k in finding["context_citation_ids"] if k in citations), None)
+            if context is None and statement != finding["statements"][0]:
+                context = finding["statements"][0]["citation_id"]
+            prefix = (short_reference(context, 300) + " ") if context else ""
+            summary.append(
+                f"**{label} — recent disclosure:** "
+                + prefix
+                + short_reference(key, text=statement["text"])
+            )
+        elif topic == "credit_risk" and risk_passages:
+            risk = next(
+                (
+                    p
+                    for p in risk_passages
+                    if not re.search(
+                        r"forward-looking statements|various risks and uncertainties", p.text, re.I
+                    )
+                ),
+                None,
+            )
+            if risk:
+                key = f"{annual.id}:B{annual.passages.index(risk) + 1}"
+                summary.append("**Financial risks — annual context:** " + short_reference(key))
+            else:
+                summary.append(
+                    "**Financial risks:** the selected annual passages are generic cautions, not a specific financial-risk assessment. Cash, funding and earnings-quality risks remain for review; see the cited findings and questions below."
+                )
+        else:
+            summary.append(f"**{label}:** insufficient selected evidence; review the gaps below.")
+    annual_finding = next((f for f in findings if f["topic"] == "annual_calculations"), None)
+    if annual_finding:
+        values = []
+        for key in annual_finding["calculation_ids"]:
+            c = calc_map[key]
+            refs = " ".join(f"[F{i}]({citations['F' + i]['url']})" for i in c.input_ids)
+            values.append(
+                f"{safe(c.metric.replace('_', ' '))} at {c.period_end}: {c.value:,.2f}% {refs}"
+            )
+        summary.append(
+            "**Separate annual calculations (rounded):** "
+            + "; ".join(values)
+            + ". These do not explain a newer quarter or establish organic growth."
+        )
+    summary.append(
+        "**Missing evidence:** "
+        + safe(coverage["tables"]["summary"] + " " + coverage["independent_news"]["label"])
+        + ". See the complete coverage register for other limitations."
+    )
+    lines[findings_insert:findings_insert] = summary + ["## Evidence appendix"] + finding_lines
     if findings:
         lines.append("## Finding interpretation notes")
         lines.append(
@@ -500,16 +601,31 @@ def build_report(research: Research) -> tuple[str, dict]:
     return "\n\n".join(lines).replace("|\n\n|", "|\n|"), citations
 
 
-def manual_synthesis_bundle(research: Research, citations=None) -> bytes:
+def manual_synthesis_bundle(research: Research, citations=None, *, config=None) -> bytes:
     """Export the existing compact evidence and rules; no chat connection or model call."""
-    from finsight.research.model_evidence import build_model_evidence, compact_synthesis_evidence
+    from finsight.research.model_evidence import build_model_evidence
     from finsight.research.narrative import INSTRUCTIONS
+    from finsight.research.preparation import prepare_evidence, prepare_request
 
-    evidence = compact_synthesis_evidence(build_model_evidence(research, citations))
+    evidence = prepare_evidence(build_model_evidence(research, citations))
     output = io.BytesIO()
     with zipfile.ZipFile(output, "w", zipfile.ZIP_DEFLATED) as archive:
         archive.writestr("evidence.json", json.dumps(evidence, ensure_ascii=False, indent=2))
         archive.writestr("instructions.txt", INSTRUCTIONS)
+        if config is not None:
+            prepared = prepare_request(evidence, config)
+            archive.writestr("request.json", prepared.encoded)
+            archive.writestr(
+                "preparation.json",
+                json.dumps(
+                    {
+                        **prepared.estimate,
+                        "request_sha256": prepared.request_sha256,
+                        "max_requests": config.max_requests,
+                    },
+                    indent=2,
+                ),
+            )
         archive.writestr(
             "README.md",
             "# Manual synthesis evidence pack\n\n"

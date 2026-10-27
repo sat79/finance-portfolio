@@ -1,0 +1,111 @@
+{
+  "origin": "Manual Codex output from this conversation; not application-provider output",
+  "ticker": "KSPI",
+  "research_cutoff": "2026-10-25T20:07:26.853221+00:00",
+  "api_calls": 0,
+  "provider_usage": null,
+  "provider_latency_seconds": null,
+  "provider_cost_usd": null,
+  "result_sha256": "4c706c0dd2133297c7e3e342eeed5ca69c6fdfad1605496cba7c6cce692a37c6",
+  "validation_failures": [],
+  "corrections": [],
+  "paragraph_checks": [
+    {
+      "paragraph": 1,
+      "all_quotes_exact": true,
+      "citations": [
+        "E7:B24",
+        "E7:B19",
+        "E7:B4"
+      ],
+      "semantic_verification": "manual review required"
+    },
+    {
+      "paragraph": 2,
+      "all_quotes_exact": true,
+      "citations": [
+        "E7:B9",
+        "E7:B74",
+        "E7:B4"
+      ],
+      "semantic_verification": "manual review required"
+    },
+    {
+      "paragraph": 3,
+      "all_quotes_exact": true,
+      "citations": [
+        "E5:B2151"
+      ],
+      "semantic_verification": "manual review required"
+    },
+    {
+      "paragraph": 4,
+      "all_quotes_exact": true,
+      "citations": [
+        "E7:B19",
+        "E7:B24",
+        "Fd263c4ad59b3d9845882"
+      ],
+      "semantic_verification": "manual review required"
+    },
+    {
+      "paragraph": 5,
+      "all_quotes_exact": true,
+      "citations": [
+        "E7:B7",
+        "E5:B2151"
+      ],
+      "semantic_verification": "manual review required"
+    }
+  ],
+  "numerical_checks": [
+    {
+      "evidence_id": "C7",
+      "all_fields_equal": true,
+      "fields_checked": [
+        "evidence_id",
+        "metric",
+        "value",
+        "period_start",
+        "period_end",
+        "currency",
+        "unit",
+        "citation_ids",
+        "source_urls"
+      ]
+    },
+    {
+      "evidence_id": "C9",
+      "all_fields_equal": true,
+      "fields_checked": [
+        "evidence_id",
+        "metric",
+        "value",
+        "period_start",
+        "period_end",
+        "currency",
+        "unit",
+        "citation_ids",
+        "source_urls"
+      ]
+    },
+    {
+      "evidence_id": "C11",
+      "all_fields_equal": true,
+      "fields_checked": [
+        "evidence_id",
+        "metric",
+        "value",
+        "period_start",
+        "period_end",
+        "currency",
+        "unit",
+        "citation_ids",
+        "source_urls"
+      ]
+    }
+  ],
+  "validator": "passed",
+  "original_sample_sha256": "d499fff760d5ff782def93fa4b2b7d372cfdab38d82b67b58d4d89b346c183b2",
+  "revision": "Separate revision: replaces only the last analytical question to address the supplied dividend proposal. Original sample and 7/8 assessment unchanged."
+}

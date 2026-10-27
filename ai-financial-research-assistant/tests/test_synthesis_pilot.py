@@ -206,9 +206,7 @@ def test_ui_requires_approval_and_exposes_generated_analysis_and_download(
         calls.append(url)
         evidence = json.loads(kwargs["json"]["input"])
         key, source = next(
-            (k, s)
-            for k, s in evidence["citations"].items()
-            if s.get("kind") == "disclosure excerpt" and s.get("eligible_for_prose")
+            (k, s) for k, s in evidence["citations"].items() if s.get("eligible_for_prose")
         )
         output = {
             "paragraphs": [
